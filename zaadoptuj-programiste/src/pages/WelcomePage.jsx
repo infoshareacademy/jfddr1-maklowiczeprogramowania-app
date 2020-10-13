@@ -1,8 +1,10 @@
 import React from 'react';
-
+import Hamburger from '../components/Hamburger'
 function WelcomePage() {
   return (
-   <div>To jest strona powitalna</div>
+   <>
+<Hamburger />
+   </>
   );
 }
 

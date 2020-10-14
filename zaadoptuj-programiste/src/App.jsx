@@ -7,12 +7,17 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Quicksand', sans-serif;
+    font-family:'Quicksand', sans-serif;
     margin:0;
-    padding:0;
-    box-sizing:border-box;
-    color: #FBFBFB;
+    padding:0 ;
+    width:100vw;
+    color:#FBFBFB;
+    overflow-x:hidden;
   }
+
+* {
+  box-sizing:border-box;
+}
 `
 function App() {
   return (

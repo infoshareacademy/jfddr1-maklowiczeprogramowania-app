@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components"
-// import MobTemplate from "../components/MobTemplate"
-import HamburgerMenu from "../components/HamburgerMenu"
-import HamburgerMenuSrc from "../img/radix-icons_hamburger-menu-dark.svg"
+import MobTemplate from "../components/MobTemplate";
 
 const MobMenuContainer = styled.section`
 align-self: center;
@@ -14,30 +12,14 @@ display: block;
 padding: 10px;
 `;
 
-const StyledMain = styled.main`
-background: #FBECCC;
-font-family: Quicksand;
-font-weight: 600;
-font-size: 2em;
-width: 100vw;
-height: 100vh;
-position: relative;
-display: flex;
-justify-content: center;
-text-align: center;
-`;
-
-const StyledHamburgerMenu = styled(HamburgerMenu)`
-position: absolute;
-right: 1px;
-width: 40px;
-margin: 40px`;
+// const ExampleComp = () =>{
+//   return <div>Cześć</div>
+// }
 
 const MobMenu = () => {
   return (
-      <>
-  <StyledMain>
-    <StyledHamburgerMenu src = {HamburgerMenuSrc}/>
+  // <MobTemplate anotherNestedComponent={<ExampleComp/>} >
+  <MobTemplate>
     <MobMenuContainer>
       <MobMenuAnchor>Zaloguj się</MobMenuAnchor>
       <MobMenuAnchor>Zarejestruj się</MobMenuAnchor>
@@ -45,8 +27,7 @@ const MobMenu = () => {
       <MobMenuAnchor>Jak to działa?</MobMenuAnchor>
       <MobMenuAnchor>Wiedza o IT</MobMenuAnchor>
     </MobMenuContainer>
-  </StyledMain>
-   </>
+  </MobTemplate>
   );
 }
 

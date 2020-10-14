@@ -15,20 +15,17 @@ display: flex;
 justify-content: center;
 `;
 
-const StyledHamburgerMenu = styled(HamburgerMenu)`
-position: absolute;
-right: 1px;
-width: 40px;
-margin: 40px`;
-
-const MobTemplate = () => {
-    return (
+const MobTemplate = ({children}) => {
+  return (
       <>
       <StyledMain>
-        <StyledHamburgerMenu src = {HamburgerMenuSrc}/>
+        <HamburgerMenu src = {HamburgerMenuSrc}/>
+        {children}
+        {/* {anotherNestedComponent} */}
       </StyledMain>
       </>
     );
+
   }
 
 export default MobTemplate;

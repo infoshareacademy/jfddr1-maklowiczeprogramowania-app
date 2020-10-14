@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.js": "/jfddr1-maklowiczeprogramowania-app/static/js/main.a5b20bb8.chunk.js",
+    "main.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/main.a5b20bb8.chunk.js.map",
+    "runtime-main.js": "/jfddr1-maklowiczeprogramowania-app/static/js/runtime-main.59d3cbc5.js",
+    "runtime-main.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/runtime-main.59d3cbc5.js.map",
+    "static/js/2.a383cf6d.chunk.js": "/jfddr1-maklowiczeprogramowania-app/static/js/2.a383cf6d.chunk.js",
+    "static/js/2.a383cf6d.chunk.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/2.a383cf6d.chunk.js.map",
+    "index.html": "/jfddr1-maklowiczeprogramowania-app/index.html",
+    "precache-manifest.2c227f34d667c69993baeaf34030e30d.js": "/jfddr1-maklowiczeprogramowania-app/precache-manifest.2c227f34d667c69993baeaf34030e30d.js",
+    "service-worker.js": "/jfddr1-maklowiczeprogramowania-app/service-worker.js",
+    "static/js/2.a383cf6d.chunk.js.LICENSE.txt": "/jfddr1-maklowiczeprogramowania-app/static/js/2.a383cf6d.chunk.js.LICENSE.txt",
+    "static/media/Product-Release.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/Product-Release.3cbbf877.svg",
+    "static/media/background-vector-left.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/background-vector-left.68d8e247.svg",
+    "static/media/header-ellipse-vector.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/header-ellipse-vector.1b906e7a.svg",
+    "static/media/icons_hamburger-menu-light.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/icons_hamburger-menu-light.a7e8e9ac.svg",
+    "static/media/team.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/team.5ca9195f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.59d3cbc5.js",
+    "static/js/2.a383cf6d.chunk.js",
+    "static/js/main.a5b20bb8.chunk.js"
+  ]
+}

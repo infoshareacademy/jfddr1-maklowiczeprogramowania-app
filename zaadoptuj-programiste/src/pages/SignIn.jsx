@@ -1,7 +1,7 @@
 import React from 'react'
-import Input from "../../components/Input";
-import Button from "../../components/Button";
-import Label from "../../components/Label";
+import Input from "../components/Input";
+import Button from "../components/Button";
+import Label from "../components/Label";
 import {SignInForm, SignInTitle, StyledParagraph, StyledAnchor} from '../components/SignIn.styled'
 
 function SignIn() {

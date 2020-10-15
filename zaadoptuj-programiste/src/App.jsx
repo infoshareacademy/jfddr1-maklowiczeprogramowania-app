@@ -25,6 +25,7 @@ function App() {
     <>
   <GlobalStyle/>
   <WelcomePage/>
+  <SignIn/>
   <Menu/>
 </>
   );

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { device } from './device';
+
 const Page = styled.div`
   margin: auto;
   font-family: "sans-serif";
@@ -11,6 +12,7 @@ const Page = styled.div`
     max-width: 1400px;
   }
 `;
+
 const size = {
     mobileS: '320px',
     mobileM: '375px',
@@ -20,6 +22,7 @@ const size = {
     laptopL: '1440px',
     desktop: '2560px'
   }
+  
   export const device = {
     mobileS: `(min-width: ${size.mobileS})`,
     mobileM: `(min-width: ${size.mobileM})`,

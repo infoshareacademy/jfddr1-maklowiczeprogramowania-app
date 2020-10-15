@@ -1,8 +1,11 @@
-import React from 'react';
+import React from "react";
+import styled from "styled-components"
 
 function SignUp() {
   return (
-   <div>To jest strona do rejestracji</div>
+    <>
+
+    </>
   );
 }
 

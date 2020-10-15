@@ -1,9 +1,11 @@
 import React from 'react';
-import Hamburger from '../components/Hamburger'
+import HamburgerMenu from '../components/HamburgerMenu'
+
+
 function WelcomePage() {
   return (
    <>
-<Hamburger />
+<HamburgerMenu />
    </>
   );
 }

@@ -15,13 +15,22 @@ display: flex;
 justify-content: center;
 `;
 
+const MobMenuContainer = styled.section`
+display: flex;
+flex-direction: column;
+align-self: center;
+text-align: center;
+`;
+
 const MobTemplate = ({children}) => {
   return (
-      <>
+    <>
       <StyledMain>
-        <HamburgerMenu src = {HamburgerMenuSrc}/>
-        {children}
-        {/* {anotherNestedComponent} */}
+        <MobMenuContainer>
+          <HamburgerMenu src = {HamburgerMenuSrc}/>
+          {children}
+          {/* {anotherNestedComponent} */}
+        </MobMenuContainer>
       </StyledMain>
       </>
     );

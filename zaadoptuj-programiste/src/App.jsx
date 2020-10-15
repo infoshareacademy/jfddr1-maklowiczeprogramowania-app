@@ -9,11 +9,16 @@ import MobLabeLWithInput from "./components/MobLabelWithInput"
 
 const GlobalStyle = createGlobalStyle`
   * {
-    font-family: 'Quicksand', sans-serif;
+    box-sizing:border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    color: #2B2B3F;
+  }
+
+  body {
+    font-family: 'Quicksand', sans-serif;
+    width: 100vw;
+    color:#FBFBFB;
+    overflow-x:hidden;
   }
 `
 const App = () => {

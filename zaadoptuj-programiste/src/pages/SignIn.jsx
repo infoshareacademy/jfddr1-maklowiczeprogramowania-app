@@ -1,25 +1,23 @@
-import React from "react";
-import styled from "styled-components";
-import MobTemplate from "../components/MobTemplate";
-
-const MobLabel = styled.label`
-`;
+import React from 'react'
+import Input from "../components/Input";
+import Button from "../components/Button";
+import Label from "../components/Label";
+import {SignInForm, SignInTitle, StyledParagraph, StyledAnchor} from '../components/SignIn.styled'
 
 const SignIn = () => {
   return (
-  <MobTemplate>
-      <h1>Załóż konto</h1>
-      <label>Imię</label>
-      <input></input>
-      <label>Nazwisko</label>
-      <input></input>
-      <label>Email</label>
-      <input></input>
-      <label>Hasło</label>
-      <input></input>
-      <p>Masz już konto? Zaloguj się tutaj</p>
-      <p>Wypełnij nasz szczegółowy formularz, żeby korzystać ze wszystkich możliwości, zrób to teraz i miej to z głowy! Możesz też pominąć ten krok i przyglądać się naszemu portalowi z nieco dalszej odległości!</p>
-  </MobTemplate>
+      <SignInForm>
+          <SignInTitle>Zaloguj się</SignInTitle>
+          <Label>{'Email'}</Label>
+          <Input type={'email'}/>
+          <Label>{'Hasło'}</Label>
+          <Input type={'password'}/>
+          <Label>
+              <StyledParagraph>Nie masz konta? Założ je</StyledParagraph>
+              <StyledAnchor href="/">tutaj</StyledAnchor>
+          </Label>
+          <Button type={'submit'} label={'Zaloguj'} />
+      </SignInForm>
   );
 }
 

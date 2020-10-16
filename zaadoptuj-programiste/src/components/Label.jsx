@@ -2,17 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledLabel = styled.div`
+    margin: 25px 0 3px 0;
     display: inline-block;
-    width: 70%;
-    font-size: 1.3rem;
-    
-    * {
-        color: #2B2B3F;
-        text-decoration: none;
-    }
+    font-size: 1rem;
 `;
 
-function Label({children}) {
+const Label = ({children}) => {
     return (
         <StyledLabel>
             {children}

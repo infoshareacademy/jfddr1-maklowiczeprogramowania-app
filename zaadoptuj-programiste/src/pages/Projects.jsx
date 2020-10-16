@@ -1,9 +1,7 @@
-import React from 'react';
+import React from "react";
 
-function Projects() {
-  return (
-   <div>To jest strona do projektów</div>
-  );
-}
+const Projects = () => {
+  return <div>To jest strona do projektów</div>;
+};
 
 export default Projects;

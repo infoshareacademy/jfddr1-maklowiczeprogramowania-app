@@ -1,26 +1,19 @@
 import styled from "styled-components";
 
-export const SignInForm = styled.form`
-    padding-top: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #2B2B3F;
-    width: 100%;
+export const SignInTitle = styled.h1`
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 2.5rem;
 `;
-
-export const SignInTitle = styled.h2`
-    margin: 50px 0;
-    font-weight: 700;
-`
 
 export const StyledParagraph = styled.p`
-    display: inline-block;
-    margin-right: 5px;
+  display: inline-block;
+  margin: 5px 0 30px 0;
 `;
 
-export const StyledAnchor = styled.p`
-    display: inline-block;
-    cursor: pointer;
-    color: #FBBB9A;
+export const StyledAnchor = styled.a`
+  display: inline-block;
+  color: #fbbb9a;
+  text-decoration: none;
+  cursor: pointer;
 `;

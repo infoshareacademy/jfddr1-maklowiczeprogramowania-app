@@ -1,24 +1,28 @@
-import React from 'react'
+import React from "react";
+import MobileViewTemplate from "../components/MobileViewTemplate";
+import Label from "../components/Label";
 import Input from "../components/Input";
 import Button from "../components/Button";
-import Label from "../components/Label";
-import {SignInForm, SignInTitle, StyledParagraph, StyledAnchor} from '../components/SignIn.styled'
+import {
+  SignInTitle,
+  StyledParagraph,
+  StyledAnchor,
+} from "../components/SignIn.styled";
 
 const SignIn = () => {
   return (
-      <SignInForm>
-          <SignInTitle>Zaloguj się</SignInTitle>
-          <Label>{'Email'}</Label>
-          <Input type={'email'}/>
-          <Label>{'Hasło'}</Label>
-          <Input type={'password'}/>
-          <Label>
-              <StyledParagraph>Nie masz konta? Założ je</StyledParagraph>
-              <StyledAnchor href="/">tutaj</StyledAnchor>
-          </Label>
-          <Button type={'submit'} label={'Zaloguj'} />
-      </SignInForm>
+    <MobileViewTemplate>
+      <SignInTitle>Zaloguj się</SignInTitle>
+      <Label>{"Email"}</Label>
+      <Input type={"email"} />
+      <Label>{"Hasło"}</Label>
+      <Input type={"password"} />
+      <StyledParagraph>
+        Nie masz konta? Założ je <StyledAnchor href="/">tutaj</StyledAnchor>
+      </StyledParagraph>
+      <Button type={"submit"} label={"Zaloguj"} />
+    </MobileViewTemplate>
   );
-}
+};
 
 export default SignIn;

@@ -1,10 +1,11 @@
-import React from 'react';
-import WelcomePage from './pages/WelcomePage'
-import MobileMenu from './pages/MobileMenu'
-import SignIn from './pages/SignIn'
-import SignUp from './pages/SignUp'
-import Projects from './pages/Projects'
-import { createGlobalStyle } from 'styled-components'
+import React from "react";
+import { createGlobalStyle } from "styled-components";
+import WelcomePage from "./pages/WelcomePage";
+import MobileMenu from "./pages/MobileMenu";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import Projects from "./pages/Projects";
+import SignUpFull from "";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -14,21 +15,18 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     width: 100vw;
     color: #FBFBFB;
     overflow-x: hidden;
   }
-`
+`;
 const App = () => {
   return (
     <>
-  <GlobalStyle/>
-  <SignIn/>
-  <SignUp/>
-  <MobileMenu/>
-</>
+      <SignUpFull />
+    </>
   );
-}
+};
 
-export default App
+export default App;

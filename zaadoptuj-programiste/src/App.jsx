@@ -1,11 +1,11 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 import WelcomePage from "./pages/WelcomePage";
-import MobileMenu from "./pages/MobileMenu";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
-import Projects from "./pages/Projects";
-import SignUpFull from "";
+// import MobileMenu from "./pages/MobileMenu";
+// import SignIn from "./pages/SignIn";
+// import SignUp from "./pages/SignUp";
+// import Projects from "./pages/Projects";
+// import SignUpFull from "";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -24,7 +24,9 @@ const GlobalStyle = createGlobalStyle`
 const App = () => {
   return (
     <>
-      <SignUpFull />
+    <GlobalStyle/>
+    <WelcomePage/>
+      {/* <SignUpFull /> */}
     </>
   );
 };

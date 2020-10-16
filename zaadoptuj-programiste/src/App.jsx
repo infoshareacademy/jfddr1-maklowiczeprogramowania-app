@@ -1,15 +1,14 @@
 import React from 'react';
 import WelcomePage from './pages/WelcomePage'
-import MobMenu from './pages/MobMenu'
+import MobileMenu from './pages/MobileMenu'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Projects from './pages/Projects'
 import { createGlobalStyle } from 'styled-components'
-import MobLabeLWithInput from "./components/MobLabelWithInput"
 
 const GlobalStyle = createGlobalStyle`
   * {
-    box-sizing:border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
@@ -17,8 +16,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Quicksand', sans-serif;
     width: 100vw;
-    color:#FBFBFB;
-    overflow-x:hidden;
+    color: #FBFBFB;
+    overflow-x: hidden;
   }
 `
 const App = () => {
@@ -26,6 +25,8 @@ const App = () => {
     <>
   <GlobalStyle/>
   <SignIn/>
+  <SignUp/>
+  <MobileMenu/>
 </>
   );
 }

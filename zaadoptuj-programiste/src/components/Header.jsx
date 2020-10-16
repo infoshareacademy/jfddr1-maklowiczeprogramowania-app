@@ -7,6 +7,11 @@ import styled from 'styled-components'
 import HeaderEllipseBackgroundSrc from '../img/header-ellipse-vector.svg'
 import HeaderEllipseInnerImageSrc from '../img/Product-Release.svg'
 
+const HeaderHeading = styled.h1`
+font-size: 2.2em;
+margin-top:4em;
+`
+
 const CreateHeroButton = styled.button`
 padding:1.3em 1em;
 margin-top:2em;

@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const SignInTitle = styled.h1`
   margin: 0 auto;
-  font-weight: 700;
-  font-size: 2.5rem;
+  font-weight: 600;
+  font-size: 2.9rem;
 `;
 
 export const StyledParagraph = styled.p`

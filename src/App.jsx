@@ -1,14 +1,23 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
-import WelcomePage from "./pages/WelcomePage";
-// import MobileMenu from "./pages/MobileMenu";
+import AuthMenuMobile from "./pages/AuthMenuMobile";
+import AuthWelcomeView from "./pages/AuthWelcomeView";
+import MenuMobile from "./pages/MenuMobile";
+import Projects from "./pages/Projects";
 import SignIn from "./pages/SignIn";
-// import SignUp from "./pages/SignUp";
-// import Projects from "./pages/Projects";
-// import SignUpFull from "";
-import SignUpFullForm from './pages/SignUpFullForm';
+import SignUpMobile from "./pages/SignUpMobile";
+import SignUpDesktop from "./pages/SignUpDesktop";
+import SignUpFullForm from "./pages/SignUpFullForm";
+import WelcomePage from "./pages/WelcomePage";
 
 const GlobalStyle = createGlobalStyle`
+  :root {
+    --dark-clr: #2B2B3F;
+    --light-clr: #FBECCC;
+    --accent-clr: #FBBB9A;
+    --text-clr: #FBFBFB;
+  }
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -22,14 +31,19 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
 `;
+
 const App = () => {
   return (
     <>
-    <GlobalStyle/>
-    <WelcomePage/>
-    <SignIn/>
-    <SignUpFullForm />
-      {/* <SignUpFull /> */}
+      <GlobalStyle />
+      {/* <AuthWelcomeView /> */}
+      <MenuMobile />
+      {/* <Projects /> */}
+      {/* <SignIn /> */}
+      {/* <SignUpMobile /> */}
+      {/* <SignUpDesktop /> */}
+      {/* <SignUpFullForm /> */}
+      {/* <WelcomePage /> */}
     </>
   );
 };

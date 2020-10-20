@@ -2,10 +2,11 @@ import React from "react";
 import { createGlobalStyle } from "styled-components";
 import WelcomePage from "./pages/WelcomePage";
 // import MobileMenu from "./pages/MobileMenu";
-// import SignIn from "./pages/SignIn";
+import SignIn from "./pages/SignIn";
 // import SignUp from "./pages/SignUp";
 // import Projects from "./pages/Projects";
 // import SignUpFull from "";
+import SignUpFullForm from './pages/SignUpFullForm';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -26,6 +27,8 @@ const App = () => {
     <>
     <GlobalStyle/>
     <WelcomePage/>
+    <SignIn/>
+    <SignUpFullForm />
       {/* <SignUpFull /> */}
     </>
   );

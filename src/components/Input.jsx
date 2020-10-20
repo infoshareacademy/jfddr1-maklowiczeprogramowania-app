@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledInput = styled.input`
+export const StyledInput = styled.input`
   background-color: #2b2b3f;
   color: #fbfbfb;
   height: 50px;

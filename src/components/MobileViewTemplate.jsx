@@ -6,8 +6,8 @@ import HamburgerMenuSrc from "../img/radix-icons_hamburger-menu-dark.svg";
 const MainContainer = styled.main`
   display: flex;
   flex-direction: column;
-  background: #fbeccc;
-  color: #2b2b3f;
+  background: var(--light-clr);
+  color: var(--dark-clr);
   font-weight: 600;
   width: 100vw;
   height: 100vh;

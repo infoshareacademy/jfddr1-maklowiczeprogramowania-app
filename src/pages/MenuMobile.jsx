@@ -13,7 +13,7 @@ const MobileMenuAnchor = styled.a`
 //   return <div>Cześć</div>
 // }
 
-const MobileMenu = () => {
+const MenuMobile = () => {
   return (
     // <MobTemplate anotherNestedComponent={<ExampleComp/>} >
     <MobileViewTemplate>
@@ -26,4 +26,4 @@ const MobileMenu = () => {
   );
 };
 
-export default MobileMenu;
+export default MenuMobile;

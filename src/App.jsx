@@ -1,6 +1,7 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 import WelcomePage from "./pages/WelcomePage";
+import AuthWelcomeView from "./pages/AuthWelcomeView";
 // import MobileMenu from "./pages/MobileMenu";
 // import SignIn from "./pages/SignIn";
 // import SignUp from "./pages/SignUp";
@@ -19,13 +20,18 @@ const GlobalStyle = createGlobalStyle`
     width: 100vw;
     color: #FBFBFB;
     overflow-x: hidden;
+  --dark-clr: #2B2B3F;
+  --light-clr: #FBECCC;
+  --accent-clr: #FBBB9A;
+  --text-clr:#FBFBFB;
   }
 `;
 const App = () => {
   return (
     <>
-    <GlobalStyle/>
-    <WelcomePage/>
+      <GlobalStyle />
+      <AuthWelcomeView />
+      {/* <WelcomePage /> */}
       {/* <SignUpFull /> */}
     </>
   );

@@ -5,10 +5,12 @@ import AuthWelcomeView from "./pages/AuthWelcomeView";
 import MenuMobile from "./pages/MenuMobile";
 import Projects from "./pages/Projects";
 import SignIn from "./pages/SignIn";
-import SignUpMobile from "./pages/SignUpMobile";
 import SignUpDesktop from "./pages/SignUpDesktop";
-import SignUpFullForm from "./pages/SignUpFullForm";
+import SignUpFull1FormMobile from "./pages/signUpFull1Mobile";
+import SignUpFull6FormMobile from "./pages/signUpFull6Mobile";
+import SignUpMobile from "./pages/SignUpMobile";
 import WelcomePage from "./pages/WelcomePage";
+
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -23,7 +25,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
-
   body {
     font-family: "Quicksand", sans-serif;
     width: 100vw;
@@ -36,13 +37,15 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
+      {/* <AuthMenuMobile /> */}
       {/* <AuthWelcomeView /> */}
       <MenuMobile />
       {/* <Projects /> */}
       {/* <SignIn /> */}
-      {/* <SignUpMobile /> */}
       {/* <SignUpDesktop /> */}
-      {/* <SignUpFullForm /> */}
+      <SignUpFull1FormMobile />
+      <SignUpFull6FormMobile />
+      {/* <SignUpMobile /> */}
       {/* <WelcomePage /> */}
     </>
   );

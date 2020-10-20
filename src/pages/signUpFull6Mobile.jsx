@@ -31,7 +31,7 @@ const SlideContainer = styled.div`
   align-items: center;
 `;
 
-const SignUpFullForm = () => {
+const SignUpFull6FormMobile = () => {
   return (
     <MobileViewTemplate>
       <SignInTitle>Podstawowe Dane</SignInTitle>
@@ -56,4 +56,4 @@ const SignUpFullForm = () => {
   );
 };
 
-export default SignUpFullForm;
+export default SignUpFull6FormMobile;

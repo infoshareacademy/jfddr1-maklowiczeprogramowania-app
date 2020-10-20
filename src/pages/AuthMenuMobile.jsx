@@ -9,13 +9,8 @@ const MobileMenuAnchor = styled.a`
   text-align: center;
 `;
 
-// const ExampleComp = () =>{
-//   return <div>Cześć</div>
-// }
-
-const MobileMenu = () => {
+const AuthMenuMobile = () => {
   return (
-    // <MobTemplate anotherNestedComponent={<ExampleComp/>} >
     <MobileViewTemplate>
       <MobileMenuAnchor>Zaloguj się</MobileMenuAnchor>
       <MobileMenuAnchor>Zarejestruj się</MobileMenuAnchor>
@@ -26,4 +21,4 @@ const MobileMenu = () => {
   );
 };
 
-export default MobileMenu;
+export default AuthMenuMobile;

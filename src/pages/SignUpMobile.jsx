@@ -22,7 +22,7 @@ const SingUpInfoContainer = styled.section`
 `;
 
 const SingUpInfoMark = styled.span`
-  color: #fbbb9a;
+  color: var(--accent-clr);
   font-size: 2.4rem;
 `;
 
@@ -30,7 +30,7 @@ const SingUpInfoParagraph = styled.p`
   margin: -20px 0 25px 10px;
 `;
 
-const SignUp = () => {
+const SignUpMobile = () => {
   return (
     <MobileViewTemplate>
       <SignInTitle>Załóż konto</SignInTitle>
@@ -64,4 +64,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignUpMobile;

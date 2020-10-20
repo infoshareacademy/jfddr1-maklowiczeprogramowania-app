@@ -12,6 +12,7 @@ const SlideItem = styled.span`
 
 const SlideItemActive = styled(SlideItem)`
   color: #fbbb9a;
+  font-size: 3rem;
 `;
 
 const ButtonContainer = styled.div`

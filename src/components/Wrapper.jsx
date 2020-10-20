@@ -1,13 +1,16 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Wrapper = styled.header`
-    width:100vw;
-    min-height:100vh;
-    padding: 0 2em;
-    background:#2B2B3F;
-    text-align:center;
-    overflow-x:hidden;
-`
+  display: flex;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #2b2b3f;
+  text-align: center;
+  overflow-x: hidden;
+  @media (min-width: 1024px) {
+    justify-content: space-between;
+  }
+`;
 
-export default Wrapper
-
+export default Wrapper;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import HamburgerMenu from "../components/HamburgerMenu";
 import HamburgerMenuSrc from "../img/icons_hamburger-menu-light.svg";
 import Wrapper from "../components/Wrapper";
-import HeaderImageSrc from "../img/hate.png";
+import HeaderImageSrc from "../img/header-image.png";
 import { StyledButton } from "../components/Button";
 import MediaQuery from "react-responsive";
 

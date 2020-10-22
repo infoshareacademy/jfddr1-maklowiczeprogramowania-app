@@ -10,8 +10,13 @@ import SignUpFull1FormMobile from "./pages/signUpFull1Mobile";
 import SignUpFull6FormMobile from "./pages/signUpFull6Mobile";
 import SignUpMobile from "./pages/SignUpMobile";
 import WelcomePage from "./pages/WelcomePage";
-
-
+import AddProjectView0 from "./pages/AddProjectView0";
+import AddProjectView1 from "./pages/AddProjectView1";
+import AddProjectView2 from "./pages/AddProjectView2";
+import AddProjectView3 from "./pages/AddProjectView3";
+import AddProjectView4 from "./pages/AddProjectView4";
+import AddProjectViewDone from "./pages/AddProjectViewDone";
+import Router from "./Router";
 const GlobalStyle = createGlobalStyle`
   :root {
     --dark-clr: #2B2B3F;
@@ -31,20 +36,33 @@ const GlobalStyle = createGlobalStyle`
     color: #FBFBFB;
     overflow-x: hidden;
   }
+
+li {
+  list-style:none;
+}
+
 `;
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
+      <Router />
+      {/* <AddProjectView0 /> */}
+      {/* <AddProjectView1 /> */}
+      {/* <AddProjectView2 /> */}
+      {/* <AddProjectView3 /> */}
+      {/* <AddProjectView4 /> */}
+      {/* <AddProjectViewDone /> */}
+      {/* <AddProjectViewTemplate /> */}
       {/* <AuthMenuMobile /> */}
       {/* <AuthWelcomeView /> */}
-      <MenuMobile />
+      {/* <MenuMobile /> */}
       {/* <Projects /> */}
       {/* <SignIn /> */}
       {/* <SignUpDesktop /> */}
-      <SignUpFull1FormMobile />
-      <SignUpFull6FormMobile />
+      {/* <SignUpFull1FormMobile />
+      <SignUpFull6FormMobile /> */}
       {/* <SignUpMobile /> */}
       {/* <WelcomePage /> */}
     </>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import HamburgerMenu from "../components/HamburgerMenu";
 import HamburgerMenuSrc from "../img/icons_hamburger-menu-light.svg";
@@ -53,6 +54,7 @@ const CreateHeroButton = styled.button`
     background: transparent;
     color: var(--light-clr);
   }
+
   @media (min-width: 1024px) {
     padding: 1em;
     font-size: 1.2rem;
@@ -137,8 +139,12 @@ const Header = () => {
               <DesktopNavListLink>Strona główna</DesktopNavListLink>
               <DesktopNavListLink>Jak to działa?</DesktopNavListLink>
               <DesktopNavListLink>Wiedza o IT</DesktopNavListLink>
-              <StyledHeaderButton>Zaloguj się</StyledHeaderButton>
-              <StyledHeaderButton>Zarejestruj się</StyledHeaderButton>
+              <Link to="../pages/SignIn">
+                <StyledHeaderButton>Zaloguj się</StyledHeaderButton>
+              </Link>
+              <Link to="../pages/SignUpDesktop">
+                <StyledHeaderButton>Zarejestruj się</StyledHeaderButton>
+              </Link>
             </DesktopNavListItem>
           </DesktopNavList>
         </DesktopNav>

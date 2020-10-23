@@ -20,7 +20,7 @@ const ExitContainer = styled.section`
   margin: 30px 30px 0 0;
 `;
 
-const SignUpFull2FormMobile = () => {
+const MobileWiewTemplateWithExit = () => {
   return (
     <MainContainer>
       <ExitContainer>
@@ -30,4 +30,4 @@ const SignUpFull2FormMobile = () => {
   );
 };
 
-export default SignUpFull2FormMobile;
+export default MobileWiewTemplateWithExit;

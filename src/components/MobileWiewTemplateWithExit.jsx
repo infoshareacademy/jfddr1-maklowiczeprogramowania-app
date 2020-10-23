@@ -12,8 +12,6 @@ const MainContainer = styled.main`
   color: var(--dark-clr);
   font-weight: 600;
   height: 100vh;
-  /* ${({ isPopUp }) => isPopUp && `width: 50%;`} */
-  /* width: ${(isPopUp) => (isPopUp ? "50%" : "100vw")}; */
   ${(isPopUp) =>
     isPopUp
       ? `
@@ -48,9 +46,6 @@ const ChildrenContainer = styled.section`
 
 const MobileWiewTemplateWithExit = ({ popUp, children }) => {
   isPopUp = popUp;
-  console.log(
-    "*****************************************************************************************************************"
-  );
   return (
     <MainContainer>
       <ExitContainer>

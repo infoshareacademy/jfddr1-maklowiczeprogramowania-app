@@ -1,9 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import AuthMenuMobile from "./pages/AuthMenuMobile";
 import AuthWelcomeView from "./pages/AuthWelcomeView";
-import MenuMobile from "./pages/MenuMobile";
-import Projects from "./pages/Projects";
 import SignIn from "./pages/SignIn";
 import SignUpDesktop from "./pages/SignUpDesktop";
 import SignUpFull1FormMobile from "./pages/signUpFull1Mobile";

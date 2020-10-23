@@ -10,7 +10,7 @@ import { getSearchSpecializationTagNames } from "../mocks/SearchTags.js";
 import { getProjectsData } from "../mocks/Projects.js";
 import { StyledSmallButton } from "../components/SmallButton";
 import MediaQuery from "react-responsive";
-import UserAvatarImageSrc from "../img/16.svg";
+import UserAvatarImageSrc from "../img/team1.svg";
 import { authMenuDB } from "../mocks/AuthMenuData.js";
 import MenuImageSrc from "../img/menu-vector-desktop.svg";
 

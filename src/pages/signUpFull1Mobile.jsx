@@ -3,6 +3,8 @@ import MobileViewTemplate from "../components/MobileViewTemplate";
 import SmallButton from "../components/SmallButton";
 import { SignInTitle } from "../components/SignIn.styled";
 import styled from "styled-components";
+import MediaQuery from "react-responsive";
+
 import signUpFullImageMobileImageSrc from "../img/sign-up-full-image-mobile.svg";
 
 const SlideContainer = styled.div`
@@ -13,7 +15,7 @@ const SlideContainer = styled.div`
   align-items: center;
 `;
 
-const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 30px;
@@ -37,21 +39,23 @@ const FullFormMobileImage = ({ src }) => {
 
 const signUpFull1FormMobile = () => {
   return (
-    <MobileViewTemplate>
-      <FullFormMobileImage src={signUpFullImageMobileImageSrc} />
-      <SignInTitleCenter>Załóż konto w kilku</SignInTitleCenter>
-      <SignInTitleCenter>prostych krokach!</SignInTitleCenter>
-      <ButtonContainer>
-        <SmallButton type={"submit"} label={"Cofnij"} />
-        <SmallButton type={"submit"} label={"Tworzę konto"} />
-      </ButtonContainer>
-      <SlideContainer>
-        <SlideItem>•</SlideItem>
-        <SlideItem>•</SlideItem>
-        <SlideItem>•</SlideItem>
-        <SlideItem>•</SlideItem>
-      </SlideContainer>
-    </MobileViewTemplate>
+    <MediaQuery maxDeviceWidth={1024}>
+      <MobileViewTemplate>
+        <FullFormMobileImage src={signUpFullImageMobileImageSrc} />
+        <SignInTitleCenter>Załóż konto w kilku</SignInTitleCenter>
+        <SignInTitleCenter>prostych krokach!</SignInTitleCenter>
+        <ButtonContainer>
+          <SmallButton type={"submit"} label={"Cofnij"} />
+          <SmallButton type={"submit"} label={"Tworzę konto"} />
+        </ButtonContainer>
+        <SlideContainer>
+          <SlideItem>•</SlideItem>
+          <SlideItem>•</SlideItem>
+          <SlideItem>•</SlideItem>
+          <SlideItem>•</SlideItem>
+        </SlideContainer>
+      </MobileViewTemplate>
+    </MediaQuery>
   );
 };
 

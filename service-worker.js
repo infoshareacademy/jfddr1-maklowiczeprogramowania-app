@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/jfddr1-maklowiczeprogramowania-app/precache-manifest.4642f61a318a7add49ce8135a705fac1.js"
+  "/jfddr1-maklowiczeprogramowania-app/precache-manifest.32296d06ad0d4d2cc4e94eace3fcb6f9.js"
 );
 
 self.addEventListener('message', (event) => {

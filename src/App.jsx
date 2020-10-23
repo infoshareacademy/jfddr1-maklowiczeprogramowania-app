@@ -1,6 +1,7 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 import Router from "./Router";
+import SignUpFull2FormMobile from "./pages/signUpFull2obile";
 const GlobalStyle = createGlobalStyle`
   :root {
     --dark-clr: #2B2B3F;

@@ -27,8 +27,8 @@ const ChildrenContainer = styled.section`
   flex-direction: column;
   align-self: center;
   justify-self: center;
-  min-width: 80%;
-  max-width: 80%;
+  min-width: 60%;
+  max-width: 60%;
 `;
 
 const MobileViewTemplate = ({ children }) => {

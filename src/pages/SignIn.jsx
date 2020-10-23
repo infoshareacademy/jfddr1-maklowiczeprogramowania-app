@@ -1,5 +1,4 @@
 import React from "react";
-import MobileViewTemplate from "../components/MobileViewTemplate";
 import { Link } from "react-router-dom";
 import Label from "../components/Label";
 import Input from "../components/Input";
@@ -9,10 +8,13 @@ import {
   StyledParagraph,
   StyledAnchor,
 } from "../components/SignIn.styled";
+import MediaQuery from "react-responsive";
+import MobileViewTemplate from "../components/MobileViewTemplate";
+import MobileWiewTemplateWithExit from "../components/MobileWiewTemplateWithExit";
 
-const SignIn = () => {
+const SignInForm = () => {
   return (
-    <MobileViewTemplate>
+    <>
       <SignInTitle>Zaloguj się</SignInTitle>
       <Label>{"Email"}</Label>
       <Input type={"email"} />
@@ -25,7 +27,24 @@ const SignIn = () => {
         </Link>
       </StyledParagraph>
       <Button type={"submit"} label={"Zaloguj"} />
-    </MobileViewTemplate>
+    </>
+  );
+};
+
+const SignIn = () => {
+  return (
+    <>
+      <MediaQuery maxWidth={1023}>
+        <MobileViewTemplate>
+          <SignInForm />
+        </MobileViewTemplate>
+      </MediaQuery>
+      <MediaQuery minWidth={1024}>
+        <MobileWiewTemplateWithExit>
+          <SignInForm />
+        </MobileWiewTemplateWithExit>
+      </MediaQuery>
+    </>
   );
 };
 

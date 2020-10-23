@@ -8,6 +8,7 @@ import SignIn from "./pages/SignIn";
 import SignUpDesktop from "./pages/SignUpDesktop";
 import SignUpFull1FormMobile from "./pages/signUpFull1Mobile";
 import SignUpFull6FormMobile from "./pages/signUpFull6Mobile";
+import SignUpFull2FormMobile from "./pages/signUpFull6Mobile";
 import SignUpMobile from "./pages/SignUpMobile";
 import WelcomePage from "./pages/WelcomePage";
 import AddProjectView0 from "./pages/AddProjectView0";
@@ -50,6 +51,15 @@ const Router = () => {
         </Route>
         <Route path="/">
           <WelcomePage />
+        </Route>
+        <Route path="/pages/SignUpFull6FormMobile">
+          <SignUpFull6FormMobile />
+        </Route>
+        <Route path="/pages/SignUpFull1FormMobile">
+          <SignUpFull1FormMobile />
+        </Route>
+        <Route path="/pages/SignUpFull2FormMobile">
+          <SignUpFull2FormMobile />
         </Route>
       </Switch>
     </BrowserRouter>

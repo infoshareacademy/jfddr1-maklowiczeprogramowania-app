@@ -15,7 +15,7 @@ const SlideContainer = styled.div`
   align-items: center;
 `;
 
-const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 30px;

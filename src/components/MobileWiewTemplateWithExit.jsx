@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ExitIconSrc from "srcimgexit-icon.svg";
+import ExitIconSrc from "../img/exit-icon.svg";
 
 const MainContainer = styled.main`
   display: flex;
@@ -14,18 +14,31 @@ const MainContainer = styled.main`
 
 const ExitContainer = styled.section`
   display: flex;
-  flex-grow: 1;
   justify-content: flex-end;
-  align-items: flex-start;
-  margin: 30px 30px 0 0;
 `;
 
-const MobileWiewTemplateWithExit = () => {
+const ExitIcon = styled.img`
+  width: 3rem;
+  margin-right: 20px;
+  padding: 10px;
+`;
+
+const ChildrenContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  min-width: 80%;
+  max-width: 80%;
+`;
+
+const MobileWiewTemplateWithExit = ({ children }) => {
   return (
     <MainContainer>
       <ExitContainer>
-        <Exit src={ExitIconSrc} />
+        <ExitIcon src={ExitIconSrc} />
       </ExitContainer>
+      <ChildrenContainer>{children}</ChildrenContainer>
     </MainContainer>
   );
 };

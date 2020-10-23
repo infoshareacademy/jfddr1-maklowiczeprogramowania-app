@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 import Label from "../components/Label";
 import Input from "../components/Input";
 import Button from "../components/Button";
@@ -11,6 +12,18 @@ import {
 import MediaQuery from "react-responsive";
 import MobileViewTemplate from "../components/MobileViewTemplate";
 import MobileWiewTemplateWithExit from "../components/MobileWiewTemplateWithExit";
+
+const PopUpContainer = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 0;
+  left: 0;
+`;
 
 const SignInForm = () => {
   return (
@@ -40,9 +53,11 @@ const SignIn = () => {
         </MobileViewTemplate>
       </MediaQuery>
       <MediaQuery minWidth={1024}>
-        <MobileWiewTemplateWithExit>
-          <SignInForm />
-        </MobileWiewTemplateWithExit>
+        <PopUpContainer>
+          <MobileWiewTemplateWithExit popUp>
+            <SignInForm />
+          </MobileWiewTemplateWithExit>
+        </PopUpContainer>
       </MediaQuery>
     </>
   );

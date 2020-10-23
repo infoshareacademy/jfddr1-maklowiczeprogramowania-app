@@ -2,14 +2,28 @@ import React from "react";
 import styled from "styled-components";
 import ExitIconSrc from "../img/exit-icon.svg";
 
+let isPopUp = false;
+
 const MainContainer = styled.main`
   display: flex;
   flex-direction: column;
+  position: relative;
   background: var(--light-clr);
   color: var(--dark-clr);
   font-weight: 600;
-  width: 100vw;
   height: 100vh;
+  /* ${({ isPopUp }) => isPopUp && `width: 50%;`} */
+  /* width: ${(isPopUp) => (isPopUp ? "50%" : "100vw")}; */
+  ${(isPopUp) =>
+    isPopUp
+      ? `
+     position: absolut; 
+     width: 50%;
+     height: 50%;`
+      : `
+     position: relative; 
+     width: 100vw;
+     height: 100vh;`}
 `;
 
 const ExitContainer = styled.section`
@@ -32,7 +46,11 @@ const ChildrenContainer = styled.section`
   max-width: 80%;
 `;
 
-const MobileWiewTemplateWithExit = ({ children }) => {
+const MobileWiewTemplateWithExit = ({ popUp, children }) => {
+  isPopUp = popUp;
+  console.log(
+    "*****************************************************************************************************************"
+  );
   return (
     <MainContainer>
       <ExitContainer>

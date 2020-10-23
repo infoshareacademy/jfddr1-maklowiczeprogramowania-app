@@ -5,6 +5,7 @@ import Label from "../components/Label";
 import Input from "../components/Input";
 import { SignInTitle } from "../components/SignIn.styled";
 import styled from "styled-components";
+import MediaQuery from "react-responsive";
 
 const SlideItem = styled.span`
   font-size: 2rem;
@@ -33,26 +34,28 @@ const SlideContainer = styled.div`
 
 const SignUpFull6FormMobile = () => {
   return (
-    <MobileViewTemplate>
-      <SignInTitle>Podstawowe Dane</SignInTitle>
-      <Label>{"Imię"}</Label>
-      <Input type={"text"} />
-      <Label>{"Nazwisko"}</Label>
-      <Input type={"text"} />
-      <Label>{"Email"}</Label>
-      <Input type={"email"} />
-      <Label>{"Hasło"}</Label>
-      <Input type={"password"} />
-      <ButtonContainer>
-        <SmallButton type={"submit"} label={"Dalej"} />
-      </ButtonContainer>
-      <SlideContainer>
-        <SlideItemActive>•</SlideItemActive>
-        <SlideItem>•</SlideItem>
-        <SlideItem>•</SlideItem>
-        <SlideItem>•</SlideItem>
-      </SlideContainer>
-    </MobileViewTemplate>
+    <MediaQuery maxDeviceWidth={1024}>
+      <MobileViewTemplate>
+        <SignInTitle>Podstawowe Dane</SignInTitle>
+        <Label>{"Imię"}</Label>
+        <Input type={"text"} />
+        <Label>{"Nazwisko"}</Label>
+        <Input type={"text"} />
+        <Label>{"Email"}</Label>
+        <Input type={"email"} />
+        <Label>{"Hasło"}</Label>
+        <Input type={"password"} />
+        <ButtonContainer>
+          <SmallButton type={"submit"} label={"Dalej"} />
+        </ButtonContainer>
+        <SlideContainer>
+          <SlideItemActive>•</SlideItemActive>
+          <SlideItem>•</SlideItem>
+          <SlideItem>•</SlideItem>
+          <SlideItem>•</SlideItem>
+        </SlideContainer>
+      </MobileViewTemplate>
+    </MediaQuery>
   );
 };
 

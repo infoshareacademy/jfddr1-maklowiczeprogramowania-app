@@ -1,6 +1,8 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 import Router from "./Router";
+import SignUpFull2FormMobile from "./pages/signUpFull2obile";
+import WelcomePage from "./pages/WelcomePage";
 const GlobalStyle = createGlobalStyle`
   :root {
     --dark-clr: #2B2B3F;
@@ -31,6 +33,7 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
+      {/* <WelcomePage /> */}
       <Router />
     </>
   );

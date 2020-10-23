@@ -1,6 +1,6 @@
 import React from "react";
-import MobileViewTemplate from "../components/MobileViewTemplate";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 import Label from "../components/Label";
 import Input from "../components/Input";
 import Button from "../components/Button";
@@ -9,10 +9,25 @@ import {
   StyledParagraph,
   StyledAnchor,
 } from "../components/SignIn.styled";
+import MediaQuery from "react-responsive";
+import MobileViewTemplate from "../components/MobileViewTemplate";
+import MobileWiewTemplateWithExit from "../components/MobileWiewTemplateWithExit";
 
-const SignIn = () => {
+const PopUpContainer = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 0;
+  left: 0;
+`;
+
+const SignInForm = () => {
   return (
-    <MobileViewTemplate>
+    <>
       <SignInTitle>Zaloguj się</SignInTitle>
       <Label>{"Email"}</Label>
       <Input type={"email"} />
@@ -25,7 +40,26 @@ const SignIn = () => {
         </Link>
       </StyledParagraph>
       <Button type={"submit"} label={"Zaloguj"} />
-    </MobileViewTemplate>
+    </>
+  );
+};
+
+const SignIn = () => {
+  return (
+    <>
+      <MediaQuery maxWidth={1023}>
+        <MobileViewTemplate>
+          <SignInForm />
+        </MobileViewTemplate>
+      </MediaQuery>
+      <MediaQuery minWidth={1024}>
+        <PopUpContainer>
+          <MobileWiewTemplateWithExit popUp>
+            <SignInForm />
+          </MobileWiewTemplateWithExit>
+        </PopUpContainer>
+      </MediaQuery>
+    </>
   );
 };
 

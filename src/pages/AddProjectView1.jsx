@@ -3,19 +3,28 @@ import styled from "styled-components";
 import MediaQuery from "react-responsive";
 import { StyledSmallButton } from "../components/SmallButton";
 import AddProjectTemplateView from "./AddProjectTemplateView";
+import { Link } from "react-router-dom";
 import { StyledInput } from "../components/Input";
 import { StyledLabel } from "../components/Label";
 import { fieldTagsDB } from "../mocks/FieldTagsData.js";
-
+import AuthDesktopTemplate from "../pages/AuthDesktopTemplate";
 const Heading = styled.h1`
   color: var(--text-color);
   font-size: 1.6rem;
+
+  @media (min-width: 1024px) {
+    color: var(--dark-clr);
+  }
 `;
 
 const Paragraph = styled.p`
   font-size: 0.9rem;
   font-weight: 500;
   margin-top: 0.5em;
+  @media (min-width: 1024px) {
+    color: var(--dark-clr);
+    font-size: 1.2rem;
+  }
 `;
 
 const Button = styled(StyledSmallButton)`
@@ -23,13 +32,20 @@ const Button = styled(StyledSmallButton)`
   color: var(--dark-clr);
   width: 8em;
   margin: 2em 0.5em 0 0.5em;
+  @media (min-width: 1024px) {
+    color: var(--light-clr);
+    background-color: var(--dark-clr);
+  }
 `;
 
 const GreyishInput = styled(StyledInput)`
   background-color: #f2f5f6;
   width: 90%;
-
   height: 2.5em;
+  @media (min-width: 1024px) {
+    color: var(--light-clr);
+    background-color: var(--dark-clr);
+  }
 `;
 
 const BigGreyishInput = styled(GreyishInput)`
@@ -40,6 +56,10 @@ const Label = styled(StyledLabel)`
   font-weight: 500;
   align-self: flex-start;
   margin-left: 1.4em;
+  @media (min-width: 1024px) {
+    color: var(--dark-clr);
+    font-size: 1.2rem;
+  }
 `;
 
 const LabelInputWrapper = styled.div`
@@ -72,7 +92,12 @@ const TagContainer = styled.section`
   // justify-content: center;
   // align-items: center;
 `;
-
+const StepCounter = styled.p`
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--dark-clr);
+  margin: 1em 0;
+`;
 const TagTemplate = (label) => {
   console.log(label);
   return (
@@ -100,32 +125,66 @@ const AddProjectView1 = () => {
   });
   return (
     <>
-      <AddProjectTemplateView
-        children={
-          <>
-            <Heading>Dodaj podstawowe informacje</Heading>
-            <Paragraph>Opisz swój projekt</Paragraph>
-            <Form>
-              <LabelInputWrapper>
-                <Label>Tytuł</Label>
-                <GreyishInput />
-              </LabelInputWrapper>
-              <LabelInputWrapper>
-                <Label>Grafika projektu</Label>
-                <GreyishInput />
-              </LabelInputWrapper>
+      <MediaQuery minDeviceWidth={1024}>
+        <AuthDesktopTemplate>
+          children=
+          {
+            <>
+              <Heading>Dodaj podstawowe informacje</Heading>
+              <Paragraph>Opisz swój projekt</Paragraph>
+              <Form>
+                <LabelInputWrapper>
+                  <Label>Tytuł</Label>
+                  <GreyishInput />
+                </LabelInputWrapper>
+                <LabelInputWrapper>
+                  <Label>Grafika projektu</Label>
+                  <GreyishInput />
+                </LabelInputWrapper>
 
-              <LabelInputWrapper>
-                <Label>Opis projektu</Label>
-                <BigGreyishInput />
-              </LabelInputWrapper>
-            </Form>
-            <TagContainer> {FieldTagsComponents}</TagContainer>
+                <LabelInputWrapper>
+                  <Label>Opis projektu</Label>
+                  <BigGreyishInput />
+                </LabelInputWrapper>
+              </Form>
+              <TagContainer> {FieldTagsComponents}</TagContainer>
+              <Link to="/pages/AddProjectView2">
+                <Button>Dalej</Button>
+              </Link>
+              <StepCounter>Krok 1 z 4</StepCounter>
+            </>
+          }
+        </AuthDesktopTemplate>
+      </MediaQuery>
+      <MediaQuery maxDeviceWidth={1024}>
+        <AddProjectTemplateView
+          children={
+            <>
+              <Heading>Dodaj podstawowe informacje</Heading>
+              <Paragraph>Opisz swój projekt</Paragraph>
+              <Form>
+                <LabelInputWrapper>
+                  <Label>Tytuł</Label>
+                  <GreyishInput />
+                </LabelInputWrapper>
+                <LabelInputWrapper>
+                  <Label>Grafika projektu</Label>
+                  <GreyishInput />
+                </LabelInputWrapper>
 
-            <Button>Dalej</Button>
-          </>
-        }
-      ></AddProjectTemplateView>
+                <LabelInputWrapper>
+                  <Label>Opis projektu</Label>
+                  <BigGreyishInput />
+                </LabelInputWrapper>
+              </Form>
+              <TagContainer> {FieldTagsComponents}</TagContainer>
+              <Link to="/pages/AddProjectView2">
+                <Button>Dalej</Button>
+              </Link>
+            </>
+          }
+        ></AddProjectTemplateView>
+      </MediaQuery>
     </>
   );
 };

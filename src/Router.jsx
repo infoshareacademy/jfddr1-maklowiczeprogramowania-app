@@ -27,6 +27,27 @@ const Router = () => {
         <Route path="/pages/SignIn">
           <SignIn />
         </Route>
+        <Route path="/pages/AddProjectView0">
+          <AddProjectView0 />
+        </Route>
+        <Route path="/pages/AddProjectView1">
+          <AddProjectView1 />
+        </Route>
+        <Route path="/pages/AddProjectView2">
+          <AddProjectView2 />
+        </Route>
+        <Route path="/pages/AddProjectView3">
+          <AddProjectView3 />
+        </Route>
+        <Route path="/pages/AddProjectView4">
+          <AddProjectView4 />
+        </Route>
+        <Route path="/pages/AddProjectViewDone">
+          <AddProjectViewDone />
+        </Route>
+        <Route path="/pages/AuthWelcomeView">
+          <AuthWelcomeView />
+        </Route>
         <Route path="/">
           <WelcomePage />
         </Route>

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import MenuMessageIconSrc from "../img/message-icon.svg";
 import MenuBellIconSrc from "../img/bell-icon.svg";
 import HamburgerMenuSrc from "../img/radix-icons_hamburger-menu-dark.svg";
@@ -8,9 +9,8 @@ import { getSearchSpecializationTagNames } from "../mocks/SearchTags.js";
 import { getProjectsData } from "../mocks/Projects.js";
 import { StyledSmallButton } from "../components/SmallButton";
 import MediaQuery from "react-responsive";
-import UserAvatarImageSrc from "../img/16.svg";
-import { authMenuDB } from "../mocks/AuthMenuData.js";
-import MenuImageSrc from "../img/menu-vector-desktop.svg";
+import AuthDesktopTemplate from "../pages/AuthDesktopTemplate";
+import MenuIconsAuthBar from "../components/MenuIconsAuthBar";
 const Header = styled.header`
   display: flex;
   align-items: center;
@@ -68,6 +68,9 @@ const MenuIconsAuthBackground = styled.div`
   align-items: center;
   justify-content: center;
   border-bottom-left-radius: 15px;
+  @media (min-width: 1024px) {
+    width: 14em;
+  }
 `;
 
 const MenuMessageIcon = styled.img`
@@ -91,14 +94,6 @@ const MenuBellIcon = styled.img`
 const HamburgerAuthMenu = styled.img`
   width: 1.5rem;
   margin-left: 0.7em;
-`;
-
-const Main = styled.main`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 5em auto;
 `;
 
 const SearchInput = styled(StyledInput)`
@@ -204,42 +199,6 @@ const EvenSmallerButton = styled(StyledSmallButton)`
   font-size: 0.8rem;
 `;
 
-const DesktopMenuBar = styled.section`
-  height: 100vh;
-  max-width: 300px;
-  display: flex;
-  align-items: center;
-
-  flex-direction: column;
-  width: 40vw;
-  background: var(--dark-clr);
-`;
-
-const UserInfo = styled.section`
-  text-align: center;
-  width: 80%;
-  height: 10em;
-  margin-top: 4em;
-  font-size: 0.7rem;
-  color: var(--light-clr);
-`;
-
-const UserName = styled.h2`
-  font-weight: 400;
-  margin-top: 0.5em;
-`;
-
-const UserSpecialization = styled.h3`
-  font-size: 1rem;
-  margin-top: 0.5em;
-`;
-
-const UserAvatar = styled.img`
-  display: flex;
-  width: 3em;
-  margin: 0 auto;
-`;
-
 const PageWrapper = styled.section`
   display: flex;
   flex-direction: column;
@@ -249,58 +208,11 @@ const PageWrapper = styled.section`
   }
 `;
 
-const AuthMenuList = styled.ul`
-  justify-content: flex-start;
-  display: flex;
-  flex-direction: column;
-`;
-
-const AuthMenuLink = styled.a`
-  margin-top: 2.3em;
-  font-weight: 600;
-  color: var(--light-clr);
-  display: inline-block;
-`;
-
-const CreateProjectButton = styled(StyledSmallButton)`
-  background-color: var(--light-clr);
-  color: var(--dark-clr);
-  padding: 1em 2em;
-  width: auto;
-  margin-top: 3em;
-`;
-
-const AuthMenuOptionIcon = styled.img`
-  margin-right: 1.3em;
-`;
-
-const AuthMenuItem = styled.li``;
-
 const UserInformation = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
-
-const MenuImage = styled.img`
-  position: absolute;
-  bottom: 0;
-`;
-
-const AuthNavigationTemplate = () => {
-  const authMenuData = authMenuDB;
-
-  const AuthMenuDataComponents = authMenuData.map(({ label, icon }) => {
-    return (
-      <AuthMenuItem key={label}>
-        <AuthMenuOptionIcon src={icon} />
-        <AuthMenuLink key={label}>{label}</AuthMenuLink>
-      </AuthMenuItem>
-    );
-  });
-
-  return <>{AuthMenuDataComponents}</>;
-};
 
 const SpecializationTagTemplate = ({ tagName }) => {
   return (
@@ -361,55 +273,47 @@ const AuthWelcomeView = () => {
             <MenuIconsAuthBackground>
               <MenuMessageIcon src={MenuMessageIconSrc} />
               <MenuBellIcon src={MenuBellIconSrc} />
-
               <HamburgerAuthMenu src={HamburgerMenuSrc} />
             </MenuIconsAuthBackground>
           </Header>
         </MediaQuery>
-        <MediaQuery minDeviceWidth={1024}>
-          <DesktopMenuBar>
-            <UserInfo>
-              <UserAvatar src={UserAvatarImageSrc} />
-              <UserName>Piotr Jarznicki</UserName>
-              <UserSpecialization>Front-End Developer</UserSpecialization>
-            </UserInfo>
-            <AuthMenuList>
-              <AuthNavigationTemplate />
-              <CreateProjectButton>Stwórz projekt</CreateProjectButton>
-            </AuthMenuList>
-            <MenuImage src={MenuImageSrc} />
-          </DesktopMenuBar>
-        </MediaQuery>
-        <Main>
-          <MediaQuery minDeviceWidth={1024}>
-            <UserInformation>
-              <Wrapper>
-                <WelcomeText>Cześć, Piotr!</WelcomeText>
-                <NotificationText>
-                  Masz <AmountOfMessages>0</AmountOfMessages> nowych wiadomości
-                </NotificationText>
-              </Wrapper>
-              <MenuIconsAuthBackground>
-                <MenuMessageIcon src={MenuMessageIconSrc} />
-                <MenuBellIcon src={MenuBellIconSrc} />
-                <MediaQuery maxDeviceWidth={1024}>
-                  <HamburgerAuthMenu src={HamburgerMenuSrc} />
-                </MediaQuery>
-              </MenuIconsAuthBackground>
-            </UserInformation>
-          </MediaQuery>
-          <MainHeading>Wyszukaj projekt</MainHeading>
-          <SearchWrapper>
-            <SearchInput />
-            <SubmitSearchButton>Szukaj</SubmitSearchButton>
-          </SearchWrapper>
-          <SearchTagSpecializationComponentsWrapper>
-            {searchTagSpecializationNamesComponents}
-          </SearchTagSpecializationComponentsWrapper>
-          <SearchedProjectsSection>
-            {searchedProjectsComponents}
-          </SearchedProjectsSection>
-        </Main>
+
+        <AuthDesktopTemplate>
+          children ={" "}
+          {
+            <>
+              <MediaQuery minDeviceWidth={1024}>
+                <UserInformation>
+                  <Wrapper>
+                    <WelcomeText>Cześć, Piotr!</WelcomeText>
+                    <NotificationText>
+                      Masz <AmountOfMessages>0</AmountOfMessages> nowych
+                      wiadomości
+                    </NotificationText>
+                  </Wrapper>
+                  <MenuIconsAuthBackground>
+                    <MenuMessageIcon src={MenuMessageIconSrc} />
+                    <MenuBellIcon src={MenuBellIconSrc} />
+                    <MediaQuery maxDeviceWidth={1024}>
+                      <HamburgerAuthMenu src={HamburgerMenuSrc} />
+                    </MediaQuery>
+                  </MenuIconsAuthBackground>
+                </UserInformation>
+              </MediaQuery>
+              <MainHeading>Wyszukaj projekt</MainHeading>
+              <SearchWrapper>
+                <SearchInput />
+                <SubmitSearchButton>Szukaj</SubmitSearchButton>
+              </SearchWrapper>
+              <SearchTagSpecializationComponentsWrapper>
+                {searchTagSpecializationNamesComponents}
+              </SearchTagSpecializationComponentsWrapper>
+              <SearchedProjectsSection>
+                {searchedProjectsComponents}
+              </SearchedProjectsSection>
+            </>
+          }
+        </AuthDesktopTemplate>
       </PageWrapper>
     </>
   );

@@ -162,7 +162,9 @@ const Header = () => {
           Opisz nad czym chciałbyś pracować i kogo poszukujesz do wspólnej
           przygody! Czas spełnić swoje marzenia!
         </HeroParagraph>
-        <CreateHeroButton>Stwórz bohatera</CreateHeroButton>
+        <Link to="../pages/SignUpDesktop">
+          <CreateHeroButton>Stwórz bohatera</CreateHeroButton>
+        </Link>
         <HowItWorksButton>Jak to działa?</HowItWorksButton>
       </Hero>
       <FlexContainer>

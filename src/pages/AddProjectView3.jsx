@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import MediaQuery from "react-responsive";
+import { Link } from "react-router-dom";
+
 import { StyledSmallButton } from "../components/SmallButton";
 import AddProjectTemplateView from "./AddProjectTemplateView";
 const Heading = styled.h1`
@@ -29,7 +31,9 @@ const AddProjectView3 = () => {
           <>
             <Heading>Wybierz technologie</Heading>
             <Paragraph>Sprecyzuj ich znajomość</Paragraph>
-            <Button>Dalej</Button>
+            <Link to="/pages/AddProjectView4">
+              <Button>Dalej</Button>
+            </Link>
           </>
         }
       ></AddProjectTemplateView>

@@ -62,19 +62,22 @@ const AddProjectViewTemplate = (props) => {
   return (
     <>
       <Container>
-        <ExitIconWrapper>
-          <ExitLink>
-            <ExitIcon src={ExitIconSrc} />
-          </ExitLink>
-        </ExitIconWrapper>
+        <MediaQuery maxDeviceWidth={1024}>
+          <ExitIconWrapper>
+            <ExitLink>
+              <ExitIcon src={ExitIconSrc} />
+            </ExitLink>
+          </ExitIconWrapper>
+        </MediaQuery>
         <ContentWrapper>{props.children}</ContentWrapper>
-
-        <StepDotContainer>
-          <StepDot />
-          <StepDot />
-          <StepDot />
-          <StepDot />
-        </StepDotContainer>
+        <MediaQuery maxDeviceWidth={1024}>
+          <StepDotContainer>
+            <StepDot />
+            <StepDot />
+            <StepDot />
+            <StepDot />
+          </StepDotContainer>
+        </MediaQuery>
       </Container>
     </>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import MediaQuery from "react-responsive";
+import { Link } from "react-router-dom";
 import { StyledSmallButton } from "../components/SmallButton";
 import AddProjectTemplateView from "./AddProjectTemplateView";
 import ImageSrc from "../img/project-done.svg";
@@ -45,7 +46,9 @@ const AddProjectViewDone = () => {
               Projekt <ProjectName>Strona za pięć zeta</ProjectName> został
               dodany!
             </Paragraph>
-            <Button>Wyjdź</Button>
+            <Link to="/pages/AuthWelcomeView">
+              <Button>Wyjdź</Button>
+            </Link>
           </>
         }
       ></AddProjectTemplateView>

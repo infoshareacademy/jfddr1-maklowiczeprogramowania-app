@@ -12,9 +12,9 @@ import MenuMobile from "./pages/mobile/MenuMobile";
 import Projects from "./pages/Projects";
 import SignIn from "./pages/SignIn";
 import SignUpDesktop from "./pages/desktop/SignUpDesktop";
-import SignUpFull1Mobile from "./pages/SignUpFull1Mobile";
-import SignUpFull2Mobile from "./pages/SignUpFull6Mobile";
-import SignUpFull6Mobile from "./pages/SignUpFull6Mobile";
+import SignUpFull1Mobile from "./pages/mobile/SignUpFull1Mobile";
+import SignUpFull2Mobile from "./pages/mobile/SignUpFull6Mobile";
+import SignUpFull6Mobile from "./pages/mobile/SignUpFull6Mobile";
 import SignUpMobile from "./pages/mobile/SignUpMobile";
 import WelcomePage from "./pages/WelcomePage";
 
@@ -52,13 +52,13 @@ const Router = () => {
         <Route path="/">
           <WelcomePage />
         </Route>
-        <Route path="/pages/SignUpFull1Mobile">
+        <Route path="/pages/mobile/SignUpFull1Mobile">
           <SignUpFull1Mobile />
         </Route>
-        <Route path="/pages/SignUpFull2Mobile">
+        <Route path="/pages/mobile/SignUpFull2Mobile">
           <SignUpFull2Mobile />
         </Route>
-        <Route path="/pages/SignUpFull6Mobile">
+        <Route path="/pages/mobile/SignUpFull6Mobile">
           <SignUpFull6Mobile />
         </Route>
       </Switch>

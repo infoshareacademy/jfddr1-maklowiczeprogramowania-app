@@ -1,11 +1,11 @@
 import React from "react";
 import MediaQuery from "react-responsive";
 import styled from "styled-components";
-import Input from "../components/Input";
-import Label from "../components/Label";
-import MobileFormTemplate from "../components/templates/MobileFormTemplate";
-import SmallButton from "../components/buttons/SmallButton";
-import { SignInTitle } from "../components/SignInUpElements";
+import Input from "../../components/Input";
+import Label from "../../components/Label";
+import MobileFormTemplate from "../../components/templates/MobileFormTemplate";
+import SmallButton from "../../components/buttons/SmallButton";
+import { SignInTitle } from "../../components/SignInUpElements";
 
 const SlideItem = styled.span`
   font-size: 2rem;

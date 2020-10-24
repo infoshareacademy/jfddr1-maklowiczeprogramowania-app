@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import MobileViewTemplate from "../components/MobileViewTemplate";
+import MobileFormTemplate from "../components/templates/MobileFormTemplate";
+import DesktopFormTemplate from "../components/templates/DesktopFormTemplate";
 import { StyledLabel } from "../components/Label";
 import Input from "../components/Input";
 import MediumButton from "../components/MediumButton";
@@ -11,19 +12,19 @@ import {
 } from "../components/SignIn.styled";
 
 const MainInputContainer = styled.div`
-display: flex; 
-gap: 5rem;
+  display: flex;
+  gap: 5rem;
 `;
 
 const SideInputContainer = styled.div`
-display: flex;
-flex-direction: column;
-flex-grow: 1;
-flex-basis: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 1rem;
 `;
 
 const StyleLabelDesktop = styled(StyledLabel)`
-margin: 45px 0 3px 0;
+  margin: 45px 0 3px 0;
 `;
 
 const ButtonContainer = styled.div`
@@ -49,8 +50,8 @@ const SingUpInfoParagraph = styled.p`
 const SignUpDesktop = () => {
   return (
     //width: 811px;
-    //height: 650px; 
-    <MobileViewTemplate>
+    //height: 650px;
+    <DesktopFormTemplate>
       <SignInTitle>Załóż konto</SignInTitle>
       <MainInputContainer style={{ display: "flex", gap: "5rem" }}>
         <SideInputContainer>
@@ -58,18 +59,21 @@ const SignUpDesktop = () => {
           <Input type={""} />
           <StyleLabelDesktop>{"Email"}</StyleLabelDesktop>
           <Input type={"email"} />
-      <StyledParagraph>
-        Masz już konto? Zaloguj się <StyledAnchor href="/">tutaj</StyledAnchor>
-      </StyledParagraph>
-        <SingUpInfoContainer>
-          <SingUpInfoMark>!</SingUpInfoMark>
-          <SingUpInfoParagraph>
-            Wypełnij nasz szczegółowy formularz, żeby korzystać ze wszystkich możliwości, zrób to teraz i miej to z głowy!
-          </SingUpInfoParagraph>
-          <SingUpInfoParagraph>
-            Możesz też pominąć ten krok i przyglądać się naszemu portalowi z nieco dalszej odległości!
-          </SingUpInfoParagraph>
-        </SingUpInfoContainer>
+          <StyledParagraph>
+            Masz już konto? Zaloguj się{" "}
+            <StyledAnchor href="/">tutaj</StyledAnchor>
+          </StyledParagraph>
+          <SingUpInfoContainer>
+            <SingUpInfoMark>!</SingUpInfoMark>
+            <SingUpInfoParagraph>
+              Wypełnij nasz szczegółowy formularz, żeby korzystać ze wszystkich
+              możliwości, zrób to teraz i miej to z głowy!
+            </SingUpInfoParagraph>
+            <SingUpInfoParagraph>
+              Możesz też pominąć ten krok i przyglądać się naszemu portalowi z
+              nieco dalszej odległości!
+            </SingUpInfoParagraph>
+          </SingUpInfoContainer>
         </SideInputContainer>
         <SideInputContainer>
           <StyleLabelDesktop>{"Nazwisko"}</StyleLabelDesktop>
@@ -82,7 +86,7 @@ const SignUpDesktop = () => {
         <MediumButton type={"submit"} label={"Stwórz konto"} />
         <MediumButton type={"submit"} label={"Wypełnij formularz"} />
       </ButtonContainer>
-    </MobileViewTemplate>
+    </DesktopFormTemplate>
   );
 };
 

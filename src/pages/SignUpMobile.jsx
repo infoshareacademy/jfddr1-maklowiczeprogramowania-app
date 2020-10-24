@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import MobileViewTemplate from "../components/MobileViewTemplate";
-import Label from "../components/Label";
 import Input from "../components/Input";
+import Label from "../components/Label";
+import MobileFormTemplate from "../components/templates/MobileFormTemplate";
 import SmallButton from "../components/SmallButton";
 import {
   SignInTitle,
@@ -32,7 +32,7 @@ const SingUpInfoParagraph = styled.p`
 
 const SignUpMobile = () => {
   return (
-    <MobileViewTemplate>
+    <MobileFormTemplate>
       <SignInTitle>Załóż konto</SignInTitle>
       <Label>{"Imię"}</Label>
       <Input type={""} />
@@ -60,7 +60,7 @@ const SignUpMobile = () => {
         <SmallButton type={"submit"} label={"Stwórz konto"} />
         <SmallButton type={"submit"} label={"Wypełnij formularz"} />
       </ButtonContainer>
-    </MobileViewTemplate>
+    </MobileFormTemplate>
   );
 };
 

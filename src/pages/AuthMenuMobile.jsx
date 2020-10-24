@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import AuthNavigationTemplate from "../components/AuthNavigationTemplate";
-import HamburgerMenu from "../components/HamburgerMenu";
-import HamburgerMenuSrc from "../img/radix-icons_hamburger-menu-dark.svg";
+import MenuIconsAuthBar from "../components/MenuIconsAuthBar";
 
 const HeaderContainer = styled.header`
   display: flex;
@@ -23,10 +22,10 @@ const UserImageWrapper = styled.div`
 `;
 
 const UserImage = styled.img`
-  height: 50px;
-  width: 50px;
+  height: 56px;
+  width: 56px;
   background-color: var(--light-clr);
-  border-radius: 25px;
+  border-radius: 28px;
   margin: 0 7px 0 12px;
 `;
 
@@ -43,19 +42,6 @@ const UserName = styled.p`
 
 const UserSpecialization = styled.p`
   font-size: 0.8rem;
-`;
-
-const TopIconsNavContainer = styled.section`
-  display: flex;
-  border-radius: 40px 0 0 40px;
-  justify-content: flex-end;
-  background-color: var(--light-clr);
-  padding: 10px 15px 10px 25px;
-  gap: 20px;
-`;
-
-const ReHamburgerMenu = styled(HamburgerMenu)`
-  width: 1.8rem;
 `;
 
 const MainContainer = styled.main`
@@ -80,11 +66,7 @@ const AuthMenuMobile = () => {
             <UserSpecialization>Front-End Developer</UserSpecialization>
           </UserNameAndSpecWrapper>
         </UserDetailsContainer>
-        <TopIconsNavContainer>
-          <ReHamburgerMenu src={HamburgerMenuSrc} />
-          <ReHamburgerMenu src={HamburgerMenuSrc} />
-          <ReHamburgerMenu src={HamburgerMenuSrc} />
-        </TopIconsNavContainer>
+        <MenuIconsAuthBar />
       </HeaderContainer>
       <MainContainer>
         <AuthNavigationTemplate />

@@ -22,50 +22,50 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Switch>
-        {/* <Route path="/pages/sign-up-desktop">
+        {/* <Route path="/pages/SignUpDesktop">
           <SignUpDesktop />
         </Route> */}
-        {/* <Route path="/pages/sign-in">
+        {/* <Route path="/pages/SignIn">
           <SignIn />
         </Route> */}
-        <Route path="/pages/addProjectView0">
+        <Route path="/pages/AddProjectView0">
           <AddProjectView0 />
         </Route>
-        <Route path="/pages/addProjectView1">
+        <Route path="/pages/AddProjectView1">
           <AddProjectView1 />
         </Route>
-        <Route path="/pages/addProjectView2">
+        <Route path="/pages/AddProjectView2">
           <AddProjectView2 />
         </Route>
-        <Route path="/pages/addProjectView3">
+        <Route path="/pages/AddProjectView3">
           <AddProjectView3 />
         </Route>
-        <Route path="/pages/addProjectView4">
+        <Route path="/pages/AddProjectView4">
           <AddProjectView4 />
         </Route>
-        <Route path="/pages/addProjectViewDone">
+        <Route path="/pages/AddProjectViewDone">
           <AddProjectViewDone />
         </Route>
-        <Route path="/pages/authWelcomeView">
+        <Route path="/pages/AuthWelcomeView">
           <AuthWelcomeView />
         </Route>
         <Route path="/">
           <WelcomePage />
         </Route>
-        <Route path="/pages/signUpFull1Mobile">
+        <Route path="/pages/SignUpFull1Mobile">
           <SignUpFull1Mobile />
         </Route>
-        <Route path="/pages/signUpFull2Mobile">
+        <Route path="/pages/SignUpFull2Mobile">
           <SignUpFull2Mobile />
         </Route>
-        <Route path="/pages/signUpFull6Mobile">
+        <Route path="/pages/SignUpFull6Mobile">
           <SignUpFull6Mobile />
         </Route>
       </Switch>
-      <Route path="/pages/signUpDesktop">
+      <Route path="/pages/SignUpDesktop">
         <SignUpDesktop />
       </Route>{" "}
-      <Route path="/pages/signIn">
+      <Route path="/pages/SignIn">
         <SignIn />
       </Route>
     </BrowserRouter>

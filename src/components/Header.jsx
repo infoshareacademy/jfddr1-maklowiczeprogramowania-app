@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import HamburgerMenu from "../components/HamburgerMenu";
 import HamburgerMenuSrc from "../img/icons_hamburger-menu-light.svg";
-import Wrapper from "../components/Wrapper";
 import HeaderImageSrc from "../img/header-image.png";
-import { StyledButton } from "../components/Button";
 import MediaQuery from "react-responsive";
+import Wrapper from "../components/Wrapper";
+import { StyledButton } from "../components/Button";
 
 const HeaderHeading = styled.h1`
   font-size: 2.5rem;
@@ -60,6 +60,7 @@ const CreateHeroButton = styled.button`
     font-size: 1.2rem;
   }
 `;
+
 const HowItWorksButton = styled(CreateHeroButton)`
   background: transparent;
   padding: 1em 2em;
@@ -104,16 +105,19 @@ const DesktopNav = styled.nav`
     left: 45%;
   }
 `;
+
 const DesktopNavList = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
   list-style: none;
 `;
+
 const DesktopNavListItem = styled.li`
   font-size: 1.2rem;
   font-weight: 500;
 `;
+
 const DesktopNavListLink = styled.a`
   margin-right: 3em;
 `;
@@ -125,6 +129,10 @@ const StyledHeaderButton = styled(StyledButton)`
   padding: 1rem 2rem;
   margin-left: 2em;
 `;
+
+const rootOverflowHidden = () => {
+  return (document.querySelector(":root").style.overflow = "hidden");
+};
 
 const Header = () => {
   return (
@@ -140,10 +148,14 @@ const Header = () => {
               <DesktopNavListLink>Jak to działa?</DesktopNavListLink>
               <DesktopNavListLink>Wiedza o IT</DesktopNavListLink>
               <Link to="../pages/SignIn">
-                <StyledHeaderButton>Zaloguj się</StyledHeaderButton>
+                <StyledHeaderButton onClick={rootOverflowHidden}>
+                  Zaloguj się
+                </StyledHeaderButton>
               </Link>
               <Link to="../pages/SignUpDesktop">
-                <StyledHeaderButton>Zarejestruj się</StyledHeaderButton>
+                <StyledHeaderButton onClick={rootOverflowHidden}>
+                  Zarejestruj się
+                </StyledHeaderButton>
               </Link>
             </DesktopNavListItem>
           </DesktopNavList>

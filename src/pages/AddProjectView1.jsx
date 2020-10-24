@@ -5,7 +5,7 @@ import { StyledSmallButton } from "../components/buttons/SmallButton";
 import AddProjectTemplateView from "./AddProjectTemplateView";
 import { Link } from "react-router-dom";
 import { StyledInput } from "../components/Input";
-import { StyledLabel } from "../components/Label";
+import { StyledLabelMobile } from "../components/Label";
 import { fieldTagsDB } from "../mocks/FieldTagsData.js";
 import AuthDesktopTemplate from "../pages/AuthDesktopTemplate";
 const Heading = styled.h1`
@@ -52,7 +52,7 @@ const BigGreyishInput = styled(GreyishInput)`
   height: 8em;
 `;
 
-const Label = styled(StyledLabel)`
+const Label = styled(StyledLabelMobile)`
   font-weight: 500;
   align-self: flex-start;
   margin-left: 1.4em;

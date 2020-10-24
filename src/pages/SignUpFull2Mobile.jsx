@@ -4,8 +4,8 @@ import MobileWiewTemplateWithExit from "../components/MobileWiewTemplateWithExit
 import ProjectDoneIconSrc from "../img/project-done.svg";
 import SmallButton from "../components/buttons/SmallButton";
 import { ButtonContainer } from "./signUpFull1Mobile";
-import { SignInTitle } from "../components/SignIn.styled";
-import { StyledParagraph } from "../components/SignIn.styled";
+import { SignInTitle } from "../components/SignInUpElements";
+import { StyledParagraph } from "../components/SignInUpElements";
 
 const ProjectDoneContainer = styled.section`
   display: flex;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import MobileFormTemplate from "../components/templates/MobileFormTemplate";
 import SmallButton from "../components/buttons/SmallButton";
 import signUpFullImageMobileImageSrc from "../img/sign-up-full-image-mobile.svg";
-import { SignInTitle } from "../components/SignIn.styled";
+import { SignInTitle } from "../components/SignInUpElements";
 
 const SlideContainer = styled.div`
   display: flex;

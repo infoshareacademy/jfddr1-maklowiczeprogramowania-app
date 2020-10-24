@@ -8,7 +8,7 @@ import {
   SignInTitle,
   StyledParagraph,
   StyledAnchor,
-} from "../../components/SignIn.styled";
+} from "../../components/SignInUpElements";
 
 const ButtonContainer = styled.div`
   display: flex;

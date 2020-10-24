@@ -1,19 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import MobileFormTemplate from "../../components/templates/MobileFormTemplate";
 import DesktopFormTemplate from "../../components/templates/DesktopFormTemplate";
-import { StyledLabel } from "../../components/Label";
+import { StyledLabelDesktop } from "../../components/Label";
 import Input from "../../components/Input";
 import MediumButton from "../../components/buttons/MediumButton";
 import {
   SignInTitle,
   StyledParagraph,
   StyledAnchor,
-} from "../../components/SignIn.styled";
+} from "../../components/SignInUpElements";
 
 const MainInputContainer = styled.div`
   display: flex;
-  gap: 5rem;
+  gap: 3rem;
 `;
 
 const SideInputContainer = styled.div`
@@ -21,10 +20,6 @@ const SideInputContainer = styled.div`
   flex-direction: column;
   flex-grow: 1;
   flex-basis: 1rem;
-`;
-
-const StyleLabelDesktop = styled(StyledLabel)`
-  margin: 45px 0 3px 0;
 `;
 
 const ButtonContainer = styled.div`
@@ -53,11 +48,11 @@ const SignUpDesktop = () => {
     //height: 650px;
     <DesktopFormTemplate>
       <SignInTitle>Załóż konto</SignInTitle>
-      <MainInputContainer style={{ display: "flex", gap: "5rem" }}>
+      <MainInputContainer>
         <SideInputContainer>
-          <StyleLabelDesktop>{"Imię"}</StyleLabelDesktop>
+          <StyledLabelDesktop>{"Imię"}</StyledLabelDesktop>
           <Input type={""} />
-          <StyleLabelDesktop>{"Email"}</StyleLabelDesktop>
+          <StyledLabelDesktop>{"Email"}</StyledLabelDesktop>
           <Input type={"email"} />
           <StyledParagraph>
             Masz już konto? Zaloguj się{" "}
@@ -76,9 +71,9 @@ const SignUpDesktop = () => {
           </SingUpInfoContainer>
         </SideInputContainer>
         <SideInputContainer>
-          <StyleLabelDesktop>{"Nazwisko"}</StyleLabelDesktop>
+          <StyledLabelDesktop>{"Nazwisko"}</StyledLabelDesktop>
           <Input type={""} />
-          <StyleLabelDesktop>{"Hasło"}</StyleLabelDesktop>
+          <StyledLabelDesktop>{"Hasło"}</StyledLabelDesktop>
           <Input type={"password"} />
         </SideInputContainer>
       </MainInputContainer>

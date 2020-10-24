@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import HamburgerMenu from "./HamburgerMenu";
-import HamburgerMenuSrc from "../img/radix-icons_hamburger-menu-dark.svg";
+import HamburgerMenu from "../HamburgerMenu";
+import HamburgerMenuSrc from "../../img/radix-icons_hamburger-menu-dark.svg";
 
 const MainContainer = styled.main`
   display: flex;
@@ -31,7 +31,7 @@ const ChildrenContainer = styled.section`
   max-width: 60%;
 `;
 
-const MobileViewTemplate = ({ children }) => {
+const MobileFormTemplate = ({ children }) => {
   return (
     <MainContainer>
       <HamburgerMenuContainer>
@@ -45,4 +45,4 @@ const MobileViewTemplate = ({ children }) => {
   );
 };
 
-export default MobileViewTemplate;
+export default MobileFormTemplate;

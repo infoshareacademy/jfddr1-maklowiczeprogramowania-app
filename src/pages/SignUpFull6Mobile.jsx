@@ -1,11 +1,11 @@
 import React from "react";
-import MobileViewTemplate from "../components/MobileViewTemplate";
-import SmallButton from "../components/SmallButton";
-import Label from "../components/Label";
-import Input from "../components/Input";
-import { SignInTitle } from "../components/SignIn.styled";
-import styled from "styled-components";
 import MediaQuery from "react-responsive";
+import styled from "styled-components";
+import Input from "../components/Input";
+import Label from "../components/Label";
+import MobileFormTemplate from "../components/templates/MobileFormTemplate";
+import SmallButton from "../components/SmallButton";
+import { SignInTitle } from "../components/SignIn.styled";
 
 const SlideItem = styled.span`
   font-size: 2rem;
@@ -35,7 +35,7 @@ const SlideContainer = styled.div`
 const SignUpFull6FormMobile = () => {
   return (
     <MediaQuery maxDeviceWidth={1024}>
-      <MobileViewTemplate>
+      <MobileFormTemplate>
         <SignInTitle>Podstawowe Dane</SignInTitle>
         <Label>{"Imię"}</Label>
         <Input type={"text"} />
@@ -54,7 +54,7 @@ const SignUpFull6FormMobile = () => {
           <SlideItem>•</SlideItem>
           <SlideItem>•</SlideItem>
         </SlideContainer>
-      </MobileViewTemplate>
+      </MobileFormTemplate>
     </MediaQuery>
   );
 };

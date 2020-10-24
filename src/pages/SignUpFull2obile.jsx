@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import MobileWiewTemplateWithExit from "../components/MobileWiewTemplateWithExit";
-import { StyledParagraph } from "../components/SignIn.styled";
-import { SignInTitle } from "../components/SignIn.styled";
-import { ButtonContainer } from "./signUpFull1Mobile";
-import SmallButton from "../components/SmallButton";
 import ProjectDoneIconSrc from "../img/project-done.svg";
+import SmallButton from "../components/SmallButton";
+import { ButtonContainer } from "./signUpFull1Mobile";
+import { SignInTitle } from "../components/SignIn.styled";
+import { StyledParagraph } from "../components/SignIn.styled";
 
 const ProjectDoneContainer = styled.section`
   display: flex;

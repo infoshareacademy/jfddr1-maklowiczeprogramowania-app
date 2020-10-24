@@ -1,11 +1,10 @@
 import React from "react";
-import MobileViewTemplate from "../components/MobileViewTemplate";
-import SmallButton from "../components/SmallButton";
-import { SignInTitle } from "../components/SignIn.styled";
-import styled from "styled-components";
 import MediaQuery from "react-responsive";
-
+import styled from "styled-components";
+import MobileFormTemplate from "../components/templates/MobileFormTemplate";
+import SmallButton from "../components/SmallButton";
 import signUpFullImageMobileImageSrc from "../img/sign-up-full-image-mobile.svg";
+import { SignInTitle } from "../components/SignIn.styled";
 
 const SlideContainer = styled.div`
   display: flex;
@@ -40,7 +39,7 @@ const FullFormMobileImage = ({ src }) => {
 const signUpFull1FormMobile = () => {
   return (
     <MediaQuery maxDeviceWidth={1024}>
-      <MobileViewTemplate>
+      <MobileFormTemplate>
         <FullFormMobileImage src={signUpFullImageMobileImageSrc} />
         <SignInTitleCenter>Załóż konto w kilku</SignInTitleCenter>
         <SignInTitleCenter>prostych krokach!</SignInTitleCenter>
@@ -54,7 +53,7 @@ const signUpFull1FormMobile = () => {
           <SlideItem>•</SlideItem>
           <SlideItem>•</SlideItem>
         </SlideContainer>
-      </MobileViewTemplate>
+      </MobileFormTemplate>
     </MediaQuery>
   );
 };

@@ -17,8 +17,8 @@ const PopUpContainer = styled.div`
 const MainContainer = styled.main`
   display: flex;
   flex-direction: column;
-  width: 40rem;
-  height: 35rem;
+  width: 50rem;
+  height: auto;
   border-radius: 2rem 2rem 2rem 2rem;
   font-weight: 600;
   background: var(--light-clr);
@@ -43,8 +43,8 @@ const ChildrenContainer = styled.section`
   flex-direction: column;
   align-self: center;
   justify-self: center;
-  min-width: 80%;
-  max-width: 80%;
+  min-width: 90%;
+  max-width: 90%;
   padding: 2rem 0;
 `;
 

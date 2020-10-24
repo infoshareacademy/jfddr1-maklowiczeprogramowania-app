@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import MobileFormTemplate from "../components/templates/MobileFormTemplate";
-import DesktopFormTemplate from "../components/templates/DesktopFormTemplate";
-import { StyledLabel } from "../components/Label";
-import Input from "../components/Input";
-import MediumButton from "../components/MediumButton";
+import MobileFormTemplate from "../../components/templates/MobileFormTemplate";
+import DesktopFormTemplate from "../../components/templates/DesktopFormTemplate";
+import { StyledLabel } from "../../components/Label";
+import Input from "../../components/Input";
+import MediumButton from "../../components/buttons/MediumButton";
 import {
   SignInTitle,
   StyledParagraph,
   StyledAnchor,
-} from "../components/SignIn.styled";
+} from "../../components/SignIn.styled";
 
 const MainInputContainer = styled.div`
   display: flex;

@@ -6,7 +6,7 @@ import HamburgerMenuSrc from "../img/icons_hamburger-menu-light.svg";
 import HeaderImageSrc from "../img/header-image.png";
 import MediaQuery from "react-responsive";
 import Wrapper from "../components/Wrapper";
-import { StyledButton } from "../components/Button";
+import { StyledButton } from "./buttons/Button";
 
 const HeaderHeading = styled.h1`
   font-size: 2.5rem;

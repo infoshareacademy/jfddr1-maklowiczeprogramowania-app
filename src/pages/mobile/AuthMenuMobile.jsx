@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import AuthNavigationTemplate from "../components/AuthNavigationTemplate";
-import MenuIconsAuthBar from "../components/MenuIconsAuthBar";
+import AuthNavigationTemplate from "../../components/templates/AuthNavigationTemplate";
+import MenuIconsAuthBar from "../../components/MenuIconsAuthBar";
 
 const HeaderContainer = styled.header`
   display: flex;

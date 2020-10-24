@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import Input from "../components/Input";
-import Label from "../components/Label";
-import MobileFormTemplate from "../components/templates/MobileFormTemplate";
-import SmallButton from "../components/SmallButton";
+import Input from "../../components/Input";
+import Label from "../../components/Label";
+import MobileFormTemplate from "../../components/templates/MobileFormTemplate";
+import SmallButton from "../../components/buttons/SmallButton";
 import {
   SignInTitle,
   StyledParagraph,
   StyledAnchor,
-} from "../components/SignIn.styled";
+} from "../../components/SignIn.styled";
 
 const ButtonContainer = styled.div`
   display: flex;

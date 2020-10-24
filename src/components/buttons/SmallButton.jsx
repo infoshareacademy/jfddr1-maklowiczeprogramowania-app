@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { StyledButton } from "../components/Button";
+import { StyledButton } from "./Button";
 
 export const StyledSmallButton = styled(StyledButton)`
   font-weight: 600;

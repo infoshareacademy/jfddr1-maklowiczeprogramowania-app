@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { authMenuDB } from "../mocks/AuthMenuData.js";
-import { StyledSmallButton } from "./SmallButton";
+import { authMenuDB } from "../../mocks/AuthMenuData.js";
+import { StyledSmallButton } from "../buttons/SmallButton";
 
 const AuthMenuList = styled.ul`
   display: flex;

@@ -8,7 +8,7 @@ import HamburgerMenuSrc from "../img/radix-icons_hamburger-menu-dark.svg";
 import { StyledInput } from "../components/Input";
 import { getSearchSpecializationTagNames } from "../mocks/SearchTags.js";
 import { getProjectsData } from "../mocks/Projects.js";
-import { StyledSmallButton } from "../components/SmallButton";
+import { StyledSmallButton } from "../components/buttons/SmallButton";
 import MediaQuery from "react-responsive";
 import UserAvatarImageSrc from "../img/team1.svg";
 import { authMenuDB } from "../mocks/AuthMenuData.js";

@@ -2,7 +2,7 @@ import React from "react";
 import MediaQuery from "react-responsive";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Button from "../components/Button";
+import Button from "../components/buttons/Button";
 import DesktopFormTemplate from "../components/templates/DesktopFormTemplate";
 import Input from "../components/Input";
 import Label from "../components/Label";

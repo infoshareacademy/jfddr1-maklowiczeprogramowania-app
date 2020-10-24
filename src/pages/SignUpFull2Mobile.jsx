@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import MobileWiewTemplateWithExit from "../components/MobileWiewTemplateWithExit";
 import ProjectDoneIconSrc from "../img/project-done.svg";
-import SmallButton from "../components/SmallButton";
+import SmallButton from "../components/buttons/SmallButton";
 import { ButtonContainer } from "./signUpFull1Mobile";
 import { SignInTitle } from "../components/SignIn.styled";
 import { StyledParagraph } from "../components/SignIn.styled";

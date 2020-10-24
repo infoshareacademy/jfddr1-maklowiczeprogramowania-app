@@ -3,7 +3,7 @@ import styled from "styled-components";
 import MediaQuery from "react-responsive";
 import { Link } from "react-router-dom";
 
-import { StyledSmallButton } from "../components/SmallButton";
+import { StyledSmallButton } from "../components/buttons/SmallButton";
 import AddProjectTemplateView from "./AddProjectTemplateView";
 
 const Heading = styled.h1`

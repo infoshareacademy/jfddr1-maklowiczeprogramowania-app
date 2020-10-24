@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Input from "../components/Input";
 import Label from "../components/Label";
 import MobileFormTemplate from "../components/templates/MobileFormTemplate";
-import SmallButton from "../components/SmallButton";
+import SmallButton from "../components/buttons/SmallButton";
 import { SignInTitle } from "../components/SignIn.styled";
 
 const SlideItem = styled.span`

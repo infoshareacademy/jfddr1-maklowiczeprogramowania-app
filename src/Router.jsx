@@ -6,16 +6,16 @@ import AddProjectView2 from "./pages/AddProjectView2";
 import AddProjectView3 from "./pages/AddProjectView3";
 import AddProjectView4 from "./pages/AddProjectView4";
 import AddProjectViewDone from "./pages/AddProjectViewDone";
-import AuthMenuMobile from "./pages/AuthMenuMobile";
+import AuthMenuMobile from "./pages/mobile/AuthMenuMobile";
 import AuthWelcomeView from "./pages/AuthWelcomeView";
-import MenuMobile from "./pages/MenuMobile";
+import MenuMobile from "./pages/mobile/MenuMobile";
 import Projects from "./pages/Projects";
 import SignIn from "./pages/SignIn";
-import SignUpDesktop from "./pages/SignUpDesktop";
+import SignUpDesktop from "./pages/desktop/SignUpDesktop";
 import SignUpFull1Mobile from "./pages/SignUpFull1Mobile";
 import SignUpFull2Mobile from "./pages/SignUpFull6Mobile";
 import SignUpFull6Mobile from "./pages/SignUpFull6Mobile";
-import SignUpMobile from "./pages/SignUpMobile";
+import SignUpMobile from "./pages/mobile/SignUpMobile";
 import WelcomePage from "./pages/WelcomePage";
 
 const Router = () => {

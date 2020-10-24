@@ -2,7 +2,7 @@ import React from "react";
 import MediaQuery from "react-responsive";
 import styled from "styled-components";
 import MobileFormTemplate from "../components/templates/MobileFormTemplate";
-import SmallButton from "../components/SmallButton";
+import SmallButton from "../components/buttons/SmallButton";
 import signUpFullImageMobileImageSrc from "../img/sign-up-full-image-mobile.svg";
 import { SignInTitle } from "../components/SignIn.styled";
 

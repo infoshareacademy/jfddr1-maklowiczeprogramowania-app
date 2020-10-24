@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import MediaQuery from "react-responsive";
-import { StyledSmallButton } from "../components/SmallButton";
+import { StyledSmallButton } from "../components/buttons/SmallButton";
 import AddProjectTemplateView from "./AddProjectTemplateView";
 import { Link } from "react-router-dom";
 import { StyledInput } from "../components/Input";

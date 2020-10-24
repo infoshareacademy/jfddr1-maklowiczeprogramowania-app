@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import MediaQuery from "react-responsive";
 import ImageSrc from "../img/add-project-idea-image.svg";
-import { StyledSmallButton } from "../components/SmallButton";
+import { StyledSmallButton } from "../components/buttons/SmallButton";
 import AddProjectTemplateView from "./AddProjectTemplateView";
 
 const Image = styled.img`
@@ -42,7 +42,7 @@ const Paragraph = styled.p`
   }
 
   @media (min-width: 1024px) {
-    font-size: 1.6rem;
+    font-size: 1.6rem;Gratulacje
     padding: 0 6em;
   }
 `;

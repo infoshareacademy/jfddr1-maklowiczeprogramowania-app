@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import MobileFormTemplate from "../components/templates/MobileFormTemplate";
-import { getMenuMobileTabsDB } from "../mocks/MenuMobileTabs.js";
+import MobileFormTemplate from "../../components/templates/MobileFormTemplate";
+import { getMenuMobileTabsDB } from "../../mocks/MenuMobileTabs.js";
 
 const StyledMobileMenuTab = styled.a`
   padding: 15px;

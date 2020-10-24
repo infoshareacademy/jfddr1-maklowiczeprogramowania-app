@@ -28,44 +28,44 @@ const Router = () => {
         {/* <Route path="/pages/sign-in">
           <SignIn />
         </Route> */}
-        <Route path="/pages/add-project-view-0">
+        <Route path="/pages/addProjectView0">
           <AddProjectView0 />
         </Route>
-        <Route path="/pages/add-project-view-1">
+        <Route path="/pages/addProjectView1">
           <AddProjectView1 />
         </Route>
-        <Route path="/pages/add-project-view-2">
+        <Route path="/pages/addProjectView2">
           <AddProjectView2 />
         </Route>
-        <Route path="/pages/add-project-view-3">
+        <Route path="/pages/addProjectView3">
           <AddProjectView3 />
         </Route>
-        <Route path="/pages/add-project-view-4">
+        <Route path="/pages/addProjectView4">
           <AddProjectView4 />
         </Route>
-        <Route path="/pages/add-project-view-done">
+        <Route path="/pages/addProjectViewDone">
           <AddProjectViewDone />
         </Route>
-        <Route path="/pages/auth-welcome-view">
+        <Route path="/pages/authWelcomeView">
           <AuthWelcomeView />
         </Route>
         <Route path="/">
           <WelcomePage />
         </Route>
-        <Route path="/pages/sign-up-full-1-mobile">
+        <Route path="/pages/signUpFull1Mobile">
           <SignUpFull1Mobile />
         </Route>
-        <Route path="/pages/sign-up-full-2-mobile">
+        <Route path="/pages/signUpFull2Mobile">
           <SignUpFull2Mobile />
         </Route>
-        <Route path="/pages/sign-up-full-6-mobile">
+        <Route path="/pages/signUpFull6Mobile">
           <SignUpFull6Mobile />
         </Route>
       </Switch>
-      <Route path="/pages/sign-up-desktop">
+      <Route path="/pages/signUpDesktop">
         <SignUpDesktop />
       </Route>{" "}
-      <Route path="/pages/sign-in">
+      <Route path="/pages/signIn">
         <SignIn />
       </Route>
     </BrowserRouter>

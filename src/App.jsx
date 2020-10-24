@@ -1,6 +1,7 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 import Router from "./Router";
+
 const GlobalStyle = createGlobalStyle`
   :root {
     --dark-clr: #2B2B3F;
@@ -14,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
   body {
     font-family: "Quicksand", sans-serif;
     width: 100vw;
@@ -24,7 +26,6 @@ const GlobalStyle = createGlobalStyle`
 li {
   list-style:none;
 }
-
 `;
 
 const App = () => {

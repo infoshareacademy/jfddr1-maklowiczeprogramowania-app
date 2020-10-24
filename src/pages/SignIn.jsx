@@ -1,29 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import MediaQuery from "react-responsive";
 import styled from "styled-components";
-import Label from "../components/Label";
-import Input from "../components/Input";
+import { Link } from "react-router-dom";
 import Button from "../components/Button";
+import DesktopFormTemplate from "../components/templates/DesktopFormTemplate";
+import Input from "../components/Input";
+import Label from "../components/Label";
+import MobileFormTemplate from "../components/templates/MobileFormTemplate";
 import {
   SignInTitle,
   StyledParagraph,
   StyledAnchor,
 } from "../components/SignIn.styled";
-import MediaQuery from "react-responsive";
-import MobileViewTemplate from "../components/MobileViewTemplate";
-import MobileWiewTemplateWithExit from "../components/MobileWiewTemplateWithExit";
-
-const PopUpContainer = styled.div`
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.2);
-  top: 0;
-  left: 0;
-`;
 
 const SignInForm = () => {
   return (
@@ -48,16 +36,14 @@ const SignIn = () => {
   return (
     <>
       <MediaQuery maxWidth={1023}>
-        <MobileViewTemplate>
+        <MobileFormTemplate>
           <SignInForm />
-        </MobileViewTemplate>
+        </MobileFormTemplate>
       </MediaQuery>
       <MediaQuery minWidth={1024}>
-        <PopUpContainer>
-          <MobileWiewTemplateWithExit popUp>
-            <SignInForm />
-          </MobileWiewTemplateWithExit>
-        </PopUpContainer>
+        <DesktopFormTemplate>
+          <SignInForm />
+        </DesktopFormTemplate>
       </MediaQuery>
     </>
   );

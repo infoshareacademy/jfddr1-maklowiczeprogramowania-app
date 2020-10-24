@@ -8,14 +8,12 @@ const AuthMenuList = styled.ul`
   flex-direction: column;
   align-items: center;
   min-width: 100%;
-  border: 1px solid green;
 `;
 
 const AuthMenuItem = styled.li`
   display: flex;
   min-height: 3.8rem;
   min-width: 100%;
-  border: 1px solid red;
 `;
 
 const AuthMenuItemLink = styled.a`
@@ -23,7 +21,7 @@ const AuthMenuItemLink = styled.a`
   align-items: center;
   justify-content: center;
   min-width: 100%;
-  border: 1px solid blue;
+  cursor: pointer;
 `;
 
 const AuthMenuItemLinkWrapper = styled.p`

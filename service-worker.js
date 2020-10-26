@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/jfddr1-maklowiczeprogramowania-app/precache-manifest.32296d06ad0d4d2cc4e94eace3fcb6f9.js"
+  "/jfddr1-maklowiczeprogramowania-app/precache-manifest.ea0b4dfdd46efcd1bdd74b66d50a438f.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -35,5 +35,5 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/jfddr1-maklowiczeprogramowania-app/index.html"), {
   
-  blacklist: [/^\/_/,/\/[^\/?]+\.[^\/]+$/],
+  blacklist: [/^\/_/,/\/[^/?]+\.[^/]+$/],
 });

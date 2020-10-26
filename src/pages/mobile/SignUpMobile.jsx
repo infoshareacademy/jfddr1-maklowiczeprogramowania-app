@@ -34,14 +34,14 @@ const SignUpMobile = () => {
   return (
     <MobileFormTemplate>
       <SignInTitle>Załóż konto</SignInTitle>
-      <Label>{"Imię"}</Label>
-      <Input type={""} />
-      <Label>{"Nazwisko"}</Label>
-      <Input type={""} />
-      <Label>{"Email"}</Label>
-      <Input type={"email"} />
-      <Label>{"Hasło"}</Label>
-      <Input type={"password"} />
+      <Label htmlFor={"firstName"}>{"Imię"}</Label>
+      <Input id={"firstName"} name={"firstName"} type={"text"} />
+      <Label htmlFor={"secondName"}>{"Nazwisko"}</Label>
+      <Input id={"secondName"} name={"secondName"} type={"text"} />
+      <Label htmlFor={"email"}>{"Email"}</Label>
+      <Input id={"email"} name={"email"} type={"email"} />
+      <Label htmlFor={"password"}>{"Hasło"}</Label>
+      <Input id={"password"} name={"password"} type={"password"} />
       <StyledParagraph>
         Masz już konto? Zaloguj się <StyledAnchor href="/">tutaj</StyledAnchor>
       </StyledParagraph>

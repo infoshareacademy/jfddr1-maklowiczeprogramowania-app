@@ -44,16 +44,16 @@ const SingUpInfoParagraph = styled.p`
 
 const SignUpDesktop = () => {
   return (
-    //width: 811px;
-    //height: 650px;
     <DesktopFormTemplate>
       <SignInTitle>Załóż konto</SignInTitle>
       <MainInputContainer>
         <SideInputContainer>
-          <StyledLabelDesktop>{"Imię"}</StyledLabelDesktop>
-          <Input type={""} />
-          <StyledLabelDesktop>{"Email"}</StyledLabelDesktop>
-          <Input type={"email"} />
+          <StyledLabelDesktop htmlFor={"firstName"}>
+            {"Imię"}
+          </StyledLabelDesktop>
+          <Input id={"firstName"} name={"firstName"} type={"text"} />
+          <StyledLabelDesktop htmlFor={"email"}>{"Email"}</StyledLabelDesktop>
+          <Input id={"email"} name={"email"} type={"email"} />
           <StyledParagraph>
             Masz już konto? Zaloguj się{" "}
             <StyledAnchor href="/">tutaj</StyledAnchor>
@@ -71,10 +71,14 @@ const SignUpDesktop = () => {
           </SingUpInfoContainer>
         </SideInputContainer>
         <SideInputContainer>
-          <StyledLabelDesktop>{"Nazwisko"}</StyledLabelDesktop>
-          <Input type={""} />
-          <StyledLabelDesktop>{"Hasło"}</StyledLabelDesktop>
-          <Input type={"password"} />
+          <StyledLabelDesktop htmlFor={"secondName"}>
+            {"Nazwisko"}
+          </StyledLabelDesktop>
+          <Input id={"secondName"} name={"secondName"} type={"text"} />
+          <StyledLabelDesktop htmlFor={"password"}>
+            {"Hasło"}
+          </StyledLabelDesktop>
+          <Input id={"password"} name={"password"} type={"password"} />
         </SideInputContainer>
       </MainInputContainer>
       <ButtonContainer>

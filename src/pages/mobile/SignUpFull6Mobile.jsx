@@ -37,14 +37,14 @@ const SignUpFull6FormMobile = () => {
     <MediaQuery maxDeviceWidth={1024}>
       <MobileFormTemplate>
         <SignInTitle>Podstawowe Dane</SignInTitle>
-        <Label>{"Imię"}</Label>
-        <Input type={"text"} />
-        <Label>{"Nazwisko"}</Label>
-        <Input type={"text"} />
-        <Label>{"Email"}</Label>
-        <Input type={"email"} />
-        <Label>{"Hasło"}</Label>
-        <Input type={"password"} />
+        <Label htmlFor={"firstName"}>{"Imię"}</Label>
+        <Input id={"firstName"} name={"firstName"} type={"text"} />
+        <Label htmlFor={"secondName"}>{"Nazwisko"}</Label>
+        <Input id={"secondName"} name={"secondName"} type={"text"} />
+        <Label htmlFor={"email"}>{"Email"}</Label>
+        <Input id={"email"} name={"email"} type={"email"} />
+        <Label htmlFor={"password"}>{"Hasło"}</Label>
+        <Input id={"password"} name={"password"} type={"password"} />
         <ButtonContainer>
           <SmallButton type={"submit"} label={"Dalej"} />
         </ButtonContainer>

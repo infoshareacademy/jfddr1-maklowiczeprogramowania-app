@@ -7,24 +7,23 @@ import MainWelcomePageLightBackgroundSrc from "../img/background-vector-left.svg
 import MainWelcomePageLightRightBackgroundSrc from "../img/background-vector-right.svg";
 import MainWelcomePageLightLeftBackgroundSrc from "../img/background-vector-left-2.svg";
 import { getWelcomePageArticlesData } from "../mocks/WelcomePageArticlesData.js";
-// import { device } from '../MediaQueries'
 
 const MainWelcomePageContent = styled.main`
-  position: relative;
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
   width: 100vw;
   min-height: 100vh;
   background: #f5f7f7;
-  justify-content: center;
-  flex-direction: column;
 `;
 
 const MainWelcomePageLightBackground = styled.img`
   position: absolute;
   top: 3%;
   left: 0;
-  width: 16em;
   z-index: 0;
+  width: 16em;
   @media (min-width: 768px) {
     width: 25em;
   }
@@ -54,17 +53,15 @@ const MainWelcomePageLightLeftBackground = styled(
 `;
 
 const MainWelcomePageArticle = styled.article`
-  margin: 2em auto;
-  //   border:1px solid red;
-  color: #2b2b3f;
-  //   width: 15em;
   z-index: 2;
+  margin: 2em auto;
+  color: #2b2b3f;
 `;
 
 const WelcomePageImageComponent = styled.img`
+  z-index: 1;
   width: 15em;
   margin: 5em auto 5em auto;
-  z-index: 1;
 `;
 
 const HeadingText = styled.h4`
@@ -82,7 +79,6 @@ const ArticleText = styled.p`
   width: 20em;
   padding: 0 2em;
   margin: 0;
-  text-justify: center;
   font-size: 1.1rem;
   font-weight: 500;
   @media (min-width: 768px) {

@@ -21,7 +21,7 @@ const HamburgerMenuContainer = styled.section`
   margin: 30px 30px 0 0;
 `;
 
-const ChildrenContainer = styled.section`
+const FormContainer = styled.form`
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -37,10 +37,10 @@ const MobileFormTemplate = ({ children }) => {
       <HamburgerMenuContainer>
         <HamburgerMenu src={HamburgerMenuSrc} />
       </HamburgerMenuContainer>
-      <ChildrenContainer>
+      <FormContainer>
         {children}
         {/* {anotherNestedComponent} */}
-      </ChildrenContainer>
+      </FormContainer>
     </MainContainer>
   );
 };

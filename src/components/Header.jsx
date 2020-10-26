@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import HamburgerMenu from "../components/HamburgerMenu";
@@ -130,11 +130,15 @@ const StyledHeaderButton = styled(StyledButton)`
   margin-left: 2em;
 `;
 
-const rootOverflowHidden = () => {
-  return (document.querySelector(":root").style.overflow = "hidden");
-};
-
 const Header = () => {
+  const [isRootOverflowHidden, setIsRootOverflowHidden] = useState("scroll");
+
+  const rootOverflowHidden = () => {
+    const root = document.querySelector(":root");
+
+    return (root.style.overflow = "hidden");
+  };
+
   return (
     <Wrapper>
       <MediaQuery maxDeviceWidth={1024}>

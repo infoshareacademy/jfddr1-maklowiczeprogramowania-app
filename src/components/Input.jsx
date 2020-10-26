@@ -12,8 +12,7 @@ export const StyledInput = styled.input`
   font-size: 1em;
 `;
 
-const Input = ({ id, name, type }) => {
-  return <StyledInput id={id} name={name} type={type} />;
-};
-
+const Input = React.forwardRef(({ id, name, type }, ref) => (
+  <StyledInput ref={ref} id={id} name={name} type={type} />
+));
 export default Input;

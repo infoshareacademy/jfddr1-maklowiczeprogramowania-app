@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import MenuMessageIconSrc from "../img/message-icon.svg";
 import MenuBellIconSrc from "../img/bell-icon.svg";
 import HamburgerMenuSrc from "../img/radix-icons_hamburger-menu-dark.svg";
@@ -10,7 +9,6 @@ import { getProjectsData } from "../mocks/Projects.js";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
 import MediaQuery from "react-responsive";
 import AuthDesktopTemplate from "../pages/AuthDesktopTemplate";
-import MenuIconsAuthBar from "../components/MenuIconsAuthBar";
 const Header = styled.header`
   display: flex;
   align-items: center;
@@ -300,6 +298,7 @@ const AuthWelcomeView = () => {
                   </MenuIconsAuthBackground>
                 </UserInformation>
               </MediaQuery>
+
               <MainHeading>Wyszukaj projekt</MainHeading>
               <SearchWrapper>
                 <SearchInput />

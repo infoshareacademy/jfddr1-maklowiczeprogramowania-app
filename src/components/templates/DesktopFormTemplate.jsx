@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import ExitIcon from "../ExitIcon";
 import ExitIconSrc from "../../img/exit-icon.svg";
 
-const PopUpContainer = styled.div`
+const MainContainer = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +16,7 @@ const PopUpContainer = styled.div`
   background-color: rgba(255, 255, 255, 0.4);
 `;
 
-const MainContainer = styled.main`
+const PopUpContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 52rem;
@@ -33,13 +34,7 @@ const ExitContainer = styled.section`
   margin: 1.8rem 1.8rem 0 0;
 `;
 
-const ExitIcon = styled.img`
-  width: 3rem;
-  margin-right: 1.6rem;
-  padding: 0.6rem;
-`;
-
-const ChildrenContainer = styled.section`
+const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -51,16 +46,16 @@ const ChildrenContainer = styled.section`
 
 const DesktopFormTemplate = ({ children }) => {
   return (
-    <PopUpContainer>
-      <MainContainer>
+    <MainContainer>
+      <PopUpContainer>
         <ExitContainer>
           <Link to="../pages">
             <ExitIcon src={ExitIconSrc} />
           </Link>
         </ExitContainer>
-        <ChildrenContainer>{children}</ChildrenContainer>
-      </MainContainer>
-    </PopUpContainer>
+        <FormContainer>{children}</FormContainer>
+      </PopUpContainer>
+    </MainContainer>
   );
 };
 

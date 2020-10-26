@@ -1,7 +1,7 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
+import { AuthProvider } from "./contexts/AuthContext";
 import Router from "./Router";
-
 const GlobalStyle = createGlobalStyle`
   :root {
     --dark-clr: #2B2B3F;
@@ -31,8 +31,10 @@ li {
 const App = () => {
   return (
     <>
-      <GlobalStyle />
-      <Router />
+      <AuthProvider>
+        <GlobalStyle />
+        <Router />
+      </AuthProvider>
     </>
   );
 };

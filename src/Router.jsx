@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { PrivateRouter } from "./PrivateRouter";
+
 import AddProjectView0 from "./pages/AddProjectView0";
 import AddProjectView1 from "./pages/AddProjectView1";
 import AddProjectView2 from "./pages/AddProjectView2";
@@ -46,9 +48,11 @@ const Router = () => {
         <Route path="/pages/AddProjectViewDone">
           <AddProjectViewDone />
         </Route>
-        <Route path="/pages/AuthWelcomeView">
-          <AuthWelcomeView />
-        </Route>
+        <Route
+          exact
+          path="/pages/AuthWelcomeView"
+          component={AuthWelcomeView}
+        ></Route>
         <Route path="/">
           <WelcomePage />
         </Route>

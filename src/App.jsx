@@ -9,7 +9,6 @@ const GlobalStyle = createGlobalStyle`
     --accent-clr: #FBBB9A;
     --text-clr: #FBFBFB;
   }
-
   * {
     box-sizing: border-box;
     margin: 0;

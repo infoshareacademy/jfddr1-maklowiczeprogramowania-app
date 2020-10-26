@@ -8,11 +8,12 @@ export const StyledInput = styled.input`
   padding: 10px;
   border-radius: 5px;
   border: none;
+  font-family: "Quicksand", sans-serif;
   font-size: 1em;
 `;
 
-const Input = ({ type }) => {
-  return <StyledInput type={type} />;
+const Input = ({ id, name, type }) => {
+  return <StyledInput id={id} name={name} type={type} />;
 };
 
 export default Input;

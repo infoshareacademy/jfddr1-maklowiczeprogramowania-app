@@ -1,18 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-
+import { Link, useHistory } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 import MenuMessageIconSrc from "../img/message-icon.svg";
 import MenuBellIconSrc from "../img/bell-icon.svg";
 import HamburgerMenuSrc from "../img/radix-icons_hamburger-menu-dark.svg";
-import { StyledInput } from "../components/Input";
-import { getSearchSpecializationTagNames } from "../mocks/SearchTags.js";
-import { getProjectsData } from "../mocks/Projects.js";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
 import MediaQuery from "react-responsive";
 import UserAvatarImageSrc from "../img/team1.svg";
 import { authMenuDB } from "../mocks/AuthMenuData.js";
-import MenuImageSrc from "../img/menu-vector-desktop.svg";
 
 const Header = styled.header`
   display: flex;
@@ -24,42 +20,6 @@ const Header = styled.header`
   background: var(--dark-clr);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-`;
-
-const WelcomeText = styled.p`
-  color: var(--light-clr);
-  font-size: 1.2rem;
-  font-weight: 500;
-
-  @media (min-width: 1024px) {
-    color: var(--dark-clr);
-    font-size: 2rem;
-  }
-`;
-
-const NotificationText = styled.p`
-  color: var(--light-clr);
-  margin-top: 0.2rem;
-  font-size: 0.8rem;
-  font-weight: 400;
-  @media (min-width: 1024px) {
-    color: var(--dark-clr);
-    font-size: 1.1rem;
-  }
-`;
-
-const Wrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-  @media (min-width: 1024px) {
-    text-align: left;
-    margin-left: 2em;
-  }
-`;
-
-const AmountOfMessages = styled.span`
-  font-weight: 600;
-  color: var(--accent-clr);
 `;
 
 const MenuIconsAuthBackground = styled.div`
@@ -96,39 +56,12 @@ const HamburgerAuthMenu = styled.img`
   margin-left: 0.7em;
 `;
 
-// export const MenuIconsAuthBar = () => {
-//   return (
-//     <MenuIconsAuthBackground>
-//       <MenuMessageIcon src={MenuMessageIconSrc} />
-//       <MenuBellIcon src={MenuBellIconSrc} />
-//       <MediaQuery maxDeviceWidth={1024}>
-//         <HamburgerAuthMenu src={HamburgerMenuSrc} />
-//       </MediaQuery>
-//     </MenuIconsAuthBackground>
-//   );
-// };
-
 const Main = styled.main`
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
   margin: 5em auto;
-`;
-
-const MainHeading = styled.h2`
-  color: var(--dark-clr);
-  font-weight: 600;
-  margin-bottom: 1em;
-`;
-
-const SpecializationTagNameTemplate = styled.div`
-  background-color: #e9e9e9;
-  padding: 0.5em;
-  width: 8em;
-  color: #b9b9b9;
-  border-radius: 5px;
-  margin: 0em 0.5em 0.5em 0;
 `;
 
 const DesktopMenuBar = styled.section`
@@ -187,6 +120,9 @@ const AuthMenuLink = styled.a`
   font-weight: 600;
   color: var(--light-clr);
   display: inline-block;
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 const CreateProjectButton = styled(StyledSmallButton)`
@@ -206,19 +142,28 @@ const AuthMenuOptionIcon = styled.img`
 
 const AuthMenuItem = styled.li``;
 
-const MenuImage = styled.img`
-  position: absolute;
-  bottom: 0;
-`;
-
 const AuthNavigationTemplate = () => {
-  const authMenuData = authMenuDB;
+  const [error, setError] = useState("");
+  const { currentUser, signOut } = useAuth();
+  const history = useHistory();
+  const signOutHandler = () => {
+    signOut()
+      .then(() => {
+        history.push("/pages/WelcomePage");
+      })
+      .catch(() => {
+        setError("Wylogowywanie nie powiodło się, spróbuj jeszcze raz!");
+      });
+  };
 
+  const authMenuData = authMenuDB;
   const AuthMenuDataComponents = authMenuData.map(({ label, icon }) => {
     return (
       <AuthMenuItem key={label}>
         <AuthMenuOptionIcon src={icon} />
-        <AuthMenuLink key={label}>{label}</AuthMenuLink>
+        <AuthMenuLink onClick={signOutHandler} key={label}>
+          {label}
+        </AuthMenuLink>
       </AuthMenuItem>
     );
   });
@@ -252,7 +197,6 @@ const AuthDesktopTemplate = (props) => {
                 <CreateProjectButton>Stwórz projekt</CreateProjectButton>
               </Link>
             </AuthMenuList>
-            <MenuImage src={MenuImageSrc} />
           </DesktopMenuBar>
         </MediaQuery>
         <Main>{props.children}</Main>

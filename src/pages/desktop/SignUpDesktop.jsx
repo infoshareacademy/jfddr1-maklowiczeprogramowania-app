@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
+import { useAuth } from "../../contexts/AuthContext";
+import { Link, useHistory } from "react-router-dom";
 import DesktopFormTemplate from "../../components/templates/DesktopFormTemplate";
 import { StyledLabelDesktop } from "../../components/Label";
 import Input from "../../components/Input";
@@ -9,7 +11,6 @@ import {
   StyledParagraph,
   StyledAnchor,
 } from "../../components/SignInUpElements";
-
 const MainInputContainer = styled.div`
   display: flex;
   gap: 3rem;
@@ -42,49 +43,94 @@ const SingUpInfoParagraph = styled.p`
   margin: -20px 0 25px 10px;
 `;
 
+const Form = styled.form``;
+
 const SignUpDesktop = () => {
+  const firstNameRef = React.createRef();
+  const secondNameRef = React.createRef();
+  const emailRef = React.createRef();
+  const passwordRef = React.createRef();
+  const { signUp } = useAuth();
+  const history = useHistory();
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    signUp(
+      // firstNameRef.current.value,
+      // secondNameRef.current.value,
+      emailRef.current.value,
+      passwordRef.current.value
+    ).then(history.push("/pages/AuthWelcomeView"));
+  };
+
   return (
     <DesktopFormTemplate>
       <SignInTitle>Załóż konto</SignInTitle>
-      <MainInputContainer>
-        <SideInputContainer>
-          <StyledLabelDesktop htmlFor={"firstName"}>
-            {"Imię"}
-          </StyledLabelDesktop>
-          <Input id={"firstName"} name={"firstName"} type={"text"} />
-          <StyledLabelDesktop htmlFor={"email"}>{"Email"}</StyledLabelDesktop>
-          <Input id={"email"} name={"email"} type={"email"} />
+      <Form onSubmit={submitHandler}>
+        <MainInputContainer>
+          <SideInputContainer>
+            <StyledLabelDesktop htmlFor={"firstName"}>
+              {"Imię"}
+            </StyledLabelDesktop>
+            <Input
+              ref={firstNameRef}
+              id={"firstName"}
+              name={"firstName"}
+              type={"text"}
+              required
+            />
+            <StyledLabelDesktop htmlFor={"email"}>{"Email"}</StyledLabelDesktop>
+            <Input
+              ref={emailRef}
+              id={"email"}
+              name={"email"}
+              type={"email"}
+              required
+            />
+          </SideInputContainer>
+          <SideInputContainer>
+            <StyledLabelDesktop htmlFor={"secondName"}>
+              {"Nazwisko"}
+            </StyledLabelDesktop>
+            <Input
+              ref={secondNameRef}
+              id={"secondName"}
+              name={"secondName"}
+              type={"text"}
+              required
+            />
+            <StyledLabelDesktop htmlFor={"password"}>
+              {"Hasło"}
+            </StyledLabelDesktop>
+            <Input
+              ref={passwordRef}
+              id={"password"}
+              name={"password"}
+              type={"password"}
+              required
+            />
+          </SideInputContainer>
+        </MainInputContainer>
+        <SingUpInfoContainer>
           <StyledParagraph>
-            Masz już konto? Zaloguj się{" "}
+            Masz już konto? Zaloguj się
             <StyledAnchor href="/">tutaj</StyledAnchor>
           </StyledParagraph>
-          <SingUpInfoContainer>
-            <SingUpInfoMark>!</SingUpInfoMark>
-            <SingUpInfoParagraph>
-              Wypełnij nasz szczegółowy formularz, żeby korzystać ze wszystkich
-              możliwości, zrób to teraz i miej to z głowy!
-            </SingUpInfoParagraph>
-            <SingUpInfoParagraph>
-              Możesz też pominąć ten krok i przyglądać się naszemu portalowi z
-              nieco dalszej odległości!
-            </SingUpInfoParagraph>
-          </SingUpInfoContainer>
-        </SideInputContainer>
-        <SideInputContainer>
-          <StyledLabelDesktop htmlFor={"secondName"}>
-            {"Nazwisko"}
-          </StyledLabelDesktop>
-          <Input id={"secondName"} name={"secondName"} type={"text"} />
-          <StyledLabelDesktop htmlFor={"password"}>
-            {"Hasło"}
-          </StyledLabelDesktop>
-          <Input id={"password"} name={"password"} type={"password"} />
-        </SideInputContainer>
-      </MainInputContainer>
-      <ButtonContainer>
-        <MediumButton type={"submit"} label={"Stwórz konto"} />
-        <MediumButton type={"submit"} label={"Wypełnij formularz"} />
-      </ButtonContainer>
+          <SingUpInfoMark>!</SingUpInfoMark>
+          <SingUpInfoParagraph>
+            Wypełnij nasz szczegółowy formularz, żeby korzystać ze wszystkich
+            możliwości, zrób to teraz i miej to z głowy!
+          </SingUpInfoParagraph>
+          <SingUpInfoParagraph>
+            Możesz też pominąć ten krok i przyglądać się naszemu portalowi z
+            nieco dalszej odległości!
+          </SingUpInfoParagraph>
+        </SingUpInfoContainer>
+        <ButtonContainer>
+          <MediumButton type={"submit"} label={"Stwórz konto"} />
+          <MediumButton label={"Wypełnij formularz"} />
+        </ButtonContainer>
+      </Form>
     </DesktopFormTemplate>
   );
 };

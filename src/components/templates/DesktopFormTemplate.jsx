@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import ExitIconSrc from "../../img/exit-icon.svg";
 
 const PopUpContainer = styled.div`
@@ -17,7 +18,7 @@ const PopUpContainer = styled.div`
 const MainContainer = styled.main`
   display: flex;
   flex-direction: column;
-  width: 50rem;
+  width: 52rem;
   height: auto;
   border-radius: 2rem 2rem 2rem 2rem;
   font-weight: 600;
@@ -53,7 +54,9 @@ const DesktopFormTemplate = ({ children }) => {
     <PopUpContainer>
       <MainContainer>
         <ExitContainer>
-          <ExitIcon src={ExitIconSrc} />
+          <Link to="../pages">
+            <ExitIcon src={ExitIconSrc} />
+          </Link>
         </ExitContainer>
         <ChildrenContainer>{children}</ChildrenContainer>
       </MainContainer>

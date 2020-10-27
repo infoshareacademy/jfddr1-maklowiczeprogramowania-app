@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
@@ -43,6 +43,18 @@ const SingUpInfoParagraph = styled.p`
   margin: -20px 0 25px 10px;
 `;
 
+const ErrorMessageBackground = styled.div`
+  margin-top: 2em;
+  padding: 1em;
+  border-radius: 4px;
+  background: #fbbb9a;
+  color: #f49869;
+`;
+
+const ErrorMessageParagraph = styled.p`
+  font-size: 1.1rem;
+`;
+
 const Form = styled.form``;
 
 const SignUpDesktop = () => {
@@ -50,6 +62,7 @@ const SignUpDesktop = () => {
   const secondNameRef = React.createRef();
   const emailRef = React.createRef();
   const passwordRef = React.createRef();
+  const [error, setError] = useState();
   const { signUp } = useAuth();
   const history = useHistory();
 
@@ -60,12 +73,23 @@ const SignUpDesktop = () => {
       // secondNameRef.current.value,
       emailRef.current.value,
       passwordRef.current.value
-    ).then(history.push("/pages/AuthWelcomeView"));
+    )
+      .then(() => {
+        history.push("/pages/AuthWelcomeView");
+      })
+      .catch(() => {
+        setError("Rejestracja nie powiodła się, spróbuj ponownie!");
+      });
   };
 
   return (
     <DesktopFormTemplate>
       <SignInTitle>Załóż konto</SignInTitle>
+      {error && (
+        <ErrorMessageBackground>
+          <ErrorMessageParagraph>{error}</ErrorMessageParagraph>
+        </ErrorMessageBackground>
+      )}
       <Form onSubmit={submitHandler}>
         <MainInputContainer>
           <SideInputContainer>

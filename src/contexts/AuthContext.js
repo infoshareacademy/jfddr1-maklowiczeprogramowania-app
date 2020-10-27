@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const history = useHistory();
 
-  const signUp = (email, password) => {
+  const signUp = (email, password, firstName, secondName) => {
     return auth.createUserWithEmailAndPassword(email, password);
   };
 

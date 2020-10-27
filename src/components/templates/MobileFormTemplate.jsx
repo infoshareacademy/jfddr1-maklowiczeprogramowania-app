@@ -3,7 +3,7 @@ import styled from "styled-components";
 import HamburgerMenu from "../HamburgerMenu";
 import HamburgerMenuSrc from "../../img/radix-icons_hamburger-menu-dark.svg";
 
-const MainContainer = styled.main`
+const MainContainer = styled.section`
   display: flex;
   flex-direction: column;
   background: var(--light-clr);

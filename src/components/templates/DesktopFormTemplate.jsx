@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import ExitIcon from "../ExitIcon";
 import ExitIconSrc from "../../img/exit-icon.svg";
 
-const MainContainer = styled.main`
+const MainContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,16 +34,6 @@ const ExitContainer = styled.section`
   margin: 1.8rem 1.8rem 0 0;
 `;
 
-const FormContainer = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-self: center;
-  min-width: 90%;
-  max-width: 90%;
-  padding: 2rem 0;
-`;
-
 const DesktopFormTemplate = ({ children }) => {
   return (
     <MainContainer>
@@ -53,7 +43,7 @@ const DesktopFormTemplate = ({ children }) => {
             <ExitIcon src={ExitIconSrc} />
           </Link>
         </ExitContainer>
-        <FormContainer>{children}</FormContainer>
+        {children}
       </PopUpContainer>
     </MainContainer>
   );

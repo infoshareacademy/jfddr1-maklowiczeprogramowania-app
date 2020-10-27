@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContext";
 import DesktopFormTemplate from "../../components/templates/DesktopFormTemplate";
 import { StyledLabelDesktop } from "../../components/Label";
+import { SignInFormContainer } from "../SignIn";
 import Input from "../../components/Input";
 import MediumButton from "../../components/buttons/MediumButton";
 import {
@@ -11,6 +12,12 @@ import {
   StyledParagraph,
   StyledAnchor,
 } from "../../components/SignInUpElements";
+
+const SignUpFormContainer = styled(SignInFormContainer)`
+  min-width: 90%;
+  max-width: 90%;
+`;
+
 const MainInputContainer = styled.div`
   display: flex;
   gap: 3rem;
@@ -43,13 +50,24 @@ const SingUpInfoParagraph = styled.p`
   margin: -20px 0 25px 10px;
 `;
 
-const Form = styled.form``;
+const ErrorMessageBackground = styled.div`
+  margin-top: 2em;
+  padding: 1em;
+  border-radius: 4px;
+  background: #fbbb9a;
+  color: #f49869;
+`;
+
+const ErrorMessageParagraph = styled.p`
+  font-size: 1.1rem;
+`;
 
 const SignUpDesktop = () => {
   const firstNameRef = React.createRef();
   const secondNameRef = React.createRef();
   const emailRef = React.createRef();
   const passwordRef = React.createRef();
+  const [error, setError] = useState();
   const { signUp } = useAuth();
   const history = useHistory();
 
@@ -60,13 +78,24 @@ const SignUpDesktop = () => {
       // secondNameRef.current.value,
       emailRef.current.value,
       passwordRef.current.value
-    ).then(history.push("/pages/AuthWelcomeView"));
+    )
+      .then(() => {
+        history.push("/pages/AuthWelcomeView");
+      })
+      .catch(() => {
+        setError("Rejestracja nie powiodła się, spróbuj ponownie!");
+      });
   };
 
   return (
     <DesktopFormTemplate>
-      <SignInTitle>Załóż konto</SignInTitle>
-      <Form onSubmit={submitHandler}>
+      <SignUpFormContainer onSubmit={submitHandler}>
+        <SignInTitle>Załóż konto</SignInTitle>
+        {error && (
+          <ErrorMessageBackground>
+            <ErrorMessageParagraph>{error}</ErrorMessageParagraph>
+          </ErrorMessageBackground>
+        )}
         <MainInputContainer>
           <SideInputContainer>
             <StyledLabelDesktop htmlFor={"firstName"}>
@@ -87,6 +116,23 @@ const SignUpDesktop = () => {
               type={"email"}
               required
             />
+            <StyledParagraph>
+              Masz już konto? Zaloguj się{" "}
+              <Link to="../pages/SignIn">
+                <StyledAnchor>tutaj</StyledAnchor>
+              </Link>
+            </StyledParagraph>
+            <SingUpInfoContainer>
+              <SingUpInfoMark>!</SingUpInfoMark>
+              <SingUpInfoParagraph>
+                Wypełnij nasz szczegółowy formularz, żeby korzystać ze
+                wszystkich możliwości, zrób to teraz i miej to z głowy!
+              </SingUpInfoParagraph>
+              <SingUpInfoParagraph>
+                Możesz też pominąć ten krok i przyglądać się naszemu portalowi z
+                nieco dalszej odległości!
+              </SingUpInfoParagraph>
+            </SingUpInfoContainer>
           </SideInputContainer>
           <SideInputContainer>
             <StyledLabelDesktop htmlFor={"secondName"}>
@@ -111,26 +157,11 @@ const SignUpDesktop = () => {
             />
           </SideInputContainer>
         </MainInputContainer>
-        <SingUpInfoContainer>
-          <StyledParagraph>
-            Masz już konto? Zaloguj się
-            <StyledAnchor href="/">tutaj</StyledAnchor>
-          </StyledParagraph>
-          <SingUpInfoMark>!</SingUpInfoMark>
-          <SingUpInfoParagraph>
-            Wypełnij nasz szczegółowy formularz, żeby korzystać ze wszystkich
-            możliwości, zrób to teraz i miej to z głowy!
-          </SingUpInfoParagraph>
-          <SingUpInfoParagraph>
-            Możesz też pominąć ten krok i przyglądać się naszemu portalowi z
-            nieco dalszej odległości!
-          </SingUpInfoParagraph>
-        </SingUpInfoContainer>
         <ButtonContainer>
           <MediumButton type={"submit"} label={"Stwórz konto"} />
-          <MediumButton label={"Wypełnij formularz"} />
+          <MediumButton type={"submit"} label={"Wypełnij formularz"} />
         </ButtonContainer>
-      </Form>
+      </SignUpFormContainer>
     </DesktopFormTemplate>
   );
 };

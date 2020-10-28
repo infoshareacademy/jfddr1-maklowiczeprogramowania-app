@@ -1,49 +1,49 @@
 import React from "react";
-import MediaQuery from "react-responsive";
 import styled from "styled-components";
-import MobileFormTemplate from "../../components/templates/MobileFormTemplate";
-import Button from "../../components/buttons/Button";
-import { SignInTitle } from "../../components/SignInUpElements";
-
-const SlideItem = styled.span`
-  font-size: 2rem;
-`;
-
-const SlideItemActive = styled(SlideItem)`
-  color: #fbbb9a;
-  font-size: 3rem;
-`;
-
-const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 30px;
-  align-items: center;
-`;
-
-const SlideContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-  gap: 10px;
-  align-items: center;
-`;
+import { Link } from "react-router-dom";
+import MobileViewTemplate, {
+  MobileFormWrapper,
+} from "../../components/templates/MobileViewTemplate";
+import SmallButton from "../../components/buttons/SmallButton";
+import {
+  Title,
+  ButtonContainer,
+  SlideContainer,
+  SlideItem,
+  SlideItemActive,
+} from "../../components/SignInUpElements";
 
 const SignUpFull4Mobile = () => {
   return (
-    <MobileFormTemplate>
-      <SignInTitle>Wybierz technologie</SignInTitle>
-      <ButtonContainer>
-        <Button type={"submit"} label={"Dalej"} />
-      </ButtonContainer>
+    <MobileViewTemplate>
+      <MobileFormWrapper>
+        <Title>Wybierz technologie</Title>
+        <ButtonContainer>
+          <SmallButton type={"submit"} label={"Dalej"} />
+        </ButtonContainer>
+      </MobileFormWrapper>
       <SlideContainer>
-        <SlideItem>•</SlideItem>
-        <SlideItem>•</SlideItem>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull2Mobile"
+        >
+          <SlideItem>•</SlideItem>
+        </Link>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull3Mobile"
+        >
+          <SlideItem>•</SlideItem>
+        </Link>
         <SlideItemActive>•</SlideItemActive>
-        <SlideItem>•</SlideItem>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull5Mobile"
+        >
+          <SlideItem>•</SlideItem>
+        </Link>
       </SlideContainer>
-    </MobileFormTemplate>
+    </MobileViewTemplate>
   );
 };
 

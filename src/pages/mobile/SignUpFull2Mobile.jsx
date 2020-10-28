@@ -1,51 +1,60 @@
 import React from "react";
 import styled from "styled-components";
-import MobileWiewTemplateWithExit from "../components/MobileWiewTemplateWithExit";
-import ProjectDoneIconSrc from "../img/project-done.svg";
+import { Link } from "react-router-dom";
+import Input from "../../components/Input";
+import Label from "../../components/Label";
+import MobileViewTemplate, {
+  MobileFormWrapper,
+} from "../../components/templates/MobileViewTemplate";
 import SmallButton from "../../components/buttons/SmallButton";
-import { ButtonContainer } from "./signUpFull1Mobile";
-import { SignInTitle } from "../../components/SignInUpElements";
-import { StyledParagraph } from "../../components/SignInUpElements";
+import {
+  ButtonContainer,
+  Title,
+  SlideContainer,
+  SlideItem,
+  SlideItemActive,
+} from "../../components/SignInUpElements";
 
-const ProjectDoneContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-`;
-
-const ProjectDone = styled.img`
-  height: 250px;
-  margin-bottom: 30px;
-  margin-top: 100px;
-`;
-
-const StyledParagraphCenter = styled(StyledParagraph)`
-  text-align: center;
-  margin: 5px 0 5px 0;
-  font-size: 1.5rem;
-`;
-
-const SignInTitleGratulacje = styled(SignInTitle)`
-  font-size: 2rem;
-`;
-
-const SignUpFull2FormMobile = () => {
+const SignUpFull2Mobile = () => {
   return (
-    <MobileWiewTemplateWithExit>
-      <ProjectDoneContainer>
-        <ProjectDone src={ProjectDoneIconSrc} />
-      </ProjectDoneContainer>
-      <SignInTitleGratulacje>Gratulacje!</SignInTitleGratulacje>
-      <StyledParagraphCenter>
-        Utworzyłeś konto, teraz możesz
-      </StyledParagraphCenter>
-      <StyledParagraphCenter>
-        korzystać z naszych dobrodziejstw!
-      </StyledParagraphCenter>
-      <ButtonContainer>
-        <SmallButton type={"submit"} label={"Profil"} />
-      </ButtonContainer>
-    </MobileWiewTemplateWithExit>
+    <MobileViewTemplate>
+      <MobileFormWrapper>
+        <Title>Podstawowe Dane</Title>
+        <Label htmlFor={"firstName"}>{"Imię"}</Label>
+        <Input id={"firstName"} name={"firstName"} type={"text"} />
+        <Label htmlFor={"secondName"}>{"Nazwisko"}</Label>
+        <Input id={"secondName"} name={"secondName"} type={"text"} />
+        <Label htmlFor={"email"}>{"Email"}</Label>
+        <Input id={"email"} name={"email"} type={"email"} />
+        <Label htmlFor={"password"}>{"Hasło"}</Label>
+        <Input id={"password"} name={"password"} type={"password"} />
+        <ButtonContainer>
+          <SmallButton type={"submit"} label={"Dalej"} />
+        </ButtonContainer>
+      </MobileFormWrapper>
+      <SlideContainer>
+        <SlideItemActive>•</SlideItemActive>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull3Mobile"
+        >
+          <SlideItem>•</SlideItem>
+        </Link>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull4Mobile"
+        >
+          <SlideItem>•</SlideItem>
+        </Link>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull5Mobile"
+        >
+          <SlideItem>•</SlideItem>
+        </Link>
+      </SlideContainer>
+    </MobileViewTemplate>
   );
 };
 
-export default SignUpFull2FormMobile;
+export default SignUpFull2Mobile;

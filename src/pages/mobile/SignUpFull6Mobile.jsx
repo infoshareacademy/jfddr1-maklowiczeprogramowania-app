@@ -1,62 +1,62 @@
 import React from "react";
-import MediaQuery from "react-responsive";
 import styled from "styled-components";
-import Input from "../../components/Input";
-import Label from "../../components/Label";
-import MobileFormTemplate from "../../components/templates/MobileFormTemplate";
+import { Link } from "react-router-dom";
+import MobileViewTemplate, {
+  MobileCommonWrapper,
+} from "../../components/templates/MobileViewTemplate";
+import ProjectDoneIconSrc from "../../img/project-done.svg";
 import SmallButton from "../../components/buttons/SmallButton";
-import { SignInTitle } from "../../components/SignInUpElements";
+import {
+  SmallerTitle,
+  ButtonContainer,
+  SlideContainer,
+  SlideItemActive,
+} from "../../components/SignInUpElements";
+import { Description } from "../../components/SignInUpElements";
 
-const SlideItem = styled.span`
-  font-size: 2rem;
-`;
-
-const SlideItemActive = styled(SlideItem)`
-  color: #fbbb9a;
-  font-size: 3rem;
-`;
-
-const ButtonContainer = styled.div`
+const ProjectDoneWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-top: 30px;
-  align-items: center;
 `;
 
-const SlideContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-  gap: 10px;
-  align-items: center;
+const ProjectDone = styled.img`
+  height: 12.5rem;
+  margin-bottom: 1.5rem;
 `;
 
-const SignUpFull6FormMobile = () => {
+const CongratTitle = styled(SmallerTitle)`
+  margin-bottom: 1rem;
+`;
+
+const DescriptionCenter = styled(Description)`
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0.3rem 0 0.3rem 0;
+`;
+
+const SignUpFull6Mobile = () => {
   return (
-    <MediaQuery maxDeviceWidth={1024}>
-      <MobileFormTemplate>
-        <SignInTitle>Podstawowe Dane</SignInTitle>
-        <Label htmlFor={"firstName"}>{"Imię"}</Label>
-        <Input id={"firstName"} name={"firstName"} type={"text"} />
-        <Label htmlFor={"secondName"}>{"Nazwisko"}</Label>
-        <Input id={"secondName"} name={"secondName"} type={"text"} />
-        <Label htmlFor={"email"}>{"Email"}</Label>
-        <Input id={"email"} name={"email"} type={"email"} />
-        <Label htmlFor={"password"}>{"Hasło"}</Label>
-        <Input id={"password"} name={"password"} type={"password"} />
+    <MobileViewTemplate>
+      <MobileCommonWrapper>
+        <ProjectDoneWrapper>
+          <ProjectDone src={ProjectDoneIconSrc} />
+        </ProjectDoneWrapper>
+        <CongratTitle>Gratulacje!</CongratTitle>
+        <DescriptionCenter>
+          Utworzyłeś konto, teraz możesz korzystać z naszych dobrodziejstw!
+        </DescriptionCenter>
         <ButtonContainer>
-          <SmallButton type={"submit"} label={"Dalej"} />
+          <SmallButton type={"submit"} label={"Profil"} />
         </ButtonContainer>
-        <SlideContainer>
-          <SlideItemActive>•</SlideItemActive>
-          <SlideItem>•</SlideItem>
-          <SlideItem>•</SlideItem>
-          <SlideItem>•</SlideItem>
-        </SlideContainer>
-      </MobileFormTemplate>
-    </MediaQuery>
+      </MobileCommonWrapper>
+      <SlideContainer>
+        <SlideItemActive>•</SlideItemActive>
+        <SlideItemActive>•</SlideItemActive>
+        <SlideItemActive>•</SlideItemActive>
+        <SlideItemActive>•</SlideItemActive>
+      </SlideContainer>
+    </MobileViewTemplate>
   );
 };
 
-export default SignUpFull6FormMobile;
+export default SignUpFull6Mobile;

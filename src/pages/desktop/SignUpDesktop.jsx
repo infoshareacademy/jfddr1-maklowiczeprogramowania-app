@@ -4,21 +4,19 @@ import * as firebase from "firebase/app";
 import "firebase/firestore";
 import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
-import DesktopFormTemplate from "../../components/templates/DesktopFormTemplate";
+import DesktopViewTemplate, {
+  DesktopFormWrapper,
+} from "../../components/templates/DesktopViewTemplate";
 import { StyledLabelDesktop } from "../../components/Label";
-import { SignInFormContainer } from "../SignIn";
 import Input from "../../components/Input";
 import MediumButton from "../../components/buttons/MediumButton";
 import {
-  SignInTitle,
-  StyledParagraph,
+  Title,
+  Description,
   StyledAnchor,
 } from "../../components/SignInUpElements";
+
 console.log(firebase);
-const SignUpFormContainer = styled(SignInFormContainer)`
-  min-width: 90%;
-  max-width: 90%;
-`;
 
 const MainInputContainer = styled.div`
   display: flex;
@@ -90,9 +88,9 @@ const SignUpDesktop = () => {
   };
 
   return (
-    <DesktopFormTemplate>
-      <SignUpFormContainer onSubmit={submitHandler}>
-        <SignInTitle>Załóż konto</SignInTitle>
+    <DesktopViewTemplate>
+      <DesktopFormWrapper onSubmit={submitHandler}>
+        <Title>Załóż konto</Title>
         {error && (
           <ErrorMessageBackground>
             <ErrorMessageParagraph>{error}</ErrorMessageParagraph>
@@ -118,12 +116,12 @@ const SignUpDesktop = () => {
               type={"email"}
               required
             />
-            <StyledParagraph>
+            <Description>
               Masz już konto? Zaloguj się{" "}
               <Link to="../pages/SignIn">
                 <StyledAnchor>tutaj</StyledAnchor>
               </Link>
-            </StyledParagraph>
+            </Description>
             <SingUpInfoContainer>
               <SingUpInfoMark>!</SingUpInfoMark>
               <SingUpInfoParagraph>
@@ -163,8 +161,8 @@ const SignUpDesktop = () => {
           <MediumButton type={"submit"} label={"Stwórz konto"} />
           <MediumButton type={"submit"} label={"Wypełnij formularz"} />
         </ButtonContainer>
-      </SignUpFormContainer>
-    </DesktopFormTemplate>
+      </DesktopFormWrapper>{" "}
+    </DesktopViewTemplate>
   );
 };
 

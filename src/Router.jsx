@@ -11,7 +11,7 @@ import AuthMenuMobile from "./pages/mobile/AuthMenuMobile";
 import AuthWelcomeView from "./pages/AuthWelcomeView";
 import MenuMobile from "./pages/mobile/MenuMobile";
 import Projects from "./pages/Projects";
-import SignIn from "./pages/SignIn";
+import SignInDesktop from "./pages/desktop/SignInDesktop";
 import SignUpDesktop from "./pages/desktop/SignUpDesktop";
 import SignUpFull1Mobile from "./pages/mobile/SignUpFull1Mobile";
 import SignUpFull2Mobile from "./pages/mobile/SignUpFull2Mobile";
@@ -29,8 +29,8 @@ const Router = () => {
         {/* <Route path="/pages/SignUpDesktop">
           <SignUpDesktop />
         </Route> */}
-        {/* <Route path="/pages/SignIn">
-          <SignIn />
+        {/* <Route path="/pages/SignInDesktop">
+          <SignInDesktop />
         </Route> */}
         <Route path="/pages/AddProjectView0">
           <AddProjectView0 />
@@ -55,42 +55,42 @@ const Router = () => {
           path="/pages/AuthWelcomeView"
           component={AuthWelcomeView}
         ></PrivateRouter>
-        <Route path="/">
-          <WelcomePage />
-        </Route>
-        <Route path="/pages/mobile/MenuMobile">
+        <Route path="/pages/MenuMobile">
           <MenuMobile />
         </Route>
-        <Route path="/pages/mobile/AuthMenuMobile">
+        <Route path="/pages/AuthMenuMobile">
           <AuthMenuMobile />
         </Route>
-        <Route path="/pages/mobile/SignUpMobile">
+        <Route path="/pages/SignUpMobile">
           <SignUpMobile />
         </Route>
-        <Route path="/pages/mobile/SignUpFull1Mobile">
+        <Route path="/pages/SignUpFull1Mobile">
           <SignUpFull1Mobile />
         </Route>
-        <Route path="/pages/mobile/SignUpFull2Mobile">
+        <Route path="/pages/SignUpFull2Mobile">
           <SignUpFull2Mobile />
         </Route>
-        <Route path="/pages/mobile/SignUpFull3Mobile">
+        <Route path="/pages/SignUpFull3Mobile">
           <SignUpFull3Mobile />
         </Route>
-        <Route path="/pages/mobile/SignUpFull4Mobile">
+        <Route path="/pages/SignUpFull4Mobile">
           <SignUpFull4Mobile />
         </Route>
-        <Route path="/pages/mobile/SignUpFull5Mobile">
+        <Route path="/pages/SignUpFull5Mobile">
           <SignUpFull5Mobile />
         </Route>
-        <Route path="/pages/mobile/SignUpFull6Mobile">
+        <Route path="/pages/SignUpFull6Mobile">
           <SignUpFull6Mobile />
+        </Route>
+        <Route path="/">
+          <WelcomePage />
         </Route>
       </Switch>
       <Route path="/pages/SignUpDesktop">
         <SignUpDesktop />
-      </Route>{" "}
-      <Route path="/pages/SignIn">
-        <SignIn />
+      </Route>
+      <Route path="/pages/SignInDesktop">
+        <SignInDesktop />
       </Route>
     </BrowserRouter>
   );

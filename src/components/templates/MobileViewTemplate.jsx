@@ -27,8 +27,8 @@ export const MobileCommonWrapper = styled.section`
   flex-direction: column;
   align-self: center;
   justify-self: center;
-  min-width: 75%;
-  max-width: 75%;
+  min-width: 80%;
+  max-width: 80%;
 `;
 
 export const MobileFormWrapper = styled.form`
@@ -37,8 +37,8 @@ export const MobileFormWrapper = styled.form`
   flex-direction: column;
   align-self: center;
   justify-self: center;
-  min-width: 75%;
-  max-width: 75%;
+  min-width: 80%;
+  max-width: 80%;
 `;
 
 const MobileViewTemplate = ({ children }) => {

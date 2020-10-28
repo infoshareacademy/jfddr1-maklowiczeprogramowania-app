@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import MobileFormTemplate from "../../components/templates/MobileFormTemplate";
+import MobileViewTemplate, {
+  MobileCommonWrapper,
+} from "../../components/templates/MobileViewTemplate";
 import { getMenuMobileTabsDB } from "../../mocks/MenuMobileTabs.js";
 
 const StyledMobileMenuTab = styled.a`
@@ -28,7 +30,11 @@ const MenuMobile = () => {
 
   return (
     // <MobTemplate anotherNestedComponent={<ExampleComp/>} >
-    <MobileFormTemplate>{searchedMenuMobileTabsComponents}</MobileFormTemplate>
+    <MobileViewTemplate>
+      <MobileCommonWrapper>
+        {searchedMenuMobileTabsComponents}
+      </MobileCommonWrapper>
+    </MobileViewTemplate>
   );
 };
 

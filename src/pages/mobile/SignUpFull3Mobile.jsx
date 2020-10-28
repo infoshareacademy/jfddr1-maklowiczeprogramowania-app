@@ -48,9 +48,7 @@ const SignUpFull3Mobile = () => {
     <MobileFormTemplate>
       <SignInTitleActive>Wybierz narzędzia</SignInTitleActive>
       <SelectElementContainer>
-        <SelectElement
-          options={["Dodaj Znajome Narzędzia", "option2", "option3"]}
-        />
+        <SelectElement />
       </SelectElementContainer>
       <ButtonContainer>
         <Button type={"submit"} label={"Stwórz konto"} />

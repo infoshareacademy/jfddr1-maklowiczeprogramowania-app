@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/jfddr1-maklowiczeprogramowania-app/static/js/main.b1c132de.chunk.js",
-    "main.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/main.b1c132de.chunk.js.map",
+    "main.js": "/jfddr1-maklowiczeprogramowania-app/static/js/main.6843d877.chunk.js",
+    "main.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/main.6843d877.chunk.js.map",
     "runtime-main.js": "/jfddr1-maklowiczeprogramowania-app/static/js/runtime-main.59d3cbc5.js",
     "runtime-main.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/runtime-main.59d3cbc5.js.map",
-    "static/js/2.1e815d54.chunk.js": "/jfddr1-maklowiczeprogramowania-app/static/js/2.1e815d54.chunk.js",
-    "static/js/2.1e815d54.chunk.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/2.1e815d54.chunk.js.map",
+    "static/js/2.3762de46.chunk.js": "/jfddr1-maklowiczeprogramowania-app/static/js/2.3762de46.chunk.js",
+    "static/js/2.3762de46.chunk.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/2.3762de46.chunk.js.map",
     "index.html": "/jfddr1-maklowiczeprogramowania-app/index.html",
-    "precache-manifest.c3b79b8f8e36a55726c41aa4501f3baf.js": "/jfddr1-maklowiczeprogramowania-app/precache-manifest.c3b79b8f8e36a55726c41aa4501f3baf.js",
+    "precache-manifest.059ac729fe90e552ac882b4a15cfb69d.js": "/jfddr1-maklowiczeprogramowania-app/precache-manifest.059ac729fe90e552ac882b4a15cfb69d.js",
     "service-worker.js": "/jfddr1-maklowiczeprogramowania-app/service-worker.js",
-    "static/js/2.1e815d54.chunk.js.LICENSE.txt": "/jfddr1-maklowiczeprogramowania-app/static/js/2.1e815d54.chunk.js.LICENSE.txt",
+    "static/js/2.3762de46.chunk.js.LICENSE.txt": "/jfddr1-maklowiczeprogramowania-app/static/js/2.3762de46.chunk.js.LICENSE.txt",
     "static/media/Achievement.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/Achievement.490d1669.svg",
     "static/media/Security.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/Security.661c1399.svg",
     "static/media/add-project-idea-image.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/add-project-idea-image.c946e01f.svg",
@@ -36,7 +36,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.59d3cbc5.js",
-    "static/js/2.1e815d54.chunk.js",
-    "static/js/main.b1c132de.chunk.js"
+    "static/js/2.3762de46.chunk.js",
+    "static/js/main.6843d877.chunk.js"
   ]
 }

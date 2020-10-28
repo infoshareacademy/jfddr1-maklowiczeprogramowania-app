@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e18dff3ee124492b470f74b7431e85a1",
+    "revision": "9eb36ed19fa2365ad0dfa8e4f934fc58",
     "url": "/jfddr1-maklowiczeprogramowania-app/index.html"
   },
   {
-    "revision": "b8d7768460bf7ed1fc78",
-    "url": "/jfddr1-maklowiczeprogramowania-app/static/js/2.1e815d54.chunk.js"
+    "revision": "e1651aba0e4db3f8598a",
+    "url": "/jfddr1-maklowiczeprogramowania-app/static/js/2.3762de46.chunk.js"
   },
   {
-    "revision": "b89bbf90ef98eabc1f991f2e603f8c98",
-    "url": "/jfddr1-maklowiczeprogramowania-app/static/js/2.1e815d54.chunk.js.LICENSE.txt"
+    "revision": "a3dc9fd35d46d772f92b9c2b7d434046",
+    "url": "/jfddr1-maklowiczeprogramowania-app/static/js/2.3762de46.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "246178bc4546dc5ee996",
-    "url": "/jfddr1-maklowiczeprogramowania-app/static/js/main.b1c132de.chunk.js"
+    "revision": "da5722e09deac2de7c66",
+    "url": "/jfddr1-maklowiczeprogramowania-app/static/js/main.6843d877.chunk.js"
   },
   {
     "revision": "db4b361d000dc00a137b",

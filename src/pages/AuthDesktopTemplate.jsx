@@ -145,6 +145,7 @@ const AuthMenuItem = styled.li``;
 const AuthNavigationTemplate = () => {
   const [error, setError] = useState("");
   const { currentUser, signOut } = useAuth();
+
   const history = useHistory();
   const signOutHandler = () => {
     signOut()
@@ -172,6 +173,7 @@ const AuthNavigationTemplate = () => {
 };
 
 const AuthDesktopTemplate = (props) => {
+  const { currentUserData } = useAuth();
   return (
     <>
       <PageWrapper>
@@ -188,7 +190,11 @@ const AuthDesktopTemplate = (props) => {
           <DesktopMenuBar>
             <UserInfo>
               <UserAvatar src={UserAvatarImageSrc} />
-              <UserName>Piotr Jarznicki</UserName>
+              <UserName>
+                {" "}
+                {currentUserData &&
+                  currentUserData.firstName + " " + currentUserData.secondName}
+              </UserName>
               <UserSpecialization>Front-End Developer</UserSpecialization>
             </UserInfo>
             <AuthMenuList>

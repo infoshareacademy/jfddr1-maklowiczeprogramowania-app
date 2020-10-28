@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MediaQuery from "react-responsive";
 import styled from "styled-components";
+import firebase from "firebase/app";
 import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import Button from "../components/buttons/Button";
@@ -51,12 +52,13 @@ const SignInForm = () => {
   const emailRef = React.createRef();
   const passwordRef = React.createRef();
   const [error, setError] = useState("");
-  const { signIn } = useAuth();
+  const { signIn, getUserData } = useAuth();
   const history = useHistory();
   const submitHandler = (e) => {
     e.preventDefault();
     signIn(emailRef.current.value, passwordRef.current.value)
-      .then(() => {
+      .then((cred) => {
+        getUserData(cred.user.uid);
         history.push("/pages/AuthWelcomeView");
       })
       .catch(() => {

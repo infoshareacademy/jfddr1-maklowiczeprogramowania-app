@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import * as firebase from "firebase/app";
+import "firebase/firestore";
 import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import DesktopFormTemplate from "../../components/templates/DesktopFormTemplate";
@@ -12,7 +14,7 @@ import {
   StyledParagraph,
   StyledAnchor,
 } from "../../components/SignInUpElements";
-
+console.log(firebase);
 const SignUpFormContainer = styled(SignInFormContainer)`
   min-width: 90%;
   max-width: 90%;
@@ -68,18 +70,18 @@ const SignUpDesktop = () => {
   const emailRef = React.createRef();
   const passwordRef = React.createRef();
   const [error, setError] = useState();
-  const { signUp } = useAuth();
+  const { signUp, getUserData } = useAuth();
   const history = useHistory();
 
   const submitHandler = (e) => {
     e.preventDefault();
-    signUp(
-      // firstNameRef.current.value,
-      // secondNameRef.current.value,
-      emailRef.current.value,
-      passwordRef.current.value
-    )
-      .then(() => {
+    signUp(emailRef.current.value, passwordRef.current.value)
+      .then((cred) => {
+        firebase.firestore().collection("users").doc(cred.user.uid).set({
+          firstName: firstNameRef.current.value,
+          secondName: secondNameRef.current.value,
+        });
+        getUserData(cred.user.uid);
         history.push("/pages/AuthWelcomeView");
       })
       .catch(() => {

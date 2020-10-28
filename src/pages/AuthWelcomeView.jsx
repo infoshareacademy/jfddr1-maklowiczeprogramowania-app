@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import MenuMessageIconSrc from "../img/message-icon.svg";
+
+import { useAuth } from "../contexts/AuthContext";
 import MenuBellIconSrc from "../img/bell-icon.svg";
 import HamburgerMenuSrc from "../img/radix-icons_hamburger-menu-dark.svg";
 import { StyledInput } from "../components/Input";
@@ -9,6 +11,7 @@ import { getProjectsData } from "../mocks/Projects.js";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
 import MediaQuery from "react-responsive";
 import AuthDesktopTemplate from "../pages/AuthDesktopTemplate";
+
 const Header = styled.header`
   display: flex;
   align-items: center;
@@ -212,6 +215,11 @@ const UserInformation = styled.section`
   justify-content: space-between;
 `;
 
+const UserName = styled.h2`
+  font-weight: 400;
+  margin-top: 0.5em;
+`;
+
 const SpecializationTagTemplate = ({ tagName }) => {
   return (
     <SpecializationTagNameTemplate>{tagName}</SpecializationTagNameTemplate>
@@ -236,6 +244,8 @@ const ProjectTemplate = ({
 };
 
 const AuthWelcomeView = () => {
+  const { currentUserData } = useAuth();
+  console.log(currentUserData);
   const searchTagSpecializationNamesData = getSearchSpecializationTagNames();
   const searchTagSpecializationNamesComponents = searchTagSpecializationNamesData.map(
     ({ tagName }) => {
@@ -263,7 +273,9 @@ const AuthWelcomeView = () => {
         <MediaQuery maxDeviceWidth={1024}>
           <Header>
             <Wrapper>
-              <WelcomeText>Cześć, Piotr!</WelcomeText>
+              <WelcomeText>
+                Cześć, {currentUserData && currentUserData.firstName}!
+              </WelcomeText>
               <NotificationText>
                 Masz <AmountOfMessages>0</AmountOfMessages> nowych wiadomości
               </NotificationText>
@@ -283,7 +295,9 @@ const AuthWelcomeView = () => {
               <MediaQuery minDeviceWidth={1024}>
                 <UserInformation>
                   <Wrapper>
-                    <WelcomeText>Cześć, Piotr!</WelcomeText>
+                    <WelcomeText>
+                      Cześć, {currentUserData && currentUserData.firstName}!
+                    </WelcomeText>
                     <NotificationText>
                       Masz <AmountOfMessages>0</AmountOfMessages> nowych
                       wiadomości

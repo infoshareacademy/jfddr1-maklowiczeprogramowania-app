@@ -118,7 +118,7 @@ const SignUpDesktop = () => {
             />
             <Description>
               Masz już konto? Zaloguj się{" "}
-              <Link to="../pages/SignIn">
+              <Link to="../pages/SignInDesktop">
                 <StyledAnchor>tutaj</StyledAnchor>
               </Link>
             </Description>

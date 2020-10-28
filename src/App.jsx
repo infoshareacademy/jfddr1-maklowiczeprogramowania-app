@@ -2,6 +2,7 @@ import React from "react";
 import { createGlobalStyle } from "styled-components";
 import { AuthProvider } from "./contexts/AuthContext";
 import Router from "./Router";
+
 const GlobalStyle = createGlobalStyle`
   :root {
     --dark-clr: #2B2B3F;
@@ -9,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
     --accent-clr: #FBBB9A;
     --text-clr: #FBFBFB;
   }
+  
   * {
     box-sizing: border-box;
     margin: 0;
@@ -18,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: "Quicksand", sans-serif;
     width: 100vw;
-    color: #FBFBFB;
+    color: var(--text-clr);
     overflow-x: hidden;
   }
 

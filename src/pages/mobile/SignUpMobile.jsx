@@ -2,11 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import Input from "../../components/Input";
 import Label from "../../components/Label";
-import MobileFormTemplate from "../../components/templates/MobileFormTemplate";
+import MobileViewTemplate, {
+  MobileFormWrapper,
+} from "../../components/templates/MobileViewTemplate";
 import SmallButton from "../../components/buttons/SmallButton";
 import {
-  SignInTitle,
-  StyledParagraph,
+  Title,
+  Description,
   StyledAnchor,
 } from "../../components/SignInUpElements";
 
@@ -16,7 +18,7 @@ const ButtonContainer = styled.div`
   margin: -15px 0 0 0;
 `;
 
-const SingUpInfoContainer = styled.section`
+const SingUpInfoWrapper = styled.section`
   font-size: 0.7rem;
   margin: -20px 0 0 0;
 `;
@@ -32,35 +34,38 @@ const SingUpInfoParagraph = styled.p`
 
 const SignUpMobile = () => {
   return (
-    <MobileFormTemplate>
-      <SignInTitle>Załóż konto</SignInTitle>
-      <Label htmlFor={"firstName"}>{"Imię"}</Label>
-      <Input id={"firstName"} name={"firstName"} type={"text"} />
-      <Label htmlFor={"secondName"}>{"Nazwisko"}</Label>
-      <Input id={"secondName"} name={"secondName"} type={"text"} />
-      <Label htmlFor={"email"}>{"Email"}</Label>
-      <Input id={"email"} name={"email"} type={"email"} />
-      <Label htmlFor={"password"}>{"Hasło"}</Label>
-      <Input id={"password"} name={"password"} type={"password"} />
-      <StyledParagraph>
-        Masz już konto? Zaloguj się <StyledAnchor href="/">tutaj</StyledAnchor>
-      </StyledParagraph>
-      <SingUpInfoContainer>
-        <SingUpInfoMark>!</SingUpInfoMark>
-        <SingUpInfoParagraph>
-          Wypełnij nasz szczegółowy formularz, żeby korzystać ze wszystkich
-          możliwości, zrób to teraz i miej to z głowy!
-        </SingUpInfoParagraph>
-        <SingUpInfoParagraph>
-          Możesz też pominąć ten krok i przyglądać się naszemu portalowi z nieco
-          dalszej odległości!
-        </SingUpInfoParagraph>
-      </SingUpInfoContainer>
-      <ButtonContainer>
-        <SmallButton type={"submit"} label={"Stwórz konto"} />
-        <SmallButton type={"submit"} label={"Wypełnij formularz"} />
-      </ButtonContainer>
-    </MobileFormTemplate>
+    <MobileViewTemplate>
+      <MobileFormWrapper>
+        <Title>Załóż konto</Title>
+        <Label htmlFor={"firstName"}>{"Imię"}</Label>
+        <Input id={"firstName"} name={"firstName"} type={"text"} />
+        <Label htmlFor={"secondName"}>{"Nazwisko"}</Label>
+        <Input id={"secondName"} name={"secondName"} type={"text"} />
+        <Label htmlFor={"email"}>{"Email"}</Label>
+        <Input id={"email"} name={"email"} type={"email"} />
+        <Label htmlFor={"password"}>{"Hasło"}</Label>
+        <Input id={"password"} name={"password"} type={"password"} />
+        <Description>
+          Masz już konto? Zaloguj się{" "}
+          <StyledAnchor href="/">tutaj</StyledAnchor>
+        </Description>
+        <SingUpInfoWrapper>
+          <SingUpInfoMark>!</SingUpInfoMark>
+          <SingUpInfoParagraph>
+            Wypełnij nasz szczegółowy formularz, żeby korzystać ze wszystkich
+            możliwości, zrób to teraz i miej to z głowy!
+          </SingUpInfoParagraph>
+          <SingUpInfoParagraph>
+            Możesz też pominąć ten krok i przyglądać się naszemu portalowi z
+            nieco dalszej odległości!
+          </SingUpInfoParagraph>
+        </SingUpInfoWrapper>
+        <ButtonContainer>
+          <SmallButton type={"submit"} label={"Stwórz konto"} />
+          <SmallButton type={"submit"} label={"Wypełnij formularz"} />
+        </ButtonContainer>
+      </MobileFormWrapper>
+    </MobileViewTemplate>
   );
 };
 

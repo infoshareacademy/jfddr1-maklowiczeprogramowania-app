@@ -14,9 +14,11 @@ import Projects from "./pages/Projects";
 import SignIn from "./pages/SignIn";
 import SignUpDesktop from "./pages/desktop/SignUpDesktop";
 import SignUpFull1Mobile from "./pages/mobile/SignUpFull1Mobile";
-import SignUpFull2Mobile from "./pages/mobile/SignUpFull6Mobile";
-import SignUpFull6Mobile from "./pages/mobile/SignUpFull6Mobile";
+import SignUpFull2Mobile from "./pages/mobile/SignUpFull2Mobile";
 import SignUpFull3Mobile from "./pages/mobile/SignUpFull3Mobile";
+import SignUpFull4Mobile from "./pages/mobile/SignUpFull4Mobile";
+import SignUpFull5Mobile from "./pages/mobile/SignUpFull5Mobile";
+import SignUpFull6Mobile from "./pages/mobile/SignUpFull6Mobile";
 import SignUpMobile from "./pages/mobile/SignUpMobile";
 import WelcomePage from "./pages/WelcomePage";
 
@@ -54,13 +56,31 @@ const Router = () => {
           component={AuthWelcomeView}
         ></PrivateRouter>
         <Route path="/">
-          <SignUpFull3Mobile />
+          <WelcomePage />
+        </Route>
+        <Route path="/pages/mobile/MenuMobile">
+          <MenuMobile />
+        </Route>
+        <Route path="/pages/mobile/AuthMenuMobile">
+          <AuthMenuMobile />
+        </Route>
+        <Route path="/pages/mobile/SignUpMobile">
+          <SignUpMobile />
         </Route>
         <Route path="/pages/mobile/SignUpFull1Mobile">
           <SignUpFull1Mobile />
         </Route>
         <Route path="/pages/mobile/SignUpFull2Mobile">
           <SignUpFull2Mobile />
+        </Route>
+        <Route path="/pages/mobile/SignUpFull3Mobile">
+          <SignUpFull3Mobile />
+        </Route>
+        <Route path="/pages/mobile/SignUpFull4Mobile">
+          <SignUpFull4Mobile />
+        </Route>
+        <Route path="/pages/mobile/SignUpFull5Mobile">
+          <SignUpFull5Mobile />
         </Route>
         <Route path="/pages/mobile/SignUpFull6Mobile">
           <SignUpFull6Mobile />

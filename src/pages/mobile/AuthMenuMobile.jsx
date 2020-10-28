@@ -3,7 +3,7 @@ import styled from "styled-components";
 import AuthNavigationTemplate from "../../components/templates/AuthNavigationTemplate";
 import MenuIconsAuthBar from "../../components/MenuIconsAuthBar";
 
-const HeaderContainer = styled.header`
+const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,7 +12,7 @@ const HeaderContainer = styled.header`
   color: var(--light-clr);
 `;
 
-const UserDetailsContainer = styled.section`
+const UserDetailsWrapper = styled.section`
   display: flex;
   justify-content: center;
 `;
@@ -44,7 +44,7 @@ const UserSpecialization = styled.p`
   font-size: 0.8rem;
 `;
 
-const MainContainer = styled.main`
+const MainWrapper = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,8 +56,8 @@ const MainContainer = styled.main`
 const AuthMenuMobile = () => {
   return (
     <>
-      <HeaderContainer>
-        <UserDetailsContainer>
+      <HeaderWrapper>
+        <UserDetailsWrapper>
           <UserImageWrapper>
             <UserImage></UserImage>
           </UserImageWrapper>
@@ -65,12 +65,12 @@ const AuthMenuMobile = () => {
             <UserName>Robert Makłowicz</UserName>
             <UserSpecialization>Front-End Developer</UserSpecialization>
           </UserNameAndSpecWrapper>
-        </UserDetailsContainer>
+        </UserDetailsWrapper>
         <MenuIconsAuthBar />
-      </HeaderContainer>
-      <MainContainer>
+      </HeaderWrapper>
+      <MainWrapper>
         <AuthNavigationTemplate />
-      </MainContainer>
+      </MainWrapper>
     </>
   );
 };

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import HamburgerMenu from "../HamburgerMenu";
 import HamburgerMenuSrc from "../../img/radix-icons_hamburger-menu-dark.svg";
 
-const MainContainer = styled.section`
+const MainWrapper = styled.main`
   display: flex;
   flex-direction: column;
   background: var(--light-clr);
@@ -13,7 +13,7 @@ const MainContainer = styled.section`
   height: 100vh;
 `;
 
-const HamburgerMenuContainer = styled.section`
+const HamburgerMenuWrapper = styled.section`
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
@@ -21,28 +21,36 @@ const HamburgerMenuContainer = styled.section`
   margin: 30px 30px 0 0;
 `;
 
-const FormContainer = styled.form`
+export const MobileCommonWrapper = styled.section`
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   align-self: center;
   justify-self: center;
-  min-width: 60%;
-  max-width: 60%;
+  min-width: 75%;
+  max-width: 75%;
 `;
 
-const MobileFormTemplate = ({ children }) => {
+export const MobileFormWrapper = styled.form`
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  min-width: 75%;
+  max-width: 75%;
+`;
+
+const MobileViewTemplate = ({ children }) => {
   return (
-    <MainContainer>
-      <HamburgerMenuContainer>
+    <MainWrapper>
+      <HamburgerMenuWrapper>
         <HamburgerMenu src={HamburgerMenuSrc} />
-      </HamburgerMenuContainer>
-      <FormContainer>
-        {children}
-        {/* {anotherNestedComponent} */}
-      </FormContainer>
-    </MainContainer>
+      </HamburgerMenuWrapper>
+      {children}
+      {/* {anotherNestedComponent} */}
+    </MainWrapper>
   );
 };
 
-export default MobileFormTemplate;
+export default MobileViewTemplate;

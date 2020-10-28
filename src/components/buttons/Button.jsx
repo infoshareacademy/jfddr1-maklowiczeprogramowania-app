@@ -11,6 +11,7 @@ export const StyledButton = styled.button`
   border: none;
   cursor: pointer;
   font-size: 2rem;
+  outline: none;
 `;
 
 const Button = ({ type, label }) => {

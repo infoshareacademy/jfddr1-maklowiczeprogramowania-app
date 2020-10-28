@@ -151,7 +151,7 @@ const Header = () => {
               <DesktopNavListLink>Strona główna</DesktopNavListLink>
               <DesktopNavListLink>Jak to działa?</DesktopNavListLink>
               <DesktopNavListLink>Wiedza o IT</DesktopNavListLink>
-              <Link to="../pages/SignIn">
+              <Link to="../pages/SignInDesktop">
                 <StyledHeaderButton onClick={rootOverflowHidden}>
                   Zaloguj się
                 </StyledHeaderButton>

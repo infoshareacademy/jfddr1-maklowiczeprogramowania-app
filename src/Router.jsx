@@ -16,6 +16,7 @@ import SignUpDesktop from "./pages/desktop/SignUpDesktop";
 import SignUpFull1Mobile from "./pages/mobile/SignUpFull1Mobile";
 import SignUpFull2Mobile from "./pages/mobile/SignUpFull6Mobile";
 import SignUpFull6Mobile from "./pages/mobile/SignUpFull6Mobile";
+import SignUpFull3Mobile from "./pages/mobile/SignUpFull3Mobile";
 import SignUpMobile from "./pages/mobile/SignUpMobile";
 import WelcomePage from "./pages/WelcomePage";
 
@@ -53,7 +54,7 @@ const Router = () => {
           component={AuthWelcomeView}
         ></PrivateRouter>
         <Route path="/">
-          <WelcomePage />
+          <SignUpFull3Mobile />
         </Route>
         <Route path="/pages/mobile/SignUpFull1Mobile">
           <SignUpFull1Mobile />

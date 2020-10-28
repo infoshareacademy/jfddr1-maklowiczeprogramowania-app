@@ -4,6 +4,7 @@ import styled from "styled-components";
 import MobileFormTemplate from "../../components/templates/MobileFormTemplate";
 import Button from "../../components/buttons/Button";
 import { SignInTitle } from "../../components/SignInUpElements";
+import SelectElement from "../../components/SelectElement";
 
 const SlideItem = styled.span`
   font-size: 2rem;
@@ -29,11 +30,28 @@ const SlideContainer = styled.div`
   gap: 10px;
   align-items: center;
 `;
+const SelectElementContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+`;
+
+const SignInTitleActive = styled(SignInTitle)`
+  justify-content: center;
+  font-size: 2rem;
+`;
 
 const SignUpFull3Mobile = () => {
   return (
     <MobileFormTemplate>
-      <SignInTitle>Wybierz narzędzia</SignInTitle>
+      <SignInTitleActive>Wybierz narzędzia</SignInTitleActive>
+      <SelectElementContainer>
+        <SelectElement
+          options={["Dodaj Znajome Narzędzia", "option2", "option3"]}
+        />
+      </SelectElementContainer>
       <ButtonContainer>
         <Button type={"submit"} label={"Stwórz konto"} />
       </ButtonContainer>

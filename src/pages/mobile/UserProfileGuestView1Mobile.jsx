@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import ExitIcon from "../../components/ExitIcon";
 import ExitIconSrc from "../../img/exit-light-icon.svg";
 import FriendsIconSrc from "../../img/friends-icon.svg";
+import GitHubIconSrc from "../../img/github-icon.jpg";
+import MessageIconSrc from "../../img/message-light-icon.svg";
+import LinkedInIconSrc from "../../img/linkedin-icon.svg";
+import ProfileImageIconSrc from "../../img/example-profile-image.svg";
 
 const MainWrapper = styled.main`
   display: flex;
@@ -15,10 +19,11 @@ const MainWrapper = styled.main`
   background: white;
 `;
 
-const TopWrapper = styled.div`
+const TopWrapper = styled.section`
   display: flex;
   flex-grow: 1;
   flex-direction: column;
+  padding: 1.8rem 1.8rem 0 1.8rem;
   border-radius: 0 0 3rem 3rem;
   background-color: var(--dark-clr);
 `;
@@ -27,17 +32,12 @@ const ExitIconWrapper = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  padding: 1.8rem 1.8rem 0 1.8rem;
 `;
 
-const TopMiddleWrapper = styled.div`
+const UserImageAndIconsWrapper = styled.div`
   display: flex;
+  align-items: center;
   justify-content: center;
-  min-width: 100%;
-`;
-
-const UserImageWrapper = styled.div`
-  display: flex;
 `;
 
 const UserImage = styled.img`
@@ -45,7 +45,36 @@ const UserImage = styled.img`
   width: 8rem;
   background-color: var(--light-clr);
   border-radius: 4rem;
-  margin: 0 2rem 0 2rem;
+  margin: 1rem 1.5rem;
+  padding: 1rem;
+`;
+
+const Icon = styled.img`
+  height: 2.4rem;
+  width: 2.4rem;
+`;
+
+const UserInfoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  color: var(--light-clr);
+`;
+
+const UserInfoName = styled.h2``;
+
+const UserInfoSpecialization = styled.h1``;
+
+const UserInfoDescription = styled.p``;
+
+const UserInfoIconsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+  gap: 3rem;
 `;
 
 const BottomWrapper = styled.section`
@@ -65,13 +94,26 @@ const UserProfileGuestView1Mobile = () => {
             <ExitIcon src={ExitIconSrc} />
           </Link>
         </ExitIconWrapper>
-        <TopMiddleWrapper>
-          <UserImageWrapper>
-            <ExitIcon src={FriendsIconSrc} />
-            <UserImage></UserImage>
-            <ExitIcon src={FriendsIconSrc} />
-          </UserImageWrapper>
-        </TopMiddleWrapper>
+        <UserImageAndIconsWrapper>
+          <Icon src={FriendsIconSrc} />
+          <UserImage src={ProfileImageIconSrc} />
+          <Icon src={MessageIconSrc} />
+        </UserImageAndIconsWrapper>
+        <UserInfoWrapper>
+          <UserInfoName>Robert Makłowicz</UserInfoName>
+          <UserInfoSpecialization>Front-End Developer</UserInfoSpecialization>
+          <UserInfoDescription>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+            commodi sequi ullam ipsam unde accusamus maiores atque asperiores
+            sit aut quasi eius, laboriosam sapiente, dolor debitis earum facere!
+            Eligendi, natus?
+          </UserInfoDescription>
+        </UserInfoWrapper>
+        <UserInfoIconsContainer>
+          <Icon src={GitHubIconSrc} />
+          <Icon src={LinkedInIconSrc} />
+          <Icon src={MessageIconSrc} />
+        </UserInfoIconsContainer>
       </TopWrapper>
       <BottomWrapper></BottomWrapper>
     </MainWrapper>

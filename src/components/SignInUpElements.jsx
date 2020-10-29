@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { toolsDB } from "../mocks/ToolsData";
 import { specDB } from "../mocks/SpecializationsData";
 import { techDB } from "../mocks/TechData";
+import { fieldTagsDB } from "../mocks/FieldTagsData";
 
 export const Title = styled.h1`
   margin: 0 auto;
@@ -97,4 +98,12 @@ export const TechElement = () => {
     return <option value={el.label}>{el.label}</option>;
   });
   return <Option>{searchedTechElements}</Option>;
+};
+
+export const TagsElement = () => {
+  const searchedTagsElements = fieldTagsDB.map((el) => {
+    console.log(el.label);
+    return <option value={el.label}>{el.label}</option>;
+  });
+  return <Option>{searchedTagsElements}</Option>;
 };

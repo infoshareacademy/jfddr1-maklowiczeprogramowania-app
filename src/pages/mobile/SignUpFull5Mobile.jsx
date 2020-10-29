@@ -48,6 +48,12 @@ const SignUpFull5Mobile = () => {
           <SlideItem>•</SlideItem>
         </Link>
         <SlideItemActive>•</SlideItemActive>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull6Mobile"
+        >
+          <SlideItem>•</SlideItem>
+        </Link>
       </SlideContainer>
     </MobileViewTemplate>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import ExitIcon from "../ExitIcon";
-import ExitIconSrc from "../../img/exit-icon.svg";
+import ExitIconSrc from "../../img/exit-dark-icon.svg";
 
 const MainWrapper = styled.section`
   display: flex;

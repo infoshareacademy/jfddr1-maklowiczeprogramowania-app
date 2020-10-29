@@ -83,3 +83,5 @@ export const SelectElement = () => {
   );
   return <Select>{searchedSelectOptionsElementItems}</Select>;
 };
+
+export default SelectElement;

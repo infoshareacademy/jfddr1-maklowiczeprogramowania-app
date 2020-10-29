@@ -83,7 +83,7 @@ const Router = () => {
           <SignUpFull6Mobile />
         </Route>
         <Route path="/">
-          <WelcomePage />
+          <SignUpFull3Mobile />
         </Route>
       </Switch>
       <Route path="/pages/SignUpDesktop">

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import SelectElement from "../../components/SignInUpElements";
 import MobileViewTemplate, {
   MobileFormWrapper,
 } from "../../components/templates/MobileViewTemplate";
@@ -18,6 +19,7 @@ const SignUpFull3Mobile = () => {
     <MobileViewTemplate>
       <MobileFormWrapper>
         <Title>Wybierz specjalizację</Title>
+        <SelectElement />
         <ButtonContainer>
           <SmallButton type={"submit"} label={"Dalej"} />
         </ButtonContainer>

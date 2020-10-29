@@ -159,7 +159,7 @@ const SignUpDesktop = () => {
         </MainInputContainer>
         <ButtonContainer>
           <MediumButton type={"submit"} label={"Stwórz konto"} />
-          <MediumButton type={"submit"} label={"Wypełnij formularz"} />
+          <MediumButton type={""} label={"Wypełnij formularz"} />
         </ButtonContainer>
       </DesktopFormWrapper>{" "}
     </DesktopViewTemplate>

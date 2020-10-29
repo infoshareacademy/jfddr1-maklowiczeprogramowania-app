@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import SpecElement from "../../components/SignInUpElements";
 import MobileViewTemplate, {
   MobileFormWrapper,
 } from "../../components/templates/MobileViewTemplate";
@@ -12,6 +11,8 @@ import {
   SlideContainer,
   SlideItem,
   SlideItemActive,
+  OptionContainer,
+  SpecsElement,
 } from "../../components/SignInUpElements";
 
 const SignUpFull3Mobile = () => {
@@ -19,7 +20,9 @@ const SignUpFull3Mobile = () => {
     <MobileViewTemplate>
       <MobileFormWrapper>
         <Title>Wybierz specjalizację</Title>
-        <SpecElement />
+        <OptionContainer>
+          <SpecsElement></SpecsElement>
+        </OptionContainer>
         <ButtonContainer>
           <SmallButton type={"submit"} label={"Dalej"} />
         </ButtonContainer>

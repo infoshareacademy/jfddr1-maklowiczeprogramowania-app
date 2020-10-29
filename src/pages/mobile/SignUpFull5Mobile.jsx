@@ -7,12 +7,12 @@ import MobileViewTemplate, {
 import SmallButton from "../../components/buttons/SmallButton";
 import {
   Title,
-  SpecElementContainer,
+  OptionContainer,
   ButtonContainer,
   SlideContainer,
   SlideItem,
   SlideItemActive,
-  SpecElement,
+  ToolsElement,
 } from "../../components/SignInUpElements";
 
 const SignUpFull5Mobile = () => {
@@ -20,10 +20,10 @@ const SignUpFull5Mobile = () => {
     <MobileViewTemplate>
       <MobileFormWrapper>
         <Title>Wybierz narzędzia</Title>
-        <SpecElementContainer>
-          <SpecElement />
+        <OptionContainer>
+          <ToolsElement />
           <SmallButton type={"submit"} label={"Dodaj"} />
-        </SpecElementContainer>
+        </OptionContainer>
         <ButtonContainer>
           <SmallButton type={"submit"} label={"Stwórz konto"} />
         </ButtonContainer>

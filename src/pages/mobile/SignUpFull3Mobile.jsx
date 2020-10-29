@@ -11,6 +11,8 @@ import {
   SlideContainer,
   SlideItem,
   SlideItemActive,
+  OptionContainer,
+  SpecsElement,
 } from "../../components/SignInUpElements";
 
 const SignUpFull3Mobile = () => {
@@ -18,6 +20,9 @@ const SignUpFull3Mobile = () => {
     <MobileViewTemplate>
       <MobileFormWrapper>
         <Title>Wybierz specjalizację</Title>
+        <OptionContainer>
+          <SpecsElement></SpecsElement>
+        </OptionContainer>
         <ButtonContainer>
           <SmallButton type={"submit"} label={"Dalej"} />
         </ButtonContainer>

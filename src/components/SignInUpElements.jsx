@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { getSelectOptionsElementDB } from "../mocks/SelectOptionsElement";
+import { toolsDB } from "../mocks/ToolsData";
+import { specDB } from "../mocks/SpecializationsData";
 
 export const Title = styled.h1`
   margin: 0 auto;
@@ -56,7 +57,7 @@ export const SlideItemActive = styled(SlideItem)`
   color: var(--accent-clr);
 `;
 
-export const SelectElementContainer = styled.div`
+export const OptionContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,7 +66,7 @@ export const SelectElementContainer = styled.div`
   gap: 0.3rem;
 `;
 
-const Select = styled.select`
+export const Option = styled.select`
   height: 3rem;
   width: 100%;
   border: none;
@@ -73,13 +74,18 @@ const Select = styled.select`
   color: #c8c8c8;
 `;
 
-export const SelectElement = () => {
-  const searchedSelectOptionsElementDB = getSelectOptionsElementDB();
-  const searchedSelectOptionsElementItems = searchedSelectOptionsElementDB.map(
-    (el) => {
-      console.log(el.option);
-      return <option value={el.option}>{el.option}</option>;
-    }
-  );
-  return <Select>{searchedSelectOptionsElementItems}</Select>;
+export const ToolsElement = () => {
+  const searchedToolsElements = toolsDB.map((el) => {
+    console.log(el.option);
+    return <option value={el.option}>{el.option}</option>;
+  });
+  return <Option>{searchedToolsElements}</Option>;
+};
+
+export const SpecsElement = () => {
+  const searchedSpecElements = specDB.map((el) => {
+    console.log(el.label);
+    return <option value={el.label}>{el.label}</option>;
+  });
+  return <Option>{searchedSpecElements}</Option>;
 };

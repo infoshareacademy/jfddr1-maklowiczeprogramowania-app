@@ -1,58 +1,58 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import MobileViewTemplate, {
-  MobileCommonWrapper,
+  MobileFormWrapper,
 } from "../../components/templates/MobileViewTemplate";
-import ProjectDoneIconSrc from "../../img/project-done.svg";
 import SmallButton from "../../components/buttons/SmallButton";
 import {
-  SmallerTitle,
+  Title,
+  OptionContainer,
   ButtonContainer,
   SlideContainer,
+  SlideItem,
   SlideItemActive,
+  TagsElement,
 } from "../../components/SignInUpElements";
-import { Description } from "../../components/SignInUpElements";
-
-const ProjectDoneWrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-`;
-
-const ProjectDone = styled.img`
-  height: 12.5rem;
-  margin-bottom: 1.5rem;
-`;
-
-const CongratTitle = styled(SmallerTitle)`
-  margin-bottom: 1rem;
-`;
-
-const DescriptionCenter = styled(Description)`
-  font-size: 1.3rem;
-  text-align: center;
-  margin: 0.3rem 0 0.3rem 0;
-`;
 
 const SignUpFull6Mobile = () => {
   return (
     <MobileViewTemplate>
-      <MobileCommonWrapper>
-        <ProjectDoneWrapper>
-          <ProjectDone src={ProjectDoneIconSrc} />
-        </ProjectDoneWrapper>
-        <CongratTitle>Gratulacje!</CongratTitle>
-        <DescriptionCenter>
-          Utworzyłeś konto, teraz możesz korzystać z naszych dobrodziejstw!
-        </DescriptionCenter>
+      <MobileFormWrapper>
+        <Title>Wybierz Najbliższe Ci Branże</Title>
+        <OptionContainer>
+          <TagsElement />
+          <SmallButton type={"submit"} label={"Dodaj"} />
+        </OptionContainer>
         <ButtonContainer>
-          <SmallButton type={"submit"} label={"Profil"} />
+          <SmallButton type={"submit"} label={"Stwórz konto"} />
         </ButtonContainer>
-      </MobileCommonWrapper>
+      </MobileFormWrapper>
       <SlideContainer>
-        <SlideItemActive>•</SlideItemActive>
-        <SlideItemActive>•</SlideItemActive>
-        <SlideItemActive>•</SlideItemActive>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull2Mobile"
+        >
+          <SlideItem>•</SlideItem>
+        </Link>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull3Mobile"
+        >
+          <SlideItem>•</SlideItem>
+        </Link>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull4Mobile"
+        >
+          <SlideItem>•</SlideItem>
+        </Link>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull5Mobile"
+        >
+          <SlideItem>•</SlideItem>
+        </Link>
         <SlideItemActive>•</SlideItemActive>
       </SlideContainer>
     </MobileViewTemplate>

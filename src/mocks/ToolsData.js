@@ -1,20 +1,20 @@
 export const toolsDB = [
   {
-    option: "Dodaj Znajome Narzędzia",
+    label: "Dodaj Znajome Narzędzia",
   },
   {
-    option: "option2",
+    label: "option2",
   },
   {
-    option: "option3",
+    label: "option3",
   },
   {
-    option: "option4",
+    label: "option4",
   },
   {
-    option: "option5",
+    label: "option5",
   },
   {
-    option: "option6",
+    label: "option6",
   },
 ];

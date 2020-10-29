@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { toolsDB } from "../mocks/ToolsData";
 import { specDB } from "../mocks/SpecializationsData";
+import { techDB } from "../mocks/TechData";
+import { fieldTagsDB } from "../mocks/FieldTagsData";
 
 export const Title = styled.h1`
   margin: 0 auto;
@@ -76,8 +78,8 @@ export const Option = styled.select`
 
 export const ToolsElement = () => {
   const searchedToolsElements = toolsDB.map((el) => {
-    console.log(el.option);
-    return <option value={el.option}>{el.option}</option>;
+    console.log(el.label);
+    return <option value={el.label}>{el.label}</option>;
   });
   return <Option>{searchedToolsElements}</Option>;
 };
@@ -88,4 +90,20 @@ export const SpecsElement = () => {
     return <option value={el.label}>{el.label}</option>;
   });
   return <Option>{searchedSpecElements}</Option>;
+};
+
+export const TechElement = () => {
+  const searchedTechElements = techDB.map((el) => {
+    console.log(el.label);
+    return <option value={el.label}>{el.label}</option>;
+  });
+  return <Option>{searchedTechElements}</Option>;
+};
+
+export const TagsElement = () => {
+  const searchedTagsElements = fieldTagsDB.map((el) => {
+    console.log(el.label);
+    return <option value={el.label}>{el.label}</option>;
+  });
+  return <Option>{searchedTagsElements}</Option>;
 };

@@ -19,6 +19,7 @@ import SignUpFull3Mobile from "./pages/mobile/SignUpFull3Mobile";
 import SignUpFull4Mobile from "./pages/mobile/SignUpFull4Mobile";
 import SignUpFull5Mobile from "./pages/mobile/SignUpFull5Mobile";
 import SignUpFull6Mobile from "./pages/mobile/SignUpFull6Mobile";
+import SignUpFull7Mobile from "./pages/mobile/SignUpFull7Mobile";
 import SignUpMobile from "./pages/mobile/SignUpMobile";
 import UserProfileGuestView1Mobile from "./pages/mobile/UserProfileGuestView1Mobile";
 import WelcomePage from "./pages/WelcomePage";
@@ -82,6 +83,9 @@ const Router = () => {
         </Route>
         <Route path="/pages/SignUpFull6Mobile">
           <SignUpFull6Mobile />
+        </Route>
+        <Route path="/pages/SignUpFull7Mobile">
+          <SignUpFull7Mobile />
         </Route>
         <Route path="/pages/UserProfileGuestView1Mobile">
           <UserProfileGuestView1Mobile />

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { getSelectOptionsElementDB } from "../mocks/SelectOptionsElement";
+import { getSpecElementDB } from "../mocks/SpecElement";
 
 export const Title = styled.h1`
   margin: 0 auto;
@@ -56,7 +56,7 @@ export const SlideItemActive = styled(SlideItem)`
   color: var(--accent-clr);
 `;
 
-export const SelectElementContainer = styled.div`
+export const SpecElementContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,7 +65,7 @@ export const SelectElementContainer = styled.div`
   gap: 0.3rem;
 `;
 
-const Select = styled.select`
+const Spec = styled.select`
   height: 3rem;
   width: 100%;
   border: none;
@@ -73,15 +73,13 @@ const Select = styled.select`
   color: #c8c8c8;
 `;
 
-export const SelectElement = () => {
-  const searchedSelectOptionsElementDB = getSelectOptionsElementDB();
-  const searchedSelectOptionsElementItems = searchedSelectOptionsElementDB.map(
-    (el) => {
-      console.log(el.option);
-      return <option value={el.option}>{el.option}</option>;
-    }
-  );
-  return <Select>{searchedSelectOptionsElementItems}</Select>;
+export const SpecElement = () => {
+  const searchedSpecElementDB = getSpecElementDB();
+  const searchedSpecElementItems = searchedSpecElementDB.map((el) => {
+    console.log(el.option);
+    return <option value={el.option}>{el.option}</option>;
+  });
+  return <Spec>{searchedSpecElementItems}</Spec>;
 };
 
-export default SelectElement;
+export default SpecElement;

@@ -21,7 +21,8 @@ const SignUpFull4Mobile = () => {
       <MobileFormWrapper>
         <Title>Wybierz technologie</Title>
         <OptionContainer>
-          <TechElement></TechElement>
+          <TechElement />
+          <SmallButton type={"submit"} label={"Dodaj"} />
         </OptionContainer>
         <ButtonContainer>
           <SmallButton type={"submit"} label={"Dalej"} />

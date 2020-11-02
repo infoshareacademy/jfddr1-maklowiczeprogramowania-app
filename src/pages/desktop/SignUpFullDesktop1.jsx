@@ -3,22 +3,13 @@ import styled from "styled-components";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopWiewWithCloudsTemplate";
 import Input from "../../components/Input";
 import { StyledLabelDesktop } from "../../components/Label";
+import { DesktopFormWrapper } from "../../components/SignInUpElements";
 
 const Title = styled.header`
   margin: 0 auto;
   text-align: center;
   font-weight: 600;
   font-size: 2.6rem;
-  color: var(--dark-clr);
-`;
-
-const DesktopFormWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-self: center;
-  min-width: 50%;
-  max-width: 50%;
   color: var(--dark-clr);
 `;
 

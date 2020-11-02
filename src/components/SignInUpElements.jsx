@@ -107,3 +107,13 @@ export const TagsElement = () => {
   });
   return <Option>{searchedTagsElements}</Option>;
 };
+
+export const DesktopFormWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  min-width: 50%;
+  max-width: 50%;
+  color: var(--dark-clr);
+`;

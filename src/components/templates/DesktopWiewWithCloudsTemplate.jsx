@@ -5,6 +5,7 @@ import FormDesktopBottomRightCloud from "../../img/form-desktop-vector-small.svg
 
 const MainWrapper = styled.main`
   display: flex;
+  flex-direction: column;
   position: relative;
   align-items: center;
   justify-content: center;

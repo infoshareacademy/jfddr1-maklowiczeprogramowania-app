@@ -4,12 +4,14 @@ import { toolsDB } from "../mocks/ToolsData";
 import { specDB } from "../mocks/SpecializationsData";
 import { techDB } from "../mocks/TechData";
 import { fieldTagsDB } from "../mocks/FieldTagsData";
+import { StyledButton } from "../components/buttons/Button";
 
 export const Title = styled.h1`
   margin: 0 auto;
   text-align: center;
   font-weight: 600;
   font-size: 2.6rem;
+  color: var(--dark-clr);
 `;
 
 export const SmallerTitle = styled(Title)`
@@ -41,7 +43,6 @@ export const SlideContainer = styled.section`
   align-items: center;
   justify-content: center;
   height: 5rem;
-  margin-top: 1rem;
   gap: 1.2rem;
 `;
 
@@ -63,6 +64,7 @@ export const OptionContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   margin-top: 3.1rem;
   margin-bottom: 3.1rem;
   gap: 0.3rem;
@@ -71,6 +73,7 @@ export const OptionContainer = styled.div`
 export const Option = styled.select`
   height: 3rem;
   width: 100%;
+  padding-left: 0.8rem;
   border: none;
   background-color: #ecf0f2;
   color: #c8c8c8;
@@ -108,12 +111,51 @@ export const TagsElement = () => {
   return <Option>{searchedTagsElements}</Option>;
 };
 
-export const DesktopFormWrapper = styled.div`
+export const DesktopOptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-self: center;
-  min-width: 50%;
-  max-width: 50%;
+  min-width: 60%;
+  max-width: 60%;
+  margin: auto 0;
   color: var(--dark-clr);
 `;
+
+export const StepsFooter = styled.footer`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.6rem;
+  min-width: 60%;
+  max-width: 60%;
+  height: 5rem;
+  gap: 1.2rem;
+  color: var(--dark-clr);
+`;
+
+export const StepDescription = styled.p``;
+
+export const Step = styled.p`
+  display: inline-block;
+  text-decoration: none;
+
+  :visited {
+    color: var(--dark-clr);
+  }
+`;
+
+export const StepActive = styled(Step)`
+  color: var(--accent-clr);
+`;
+
+export const StyledAddButton = styled(StyledButton)`
+  padding: 0.8rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+`;
+
+export const AddButton = ({ type, label }) => {
+  return <StyledAddButton type={type}>{label}</StyledAddButton>;
+};

@@ -1,26 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopWiewWithCloudsTemplate";
 import Input from "../../components/Input";
 import { StyledLabelDesktop } from "../../components/Label";
-
-const Title = styled.header`
-  margin: 0 auto;
-  text-align: center;
-  font-weight: 600;
-  font-size: 2.6rem;
-  color: var(--dark-clr);
-`;
-
-const DesktopFormWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-self: center;
-  min-width: 50%;
-  max-width: 50%;
-  color: var(--dark-clr);
-`;
+import {
+  DesktopOptionWrapper,
+  Step,
+  StepActive,
+  StepDescription,
+  StepsFooter,
+  Title,
+} from "../../components/SignInUpElements";
 
 const InputLabelContainer = styled.div`
   display: flex;
@@ -42,19 +33,10 @@ const Label = ({ htmlFor, children }) => {
   );
 };
 
-const Header = styled.header`
-  margin: 0 auto;
-  text-align: center;
-  font-weight: 600;
-  font-size: 2.6rem;
-  color: var(--dark-clr);
-  margin-top: 50px;
-`;
-
-const SignUpFullDesktop4 = () => {
+const SignUpFull2Desktop = () => {
   return (
     <DesktopViewWithCloudsTemplate>
-      <DesktopFormWrapper>
+      <DesktopOptionWrapper>
         <Title>Dodaj podstawowe informacje</Title>
         <InputLabelContainer>
           <Label htmlFor={"Imię"}>{"Imię"}</Label>
@@ -66,10 +48,31 @@ const SignUpFullDesktop4 = () => {
           <Label htmlFor={"Hasło"}>{"Hasło"}</Label>
           <Input name={"Hasło"} type={"text"} />
         </InputLabelContainer>
-        <Header>Krok 1 z 4</Header>
-      </DesktopFormWrapper>
+      </DesktopOptionWrapper>
+      <StepsFooter>
+        <StepDescription>Krok</StepDescription>
+        <StepActive>1</StepActive>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull3Desktop"
+        >
+          <Step>2</Step>
+        </Link>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull4Desktop"
+        >
+          <Step>3</Step>
+        </Link>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull4Desktop"
+        >
+          <Step>4</Step>
+        </Link>
+      </StepsFooter>
     </DesktopViewWithCloudsTemplate>
   );
 };
 
-export default SignUpFullDesktop4;
+export default SignUpFull2Desktop;

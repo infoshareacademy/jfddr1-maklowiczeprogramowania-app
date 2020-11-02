@@ -16,7 +16,7 @@ const Title = styled.header`
   color: var(--dark-clr);
 `;
 
-const DesktopWrapper = styled.section`
+export const DesktopWrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;

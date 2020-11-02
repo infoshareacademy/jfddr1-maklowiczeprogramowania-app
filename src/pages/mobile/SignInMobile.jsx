@@ -3,18 +3,18 @@ import MediaQuery from "react-responsive";
 import styled from "styled-components";
 import firebase from "firebase/app";
 import { Link, useHistory } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
-import Button from "../components/buttons/Button";
-import Input from "../components/Input";
+import { useAuth } from "../../contexts/AuthContext";
+import Button from "../../components/buttons/Button";
+import Input from "../../components/Input";
 import MobileViewTemplate, {
   MobileFormWrapper,
-} from "../components/templates/MobileViewTemplate";
+} from "../../components/templates/MobileViewTemplate";
 import {
   Title,
   Description,
   StyledAnchor,
-} from "../components/SignInUpElements";
-import { StyledLabelDesktop } from "../components/Label";
+} from "../../components/SignInUpElements";
+import { StyledLabelDesktop } from "../../components/Label";
 
 const ButtonContainer = styled.div`
   display: flex;

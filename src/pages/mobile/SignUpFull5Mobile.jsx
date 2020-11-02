@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import MobileViewTemplate, {
   MobileFormWrapper,
 } from "../../components/templates/MobileViewTemplate";

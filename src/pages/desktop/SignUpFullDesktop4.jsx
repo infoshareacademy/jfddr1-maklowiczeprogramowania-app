@@ -51,25 +51,25 @@ const Header = styled.header`
   margin-top: 50px;
 `;
 
-const SignUpFullDesktop1 = () => {
+const SignUpFullDesktop4 = () => {
   return (
     <DesktopViewWithCloudsTemplate>
       <DesktopFormWrapper>
-        <Title>Pozwól się odnaleźć</Title>
+        <Title>Dodaj podstawowe informacje</Title>
         <InputLabelContainer>
-          <Label htmlFor={"Portfolio"}>{"Portfolio"}</Label>
-          <Input name={"Portfolio"} type={"text"} />
-          <Label htmlFor={"Github"}>{"Github"}</Label>
-          <Input name={"Github"} type={"text"} />
-          <Label htmlFor={"Linkedin"}>{"Linkedin"}</Label>
-          <Input name={"Linkedin"} type={"text"} />
-          <Label htmlFor={"Dodaj"}>{"Dodaj zdjęcie"}</Label>
-          <Input name={"Dodaj"} type={"text"} />
+          <Label htmlFor={"Imię"}>{"Imię"}</Label>
+          <Input name={"Imię"} type={"text"} />
+          <Label htmlFor={"Nazwisko"}>{"Nazwisko"}</Label>
+          <Input name={"Nazwisko"} type={"text"} />
+          <Label htmlFor={"Email"}>{"Email"}</Label>
+          <Input name={"Email"} type={"text"} />
+          <Label htmlFor={"Hasło"}>{"Hasło"}</Label>
+          <Input name={"Hasło"} type={"text"} />
         </InputLabelContainer>
-        <Header>Krok 2 z 4</Header>
+        <Header>Krok 1 z 4</Header>
       </DesktopFormWrapper>
     </DesktopViewWithCloudsTemplate>
   );
 };
 
-export default SignUpFullDesktop1;
+export default SignUpFullDesktop4;

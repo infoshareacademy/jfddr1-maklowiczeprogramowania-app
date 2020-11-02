@@ -25,6 +25,7 @@ import UserProfileGuestView1Mobile from "./pages/mobile/UserProfileGuestView1Mob
 import WelcomePage from "./pages/WelcomePage";
 import SignUpFullDesktop from "./pages/desktop/SignUpFullDesktop";
 import SignUpFullDesktop1 from "./pages/desktop/SignUpFullDesktop1";
+import SignUpFullDesktop4 from "./pages/desktop/SignUpFullDesktop4";
 
 const Router = () => {
   return (
@@ -93,7 +94,7 @@ const Router = () => {
           <UserProfileGuestView1Mobile />
         </Route>
         <Route path="/">
-          <SignUpFullDesktop1 />
+          <SignUpFullDesktop4 />
         </Route>
       </Switch>
       <Route path="/pages/SignUpDesktop">

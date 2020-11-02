@@ -4,10 +4,10 @@ import styled from "styled-components";
 export const StyledButton = styled.button`
   font-family: "Quicksand";
   font-weight: 500;
-  background-color: #2b2b3f;
-  color: #fbeccc;
-  padding: 10px;
-  border-radius: 5px;
+  background-color: var(--dark-clr);
+  color: var(--light-clr);
+  padding: 0.6rem;
+  border-radius: 0.3rem;
   border: none;
   cursor: pointer;
   font-size: 2rem;

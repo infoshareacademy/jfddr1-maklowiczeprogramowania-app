@@ -3,18 +3,18 @@ export const toolsDB = [
     label: "Dodaj Znajome Narzędzia",
   },
   {
-    label: "option2",
+    label: "Git",
   },
   {
-    label: "option3",
+    label: "Jira",
   },
   {
-    label: "option4",
+    label: "Option3",
   },
   {
-    label: "option5",
+    label: "Option4",
   },
   {
-    label: "option6",
+    label: "Option6",
   },
 ];

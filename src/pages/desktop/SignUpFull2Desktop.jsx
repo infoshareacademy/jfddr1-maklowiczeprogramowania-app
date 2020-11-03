@@ -20,16 +20,16 @@ const SignUpFull2Desktop = () => {
   return (
     <DesktopViewWithCloudsTemplate>
       <HalfDesktopFormWrapper>
-        <Title>Podaj podstawowe dane</Title>
+        <Title>Pozwól się odnaleźć</Title>
         <InputsAndLabelsContainer>
-          <LabelDesktop htmlFor={"Imię"}>{"Imię"}</LabelDesktop>
-          <Input name={"Imię"} type={"text"} />
-          <LabelDesktop htmlFor={"Nazwisko"}>{"Nazwisko"}</LabelDesktop>
-          <Input name={"Nazwisko"} type={"text"} />
-          <LabelDesktop htmlFor={"Email"}>{"Email"}</LabelDesktop>
-          <Input name={"Email"} type={"text"} />
-          <LabelDesktop htmlFor={"Hasło"}>{"Hasło"}</LabelDesktop>
-          <Input name={"Hasło"} type={"text"} />
+          <LabelDesktop htmlFor={"Portfolio"}>{"Portfolio"}</LabelDesktop>
+          <Input name={"Portfolio"} type={"text"} />
+          <LabelDesktop htmlFor={"Github"}>{"Github"}</LabelDesktop>
+          <Input name={"Github"} type={"text"} />
+          <LabelDesktop htmlFor={"Linkedin"}>{"Linkedin"}</LabelDesktop>
+          <Input name={"Linkedin"} type={"text"} />
+          <LabelDesktop htmlFor={"Dodaj"}>{"Dodaj zdjęcie"}</LabelDesktop>
+          <Input name={"Dodaj"} type={"text"} />
         </InputsAndLabelsContainer>
         <CenterRowButtonContainer>
           <MediumButton type={"submit"} label={"Dalej"} />
@@ -37,24 +37,30 @@ const SignUpFull2Desktop = () => {
       </HalfDesktopFormWrapper>
       <DesktopSlideContainer>
         <SlideDescription>Krok</SlideDescription>
-        <SlideItemActive>1</SlideItemActive>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull1Desktop"
+        >
+          <SlideItem>1</SlideItem>
+        </Link>
+        <SlideItemActive>2</SlideItemActive>
         <Link
           style={{ color: "var(--dark-clr)" }}
           to="/pages/SignUpFull3Desktop"
-        >
-          <SlideItem>2</SlideItem>
-        </Link>
-        <Link
-          style={{ color: "var(--dark-clr)" }}
-          to="/pages/SignUpFull4Desktop"
         >
           <SlideItem>3</SlideItem>
         </Link>
         <Link
           style={{ color: "var(--dark-clr)" }}
-          to="/pages/SignUpFull5Desktop"
+          to="/pages/SignUpFull4Desktop"
         >
           <SlideItem>4</SlideItem>
+        </Link>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull5Desktop"
+        >
+          <SlideItem>5</SlideItem>
         </Link>
       </DesktopSlideContainer>
     </DesktopViewWithCloudsTemplate>

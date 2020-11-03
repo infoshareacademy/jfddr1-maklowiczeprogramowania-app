@@ -24,6 +24,7 @@ import SignUpFull7Mobile from "./pages/mobile/SignUpFull7Mobile";
 import SignUpMobile from "./pages/mobile/SignUpMobile";
 import UserProfileGuestView1Mobile from "./pages/mobile/UserProfileGuestView1Mobile";
 import WelcomePage from "./pages/WelcomePage";
+import SignUpFull0Desktop from "./pages/desktop/SignUpFull0Desktop";
 import SignUpFull1Desktop from "./pages/desktop/SignUpFull1Desktop";
 import SignUpFull2Desktop from "./pages/desktop/SignUpFull2Desktop";
 import SignUpFull3Desktop from "./pages/desktop/SignUpFull3Desktop";
@@ -95,6 +96,9 @@ const Router = () => {
         </Route>
         <Route path="/pages/SignUpFull7Mobile">
           <SignUpFull7Mobile />
+        </Route>
+        <Route path="/pages/SignUpFull0Desktop">
+          <SignUpFull0Desktop />
         </Route>
         <Route path="/pages/SignUpFull1Desktop">
           <SignUpFull1Desktop />

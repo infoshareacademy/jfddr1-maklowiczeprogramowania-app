@@ -40,22 +40,28 @@ const SignUpFull4Desktop = () => {
         <SlideDescription>Krok</SlideDescription>
         <Link
           style={{ color: "var(--dark-clr)" }}
-          to="/pages/SignUpFull2Desktop"
+          to="/pages/SignUpFull1Desktop"
         >
           <SlideItem>1</SlideItem>
         </Link>
         <Link
           style={{ color: "var(--dark-clr)" }}
-          to="/pages/SignUpFull3Desktop"
+          to="/pages/SignUpFull2Desktop"
         >
           <SlideItem>2</SlideItem>
         </Link>
-        <SlideItemActive>3</SlideItemActive>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull3Desktop"
+        >
+          <SlideItem>3</SlideItem>
+        </Link>
+        <SlideItemActive>4</SlideItemActive>
         <Link
           style={{ color: "var(--dark-clr)" }}
           to="/pages/SignUpFull5Desktop"
         >
-          <SlideItem>4</SlideItem>
+          <SlideItem>5</SlideItem>
         </Link>
       </DesktopSlideContainer>
     </DesktopViewWithCloudsTemplate>

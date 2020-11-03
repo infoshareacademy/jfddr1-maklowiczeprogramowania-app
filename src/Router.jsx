@@ -14,22 +14,23 @@ import Projects from "./pages/Projects";
 import SignInDesktop from "./pages/desktop/SignInDesktop";
 import SignInMobile from "./pages/mobile/SignInMobile";
 import SignUpDesktop from "./pages/desktop/SignUpDesktop";
-import SignUpFull0Mobile from "./pages/mobile/SignUpFull0Mobile";
+import SignUpFull0StartMobile from "./pages/mobile/SignUpFull0StartMobile";
 import SignUpFull1Mobile from "./pages/mobile/SignUpFull1Mobile";
 import SignUpFull2Mobile from "./pages/mobile/SignUpFull2Mobile";
 import SignUpFull3Mobile from "./pages/mobile/SignUpFull3Mobile";
 import SignUpFull4Mobile from "./pages/mobile/SignUpFull4Mobile";
 import SignUpFull5Mobile from "./pages/mobile/SignUpFull5Mobile";
-import SignUpFull6Mobile from "./pages/mobile/SignUpFull6Mobile";
+import SignUpFull6DoneMobile from "./pages/mobile/SignUpFull6DoneMobile";
 import SignUpMobile from "./pages/mobile/SignUpMobile";
 import UserProfileGuestView1Mobile from "./pages/mobile/UserProfileGuestView1Mobile";
 import WelcomePage from "./pages/WelcomePage";
-import SignUpFull0Desktop from "./pages/desktop/SignUpFull0Desktop";
+import SignUpFull0StartDesktop from "./pages/desktop/SignUpFull0StartDesktop";
 import SignUpFull1Desktop from "./pages/desktop/SignUpFull1Desktop";
 import SignUpFull2Desktop from "./pages/desktop/SignUpFull2Desktop";
 import SignUpFull3Desktop from "./pages/desktop/SignUpFull3Desktop";
 import SignUpFull4Desktop from "./pages/desktop/SignUpFull4Desktop";
 import SignUpFull5Desktop from "./pages/desktop/SignUpFull5Desktop";
+import SignUpFull6DoneDesktop from "./pages/desktop/SignUpFull6DoneDesktop";
 
 const Router = () => {
   return (
@@ -76,8 +77,8 @@ const Router = () => {
         <Route path="/pages/SignInMobile">
           <SignInMobile />
         </Route>
-        <Route path="/pages/SignUpFull0Mobile">
-          <SignUpFull0Mobile />
+        <Route path="/pages/SignUpFull0StartMobile">
+          <SignUpFull0StartMobile />
         </Route>
         <Route path="/pages/SignUpFull1Mobile">
           <SignUpFull1Mobile />
@@ -94,11 +95,11 @@ const Router = () => {
         <Route path="/pages/SignUpFull5Mobile">
           <SignUpFull5Mobile />
         </Route>
-        <Route path="/pages/SignUpFull6Mobile">
-          <SignUpFull6Mobile />
+        <Route path="/pages/SignUpFull6DoneMobile">
+          <SignUpFull6DoneMobile />
         </Route>
-        <Route path="/pages/SignUpFull0Desktop">
-          <SignUpFull0Desktop />
+        <Route path="/pages/SignUpFull0StartDesktop">
+          <SignUpFull0StartDesktop />
         </Route>
         <Route path="/pages/SignUpFull1Desktop">
           <SignUpFull1Desktop />
@@ -114,6 +115,9 @@ const Router = () => {
         </Route>
         <Route path="/pages/SignUpFull5Desktop">
           <SignUpFull5Desktop />
+        </Route>
+        <Route path="/pages/SignUpFull6DoneDesktop">
+          <SignUpFull6DoneDesktop />
         </Route>
         <Route path="/pages/UserProfileGuestView1Mobile">
           <UserProfileGuestView1Mobile />

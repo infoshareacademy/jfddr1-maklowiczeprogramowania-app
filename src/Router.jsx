@@ -28,6 +28,7 @@ import SignUpFull1Desktop from "./pages/desktop/SignUpFull1Desktop";
 import SignUpFull2Desktop from "./pages/desktop/SignUpFull2Desktop";
 import SignUpFull3Desktop from "./pages/desktop/SignUpFull3Desktop";
 import SignUpFull4Desktop from "./pages/desktop/SignUpFull4Desktop";
+import SignUpFull5Desktop from "./pages/desktop/SignUpFull5Desktop";
 
 const Router = () => {
   return (
@@ -106,6 +107,9 @@ const Router = () => {
         </Route>
         <Route path="/pages/SignUpFull4Desktop">
           <SignUpFull4Desktop />
+        </Route>
+        <Route path="/pages/SignUpFull5Desktop">
+          <SignUpFull5Desktop />
         </Route>
         <Route path="/pages/UserProfileGuestView1Mobile">
           <UserProfileGuestView1Mobile />

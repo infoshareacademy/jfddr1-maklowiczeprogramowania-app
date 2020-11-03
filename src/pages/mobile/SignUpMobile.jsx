@@ -45,8 +45,8 @@ const SignUpMobile = () => {
           </SingUpInfoParagraph>
         </SingUpInfoWrapper>
         <ShiftedRowButtonContainer>
-          <SmallButton type={"submit"} label={"Stwórz konto"} />
-          <SmallButton type={"submit"} label={"Wypełnij formularz"} />
+          <SmallButton type="submit" label="Stwórz konto" />
+          <SmallButton type="submit" label="Wypełnij formularz" />
         </ShiftedRowButtonContainer>
       </MobileFormWrapper>
     </MobileViewTemplate>

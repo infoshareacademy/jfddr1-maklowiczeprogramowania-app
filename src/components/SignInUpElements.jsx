@@ -179,9 +179,10 @@ export const Option = styled.select`
   height: 3rem;
   width: 100%;
   padding-left: 0.8rem;
+  font-size: 1.2rem;
   border: none;
   background-color: #ecf0f2;
-  color: #c8c8c8;
+  color: #7e7e7e;
 `;
 
 export const ToolsElement = () => {

@@ -67,6 +67,28 @@ export const SingUpInfoParagraph = styled.p`
   margin: -1.25rem 0 1.6rem 0.6rem;
 `;
 
+// *********** SIGNUP DONE ***********
+
+export const SignUpDoneIconWrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const SignUpDoneIcon = styled.img`
+  height: 12.5rem;
+  margin-bottom: 1.5rem;
+`;
+
+export const SignUpDoneTitle = styled(SmallerTitle)`
+  margin-bottom: 1rem;
+`;
+
+export const SignUpDoneDescription = styled(Description)`
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0.3rem 0 0.3rem 0;
+`;
+
 // *********** BUTTON CONTAINERS ***********
 
 export const RowButtonContainer = styled.div`

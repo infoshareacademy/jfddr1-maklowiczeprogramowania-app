@@ -7,44 +7,26 @@ import MobileViewTemplate, {
 import ProjectDoneIconSrc from "../../img/project-done.svg";
 import SmallButton from "../../components/buttons/SmallButton";
 import {
-  SmallerTitle,
   CenterRowButtonContainer,
   MobileSlideContainer,
   SlideItemActive,
+  SignUpDoneIconWrapper,
+  SignUpDoneIcon,
+  SignUpDoneTitle,
+  SignUpDoneDescription,
 } from "../../components/SignInUpElements";
-import { Description } from "../../components/SignInUpElements";
 
-const ProjectDoneWrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-`;
-
-const ProjectDoneIcon = styled.img`
-  height: 12.5rem;
-  margin-bottom: 1.5rem;
-`;
-
-const CongratTitle = styled(SmallerTitle)`
-  margin-bottom: 1rem;
-`;
-
-const ProjectDoneDescription = styled(Description)`
-  font-size: 1.3rem;
-  text-align: center;
-  margin: 0.3rem 0 0.3rem 0;
-`;
-
-const SignUpFull6Mobile = () => {
+const SignUpFull6DoneMobile = () => {
   return (
     <MobileViewTemplate>
       <MobileCommonWrapper>
-        <ProjectDoneWrapper>
-          <ProjectDoneIcon src={ProjectDoneIconSrc} />
-        </ProjectDoneWrapper>
-        <CongratTitle>Gratulacje!</CongratTitle>
-        <ProjectDoneDescription>
+        <SignUpDoneIconWrapper>
+          <SignUpDoneIcon src={ProjectDoneIconSrc} />
+        </SignUpDoneIconWrapper>
+        <SignUpDoneTitle>Gratulacje!</SignUpDoneTitle>
+        <SignUpDoneDescription>
           Utworzyłeś konto, teraz możesz korzystać z naszych dobrodziejstw!
-        </ProjectDoneDescription>
+        </SignUpDoneDescription>
         <CenterRowButtonContainer>
           <SmallButton type="submit" label="Profil" />
         </CenterRowButtonContainer>
@@ -60,4 +42,4 @@ const SignUpFull6Mobile = () => {
   );
 };
 
-export default SignUpFull6Mobile;
+export default SignUpFull6DoneMobile;

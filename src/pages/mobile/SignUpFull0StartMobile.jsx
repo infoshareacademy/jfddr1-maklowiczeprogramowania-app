@@ -18,7 +18,7 @@ const FullFormMobileImage = ({ src }) => {
   return <FullFormMobileImageComponent src={src} />;
 };
 
-const SignUpFull0Mobile = () => {
+const SignUpFull0StartMobile = () => {
   return (
     <MobileViewTemplate>
       <MobileCommonWrapper>
@@ -41,4 +41,4 @@ const SignUpFull0Mobile = () => {
   );
 };
 
-export default SignUpFull0Mobile;
+export default SignUpFull0StartMobile;

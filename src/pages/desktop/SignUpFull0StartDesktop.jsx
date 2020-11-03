@@ -16,7 +16,7 @@ const SignUpFullImage = styled.img`
   width: 25em;
 `;
 
-const SignUpFull0Desktop = () => {
+const SignUpFull0StartDesktop = () => {
   return (
     <CenterMainWrapper>
       <HalfDesktopCommonWrapper>
@@ -31,4 +31,4 @@ const SignUpFull0Desktop = () => {
   );
 };
 
-export default SignUpFull0Desktop;
+export default SignUpFull0StartDesktop;

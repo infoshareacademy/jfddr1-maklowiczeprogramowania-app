@@ -6,13 +6,15 @@ import FormDesktopBottomRightCloud from "../../img/form-desktop-vector-small.svg
 const MainWrapper = styled.main`
   display: flex;
   flex-direction: column;
-  position: relative;
   align-items: center;
   justify-content: center;
-  background-color: var(--light-clr);
-  height: 100vh;
+  position: relative;
   width: 100vw;
+  height: 100vh;
+  background-color: var(--light-clr);
+  color: var(--dark-clr);
 `;
+
 const FormDesktopTopRightCloudWrapper = styled.img`
   position: absolute;
   top: -5rem;

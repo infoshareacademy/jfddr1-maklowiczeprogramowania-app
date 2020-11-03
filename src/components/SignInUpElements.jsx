@@ -184,7 +184,7 @@ export const Option = styled.select`
   background-color: #ecf0f2;
   color: #7e7e7e;
 
-  media (min-width: 1024px) {
+  @media (min-width: 1024px) {
     padding-left: 0.8rem;
     font-size: 1.2rem;
   }

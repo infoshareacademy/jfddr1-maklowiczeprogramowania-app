@@ -1,76 +1,62 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopWiewWithCloudsTemplate";
+import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
 import Input from "../../components/Input";
-import { StyledLabelDesktop } from "../../components/Label";
+import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
+import { LabelDesktop } from "../../components/Label";
 import {
-  DesktopOptionWrapper,
-  Step,
-  StepActive,
-  StepDescription,
-  StepsFooter,
+  SlideItem,
+  SlideItemActive,
+  SlideDescription,
+  DesktopSlideContainer,
   Title,
+  InputsAndLabelsContainer,
+  CenterRowButtonContainer,
 } from "../../components/SignInUpElements";
-
-const InputLabelContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-self: center;
-  min-width: 50%;
-  max-width: 50%;
-`;
-
-const StyledLabelDesktop2 = styled(StyledLabelDesktop)`
-  font-size: 1.5rem;
-  font-weight: 600;
-`;
-
-const Label = ({ htmlFor, children }) => {
-  return (
-    <StyledLabelDesktop2 htmlFor={htmlFor}>{children}</StyledLabelDesktop2>
-  );
-};
+import MediumButton from "../../components/buttons/MediumButton";
 
 const SignUpFull2Desktop = () => {
   return (
     <DesktopViewWithCloudsTemplate>
-      <DesktopOptionWrapper>
-        <Title>Dodaj podstawowe informacje</Title>
-        <InputLabelContainer>
-          <Label htmlFor={"Imię"}>{"Imię"}</Label>
+      <HalfDesktopFormWrapper>
+        <Title>Podaj podstawowe dane</Title>
+        <InputsAndLabelsContainer>
+          <LabelDesktop htmlFor={"Imię"}>{"Imię"}</LabelDesktop>
           <Input name={"Imię"} type={"text"} />
-          <Label htmlFor={"Nazwisko"}>{"Nazwisko"}</Label>
+          <LabelDesktop htmlFor={"Nazwisko"}>{"Nazwisko"}</LabelDesktop>
           <Input name={"Nazwisko"} type={"text"} />
-          <Label htmlFor={"Email"}>{"Email"}</Label>
+          <LabelDesktop htmlFor={"Email"}>{"Email"}</LabelDesktop>
           <Input name={"Email"} type={"text"} />
-          <Label htmlFor={"Hasło"}>{"Hasło"}</Label>
+          <LabelDesktop htmlFor={"Hasło"}>{"Hasło"}</LabelDesktop>
           <Input name={"Hasło"} type={"text"} />
-        </InputLabelContainer>
-      </DesktopOptionWrapper>
-      <StepsFooter>
-        <StepDescription>Krok</StepDescription>
-        <StepActive>1</StepActive>
+        </InputsAndLabelsContainer>
+        <CenterRowButtonContainer>
+          <MediumButton type={"submit"} label={"Dalej"} />
+        </CenterRowButtonContainer>
+      </HalfDesktopFormWrapper>
+      <DesktopSlideContainer>
+        <SlideDescription>Krok</SlideDescription>
+        <SlideItemActive>1</SlideItemActive>
         <Link
           style={{ color: "var(--dark-clr)" }}
           to="/pages/SignUpFull3Desktop"
         >
-          <Step>2</Step>
+          <SlideItem>2</SlideItem>
         </Link>
         <Link
           style={{ color: "var(--dark-clr)" }}
           to="/pages/SignUpFull4Desktop"
         >
-          <Step>3</Step>
+          <SlideItem>3</SlideItem>
         </Link>
         <Link
           style={{ color: "var(--dark-clr)" }}
-          to="/pages/SignUpFull4Desktop"
+          to="/pages/SignUpFull5Desktop"
         >
-          <Step>4</Step>
+          <SlideItem>4</SlideItem>
         </Link>
-      </StepsFooter>
+      </DesktopSlideContainer>
     </DesktopViewWithCloudsTemplate>
   );
 };

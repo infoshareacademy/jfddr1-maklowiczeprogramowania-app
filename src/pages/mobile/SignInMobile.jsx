@@ -13,26 +13,11 @@ import {
   Title,
   Description,
   StyledAnchor,
+  ColumnButtonContainer,
+  ErrorMessageBackground,
+  ErrorMessageParagraph,
 } from "../../components/SignInUpElements";
-import { StyledLabelDesktop } from "../../components/Label";
-
-const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 15px 40px;
-`;
-
-const ErrorMessageBackground = styled.div`
-  margin-top: 2em;
-  padding: 1em;
-  border-radius: 4px;
-  background: #fbbb9a;
-  color: #f49869;
-`;
-
-const ErrorMessageParagraph = styled.p`
-  font-size: 1.1rem;
-`;
+import { LabelMobile } from "../../components/Label";
 
 const SignInMobile = () => {
   const emailRef = React.createRef();
@@ -61,9 +46,9 @@ const SignInMobile = () => {
             <ErrorMessageParagraph>{error}</ErrorMessageParagraph>
           </ErrorMessageBackground>
         )}
-        <StyledLabelDesktop htmlFor={"email"}>{"Email"}</StyledLabelDesktop>
+        <LabelMobile htmlFor={"email"}>{"Email"}</LabelMobile>
         <Input ref={emailRef} id={"email"} name={"email"} type={"email"} />
-        <StyledLabelDesktop htmlFor={"password"}>{"Hasło"}</StyledLabelDesktop>
+        <LabelMobile htmlFor={"password"}>{"Hasło"}</LabelMobile>
         <Input
           ref={passwordRef}
           id={"password"}
@@ -76,9 +61,9 @@ const SignInMobile = () => {
             <StyledAnchor>tutaj</StyledAnchor>
           </Link>
         </Description>
-        <ButtonContainer>
+        <ColumnButtonContainer>
           <Button type={"submit"} label={"Zaloguj"} />
-        </ButtonContainer>
+        </ColumnButtonContainer>
       </MobileFormWrapper>
     </MobileViewTemplate>
   );

@@ -6,38 +6,18 @@ import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import Button from "../../components/buttons/Button";
 import DesktopViewTemplate, {
-  DesktopFormWrapper,
+  ThinDesktopFormWrapper,
 } from "../../components/templates/DesktopViewTemplate";
 import Input from "../../components/Input";
 import {
   Title,
   Description,
   StyledAnchor,
+  ColumnButtonContainer,
+  ErrorMessageBackground,
+  ErrorMessageParagraph,
 } from "../../components/SignInUpElements";
-import { StyledLabelDesktop } from "../../components/Label";
-
-const SmallerDesktopFormWrapper = styled(DesktopFormWrapper)`
-  min-width: 65%;
-  max-width: 65%;
-`;
-
-const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 15px 40px;
-`;
-
-const ErrorMessageBackground = styled.div`
-  margin-top: 2em;
-  padding: 1em;
-  border-radius: 4px;
-  background: #fbbb9a;
-  color: #f49869;
-`;
-
-const ErrorMessageParagraph = styled.p`
-  font-size: 1.1rem;
-`;
+import { LabelDesktop } from "../../components/Label";
 
 const SignInDesktop = () => {
   const emailRef = React.createRef();
@@ -59,16 +39,16 @@ const SignInDesktop = () => {
 
   return (
     <DesktopViewTemplate>
-      <SmallerDesktopFormWrapper onSubmit={submitHandler}>
+      <ThinDesktopFormWrapper onSubmit={submitHandler}>
         <Title>Zaloguj się</Title>
         {error && (
           <ErrorMessageBackground>
             <ErrorMessageParagraph>{error}</ErrorMessageParagraph>
           </ErrorMessageBackground>
         )}
-        <StyledLabelDesktop htmlFor={"email"}>{"Email"}</StyledLabelDesktop>
+        <LabelDesktop htmlFor={"email"}>{"Email"}</LabelDesktop>
         <Input ref={emailRef} id={"email"} name={"email"} type={"email"} />
-        <StyledLabelDesktop htmlFor={"password"}>{"Hasło"}</StyledLabelDesktop>
+        <LabelDesktop htmlFor={"password"}>{"Hasło"}</LabelDesktop>
         <Input
           ref={passwordRef}
           id={"password"}
@@ -81,10 +61,10 @@ const SignInDesktop = () => {
             <StyledAnchor>tutaj</StyledAnchor>
           </Link>
         </Description>
-        <ButtonContainer>
+        <ColumnButtonContainer>
           <Button type={"submit"} label={"Zaloguj"} />
-        </ButtonContainer>
-      </SmallerDesktopFormWrapper>
+        </ColumnButtonContainer>
+      </ThinDesktopFormWrapper>
     </DesktopViewTemplate>
   );
 };

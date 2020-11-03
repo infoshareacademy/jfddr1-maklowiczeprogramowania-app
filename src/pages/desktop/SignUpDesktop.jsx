@@ -7,13 +7,19 @@ import { useAuth } from "../../contexts/AuthContext";
 import DesktopViewTemplate, {
   DesktopFormWrapper,
 } from "../../components/templates/DesktopViewTemplate";
-import { StyledLabelDesktop } from "../../components/Label";
+import { LabelDesktop } from "../../components/Label";
 import Input from "../../components/Input";
 import MediumButton from "../../components/buttons/MediumButton";
 import {
   Title,
   Description,
   StyledAnchor,
+  RowButtonContainer,
+  ErrorMessageBackground,
+  ErrorMessageParagraph,
+  SingUpInfoWrapper,
+  SingUpInfoMark,
+  SingUpInfoParagraph,
 } from "../../components/SignInUpElements";
 
 console.log(firebase);
@@ -28,38 +34,6 @@ const SideInputContainer = styled.div`
   flex-direction: column;
   flex-grow: 1;
   flex-basis: 1rem;
-`;
-
-const ButtonContainer = styled.div`
-  display: flex;
-  gap: 20px;
-  margin: 15px 40px;
-`;
-
-const SingUpInfoContainer = styled.section`
-  font-size: 0.8rem;
-  margin: -20px 0 0 0;
-`;
-
-const SingUpInfoMark = styled.span`
-  color: #fbbb9a;
-  font-size: 2.4rem;
-`;
-
-const SingUpInfoParagraph = styled.p`
-  margin: -20px 0 25px 10px;
-`;
-
-const ErrorMessageBackground = styled.div`
-  margin-top: 2em;
-  padding: 1em;
-  border-radius: 4px;
-  background: #fbbb9a;
-  color: #f49869;
-`;
-
-const ErrorMessageParagraph = styled.p`
-  font-size: 1.1rem;
 `;
 
 const SignUpDesktop = () => {
@@ -98,9 +72,7 @@ const SignUpDesktop = () => {
         )}
         <MainInputContainer>
           <SideInputContainer>
-            <StyledLabelDesktop htmlFor={"firstName"}>
-              {"Imię"}
-            </StyledLabelDesktop>
+            <LabelDesktop htmlFor={"firstName"}>{"Imię"}</LabelDesktop>
             <Input
               ref={firstNameRef}
               id={"firstName"}
@@ -108,7 +80,7 @@ const SignUpDesktop = () => {
               type={"text"}
               required
             />
-            <StyledLabelDesktop htmlFor={"email"}>{"Email"}</StyledLabelDesktop>
+            <LabelDesktop htmlFor={"email"}>{"Email"}</LabelDesktop>
             <Input
               ref={emailRef}
               id={"email"}
@@ -122,7 +94,7 @@ const SignUpDesktop = () => {
                 <StyledAnchor>tutaj</StyledAnchor>
               </Link>
             </Description>
-            <SingUpInfoContainer>
+            <SingUpInfoWrapper>
               <SingUpInfoMark>!</SingUpInfoMark>
               <SingUpInfoParagraph>
                 Wypełnij nasz szczegółowy formularz, żeby korzystać ze
@@ -132,12 +104,10 @@ const SignUpDesktop = () => {
                 Możesz też pominąć ten krok i przyglądać się naszemu portalowi z
                 nieco dalszej odległości!
               </SingUpInfoParagraph>
-            </SingUpInfoContainer>
+            </SingUpInfoWrapper>
           </SideInputContainer>
           <SideInputContainer>
-            <StyledLabelDesktop htmlFor={"secondName"}>
-              {"Nazwisko"}
-            </StyledLabelDesktop>
+            <LabelDesktop htmlFor={"secondName"}>{"Nazwisko"}</LabelDesktop>
             <Input
               ref={secondNameRef}
               id={"secondName"}
@@ -145,9 +115,7 @@ const SignUpDesktop = () => {
               type={"text"}
               required
             />
-            <StyledLabelDesktop htmlFor={"password"}>
-              {"Hasło"}
-            </StyledLabelDesktop>
+            <LabelDesktop htmlFor={"password"}>{"Hasło"}</LabelDesktop>
             <Input
               ref={passwordRef}
               id={"password"}
@@ -157,10 +125,10 @@ const SignUpDesktop = () => {
             />
           </SideInputContainer>
         </MainInputContainer>
-        <ButtonContainer>
+        <RowButtonContainer>
           <MediumButton type={"submit"} label={"Stwórz konto"} />
           <MediumButton type={""} label={"Wypełnij formularz"} />
-        </ButtonContainer>
+        </RowButtonContainer>
       </DesktopFormWrapper>{" "}
     </DesktopViewTemplate>
   );

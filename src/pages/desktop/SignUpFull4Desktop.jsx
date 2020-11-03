@@ -1,73 +1,63 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopWiewWithCloudsTemplate";
-import { StyledButton } from "../../components/buttons/Button";
+import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
+import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
 import {
   AddButton,
-  DesktopOptionWrapper,
   OptionContainer,
   TechElement,
-  Step,
-  StepActive,
-  StepDescription,
-  StepsFooter,
+  SlideItem,
+  SlideItemActive,
+  SlideDescription,
+  DesktopSlideContainer,
   Title,
+  CenterRowButtonContainer,
+  ChosenOptionContainer,
+  ChosenOption,
 } from "../../components/SignInUpElements";
-
-const TechItemContainer = styled.div`
-  display: flex;
-  gap: 1rem;
-  align-self: flex-start;
-  width: 60%;
-`;
-
-const StyledTechItem = styled(StyledButton)`
-  padding: 0.8rem 2rem;
-  font-size: 1.4rem;
-`;
-
-const TechItem = ({ type, label }) => {
-  return <StyledTechItem type={type}>{label}</StyledTechItem>;
-};
+import MediumButton from "../../components/buttons/MediumButton";
 
 const SignUpFull4Desktop = () => {
   return (
     <DesktopViewWithCloudsTemplate>
-      <DesktopOptionWrapper>
-        <Title>Wybierz technologię</Title>
+      <HalfDesktopFormWrapper>
+        <Title>Wybierz technologie</Title>
         <OptionContainer>
           <TechElement />
           <AddButton type={"submit"} label={"Dodaj"} />
         </OptionContainer>
-        <TechItemContainer>
-          <TechItem type="" label="Python" />
-          <TechItem type="" label="JavaScript" />
-          <TechItem type="" label="Java" />
-        </TechItemContainer>
-      </DesktopOptionWrapper>
-      <StepsFooter>
-        <StepDescription>Krok</StepDescription>
+        <ChosenOptionContainer>
+          <ChosenOption type="" label="Python" />
+          <ChosenOption type="" label="JavaScript" />
+          <ChosenOption type="" label="Java" />
+        </ChosenOptionContainer>
+        <CenterRowButtonContainer>
+          <MediumButton type={"submit"} label={"Dalej"} />
+        </CenterRowButtonContainer>
+      </HalfDesktopFormWrapper>
+      <DesktopSlideContainer>
+        <SlideDescription>Krok</SlideDescription>
         <Link
           style={{ color: "var(--dark-clr)" }}
           to="/pages/SignUpFull2Desktop"
         >
-          <Step>1</Step>
+          <SlideItem>1</SlideItem>
         </Link>
         <Link
           style={{ color: "var(--dark-clr)" }}
           to="/pages/SignUpFull3Desktop"
         >
-          <Step>2</Step>
+          <SlideItem>2</SlideItem>
         </Link>
-        <StepActive>3</StepActive>
+        <SlideItemActive>3</SlideItemActive>
         <Link
           style={{ color: "var(--dark-clr)" }}
-          to="/pages/SignUpFull4Desktop"
+          to="/pages/SignUpFull5Desktop"
         >
-          <Step>4</Step>
+          <SlideItem>4</SlideItem>
         </Link>
-      </StepsFooter>
+      </DesktopSlideContainer>
     </DesktopViewWithCloudsTemplate>
   );
 };

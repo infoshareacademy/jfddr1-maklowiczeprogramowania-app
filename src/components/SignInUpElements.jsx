@@ -112,7 +112,7 @@ export const MobileSlideContainer = styled.section`
   justify-content: center;
   height: 5rem;
   gap: 1.1rem;
-  font-size: 2.1rem;
+  font-size: 3rem;
   font-weight: 600;
   color: var(--dark-clr);
 `;
@@ -121,6 +121,7 @@ export const DesktopSlideContainer = styled(MobileSlideContainer)`
   align-items: flex-start;
   min-width: 60%;
   max-width: 60%;
+  gap: 0.7rem;
   text-align: center;
   font-size: 2.1rem;
 `;

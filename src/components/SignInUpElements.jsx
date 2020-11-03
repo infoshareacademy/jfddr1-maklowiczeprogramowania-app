@@ -178,11 +178,16 @@ export const OptionContainer = styled.div`
 export const Option = styled.select`
   height: 3rem;
   width: 100%;
-  padding-left: 0.8rem;
-  font-size: 1.2rem;
+  padding-left: 0.4rem;
+  font-size: 0.9rem;
   border: none;
   background-color: #ecf0f2;
   color: #7e7e7e;
+
+  media (min-width: 1024px) {
+    padding-left: 0.8rem;
+    font-size: 1.2rem;
+  }
 `;
 
 export const ToolsElement = () => {

@@ -82,7 +82,7 @@ export const CenterRowButtonContainer = styled(RowButtonContainer)`
 `;
 
 export const ShiftedRowButtonContainer = styled(RowButtonContainer)`
-  margin: -15px 0 0 0;
+  margin: -0.9rem 0 0 0;
 `;
 
 export const ColumnButtonContainer = styled(RowButtonContainer)`
@@ -96,7 +96,7 @@ export const ErrorMessageBackground = styled.div`
   margin-top: 2em;
   padding: 1em;
   border-radius: 0.25rem;
-  background: #fbbb9a;
+  background: var(--accent-clr);
   color: #f49869;
 `;
 

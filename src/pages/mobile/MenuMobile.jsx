@@ -6,7 +6,7 @@ import MobileViewTemplate, {
 import { getMenuMobileTabsDB } from "../../mocks/MenuMobileTabs.js";
 
 const StyledMobileMenuTab = styled.a`
-  padding: 15px;
+  padding: 0.94rem;
   font-weight: 700;
   font-size: 2rem;
   text-align: center;

@@ -5,9 +5,10 @@ import { StyledSmallButton } from "../components/buttons/SmallButton";
 import AddProjectTemplateView from "./AddProjectTemplateView";
 import { Link } from "react-router-dom";
 import { StyledInput } from "../components/Input";
-import { StyledLabelMobile } from "../components/Label";
+import { StyledLabelDesktop } from "../components/Label";
 import { fieldTagsDB } from "../mocks/FieldTagsData.js";
 import AuthDesktopTemplate from "../pages/AuthDesktopTemplate";
+
 const Heading = styled.h1`
   color: var(--text-color);
   font-size: 1.6rem;
@@ -52,7 +53,7 @@ const BigGreyishInput = styled(GreyishInput)`
   height: 8em;
 `;
 
-const Label = styled(StyledLabelMobile)`
+const Label = styled(StyledLabelDesktop)`
   font-weight: 500;
   align-self: flex-start;
   margin-left: 1.4em;
@@ -92,12 +93,14 @@ const TagContainer = styled.section`
   // justify-content: center;
   // align-items: center;
 `;
+
 const StepCounter = styled.p`
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--dark-clr);
   margin: 1em 0;
 `;
+
 const TagTemplate = (label) => {
   console.log(label);
   return (

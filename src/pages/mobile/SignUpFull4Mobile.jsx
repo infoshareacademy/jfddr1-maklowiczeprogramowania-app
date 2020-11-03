@@ -7,21 +7,21 @@ import MobileViewTemplate, {
 import SmallButton from "../../components/buttons/SmallButton";
 import {
   Title,
+  OptionContainer,
   CenterRowButtonContainer,
   MobileSlideContainer,
   SlideItem,
   SlideItemActive,
-  OptionContainer,
-  TechElement,
+  ToolsElement,
 } from "../../components/SignInUpElements";
 
 const SignUpFull4Mobile = () => {
   return (
     <MobileViewTemplate>
       <MobileFormWrapper>
-        <Title>Wybierz technologie</Title>
+        <Title>Wybierz narzędzia</Title>
         <OptionContainer>
-          <TechElement />
+          <ToolsElement />
           <SmallButton type="submit" label="Dodaj" />
         </OptionContainer>
         <CenterRowButtonContainer>
@@ -29,6 +29,12 @@ const SignUpFull4Mobile = () => {
         </CenterRowButtonContainer>
       </MobileFormWrapper>
       <MobileSlideContainer>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull1Mobile"
+        >
+          <SlideItem>•</SlideItem>
+        </Link>
         <Link
           style={{ color: "var(--dark-clr)" }}
           to="/pages/SignUpFull2Mobile"
@@ -45,12 +51,6 @@ const SignUpFull4Mobile = () => {
         <Link
           style={{ color: "var(--dark-clr)" }}
           to="/pages/SignUpFull5Mobile"
-        >
-          <SlideItem>•</SlideItem>
-        </Link>
-        <Link
-          style={{ color: "var(--dark-clr)" }}
-          to="/pages/SignUpFull6Mobile"
         >
           <SlideItem>•</SlideItem>
         </Link>

@@ -12,16 +12,16 @@ import {
   SlideItem,
   SlideItemActive,
   OptionContainer,
-  SpecsElement,
+  TechElement,
 } from "../../components/SignInUpElements";
 
 const SignUpFull3Mobile = () => {
   return (
     <MobileViewTemplate>
       <MobileFormWrapper>
-        <Title>Wybierz specjalizację</Title>
+        <Title>Wybierz technologie</Title>
         <OptionContainer>
-          <SpecsElement></SpecsElement>
+          <TechElement />
           <SmallButton type="submit" label="Dodaj" />
         </OptionContainer>
         <CenterRowButtonContainer>
@@ -29,6 +29,12 @@ const SignUpFull3Mobile = () => {
         </CenterRowButtonContainer>
       </MobileFormWrapper>
       <MobileSlideContainer>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull1Mobile"
+        >
+          <SlideItem>•</SlideItem>
+        </Link>
         <Link
           style={{ color: "var(--dark-clr)" }}
           to="/pages/SignUpFull2Mobile"
@@ -45,12 +51,6 @@ const SignUpFull3Mobile = () => {
         <Link
           style={{ color: "var(--dark-clr)" }}
           to="/pages/SignUpFull5Mobile"
-        >
-          <SlideItem>•</SlideItem>
-        </Link>
-        <Link
-          style={{ color: "var(--dark-clr)" }}
-          to="/pages/SignUpFull6Mobile"
         >
           <SlideItem>•</SlideItem>
         </Link>

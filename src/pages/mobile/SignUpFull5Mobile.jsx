@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import MobileViewTemplate, {
   MobileFormWrapper,
 } from "../../components/templates/MobileViewTemplate";
@@ -12,23 +12,29 @@ import {
   MobileSlideContainer,
   SlideItem,
   SlideItemActive,
-  ToolsElement,
+  TagsElement,
 } from "../../components/SignInUpElements";
 
 const SignUpFull5Mobile = () => {
   return (
     <MobileViewTemplate>
       <MobileFormWrapper>
-        <Title>Wybierz narzędzia</Title>
+        <Title>Wybierz obszar swoich zainteresowań</Title>
         <OptionContainer>
-          <ToolsElement />
+          <TagsElement />
           <SmallButton type="submit" label="Dodaj" />
         </OptionContainer>
         <CenterRowButtonContainer>
-          <SmallButton type="submit" label="Dalej" />
+          <SmallButton type="submit" label="Stwórz konto" />
         </CenterRowButtonContainer>
       </MobileFormWrapper>
       <MobileSlideContainer>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull1Mobile"
+        >
+          <SlideItem>•</SlideItem>
+        </Link>
         <Link
           style={{ color: "var(--dark-clr)" }}
           to="/pages/SignUpFull2Mobile"
@@ -48,12 +54,6 @@ const SignUpFull5Mobile = () => {
           <SlideItem>•</SlideItem>
         </Link>
         <SlideItemActive>•</SlideItemActive>
-        <Link
-          style={{ color: "var(--dark-clr)" }}
-          to="/pages/SignUpFull6Mobile"
-        >
-          <SlideItem>•</SlideItem>
-        </Link>
       </MobileSlideContainer>
     </MobileViewTemplate>
   );

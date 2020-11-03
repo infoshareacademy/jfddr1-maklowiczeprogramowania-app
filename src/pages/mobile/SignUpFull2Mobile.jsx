@@ -20,16 +20,16 @@ const SignUpFull2Mobile = () => {
     <MobileViewTemplate>
       <MobileFormWrapper>
         <Title>Podstawowe Dane</Title>
-        <LabelMobile htmlFor={"firstName"}>{"Imię"}</LabelMobile>
-        <Input id={"firstName"} name={"firstName"} type={"text"} />
-        <LabelMobile htmlFor={"secondName"}>{"Nazwisko"}</LabelMobile>
-        <Input id={"secondName"} name={"secondName"} type={"text"} />
-        <LabelMobile htmlFor={"email"}>{"Email"}</LabelMobile>
-        <Input id={"email"} name={"email"} type={"email"} />
-        <LabelMobile htmlFor={"password"}>{"Hasło"}</LabelMobile>
-        <Input id={"password"} name={"password"} type={"password"} />
+        <LabelMobile htmlFor="firstName">{"Imię"}</LabelMobile>
+        <Input id="firstName" name="firstName" type="text" />
+        <LabelMobile htmlFor="secondName">{"Nazwisko"}</LabelMobile>
+        <Input id="secondName" name="secondName" type="text" />
+        <LabelMobile htmlFor="email">{"Email"}</LabelMobile>
+        <Input id="email" name="email" type="email" />
+        <LabelMobile htmlFor="password">{"Hasło"}</LabelMobile>
+        <Input id="password" name="password" type="password" />
         <CenterRowButtonContainer>
-          <SmallButton type={"submit"} label={"Dalej"} />
+          <SmallButton type="submit" label="Dalej" />
         </CenterRowButtonContainer>
       </MobileFormWrapper>
       <MobileSlideContainer>

@@ -46,7 +46,7 @@ const SignUpFull7Mobile = () => {
           Utworzyłeś konto, teraz możesz korzystać z naszych dobrodziejstw!
         </ProjectDoneDescription>
         <CenterRowButtonContainer>
-          <SmallButton type={"submit"} label={"Profil"} />
+          <SmallButton type="submit" label="Profil" />
         </CenterRowButtonContainer>
       </MobileCommonWrapper>
       <MobileSlideContainer>

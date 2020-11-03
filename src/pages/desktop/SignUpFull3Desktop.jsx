@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
+import MediumButton from "../../components/buttons/MediumButton";
 import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
 import {
   AddButton,
@@ -16,7 +17,6 @@ import {
   ChosenOptionContainer,
   ChosenOption,
 } from "../../components/SignInUpElements";
-import MediumButton from "../../components/buttons/MediumButton";
 
 const SignUpFull3Desktop = () => {
   return (
@@ -25,10 +25,10 @@ const SignUpFull3Desktop = () => {
         <Title>Wybierz specjalizację</Title>
         <OptionContainer>
           <SpecsElement />
-          <AddButton type={"submit"} label={"Dodaj"} />
+          <AddButton type="submit" label="Dodaj" />
         </OptionContainer>
         <CenterRowButtonContainer>
-          <MediumButton type={"submit"} label={"Dalej"} />
+          <MediumButton type="submit" label="Dalej" />
         </CenterRowButtonContainer>
       </HalfDesktopFormWrapper>
       <DesktopSlideContainer>

@@ -22,10 +22,10 @@ const SignUpFull4Mobile = () => {
         <Title>Wybierz technologie</Title>
         <OptionContainer>
           <TechElement />
-          <SmallButton type={"submit"} label={"Dodaj"} />
+          <SmallButton type="submit" label="Dodaj" />
         </OptionContainer>
         <CenterRowButtonContainer>
-          <SmallButton type={"submit"} label={"Dalej"} />
+          <SmallButton type="submit" label="Dalej" />
         </CenterRowButtonContainer>
       </MobileFormWrapper>
       <MobileSlideContainer>

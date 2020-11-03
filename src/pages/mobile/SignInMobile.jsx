@@ -46,14 +46,14 @@ const SignInMobile = () => {
             <ErrorMessageParagraph>{error}</ErrorMessageParagraph>
           </ErrorMessageBackground>
         )}
-        <LabelMobile htmlFor={"email"}>{"Email"}</LabelMobile>
-        <Input ref={emailRef} id={"email"} name={"email"} type={"email"} />
-        <LabelMobile htmlFor={"password"}>{"Hasło"}</LabelMobile>
+        <LabelMobile htmlFor="email">{"Email"}</LabelMobile>
+        <Input ref={emailRef} id="email" name="email" type="email" />
+        <LabelMobile htmlFor="password">{"Hasło"}</LabelMobile>
         <Input
           ref={passwordRef}
-          id={"password"}
-          name={"password"}
-          type={"password"}
+          id="password"
+          name="password"
+          type="password"
         />
         <Description>
           Nie masz konta? Założ je{" "}
@@ -62,7 +62,7 @@ const SignInMobile = () => {
           </Link>
         </Description>
         <ColumnButtonContainer>
-          <Button type={"submit"} label={"Zaloguj"} />
+          <Button type="submit" label="Zaloguj" />
         </ColumnButtonContainer>
       </MobileFormWrapper>
     </MobileViewTemplate>

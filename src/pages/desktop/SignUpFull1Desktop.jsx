@@ -22,17 +22,17 @@ const SignUpFull1Desktop = () => {
       <HalfDesktopFormWrapper>
         <Title>Podaj podstawowe dane</Title>
         <InputsAndLabelsContainer>
-          <LabelDesktop htmlFor={"Imię"}>{"Imię"}</LabelDesktop>
-          <Input name={"Imię"} type={"text"} />
-          <LabelDesktop htmlFor={"Nazwisko"}>{"Nazwisko"}</LabelDesktop>
-          <Input name={"Nazwisko"} type={"text"} />
-          <LabelDesktop htmlFor={"Email"}>{"Email"}</LabelDesktop>
-          <Input name={"Email"} type={"text"} />
-          <LabelDesktop htmlFor={"Hasło"}>{"Hasło"}</LabelDesktop>
-          <Input name={"Hasło"} type={"text"} />
+          <LabelDesktop htmlFor="Imię">{"Imię"}</LabelDesktop>
+          <Input name="Imię" type="text" />
+          <LabelDesktop htmlFor="Nazwisko">{"Nazwisko"}</LabelDesktop>
+          <Input name="Nazwisko" type="text" />
+          <LabelDesktop htmlFor="Email">{"Email"}</LabelDesktop>
+          <Input name="Email" type="text" />
+          <LabelDesktop htmlFor="Hasło">{"Hasło"}</LabelDesktop>
+          <Input name="Hasło" type="text" />
         </InputsAndLabelsContainer>
         <CenterRowButtonContainer>
-          <MediumButton type={"submit"} label={"Dalej"} />
+          <MediumButton type="submit" label="Dalej" />
         </CenterRowButtonContainer>
       </HalfDesktopFormWrapper>
       <DesktopSlideContainer>

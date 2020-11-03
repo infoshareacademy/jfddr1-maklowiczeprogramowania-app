@@ -22,10 +22,10 @@ const SignUpFull5Mobile = () => {
         <Title>Wybierz narzędzia</Title>
         <OptionContainer>
           <ToolsElement />
-          <SmallButton type={"submit"} label={"Dodaj"} />
+          <SmallButton type="submit" label="Dodaj" />
         </OptionContainer>
         <CenterRowButtonContainer>
-          <SmallButton type={"submit"} label={"Dalej"} />
+          <SmallButton type="submit" label="Dalej" />
         </CenterRowButtonContainer>
       </MobileFormWrapper>
       <MobileSlideContainer>

@@ -26,8 +26,8 @@ const SignUpFull1Mobile = () => {
         <SmallerTitle>Załóż konto w kilku</SmallerTitle>
         <SmallerTitle>prostych krokach!</SmallerTitle>
         <CenterRowButtonContainer>
-          <SmallButton type={"submit"} label={"Cofnij"} />
-          <SmallButton type={"submit"} label={"Tworzę konto"} />
+          <SmallButton type="submit" label="Cofnij" />
+          <SmallButton type="submit" label="Tworzę konto" />
         </CenterRowButtonContainer>
       </MobileCommonWrapper>
       <MobileSlideContainer>

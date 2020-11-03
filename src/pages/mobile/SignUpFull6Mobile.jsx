@@ -22,10 +22,10 @@ const SignUpFull6Mobile = () => {
         <Title>Wybierz obszar swoich zainteresowań</Title>
         <OptionContainer>
           <TagsElement />
-          <SmallButton type={"submit"} label={"Dodaj"} />
+          <SmallButton type="submit" label="Dodaj" />
         </OptionContainer>
         <CenterRowButtonContainer>
-          <SmallButton type={"submit"} label={"Stwórz konto"} />
+          <SmallButton type="submit" label="Stwórz konto" />
         </CenterRowButtonContainer>
       </MobileFormWrapper>
       <MobileSlideContainer>

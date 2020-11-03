@@ -72,20 +72,20 @@ const SignUpDesktop = () => {
         )}
         <MainInputContainer>
           <SideInputContainer>
-            <LabelDesktop htmlFor={"firstName"}>{"Imię"}</LabelDesktop>
+            <LabelDesktop htmlFor="firstName">{"Imię"}</LabelDesktop>
             <Input
               ref={firstNameRef}
-              id={"firstName"}
-              name={"firstName"}
-              type={"text"}
+              id="firstName"
+              name="firstName"
+              type="text"
               required
             />
-            <LabelDesktop htmlFor={"email"}>{"Email"}</LabelDesktop>
+            <LabelDesktop htmlFor="email">{"Email"}</LabelDesktop>
             <Input
               ref={emailRef}
-              id={"email"}
-              name={"email"}
-              type={"email"}
+              id="email"
+              name="email"
+              type="email"
               required
             />
             <Description>
@@ -107,27 +107,27 @@ const SignUpDesktop = () => {
             </SingUpInfoWrapper>
           </SideInputContainer>
           <SideInputContainer>
-            <LabelDesktop htmlFor={"secondName"}>{"Nazwisko"}</LabelDesktop>
+            <LabelDesktop htmlFor="secondName">{"Nazwisko"}</LabelDesktop>
             <Input
               ref={secondNameRef}
-              id={"secondName"}
-              name={"secondName"}
-              type={"text"}
+              id="secondName"
+              name="secondName"
+              type="text"
               required
             />
-            <LabelDesktop htmlFor={"password"}>{"Hasło"}</LabelDesktop>
+            <LabelDesktop htmlFor="password">{"Hasło"}</LabelDesktop>
             <Input
               ref={passwordRef}
-              id={"password"}
-              name={"password"}
-              type={"password"}
+              id="password"
+              name="password"
+              type="password"
               required
             />
           </SideInputContainer>
         </MainInputContainer>
         <RowButtonContainer>
-          <MediumButton type={"submit"} label={"Stwórz konto"} />
-          <MediumButton type={""} label={"Wypełnij formularz"} />
+          <MediumButton type="submit" label="Stwórz konto" />
+          <MediumButton type="" label="Wypełnij formularz" />
         </RowButtonContainer>
       </DesktopFormWrapper>{" "}
     </DesktopViewTemplate>

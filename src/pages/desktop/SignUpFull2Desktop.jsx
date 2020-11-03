@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
 import Input from "../../components/Input";
+import MediumButton from "../../components/buttons/MediumButton";
 import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
 import { LabelDesktop } from "../../components/Label";
 import {
@@ -14,7 +15,6 @@ import {
   InputsAndLabelsContainer,
   CenterRowButtonContainer,
 } from "../../components/SignInUpElements";
-import MediumButton from "../../components/buttons/MediumButton";
 
 const SignUpFull2Desktop = () => {
   return (
@@ -22,17 +22,17 @@ const SignUpFull2Desktop = () => {
       <HalfDesktopFormWrapper>
         <Title>Pozwól się odnaleźć</Title>
         <InputsAndLabelsContainer>
-          <LabelDesktop htmlFor={"Portfolio"}>{"Portfolio"}</LabelDesktop>
-          <Input name={"Portfolio"} type={"text"} />
-          <LabelDesktop htmlFor={"Github"}>{"Github"}</LabelDesktop>
-          <Input name={"Github"} type={"text"} />
-          <LabelDesktop htmlFor={"Linkedin"}>{"Linkedin"}</LabelDesktop>
-          <Input name={"Linkedin"} type={"text"} />
-          <LabelDesktop htmlFor={"Dodaj"}>{"Dodaj zdjęcie"}</LabelDesktop>
-          <Input name={"Dodaj"} type={"text"} />
+          <LabelDesktop htmlFor="Portfolio">{"Portfolio"}</LabelDesktop>
+          <Input name="Portfolio" type="text" />
+          <LabelDesktop htmlFor="Github">{"Github"}</LabelDesktop>
+          <Input name="Github" type="text" />
+          <LabelDesktop htmlFor="Linkedin">{"Linkedin"}</LabelDesktop>
+          <Input name="Linkedin" type="text" />
+          <LabelDesktop htmlFor="Dodaj">{"Dodaj zdjęcie"}</LabelDesktop>
+          <Input name="Dodaj" type="text" />
         </InputsAndLabelsContainer>
         <CenterRowButtonContainer>
-          <MediumButton type={"submit"} label={"Dalej"} />
+          <MediumButton type="submit" label="Dalej" />
         </CenterRowButtonContainer>
       </HalfDesktopFormWrapper>
       <DesktopSlideContainer>

@@ -46,14 +46,14 @@ const SignInDesktop = () => {
             <ErrorMessageParagraph>{error}</ErrorMessageParagraph>
           </ErrorMessageBackground>
         )}
-        <LabelDesktop htmlFor={"email"}>{"Email"}</LabelDesktop>
-        <Input ref={emailRef} id={"email"} name={"email"} type={"email"} />
-        <LabelDesktop htmlFor={"password"}>{"Hasło"}</LabelDesktop>
+        <LabelDesktop htmlFor="email">{"Email"}</LabelDesktop>
+        <Input ref={emailRef} id="email" name="email" type="email" />
+        <LabelDesktop htmlFor="password">{"Hasło"}</LabelDesktop>
         <Input
           ref={passwordRef}
-          id={"password"}
-          name={"password"}
-          type={"password"}
+          id="password"
+          name="password"
+          type="password"
         />
         <Description>
           Nie masz konta? Założ je{" "}
@@ -62,7 +62,7 @@ const SignInDesktop = () => {
           </Link>
         </Description>
         <ColumnButtonContainer>
-          <Button type={"submit"} label={"Zaloguj"} />
+          <Button type="submit" label="Zaloguj" />
         </ColumnButtonContainer>
       </ThinDesktopFormWrapper>
     </DesktopViewTemplate>

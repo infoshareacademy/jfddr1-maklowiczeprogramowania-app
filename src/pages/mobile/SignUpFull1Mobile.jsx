@@ -7,8 +7,8 @@ import SmallButton from "../../components/buttons/SmallButton";
 import signUpFullImageMobileImageSrc from "../../img/sign-up-full-image-mobile.svg";
 import {
   SmallerTitle,
-  ButtonContainer,
-  SlideContainer,
+  CenterRowButtonContainer,
+  MobileSlideContainer,
   SlideItem,
 } from "../../components/SignInUpElements";
 
@@ -25,18 +25,18 @@ const SignUpFull1Mobile = () => {
         <FullFormMobileImage src={signUpFullImageMobileImageSrc} />
         <SmallerTitle>Załóż konto w kilku</SmallerTitle>
         <SmallerTitle>prostych krokach!</SmallerTitle>
-        <ButtonContainer>
+        <CenterRowButtonContainer>
           <SmallButton type={"submit"} label={"Cofnij"} />
           <SmallButton type={"submit"} label={"Tworzę konto"} />
-        </ButtonContainer>
+        </CenterRowButtonContainer>
       </MobileCommonWrapper>
-      <SlideContainer>
+      <MobileSlideContainer>
         <SlideItem>•</SlideItem>
         <SlideItem>•</SlideItem>
         <SlideItem>•</SlideItem>
         <SlideItem>•</SlideItem>
         <SlideItem>•</SlideItem>
-      </SlideContainer>
+      </MobileSlideContainer>
     </MobileViewTemplate>
   );
 };

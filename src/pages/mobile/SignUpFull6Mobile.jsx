@@ -8,8 +8,8 @@ import SmallButton from "../../components/buttons/SmallButton";
 import {
   Title,
   OptionContainer,
-  ButtonContainer,
-  SlideContainer,
+  CenterRowButtonContainer,
+  MobileSlideContainer,
   SlideItem,
   SlideItemActive,
   TagsElement,
@@ -19,16 +19,16 @@ const SignUpFull6Mobile = () => {
   return (
     <MobileViewTemplate>
       <MobileFormWrapper>
-        <Title>Wybierz Najbliższe Ci Branże</Title>
+        <Title>Wybierz obszar swoich zainteresowań</Title>
         <OptionContainer>
           <TagsElement />
           <SmallButton type={"submit"} label={"Dodaj"} />
         </OptionContainer>
-        <ButtonContainer>
+        <CenterRowButtonContainer>
           <SmallButton type={"submit"} label={"Stwórz konto"} />
-        </ButtonContainer>
+        </CenterRowButtonContainer>
       </MobileFormWrapper>
-      <SlideContainer>
+      <MobileSlideContainer>
         <Link
           style={{ color: "var(--dark-clr)" }}
           to="/pages/SignUpFull2Mobile"
@@ -54,7 +54,7 @@ const SignUpFull6Mobile = () => {
           <SlideItem>•</SlideItem>
         </Link>
         <SlideItemActive>•</SlideItemActive>
-      </SlideContainer>
+      </MobileSlideContainer>
     </MobileViewTemplate>
   );
 };

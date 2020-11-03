@@ -2,15 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Input from "../../components/Input";
-import Label from "../../components/Label";
+import { LabelMobile } from "../../components/Label";
 import MobileViewTemplate, {
   MobileFormWrapper,
 } from "../../components/templates/MobileViewTemplate";
 import SmallButton from "../../components/buttons/SmallButton";
 import {
-  ButtonContainer,
+  CenterRowButtonContainer,
   Title,
-  SlideContainer,
+  MobileSlideContainer,
   SlideItem,
   SlideItemActive,
 } from "../../components/SignInUpElements";
@@ -20,19 +20,19 @@ const SignUpFull2Mobile = () => {
     <MobileViewTemplate>
       <MobileFormWrapper>
         <Title>Podstawowe Dane</Title>
-        <Label htmlFor={"firstName"}>{"Imię"}</Label>
+        <LabelMobile htmlFor={"firstName"}>{"Imię"}</LabelMobile>
         <Input id={"firstName"} name={"firstName"} type={"text"} />
-        <Label htmlFor={"secondName"}>{"Nazwisko"}</Label>
+        <LabelMobile htmlFor={"secondName"}>{"Nazwisko"}</LabelMobile>
         <Input id={"secondName"} name={"secondName"} type={"text"} />
-        <Label htmlFor={"email"}>{"Email"}</Label>
+        <LabelMobile htmlFor={"email"}>{"Email"}</LabelMobile>
         <Input id={"email"} name={"email"} type={"email"} />
-        <Label htmlFor={"password"}>{"Hasło"}</Label>
+        <LabelMobile htmlFor={"password"}>{"Hasło"}</LabelMobile>
         <Input id={"password"} name={"password"} type={"password"} />
-        <ButtonContainer>
+        <CenterRowButtonContainer>
           <SmallButton type={"submit"} label={"Dalej"} />
-        </ButtonContainer>
+        </CenterRowButtonContainer>
       </MobileFormWrapper>
-      <SlideContainer>
+      <MobileSlideContainer>
         <SlideItemActive>•</SlideItemActive>
         <Link
           style={{ color: "var(--dark-clr)" }}
@@ -58,7 +58,7 @@ const SignUpFull2Mobile = () => {
         >
           <SlideItem>•</SlideItem>
         </Link>
-      </SlideContainer>
+      </MobileSlideContainer>
     </MobileViewTemplate>
   );
 };

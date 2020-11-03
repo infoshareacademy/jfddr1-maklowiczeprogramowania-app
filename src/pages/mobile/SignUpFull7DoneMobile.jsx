@@ -16,7 +16,7 @@ import {
   SignUpDoneDescription,
 } from "../../components/SignInUpElements";
 
-const SignUpFull6DoneMobile = () => {
+const SignUpFull7DoneMobile = () => {
   return (
     <MobileViewTemplate>
       <MobileCommonWrapper>
@@ -37,9 +37,10 @@ const SignUpFull6DoneMobile = () => {
         <SlideItemActive>•</SlideItemActive>
         <SlideItemActive>•</SlideItemActive>
         <SlideItemActive>•</SlideItemActive>
+        <SlideItemActive>•</SlideItemActive>
       </MobileSlideContainer>
     </MobileViewTemplate>
   );
 };
 
-export default SignUpFull6DoneMobile;
+export default SignUpFull7DoneMobile;

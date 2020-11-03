@@ -16,7 +16,7 @@ import {
   DesktopSlideContainer,
 } from "../../components/SignInUpElements";
 
-const SignUpFull6DoneDesktop = () => {
+const SignUpFull7DoneDesktop = () => {
   return (
     <DesktopViewWithCloudsTemplate>
       <HalfDesktopFormWrapper>
@@ -38,9 +38,10 @@ const SignUpFull6DoneDesktop = () => {
         <SlideItemActive>3</SlideItemActive>
         <SlideItemActive>4</SlideItemActive>
         <SlideItemActive>5</SlideItemActive>
+        <SlideItemActive>6</SlideItemActive>
       </DesktopSlideContainer>
     </DesktopViewWithCloudsTemplate>
   );
 };
 
-export default SignUpFull6DoneDesktop;
+export default SignUpFull7DoneDesktop;

@@ -20,7 +20,8 @@ import SignUpFull2Mobile from "./pages/mobile/SignUpFull2Mobile";
 import SignUpFull3Mobile from "./pages/mobile/SignUpFull3Mobile";
 import SignUpFull4Mobile from "./pages/mobile/SignUpFull4Mobile";
 import SignUpFull5Mobile from "./pages/mobile/SignUpFull5Mobile";
-import SignUpFull6DoneMobile from "./pages/mobile/SignUpFull6DoneMobile";
+import SignUpFull6Mobile from "./pages/mobile/SignUpFull6Mobile";
+import SignUpFull7DoneMobile from "./pages/mobile/SignUpFull7DoneMobile";
 import SignUpMobile from "./pages/mobile/SignUpMobile";
 import UserProfileGuestView1Mobile from "./pages/mobile/UserProfileGuestView1Mobile";
 import WelcomePage from "./pages/WelcomePage";
@@ -30,7 +31,8 @@ import SignUpFull2Desktop from "./pages/desktop/SignUpFull2Desktop";
 import SignUpFull3Desktop from "./pages/desktop/SignUpFull3Desktop";
 import SignUpFull4Desktop from "./pages/desktop/SignUpFull4Desktop";
 import SignUpFull5Desktop from "./pages/desktop/SignUpFull5Desktop";
-import SignUpFull6DoneDesktop from "./pages/desktop/SignUpFull6DoneDesktop";
+import SignUpFull6Desktop from "./pages/desktop/SignUpFull6Desktop";
+import SignUpFull7DoneDesktop from "./pages/desktop/SignUpFull7DoneDesktop";
 
 const Router = () => {
   return (
@@ -95,8 +97,11 @@ const Router = () => {
         <Route path="/pages/SignUpFull5Mobile">
           <SignUpFull5Mobile />
         </Route>
-        <Route path="/pages/SignUpFull6DoneMobile">
-          <SignUpFull6DoneMobile />
+        <Route path="/pages/SignUpFull6Mobile">
+          <SignUpFull6Mobile />
+        </Route>
+        <Route path="/pages/SignUpFull7DoneMobile">
+          <SignUpFull7DoneMobile />
         </Route>
         <Route path="/pages/SignUpFull0StartDesktop">
           <SignUpFull0StartDesktop />
@@ -116,8 +121,11 @@ const Router = () => {
         <Route path="/pages/SignUpFull5Desktop">
           <SignUpFull5Desktop />
         </Route>
-        <Route path="/pages/SignUpFull6DoneDesktop">
-          <SignUpFull6DoneDesktop />
+        <Route path="/pages/SignUpFull6Desktop">
+          <SignUpFull6Desktop />
+        </Route>
+        <Route path="/pages/SignUpFull7DoneDesktop">
+          <SignUpFull7DoneDesktop />
         </Route>
         <Route path="/pages/UserProfileGuestView1Mobile">
           <UserProfileGuestView1Mobile />

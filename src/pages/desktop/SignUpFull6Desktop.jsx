@@ -7,7 +7,7 @@ import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTe
 import {
   AddButton,
   OptionContainer,
-  TechElement,
+  TagsElement,
   SlideItem,
   SlideItemActive,
   SlideDescription,
@@ -18,20 +18,15 @@ import {
   ChosenOption,
 } from "../../components/SignInUpElements";
 
-const SignUpFull4Desktop = () => {
+const SignUpFull6Desktop = () => {
   return (
     <DesktopViewWithCloudsTemplate>
       <HalfDesktopFormWrapper>
-        <Title>Wybierz technologie</Title>
+        <Title>Wybierz obszar swoich zainteresowań</Title>
         <OptionContainer>
-          <TechElement />
+          <TagsElement />
           <AddButton type="submit" label="Dodaj" />
         </OptionContainer>
-        <ChosenOptionContainer>
-          <ChosenOption type="" label="Python" />
-          <ChosenOption type="" label="JavaScript" />
-          <ChosenOption type="" label="Java" />
-        </ChosenOptionContainer>
         <CenterRowButtonContainer>
           <MediumButton type="submit" label="Dalej" />
         </CenterRowButtonContainer>
@@ -56,22 +51,22 @@ const SignUpFull4Desktop = () => {
         >
           <SlideItem>3</SlideItem>
         </Link>
-        <SlideItemActive>4</SlideItemActive>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull4Desktop"
+        >
+          <SlideItem>4</SlideItem>
+        </Link>
         <Link
           style={{ color: "var(--dark-clr)" }}
           to="/pages/SignUpFull5Desktop"
         >
           <SlideItem>5</SlideItem>
         </Link>
-        <Link
-          style={{ color: "var(--dark-clr)" }}
-          to="/pages/SignUpFull6Desktop"
-        >
-          <SlideItem>6</SlideItem>
-        </Link>
+        <SlideItemActive>6</SlideItemActive>
       </DesktopSlideContainer>
     </DesktopViewWithCloudsTemplate>
   );
 };
 
-export default SignUpFull4Desktop;
+export default SignUpFull6Desktop;

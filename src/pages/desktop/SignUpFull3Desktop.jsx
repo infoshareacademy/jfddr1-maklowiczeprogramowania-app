@@ -58,6 +58,12 @@ const SignUpFull3Desktop = () => {
         >
           <SlideItem>5</SlideItem>
         </Link>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull6Desktop"
+        >
+          <SlideItem>6</SlideItem>
+        </Link>
       </DesktopSlideContainer>
     </DesktopViewWithCloudsTemplate>
   );

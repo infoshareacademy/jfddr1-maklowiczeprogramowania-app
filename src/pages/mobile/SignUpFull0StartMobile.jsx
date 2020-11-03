@@ -36,6 +36,7 @@ const SignUpFull0StartMobile = () => {
         <SlideItem>•</SlideItem>
         <SlideItem>•</SlideItem>
         <SlideItem>•</SlideItem>
+        <SlideItem>•</SlideItem>
       </MobileSlideContainer>
     </MobileViewTemplate>
   );

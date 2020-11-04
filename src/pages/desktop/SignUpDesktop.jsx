@@ -20,12 +20,17 @@ import {
   SingUpInfoWrapper,
   SingUpInfoMark,
   SingUpInfoParagraph,
+  DesktopLinkButton,
 } from "../../components/SignInUpElements";
 
 // const SignUpFormContainer = styled(SignInFormContainer)`
 //   min-width: 90%;
 //   max-width: 90%;
 // `;
+
+const HalfContainerSizeDesktopLinkButton = styled(DesktopLinkButton)`
+  width: 50%;
+`;
 
 const MainInputContainer = styled.div`
   display: flex;
@@ -130,7 +135,9 @@ const SignUpDesktop = () => {
         </MainInputContainer>
         <RowButtonContainer>
           <MediumButton type="submit" label="Stwórz konto" />
-          <MediumButton type="" label="Wypełnij formularz" />
+          <HalfContainerSizeDesktopLinkButton to="/pages/SignUpFull0StartDesktop">
+            Załóż konto
+          </HalfContainerSizeDesktopLinkButton>
         </RowButtonContainer>
       </DesktopFormWrapper>{" "}
     </DesktopViewTemplate>

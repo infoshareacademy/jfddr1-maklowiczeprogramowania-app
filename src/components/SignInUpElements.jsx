@@ -107,9 +107,10 @@ export const MobileLinkButton = styled(Link)`
 `;
 
 export const DesktopLinkButton = styled(MobileLinkButton)`
-  width: 13rem;
-  padding: 1rem;
-  font-size: 1.7em;
+  width: 14rem;
+  margin: auto 0;
+  padding: 1.3rem;
+  font-size: 1.5em;
 `;
 
 // *********** BUTTON CONTAINERS ***********

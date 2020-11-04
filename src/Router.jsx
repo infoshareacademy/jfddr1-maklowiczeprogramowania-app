@@ -44,24 +44,36 @@ const Router = () => {
         {/* <Route path="/pages/SignInDesktop">
           <SignInDesktop />
         </Route> */}
-        <Route path="/pages/AddProjectView0">
-          <AddProjectView0 />
-        </Route>
-        <Route path="/pages/AddProjectView1">
-          <AddProjectView1 />
-        </Route>
-        <Route path="/pages/AddProjectView2">
-          <AddProjectView2 />
-        </Route>
-        <Route path="/pages/AddProjectView3">
-          <AddProjectView3 />
-        </Route>
-        <Route path="/pages/AddProjectView4">
-          <AddProjectView4 />
-        </Route>
-        <Route path="/pages/AddProjectViewDone">
-          <AddProjectViewDone />
-        </Route>
+        <PrivateRouter
+          exact
+          path="/pages/AddProjectView0"
+          component={AddProjectView0}
+        ></PrivateRouter>
+        <PrivateRouter
+          exact
+          path="/pages/AddProjectView1"
+          component={AddProjectView1}
+        ></PrivateRouter>
+        <PrivateRouter
+          exact
+          path="/pages/AddProjectView2"
+          component={AddProjectView2}
+        ></PrivateRouter>
+        <PrivateRouter
+          exact
+          path="/pages/AddProjectView3"
+          component={AddProjectView3}
+        ></PrivateRouter>
+        <PrivateRouter
+          exact
+          path="/pages/AddProjectView4"
+          component={AddProjectView4}
+        ></PrivateRouter>
+        <PrivateRouter
+          exact
+          path="/pages/AddProjectViewDone"
+          component={AddProjectViewDone}
+        ></PrivateRouter>
         <PrivateRouter
           exact
           path="/pages/AuthWelcomeView"

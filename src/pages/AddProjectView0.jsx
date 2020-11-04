@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import styled from "styled-components";
 import MediaQuery from "react-responsive";
 import ImageSrc from "../img/add-project-idea-image.svg";

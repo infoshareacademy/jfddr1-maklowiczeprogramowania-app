@@ -1,20 +1,47 @@
+// export const toolsDB = [
+//   {
+//     label: "Dodaj Znajome Narzędzia",
+//   },
+//   {
+//     label: "option2",
+//   },
+//   {
+//     label: "option3",
+//   },
+//   {
+//     label: "option4",
+//   },
+//   {
+//     label: "option5",
+//   },
+//   {
+//     label: "option6",
+//   },
+// ];
+
 export const toolsDB = [
   {
-    label: "Dodaj Znajome Narzędzia",
-  },
-  {
-    label: "Git",
+    label: "GIT",
+    value: "GIT",
   },
   {
     label: "Jira",
+    value: "Jira",
   },
   {
-    label: "Option3",
+    label: "Adobe XD",
+    value: "Adobe XD",
   },
   {
-    label: "Option4",
+    label: "Photoshop",
+    value: "Photoshop",
   },
   {
-    label: "Option6",
+    label: "Visual Studio Code",
+    value: "Visual Studio Code",
+  },
+  {
+    label: "Linux",
+    value: "Linux",
   },
 ];

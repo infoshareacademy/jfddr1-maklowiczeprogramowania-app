@@ -1,6 +1,8 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 import { AuthProvider } from "./contexts/AuthContext";
+import { ProjectsProvider } from "./contexts/ProjectsContext";
+
 import Router from "./Router";
 
 const GlobalStyle = createGlobalStyle`
@@ -32,10 +34,12 @@ li {
 const App = () => {
   return (
     <>
-      <AuthProvider>
-        <GlobalStyle />
-        <Router />
-      </AuthProvider>
+      <ProjectsProvider>
+        <AuthProvider>
+          <GlobalStyle />
+          <Router />
+        </AuthProvider>
+      </ProjectsProvider>
     </>
   );
 };

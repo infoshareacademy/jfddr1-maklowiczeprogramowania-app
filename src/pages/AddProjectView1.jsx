@@ -1,48 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import MediaQuery from "react-responsive";
+import Select from "react-select";
+import { useProject } from "../contexts/ProjectsContext";
+import { Link, useHistory } from "react-router-dom";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
-import AddProjectTemplateView from "./AddProjectTemplateView";
-import { Link } from "react-router-dom";
 import { StyledInput } from "../components/Input";
 import { StyledLabelDesktop } from "../components/Label";
 import { fieldTagsDB } from "../mocks/FieldTagsData.js";
+import AddProjectTemplateView from "./AddProjectTemplateView";
 import AuthDesktopTemplate from "../pages/AuthDesktopTemplate";
 
-const Heading = styled.h1`
-  color: var(--text-color);
-  font-size: 1.6rem;
-
-  @media (min-width: 1024px) {
-    color: var(--dark-clr);
-  }
-`;
-
-const Paragraph = styled.p`
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-top: 0.5em;
-  @media (min-width: 1024px) {
-    color: var(--dark-clr);
-    font-size: 1.2rem;
-  }
-`;
-
 const Button = styled(StyledSmallButton)`
-  background-color: var(--light-clr);
-  color: var(--dark-clr);
   width: 8em;
   margin: 2em 0.5em 0 0.5em;
+  color: var(--dark-clr);
+  background-color: var(--light-clr);
   @media (min-width: 1024px) {
     color: var(--light-clr);
     background-color: var(--dark-clr);
   }
 `;
 
+const SelectButton = styled(Button)`
+margin 0 1em;
+`;
+
 const GreyishInput = styled(StyledInput)`
-  background-color: #f2f5f6;
   width: 90%;
   height: 2.5em;
+  color: var(--dark-clr);
+  background-color: #f2f5f6;
+
   @media (min-width: 1024px) {
     color: var(--light-clr);
     background-color: var(--dark-clr);
@@ -57,133 +46,166 @@ const Label = styled(StyledLabelDesktop)`
   font-weight: 500;
   align-self: flex-start;
   margin-left: 1.4em;
+  font-weight: 500;
   @media (min-width: 1024px) {
-    color: var(--dark-clr);
     font-size: 1.2rem;
+    color: var(--dark-clr);
   }
 `;
 
 const LabelInputWrapper = styled.div`
   display: flex;
-  width: 80%;
-  max-width: 450px;
-  // border: 1px solid yellow;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 80%;
+  max-width: 450px;
 `;
 
-const Tag = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4px 14px;
-  margin: 0.2em;
-  border-radius: 10px;
-  background: #f2f5f6;
-  color: #636363;
-  font-size: 0.9rem;
+const StyledSelect = styled(Select)`
+  color: var(--dark-clr);
+  border: red;
 `;
 
 const TagContainer = styled.section`
-  margin: 0.4em auto;
   display: flex;
-  width: 80%;
-  flex-wrap: wrap;
-  // justify-content: center;
-  // align-items: center;
+  margin: 2em 0;
+  width: 100%;
+  align-items: center;
 `;
 
 const StepCounter = styled.p`
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--dark-clr);
-  margin: 1em 0;
 `;
-
-const TagTemplate = (label) => {
-  console.log(label);
-  return (
-    <>
-      <Tag>{label.label}</Tag>
-    </>
-  );
-};
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  // border: 1px solid red;
 `;
+const Input = React.forwardRef(({ id, name, type }, ref) => (
+  <GreyishInput ref={ref} id={id} name={name} type={type} required />
+));
 
 const AddProjectView1 = () => {
-  const fieldTagsData = fieldTagsDB;
-  const FieldTagsComponents = fieldTagsData.map(({ label }) => {
+  const history = useHistory();
+  const { project, setProject } = useProject();
+  const [tags, setTags] = useState([]);
+  const titleRef = React.createRef();
+  const fileRef = React.createRef();
+  const descriptionRef = React.createRef();
+  const SpecSelect = ({ name }) => {
+    const [disabled, setDisabled] = useState(false);
+    const [tagsState, setTagsState] = useState([]);
+
+    const handleClick = (e) => {
+      e.preventDefault();
+      const tags = tagsState.map((el) => el.label);
+      setTags(tags);
+      setDisabled(true);
+    };
     return (
       <>
-        <TagTemplate label={label} />
+        <StyledSelect
+          isMulti={true}
+          placeholder="Wybierz tagi..."
+          name={name}
+          options={fieldTagsDB}
+          onChange={setTagsState}
+          isDisabled={disabled}
+        />
+        <SelectButton name={name} onClick={handleClick}>
+          Zatwierdź
+        </SelectButton>
       </>
     );
-  });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let title = titleRef.current.value;
+    let file = fileRef.current.value;
+    let description = descriptionRef.current.value;
+    setProject({ title, file, description, tags });
+    console.log(project);
+    history.push("/pages/AddProjectView2");
+  };
+
   return (
     <>
       <MediaQuery minDeviceWidth={1024}>
-        <AuthDesktopTemplate>
-          children=
-          {
+        <AuthDesktopTemplate
+          heading={"Dodaj podstawowe informacje"}
+          sectionSubtitle={"Opisz swój projekt"}
+          step={"Krok 1 z 4"}
+          children={
             <>
-              <Heading>Dodaj podstawowe informacje</Heading>
-              <Paragraph>Opisz swój projekt</Paragraph>
-              <Form>
+              <Form onSubmit={handleSubmit}>
                 <LabelInputWrapper>
                   <Label>Tytuł</Label>
-                  <GreyishInput />
+                  <Input
+                    ref={titleRef}
+                    id={"title"}
+                    name={"title"}
+                    type={"text"}
+                    required
+                  />
                 </LabelInputWrapper>
                 <LabelInputWrapper>
                   <Label>Grafika projektu</Label>
-                  <GreyishInput />
+                  <Input
+                    ref={fileRef}
+                    id={"upload"}
+                    name={"upload"}
+                    type={"file"}
+                    accept={"image/png, image/jpeg"}
+                  />
                 </LabelInputWrapper>
-
                 <LabelInputWrapper>
                   <Label>Opis projektu</Label>
-                  <BigGreyishInput />
+                  <Input
+                    ref={descriptionRef}
+                    id={"description"}
+                    name={"description"}
+                    type={"text"}
+                    required
+                  />
                 </LabelInputWrapper>
+
+                <TagContainer>
+                  <SpecSelect />
+                </TagContainer>
+
+                <Button type="submit">Dalej</Button>
               </Form>
-              <TagContainer> {FieldTagsComponents}</TagContainer>
-              <Link to="/pages/AddProjectView2">
-                <Button>Dalej</Button>
-              </Link>
-              <StepCounter>Krok 1 z 4</StepCounter>
             </>
           }
-        </AuthDesktopTemplate>
+        ></AuthDesktopTemplate>
       </MediaQuery>
       <MediaQuery maxDeviceWidth={1024}>
         <AddProjectTemplateView
+          heading={"Dodaj podstawowe informacje"}
+          sectionSubtitle={"Opisz swój projekt"}
           children={
             <>
-              <Heading>Dodaj podstawowe informacje</Heading>
-              <Paragraph>Opisz swój projekt</Paragraph>
               <Form>
                 <LabelInputWrapper>
                   <Label>Tytuł</Label>
-                  <GreyishInput />
+                  <GreyishInput required type="password" />
                 </LabelInputWrapper>
                 <LabelInputWrapper>
                   <Label>Grafika projektu</Label>
-                  <GreyishInput />
+                  <GreyishInput required />
                 </LabelInputWrapper>
-
                 <LabelInputWrapper>
                   <Label>Opis projektu</Label>
-                  <BigGreyishInput />
+                  <BigGreyishInput required />
                 </LabelInputWrapper>
               </Form>
-              <TagContainer> {FieldTagsComponents}</TagContainer>
-              <Link to="/pages/AddProjectView2">
-                <Button>Dalej</Button>
-              </Link>
+
+              <Button>Dalej</Button>
             </>
           }
         ></AddProjectTemplateView>

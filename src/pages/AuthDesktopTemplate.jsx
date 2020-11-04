@@ -140,6 +140,31 @@ const AuthMenuOptionIcon = styled.img`
   margin-right: 1.3em;
 `;
 
+const Heading = styled.h1`
+  font-size: 1.6rem;
+  color: var(--text-color);
+  @media (min-width: 1024px) {
+    color: var(--dark-clr);
+  }
+`;
+
+const Paragraph = styled.p`
+  margin-top: 0.5em;
+  font-size: 0.9rem;
+  font-weight: 500;
+  @media (min-width: 1024px) {
+    font-size: 1.2rem;
+    color: var(--dark-clr);
+  }
+`;
+
+const StepCounter = styled.p`
+  margin: 1em 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--dark-clr);
+`;
+
 const AuthMenuItem = styled.li``;
 
 const AuthNavigationTemplate = () => {
@@ -173,7 +198,8 @@ const AuthNavigationTemplate = () => {
 };
 
 const AuthDesktopTemplate = (props) => {
-  const { currentUserData } = useAuth();
+  const { currentUserData, currentUser } = useAuth();
+  console.log(currentUserData, currentUser);
   return (
     <>
       <PageWrapper>
@@ -205,7 +231,13 @@ const AuthDesktopTemplate = (props) => {
             </AuthMenuList>
           </DesktopMenuBar>
         </MediaQuery>
-        <Main>{props.children}</Main>
+        <Main>
+          <Heading>{props.heading}</Heading>
+          <Paragraph>{props.sectionSubtitle}</Paragraph>
+
+          {props.children}
+          <StepCounter>{props.step}</StepCounter>
+        </Main>
       </PageWrapper>
     </>
   );

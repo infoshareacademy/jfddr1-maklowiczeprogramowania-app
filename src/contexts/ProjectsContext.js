@@ -8,17 +8,11 @@ export const useProject = () => {
 
 export const ProjectsProvider = ({ children }) => {
   const [project, setProject] = useState([{}]);
-  const manageProject = (projectParams) => {
-    setProject((oldProject) => ({ ...oldProject, projectParams }));
-  };
 
-  console.log(project);
   const value = {
     project,
     setProject,
-    manageProject,
   };
-  const [loading, setLoading] = useState(true);
   return (
     <>
       <ProjectContext.Provider value={value}>

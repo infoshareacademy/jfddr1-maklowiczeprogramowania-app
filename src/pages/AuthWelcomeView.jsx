@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import MenuMessageIconSrc from "../img/message-icon.svg";
-
 import { useAuth } from "../contexts/AuthContext";
 import MenuBellIconSrc from "../img/bell-icon.svg";
 import HamburgerMenuSrc from "../img/radix-icons_hamburger-menu-dark.svg";
@@ -245,7 +244,6 @@ const ProjectTemplate = ({
 
 const AuthWelcomeView = () => {
   const { currentUserData } = useAuth();
-  console.log(currentUserData);
   const searchTagSpecializationNamesData = getSearchSpecializationTagNames();
   const searchTagSpecializationNamesComponents = searchTagSpecializationNamesData.map(
     ({ tagName }) => {

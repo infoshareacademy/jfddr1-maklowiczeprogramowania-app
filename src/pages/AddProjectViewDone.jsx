@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import MediaQuery from "react-responsive";
 import { Link } from "react-router-dom";
+import { useProject } from "../contexts/ProjectsContext";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
 import AddProjectTemplateView from "./AddProjectTemplateView";
 import ImageSrc from "../img/project-done.svg";
@@ -27,6 +27,11 @@ const Button = styled(StyledSmallButton)`
   margin: 2em 0.5em 0 0.5em;
   color: var(--dark-clr);
   background-color: var(--light-clr);
+  @media (min-width: 1024px) {
+    color: var(--light-clr);
+    margin: 4em auto;
+    background-color: var(--dark-clr);
+  }
 `;
 
 const ProjectName = styled.span`
@@ -35,6 +40,7 @@ const ProjectName = styled.span`
 `;
 
 const AddProjectViewDone = () => {
+  const { project } = useProject();
   return (
     <>
       <AddProjectTemplateView
@@ -43,8 +49,7 @@ const AddProjectViewDone = () => {
             <Image src={ImageSrc} />
             <Heading>Gratulacje!</Heading>
             <Paragraph>
-              Projekt <ProjectName>Strona za pięć zeta</ProjectName> został
-              dodany!
+              Projekt <ProjectName>{project.title}</ProjectName> został dodany!
             </Paragraph>
             <Link to="/pages/AuthWelcomeView">
               <Button>Wyjdź</Button>

@@ -22,7 +22,10 @@ import {
   SingUpInfoParagraph,
 } from "../../components/SignInUpElements";
 
-console.log(firebase);
+// const SignUpFormContainer = styled(SignInFormContainer)`
+//   min-width: 90%;
+//   max-width: 90%;
+// `;
 
 const MainInputContainer = styled.div`
   display: flex;

@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { StyledButton } from "./Button";
 
-const StyledMediumButton = styled(StyledButton)`
+export const StyledMediumButton = styled(StyledButton)`
   font-weight: 600;
-  font-size: 1.2rem;
-  padding: 25px 0;
+  font-size: 1.4rem;
+  padding: 1.5rem 0;
   width: 50%;
 `;
 

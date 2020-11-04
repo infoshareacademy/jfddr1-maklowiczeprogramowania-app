@@ -7,8 +7,8 @@ import MobileViewTemplate, {
 import SmallButton from "../../components/buttons/SmallButton";
 import {
   Title,
-  ButtonContainer,
-  SlideContainer,
+  CenterRowButtonContainer,
+  MobileSlideContainer,
   SlideItem,
   SlideItemActive,
   OptionContainer,
@@ -22,12 +22,19 @@ const SignUpFull3Mobile = () => {
         <Title>Wybierz specjalizację</Title>
         <OptionContainer>
           <SpecsElement></SpecsElement>
+          <SmallButton type="submit" label="Dodaj" />
         </OptionContainer>
-        <ButtonContainer>
-          <SmallButton type={"submit"} label={"Dalej"} />
-        </ButtonContainer>
+        <CenterRowButtonContainer>
+          <SmallButton type="submit" label="Dalej" />
+        </CenterRowButtonContainer>
       </MobileFormWrapper>
-      <SlideContainer>
+      <MobileSlideContainer>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull1Mobile"
+        >
+          <SlideItem>•</SlideItem>
+        </Link>
         <Link
           style={{ color: "var(--dark-clr)" }}
           to="/pages/SignUpFull2Mobile"
@@ -53,7 +60,7 @@ const SignUpFull3Mobile = () => {
         >
           <SlideItem>•</SlideItem>
         </Link>
-      </SlideContainer>
+      </MobileSlideContainer>
     </MobileViewTemplate>
   );
 };

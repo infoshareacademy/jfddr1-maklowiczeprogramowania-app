@@ -44,6 +44,16 @@ export const DesktopCommonWrapper = styled.section`
   padding: 2rem 0;
 `;
 
+export const ThinDesktopCommonWrapper = styled(DesktopCommonWrapper)`
+  min-width: 65%;
+  max-width: 65%;
+`;
+
+export const HalfDesktopCommonWrapper = styled(DesktopCommonWrapper)`
+  min-width: 50%;
+  max-width: 50%;
+`;
+
 export const DesktopFormWrapper = styled.form`
   display: flex;
   flex-direction: column;
@@ -52,6 +62,17 @@ export const DesktopFormWrapper = styled.form`
   min-width: 90%;
   max-width: 90%;
   padding: 2rem 0;
+`;
+
+export const ThinDesktopFormWrapper = styled(DesktopFormWrapper)`
+  min-width: 65%;
+  max-width: 65%;
+`;
+
+export const HalfDesktopFormWrapper = styled(DesktopFormWrapper)`
+  min-width: 50%;
+  max-width: 50%;
+  margin: auto 0;
 `;
 
 const DesktopViewTemplate = ({ children }) => {

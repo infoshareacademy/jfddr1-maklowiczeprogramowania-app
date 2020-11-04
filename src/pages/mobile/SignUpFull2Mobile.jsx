@@ -2,15 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Input from "../../components/Input";
-import Label from "../../components/Label";
+import { LabelMobile } from "../../components/Label";
 import MobileViewTemplate, {
   MobileFormWrapper,
 } from "../../components/templates/MobileViewTemplate";
 import SmallButton from "../../components/buttons/SmallButton";
 import {
-  ButtonContainer,
+  CenterRowButtonContainer,
   Title,
-  SlideContainer,
+  MobileSlideContainer,
   SlideItem,
   SlideItemActive,
 } from "../../components/SignInUpElements";
@@ -19,20 +19,26 @@ const SignUpFull2Mobile = () => {
   return (
     <MobileViewTemplate>
       <MobileFormWrapper>
-        <Title>Podstawowe Dane</Title>
-        <Label htmlFor={"firstName"}>{"Imię"}</Label>
-        <Input id={"firstName"} name={"firstName"} type={"text"} />
-        <Label htmlFor={"secondName"}>{"Nazwisko"}</Label>
-        <Input id={"secondName"} name={"secondName"} type={"text"} />
-        <Label htmlFor={"email"}>{"Email"}</Label>
-        <Input id={"email"} name={"email"} type={"email"} />
-        <Label htmlFor={"password"}>{"Hasło"}</Label>
-        <Input id={"password"} name={"password"} type={"password"} />
-        <ButtonContainer>
-          <SmallButton type={"submit"} label={"Dalej"} />
-        </ButtonContainer>
+        <Title>Pozwól się odnaleźć</Title>
+        <LabelMobile htmlFor="Portfolio">{"Portfolio"}</LabelMobile>
+        <Input name="Portfolio" type="text" />
+        <LabelMobile htmlFor="Github">{"Github"}</LabelMobile>
+        <Input name="Github" type="text" />
+        <LabelMobile htmlFor="Linkedin">{"Linkedin"}</LabelMobile>
+        <Input name="Linkedin" type="text" />
+        <LabelMobile htmlFor="Dodaj">{"Dodaj zdjęcie"}</LabelMobile>
+        <Input name="Dodaj" type="text" />
+        <CenterRowButtonContainer>
+          <SmallButton type="submit" label="Dalej" />
+        </CenterRowButtonContainer>
       </MobileFormWrapper>
-      <SlideContainer>
+      <MobileSlideContainer>
+        <Link
+          style={{ color: "var(--dark-clr)" }}
+          to="/pages/SignUpFull1Mobile"
+        >
+          <SlideItem>•</SlideItem>
+        </Link>
         <SlideItemActive>•</SlideItemActive>
         <Link
           style={{ color: "var(--dark-clr)" }}
@@ -58,7 +64,7 @@ const SignUpFull2Mobile = () => {
         >
           <SlideItem>•</SlideItem>
         </Link>
-      </SlideContainer>
+      </MobileSlideContainer>
     </MobileViewTemplate>
   );
 };

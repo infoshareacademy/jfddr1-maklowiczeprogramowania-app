@@ -22,11 +22,11 @@ const UserImageWrapper = styled.div`
 `;
 
 const UserImage = styled.img`
-  height: 56px;
-  width: 56px;
+  height: 3.5rem;
+  width: 3.5rem;
   background-color: var(--light-clr);
-  border-radius: 28px;
-  margin: 0 7px 0 12px;
+  border-radius: 1.75rem;
+  margin: 0 0.44rem 0 0.75rem;
 `;
 
 const UserNameAndSpecWrapper = styled.div`

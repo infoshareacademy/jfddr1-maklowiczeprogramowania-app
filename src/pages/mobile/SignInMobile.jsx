@@ -3,36 +3,21 @@ import MediaQuery from "react-responsive";
 import styled from "styled-components";
 import firebase from "firebase/app";
 import { Link, useHistory } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
-import Button from "../components/buttons/Button";
-import Input from "../components/Input";
+import { useAuth } from "../../contexts/AuthContext";
+import Button from "../../components/buttons/Button";
+import Input from "../../components/Input";
 import MobileViewTemplate, {
   MobileFormWrapper,
-} from "../components/templates/MobileViewTemplate";
+} from "../../components/templates/MobileViewTemplate";
 import {
   Title,
   Description,
   StyledAnchor,
-} from "../components/SignInUpElements";
-import { StyledLabelDesktop } from "../components/Label";
-
-const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 15px 40px;
-`;
-
-const ErrorMessageBackground = styled.div`
-  margin-top: 2em;
-  padding: 1em;
-  border-radius: 4px;
-  background: #fbbb9a;
-  color: #f49869;
-`;
-
-const ErrorMessageParagraph = styled.p`
-  font-size: 1.1rem;
-`;
+  ColumnButtonContainer,
+  ErrorMessageBackground,
+  ErrorMessageParagraph,
+} from "../../components/SignInUpElements";
+import { LabelMobile } from "../../components/Label";
 
 const SignInMobile = () => {
   const emailRef = React.createRef();
@@ -61,14 +46,14 @@ const SignInMobile = () => {
             <ErrorMessageParagraph>{error}</ErrorMessageParagraph>
           </ErrorMessageBackground>
         )}
-        <StyledLabelDesktop htmlFor={"email"}>{"Email"}</StyledLabelDesktop>
-        <Input ref={emailRef} id={"email"} name={"email"} type={"email"} />
-        <StyledLabelDesktop htmlFor={"password"}>{"Hasło"}</StyledLabelDesktop>
+        <LabelMobile htmlFor="email">{"Email"}</LabelMobile>
+        <Input ref={emailRef} id="email" name="email" type="email" />
+        <LabelMobile htmlFor="password">{"Hasło"}</LabelMobile>
         <Input
           ref={passwordRef}
-          id={"password"}
-          name={"password"}
-          type={"password"}
+          id="password"
+          name="password"
+          type="password"
         />
         <Description>
           Nie masz konta? Założ je{" "}
@@ -76,9 +61,9 @@ const SignInMobile = () => {
             <StyledAnchor>tutaj</StyledAnchor>
           </Link>
         </Description>
-        <ButtonContainer>
-          <Button type={"submit"} label={"Zaloguj"} />
-        </ButtonContainer>
+        <ColumnButtonContainer>
+          <Button type="submit" label="Zaloguj" />
+        </ColumnButtonContainer>
       </MobileFormWrapper>
     </MobileViewTemplate>
   );

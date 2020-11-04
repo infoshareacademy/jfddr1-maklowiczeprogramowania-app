@@ -3,7 +3,7 @@ import styled from "styled-components";
 import HamburgerMenu from "../HamburgerMenu";
 import HamburgerMenuSrc from "../../img/radix-icons_hamburger-menu-dark.svg";
 
-const MainWrapper = styled.main`
+export const MainWrapper = styled.main`
   display: flex;
   flex-direction: column;
   background: var(--light-clr);
@@ -18,7 +18,7 @@ const HamburgerMenuWrapper = styled.section`
   flex-grow: 1;
   justify-content: flex-end;
   align-items: flex-start;
-  margin: 30px 30px 0 0;
+  margin: 1.9rem 1.9rem 0 0;
 `;
 
 export const MobileCommonWrapper = styled.section`

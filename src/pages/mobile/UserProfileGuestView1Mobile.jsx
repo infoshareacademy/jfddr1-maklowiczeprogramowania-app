@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import ExitIcon from "../../components/ExitIcon";
 import ExitIconSrc from "../../img/exit-light-icon.svg";
 import FriendsIconSrc from "../../img/friends-icon.svg";
-import GitHubIconSrc from "../../img/github-icon.jpg";
+import GitHubIconSrc from "../../img/github-icon.svg";
 import MessageIconSrc from "../../img/message-light-icon.svg";
 import LinkedInIconSrc from "../../img/linkedin-icon.svg";
+import PortfolioIconSrc from "../../img/portfolio-icon.svg";
 import ProfileImageIconSrc from "../../img/example-profile-image.svg";
 
 const MainWrapper = styled.main`
@@ -21,10 +22,9 @@ const MainWrapper = styled.main`
 
 const TopWrapper = styled.section`
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
   padding: 1.8rem 1.8rem 0 1.8rem;
-  border-radius: 0 0 3rem 3rem;
+  border-radius: 0 0 2.3rem 2.3rem;
   background-color: var(--dark-clr);
 `;
 
@@ -45,13 +45,34 @@ const UserImage = styled.img`
   width: 8rem;
   background-color: var(--light-clr);
   border-radius: 4rem;
-  margin: 1rem 1.5rem;
+  margin: 0 1.5rem 0.7rem 1.5rem;
   padding: 1rem;
 `;
 
+const IconWithPlusWrapper = styled.div`
+  display: flex;
+  height: 3.1rem;
+  width: 3.1rem;
+`;
+
 const Icon = styled.img`
-  height: 2.4rem;
-  width: 2.4rem;
+  align-self: center;
+  height: 2rem;
+  width: 2rem;
+`;
+
+const PlusOnIcon = styled.span`
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 1.1rem;
+  width: 1.1rem;
+  line-height: 1rem;
+  margin-left: -0.6rem;
+  // text-align: center;
+  font-size: 0.9rem;
+  border-radius: 0.2rem;
+  background-color: var(--accent-clr);
 `;
 
 const UserInfoWrapper = styled.div`
@@ -60,15 +81,24 @@ const UserInfoWrapper = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 1rem;
+  gap: 0.7rem;
   color: var(--light-clr);
 `;
 
-const UserInfoName = styled.h2``;
+const UserInfoName = styled.h2`
+  font-size: 1.2rem;
+  font-weight: 500;
+`;
 
-const UserInfoSpecialization = styled.h1``;
+const UserInfoSpecialization = styled.h1`
+  font-weight: 600;
+`;
 
-const UserInfoDescription = styled.p``;
+const UserInfoDescription = styled.p`
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-clr);
+`;
 
 const UserInfoIconsContainer = styled.div`
   display: flex;
@@ -77,12 +107,52 @@ const UserInfoIconsContainer = styled.div`
   gap: 3rem;
 `;
 
+const TopWrapperTabsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+`;
+
+const TopWrapperTab = styled.button`
+  width: 6rem;
+  margin-bottom: -0.9rem;
+  padding: 0.4rem;
+  text-align: center;
+  font-size: 0.8rem;
+  border: 0.1rem var(--dark-clr) solid;
+  border-radius: 0.6rem;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--light-clr);
+`;
+
 const BottomWrapper = styled.section`
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  align-self: center;
   justify-self: center;
+  padding: 0 1.8rem 1.8rem 1.8rem;
+`;
+
+const TechAndToolsWrapper = styled.div`
+  margin-top: 1.8rem;
+`;
+
+const TechAndToolsTitle = styled.div`
+  font-size: 1.3rem;
+  font-weight: 600;
+`;
+
+const TechAndToolsItem = styled.div`
+  display: inline-block;
+  width: 6rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.4rem;
+  text-align: center;
+  font-size: 0.8rem;
+  border-radius: 0.6rem;
+  background-color: var(--light-clr);
 `;
 
 const UserProfileGuestView1Mobile = () => {
@@ -95,27 +165,47 @@ const UserProfileGuestView1Mobile = () => {
           </Link>
         </ExitIconWrapper>
         <UserImageAndIconsWrapper>
-          <Icon src={FriendsIconSrc} />
+          <IconWithPlusWrapper>
+            <Icon src={FriendsIconSrc} />
+            <PlusOnIcon>+</PlusOnIcon>
+          </IconWithPlusWrapper>
           <UserImage src={ProfileImageIconSrc} />
-          <Icon src={MessageIconSrc} />
+          <IconWithPlusWrapper>
+            <Icon src={MessageIconSrc} />
+            <PlusOnIcon>+</PlusOnIcon>
+          </IconWithPlusWrapper>
         </UserImageAndIconsWrapper>
         <UserInfoWrapper>
           <UserInfoName>Robert Makłowicz</UserInfoName>
           <UserInfoSpecialization>Front-End Developer</UserInfoSpecialization>
           <UserInfoDescription>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-            commodi sequi ullam ipsam unde accusamus maiores atque asperiores
-            sit aut quasi eius, laboriosam sapiente, dolor debitis earum facere!
-            Eligendi, natus?
+            commodi sequi ullam ipsam unde accusamus maiores atque.
           </UserInfoDescription>
         </UserInfoWrapper>
         <UserInfoIconsContainer>
           <Icon src={GitHubIconSrc} />
           <Icon src={LinkedInIconSrc} />
-          <Icon src={MessageIconSrc} />
+          <Icon src={PortfolioIconSrc} />
         </UserInfoIconsContainer>
+        <TopWrapperTabsContainer>
+          <TopWrapperTab>Informacje</TopWrapperTab>
+          <TopWrapperTab>Projekty</TopWrapperTab>
+          <TopWrapperTab>Nie wiem</TopWrapperTab>
+        </TopWrapperTabsContainer>
       </TopWrapper>
-      <BottomWrapper></BottomWrapper>
+      <BottomWrapper>
+        <TechAndToolsWrapper>
+          <TechAndToolsTitle>Technologie</TechAndToolsTitle>
+          <TechAndToolsItem>JavaScript</TechAndToolsItem>
+          <TechAndToolsItem>TypeScript</TechAndToolsItem>
+          <TechAndToolsItem>React</TechAndToolsItem>
+        </TechAndToolsWrapper>
+        <TechAndToolsWrapper>
+          <TechAndToolsTitle>Narzędzia</TechAndToolsTitle>
+          <TechAndToolsItem>Git</TechAndToolsItem>
+        </TechAndToolsWrapper>
+      </BottomWrapper>
     </MainWrapper>
   );
 };

@@ -6,10 +6,29 @@ import { useProject } from "../contexts/ProjectsContext";
 import { Link, useHistory } from "react-router-dom";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
 import { StyledInput } from "../components/Input";
-import { StyledLabelMobile } from "../components/Label";
+import { StyledLabelDesktop } from "../components/Label";
 import { fieldTagsDB } from "../mocks/FieldTagsData.js";
 import AddProjectTemplateView from "./AddProjectTemplateView";
 import AuthDesktopTemplate from "../pages/AuthDesktopTemplate";
+
+const Heading = styled.h1`
+  color: var(--text-color);
+  font-size: 1.6rem;
+
+  @media (min-width: 1024px) {
+    color: var(--dark-clr);
+  }
+`;
+
+const Paragraph = styled.p`
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 0.5em;
+  @media (min-width: 1024px) {
+    color: var(--dark-clr);
+    font-size: 1.2rem;
+  }
+`;
 
 const Button = styled(StyledSmallButton)`
   width: 8em;
@@ -42,7 +61,8 @@ const BigGreyishInput = styled(GreyishInput)`
   height: 8em;
 `;
 
-const Label = styled(StyledLabelMobile)`
+const Label = styled(StyledLabelDesktop)`
+  font-weight: 500;
   align-self: flex-start;
   margin-left: 1.4em;
   font-weight: 500;
@@ -68,11 +88,29 @@ const TagContainer = styled.section`
   align-items: center;
 `;
 
-const StyledSelect = styled(Select)`
-  width: 100%;
-  max-width: 300px;
+const TagContainer = styled.section`
+  margin: 0.4em auto;
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: center;
+`;
+
+const StepCounter = styled.p`
+  font-size: 1.5rem;
+  font-weight: 500;
   color: var(--dark-clr);
 `;
+
+const TagTemplate = (label) => {
+  console.log(label);
+  return (
+    <>
+      <Tag>{label.label}</Tag>
+    </>
+  );
+};
 
 const Form = styled.form`
   display: flex;

@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import MobileViewTemplate, {
   MobileCommonWrapper,
 } from "../../components/templates/MobileViewTemplate";

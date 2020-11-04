@@ -74,11 +74,9 @@ const Router = () => {
           path="/pages/AddProjectViewDone"
           component={AddProjectViewDone}
         ></PrivateRouter>
-        <PrivateRouter
-          exact
-          path="/pages/AuthWelcomeView"
-          component={AuthWelcomeView}
-        ></PrivateRouter>
+        <Route path="/pages/AuthWelcomeView">
+          <AuthWelcomeView />
+        </Route>
         <Route path="/pages/MenuMobile">
           <MenuMobile />
         </Route>

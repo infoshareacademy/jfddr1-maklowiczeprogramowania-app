@@ -3,14 +3,15 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
 import ProjectDoneIconSrc from "../../img/project-done.svg";
-import MediumButton from "../../components/buttons/MediumButton";
+
 import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
 import {
   SignUpDoneIconWrapper,
   SignUpDoneIcon,
   SignUpDoneTitle,
   SignUpDoneDescription,
-  CenterRowButtonContainer,
+  DesktopCenterRowButtonContainer,
+  DesktopLinkButton,
   SlideItemActive,
   SlideDescription,
   DesktopSlideContainer,
@@ -27,9 +28,9 @@ const SignUpFull7DoneDesktop = () => {
         <SignUpDoneDescription>
           Utworzyłeś konto, teraz możesz korzystać z naszych dobrodziejstw!
         </SignUpDoneDescription>
-        <CenterRowButtonContainer>
-          <MediumButton type="submit" label="Profil" />
-        </CenterRowButtonContainer>
+        <DesktopCenterRowButtonContainer>
+          <DesktopLinkButton to="/pages/">Profil</DesktopLinkButton>
+        </DesktopCenterRowButtonContainer>
       </HalfDesktopFormWrapper>
       <DesktopSlideContainer>
         <SlideDescription>Krok</SlideDescription>

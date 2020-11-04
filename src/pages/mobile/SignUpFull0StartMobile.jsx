@@ -3,13 +3,13 @@ import styled from "styled-components";
 import MobileViewTemplate, {
   MobileCommonWrapper,
 } from "../../components/templates/MobileViewTemplate";
-import SmallButton from "../../components/buttons/SmallButton";
 import signUpFullImageMobileImageSrc from "../../img/sign-up-full-image-mobile.svg";
 import {
   SmallerTitle,
-  CenterRowButtonContainer,
+  MobileCenterRowButtonContainer,
   MobileSlideContainer,
   SlideItem,
+  MobileLinkButton,
 } from "../../components/SignInUpElements";
 
 const FullFormMobileImageComponent = styled.img``;
@@ -23,12 +23,13 @@ const SignUpFull0StartMobile = () => {
     <MobileViewTemplate>
       <MobileCommonWrapper>
         <FullFormMobileImage src={signUpFullImageMobileImageSrc} />
-        <SmallerTitle>Załóż konto w kilku</SmallerTitle>
-        <SmallerTitle>prostych krokach!</SmallerTitle>
-        <CenterRowButtonContainer>
-          <SmallButton type="submit" label="Cofnij" />
-          <SmallButton type="submit" label="Tworzę konto" />
-        </CenterRowButtonContainer>
+        <SmallerTitle>Załóż konto w kilku prostych krokach!</SmallerTitle>
+        <MobileCenterRowButtonContainer>
+          <MobileLinkButton to="/pages/WelcomePage">Cofnij</MobileLinkButton>
+          <MobileLinkButton to="/pages/SignUpFull1Mobile">
+            Załóż konto
+          </MobileLinkButton>
+        </MobileCenterRowButtonContainer>
       </MobileCommonWrapper>
       <MobileSlideContainer>
         <SlideItem>•</SlideItem>

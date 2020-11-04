@@ -6,20 +6,20 @@ import { LabelMobile } from "../../components/Label";
 import MobileViewTemplate, {
   MobileFormWrapper,
 } from "../../components/templates/MobileViewTemplate";
-import SmallButton from "../../components/buttons/SmallButton";
 import {
-  CenterRowButtonContainer,
-  Title,
+  MobileCenterRowButtonContainer,
+  SmallerTitle,
   MobileSlideContainer,
   SlideItem,
   SlideItemActive,
+  MobileLinkButton,
 } from "../../components/SignInUpElements";
 
 const SignUpFull2Mobile = () => {
   return (
     <MobileViewTemplate>
       <MobileFormWrapper>
-        <Title>Pozwól się odnaleźć</Title>
+        <SmallerTitle>Pozwól się odnaleźć</SmallerTitle>
         <LabelMobile htmlFor="Portfolio">{"Portfolio"}</LabelMobile>
         <Input name="Portfolio" type="text" />
         <LabelMobile htmlFor="Github">{"Github"}</LabelMobile>
@@ -28,9 +28,11 @@ const SignUpFull2Mobile = () => {
         <Input name="Linkedin" type="text" />
         <LabelMobile htmlFor="Dodaj">{"Dodaj zdjęcie"}</LabelMobile>
         <Input name="Dodaj" type="text" />
-        <CenterRowButtonContainer>
-          <SmallButton type="submit" label="Dalej" />
-        </CenterRowButtonContainer>
+        <MobileCenterRowButtonContainer>
+          <MobileLinkButton to="/pages/SignUpFull3Mobile">
+            Dalej
+          </MobileLinkButton>
+        </MobileCenterRowButtonContainer>
       </MobileFormWrapper>
       <MobileSlideContainer>
         <Link

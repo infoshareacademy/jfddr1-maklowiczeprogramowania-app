@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
 import Input from "../../components/Input";
-import MediumButton from "../../components/buttons/MediumButton";
 import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
 import { LabelDesktop } from "../../components/Label";
 import {
@@ -13,7 +12,8 @@ import {
   DesktopSlideContainer,
   Title,
   InputsAndLabelsContainer,
-  CenterRowButtonContainer,
+  DesktopCenterRowButtonContainer,
+  DesktopLinkButton,
 } from "../../components/SignInUpElements";
 
 const SignUpFull2Desktop = () => {
@@ -31,9 +31,11 @@ const SignUpFull2Desktop = () => {
           <LabelDesktop htmlFor="Dodaj">{"Dodaj zdjęcie"}</LabelDesktop>
           <Input name="Dodaj" type="text" />
         </InputsAndLabelsContainer>
-        <CenterRowButtonContainer>
-          <MediumButton type="submit" label="Dalej" />
-        </CenterRowButtonContainer>
+        <DesktopCenterRowButtonContainer>
+          <DesktopLinkButton to="/pages/SignUpFull3Desktop">
+            Dalej
+          </DesktopLinkButton>
+        </DesktopCenterRowButtonContainer>
       </HalfDesktopFormWrapper>
       <DesktopSlideContainer>
         <SlideDescription>Krok</SlideDescription>

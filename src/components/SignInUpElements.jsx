@@ -5,6 +5,7 @@ import { specDB } from "../mocks/SpecializationsData";
 import { techDB } from "../mocks/TechData";
 import { fieldTagsDB } from "../mocks/FieldTagsData";
 import { StyledButton } from "../components/buttons/Button";
+import { Link } from "react-router-dom";
 
 // *********** OTHER ***********
 
@@ -17,7 +18,7 @@ export const Title = styled.h1`
 `;
 
 export const SmallerTitle = styled(Title)`
-  font-size: 2rem;
+  font-size: 2.2rem;
 `;
 
 export const Description = styled.p`
@@ -89,6 +90,28 @@ export const SignUpDoneDescription = styled(Description)`
   margin: 0.3rem 0 0.3rem 0;
 `;
 
+// *********** BUTTONS AS STYLED LINK COMPONENTS ***********
+
+export const MobileLinkButton = styled(Link)`
+  width: 8.5rem;
+  padding: 0.7rem;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 1.2em;
+  font-weight: 600;
+  background-color: var(--dark-clr);
+  color: var(--light-clr);
+  text-decoration: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+`;
+
+export const DesktopLinkButton = styled(MobileLinkButton)`
+  width: 13rem;
+  padding: 1rem;
+  font-size: 1.7em;
+`;
+
 // *********** BUTTON CONTAINERS ***********
 
 export const RowButtonContainer = styled.div`
@@ -97,10 +120,18 @@ export const RowButtonContainer = styled.div`
   margin: 1rem 2.8rem;
 `;
 
-export const CenterRowButtonContainer = styled(RowButtonContainer)`
+export const MobileCenterRowButtonContainer = styled(RowButtonContainer)`
   align-items: center;
   justify-content: center;
-  margin: 2.5rem 0 0 0;
+  gap: 0.8rem;
+  margin: 2.3rem 0 0 0;
+`;
+
+export const DesktopCenterRowButtonContainer = styled(RowButtonContainer)`
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  margin: 4rem 0 0 0;
 `;
 
 export const ShiftedRowButtonContainer = styled(RowButtonContainer)`

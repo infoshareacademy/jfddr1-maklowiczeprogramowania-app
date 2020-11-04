@@ -6,20 +6,20 @@ import { LabelMobile } from "../../components/Label";
 import MobileViewTemplate, {
   MobileFormWrapper,
 } from "../../components/templates/MobileViewTemplate";
-import SmallButton from "../../components/buttons/SmallButton";
 import {
-  CenterRowButtonContainer,
-  Title,
+  MobileCenterRowButtonContainer,
+  SmallerTitle,
   MobileSlideContainer,
   SlideItem,
   SlideItemActive,
+  MobileLinkButton,
 } from "../../components/SignInUpElements";
 
 const SignUpFull1Mobile = () => {
   return (
     <MobileViewTemplate>
       <MobileFormWrapper>
-        <Title>Podstawowe Dane</Title>
+        <SmallerTitle>Podstawowe Dane</SmallerTitle>
         <LabelMobile htmlFor="firstName">{"Imię"}</LabelMobile>
         <Input id="firstName" name="firstName" type="text" />
         <LabelMobile htmlFor="secondName">{"Nazwisko"}</LabelMobile>
@@ -28,9 +28,11 @@ const SignUpFull1Mobile = () => {
         <Input id="email" name="email" type="email" />
         <LabelMobile htmlFor="password">{"Hasło"}</LabelMobile>
         <Input id="password" name="password" type="password" />
-        <CenterRowButtonContainer>
-          <SmallButton type="submit" label="Dalej" />
-        </CenterRowButtonContainer>
+        <MobileCenterRowButtonContainer>
+          <MobileLinkButton to="/pages/SignUpFull2Mobile">
+            Dalej
+          </MobileLinkButton>
+        </MobileCenterRowButtonContainer>
       </MobileFormWrapper>
       <MobileSlideContainer>
         <SlideItemActive>•</SlideItemActive>

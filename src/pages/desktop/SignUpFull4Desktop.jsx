@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
-import MediumButton from "../../components/buttons/MediumButton";
 import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
 import {
   AddButton,
@@ -13,9 +12,10 @@ import {
   SlideDescription,
   DesktopSlideContainer,
   Title,
-  CenterRowButtonContainer,
+  DesktopCenterRowButtonContainer,
   ChosenOptionContainer,
   ChosenOption,
+  DesktopLinkButton,
 } from "../../components/SignInUpElements";
 
 const SignUpFull4Desktop = () => {
@@ -32,9 +32,11 @@ const SignUpFull4Desktop = () => {
           <ChosenOption type="" label="JavaScript" />
           <ChosenOption type="" label="Java" />
         </ChosenOptionContainer>
-        <CenterRowButtonContainer>
-          <MediumButton type="submit" label="Dalej" />
-        </CenterRowButtonContainer>
+        <DesktopCenterRowButtonContainer>
+          <DesktopLinkButton to="/pages/SignUpFull5Desktop">
+            Dalej
+          </DesktopLinkButton>
+        </DesktopCenterRowButtonContainer>
       </HalfDesktopFormWrapper>
       <DesktopSlideContainer>
         <SlideDescription>Krok</SlideDescription>

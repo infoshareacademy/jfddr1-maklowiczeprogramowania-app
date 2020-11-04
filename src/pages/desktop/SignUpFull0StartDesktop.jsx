@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import MediumButton from "../../components/buttons/MediumButton";
 import SignUpFullImageSrc from "../../img/sign-up-full-image-mobile.svg";
 import { HalfDesktopCommonWrapper } from "../../components/templates/DesktopViewTemplate";
 import { MainWrapper } from "../../components/templates/MobileViewTemplate";
-import { RowButtonContainer, Title } from "../../components/SignInUpElements";
+import {
+  DesktopLinkButton,
+  DesktopCenterRowButtonContainer,
+  Title,
+} from "../../components/SignInUpElements";
 
 const CenterMainWrapper = styled(MainWrapper)`
   justify-content: center;
@@ -22,10 +24,12 @@ const SignUpFull0StartDesktop = () => {
       <HalfDesktopCommonWrapper>
         <SignUpFullImage src={SignUpFullImageSrc} />
         <Title>Załóż konto w kilku prostych krokach!</Title>
-        <RowButtonContainer>
-          <MediumButton type="" label="Cofnij" />
-          <MediumButton type="" label="Tworzę konto" />
-        </RowButtonContainer>
+        <DesktopCenterRowButtonContainer>
+          <DesktopLinkButton to="/pages/WelcomePage">Cofnij</DesktopLinkButton>
+          <DesktopLinkButton to="/pages/SignUpFull1Desktop">
+            Załóż konto
+          </DesktopLinkButton>
+        </DesktopCenterRowButtonContainer>
       </HalfDesktopCommonWrapper>
     </CenterMainWrapper>
   );

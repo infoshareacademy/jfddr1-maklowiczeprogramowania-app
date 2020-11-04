@@ -12,9 +12,9 @@ import {
   DesktopSlideContainer,
   Title,
   InputsAndLabelsContainer,
-  CenterRowButtonContainer,
+  DesktopCenterRowButtonContainer,
+  DesktopLinkButton,
 } from "../../components/SignInUpElements";
-import MediumButton from "../../components/buttons/MediumButton";
 
 const SignUpFull1Desktop = () => {
   return (
@@ -31,9 +31,11 @@ const SignUpFull1Desktop = () => {
           <LabelDesktop htmlFor="Hasło">{"Hasło"}</LabelDesktop>
           <Input name="Hasło" type="text" />
         </InputsAndLabelsContainer>
-        <CenterRowButtonContainer>
-          <MediumButton type="submit" label="Dalej" />
-        </CenterRowButtonContainer>
+        <DesktopCenterRowButtonContainer>
+          <DesktopLinkButton to="/pages/SignUpFull2Desktop">
+            Dalej
+          </DesktopLinkButton>
+        </DesktopCenterRowButtonContainer>
       </HalfDesktopFormWrapper>
       <DesktopSlideContainer>
         <SlideDescription>Krok</SlideDescription>

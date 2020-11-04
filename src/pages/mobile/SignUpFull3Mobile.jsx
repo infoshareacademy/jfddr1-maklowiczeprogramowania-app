@@ -6,27 +6,30 @@ import MobileViewTemplate, {
 } from "../../components/templates/MobileViewTemplate";
 import SmallButton from "../../components/buttons/SmallButton";
 import {
-  Title,
-  CenterRowButtonContainer,
+  SmallerTitle,
+  MobileCenterRowButtonContainer,
   MobileSlideContainer,
   SlideItem,
   SlideItemActive,
   OptionContainer,
   SpecsElement,
+  MobileLinkButton,
 } from "../../components/SignInUpElements";
 
 const SignUpFull3Mobile = () => {
   return (
     <MobileViewTemplate>
       <MobileFormWrapper>
-        <Title>Wybierz specjalizację</Title>
+        <SmallerTitle>Wybierz specjalizację</SmallerTitle>
         <OptionContainer>
           <SpecsElement></SpecsElement>
           <SmallButton type="submit" label="Dodaj" />
         </OptionContainer>
-        <CenterRowButtonContainer>
-          <SmallButton type="submit" label="Dalej" />
-        </CenterRowButtonContainer>
+        <MobileCenterRowButtonContainer>
+          <MobileLinkButton to="/pages/SignUpFull4Mobile">
+            Dalej
+          </MobileLinkButton>
+        </MobileCenterRowButtonContainer>
       </MobileFormWrapper>
       <MobileSlideContainer>
         <Link

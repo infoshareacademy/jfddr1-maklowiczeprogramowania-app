@@ -13,9 +13,10 @@ import {
   SlideDescription,
   DesktopSlideContainer,
   Title,
-  CenterRowButtonContainer,
+  DesktopCenterRowButtonContainer,
   ChosenOptionContainer,
   ChosenOption,
+  DesktopLinkButton,
 } from "../../components/SignInUpElements";
 
 const SignUpFull5Desktop = () => {
@@ -32,9 +33,11 @@ const SignUpFull5Desktop = () => {
           <ChosenOption type="" label="Jira" />
           <ChosenOption type="" label="Option3" />
         </ChosenOptionContainer>
-        <CenterRowButtonContainer>
-          <MediumButton type="submit" label="Dalej" />
-        </CenterRowButtonContainer>
+        <DesktopCenterRowButtonContainer>
+          <DesktopLinkButton to="/pages/SignUpFull6Desktop">
+            Dalej
+          </DesktopLinkButton>
+        </DesktopCenterRowButtonContainer>
       </HalfDesktopFormWrapper>
       <DesktopSlideContainer>
         <SlideDescription>Krok</SlideDescription>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import MobileViewTemplate, {
   MobileCommonWrapper,
 } from "../../components/templates/MobileViewTemplate";
-import { getMenuMobileTabsDB } from "../../mocks/MenuMobileTabs.js";
+import { menuMobileTabsDB } from "../../mocks/MenuMobileTabs.js";
 
 const StyledMobileMenuTab = styled.a`
   padding: 0.94rem;
@@ -21,19 +21,14 @@ const MobileMenuTab = ({ text }) => {
 // }
 
 const MenuMobile = () => {
-  const searchedMenuMobileTabsDB = getMenuMobileTabsDB();
-  const searchedMenuMobileTabsComponents = searchedMenuMobileTabsDB.map(
-    ({ tabName }) => {
-      return <MobileMenuTab key={tabName} text={tabName} />;
-    }
-  );
+  const searchedMenuMobileTabs = menuMobileTabsDB.map(({ tabName }) => {
+    return <MobileMenuTab key={tabName} text={tabName} />;
+  });
 
   return (
     // <MobTemplate anotherNestedComponent={<ExampleComp/>} >
     <MobileViewTemplate>
-      <MobileCommonWrapper>
-        {searchedMenuMobileTabsComponents}
-      </MobileCommonWrapper>
+      <MobileCommonWrapper>{searchedMenuMobileTabs}</MobileCommonWrapper>
     </MobileViewTemplate>
   );
 };

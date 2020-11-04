@@ -136,7 +136,7 @@ const SignUpDesktop = () => {
         <RowButtonContainer>
           <MediumButton type="submit" label="Stwórz konto" />
           <HalfContainerSizeDesktopLinkButton to="/pages/SignUpFull0StartDesktop">
-            Załóż konto
+            Wypełnij formularz
           </HalfContainerSizeDesktopLinkButton>
         </RowButtonContainer>
       </DesktopFormWrapper>{" "}

@@ -1,9 +1,22 @@
-const MenuMobileTabsDB = `[
-  {"tabName":"Zaloguj się" },
-  {"tabName":"Zarejestruj się" },
-  {"tabName":"Strona główna" },
-  {"tabName":"Jak to działa?" },
-  {"tabName":"Wiedza o IT" }
-]`;
-
-export const getMenuMobileTabsDB = () => JSON.parse(MenuMobileTabsDB);
+export const menuMobileTabsDB = [
+  {
+    tabName: "Zaloguj się",
+    url: "",
+  },
+  {
+    tabName: "Zarejestruj się",
+    url: "",
+  },
+  {
+    tabName: "Strona główna",
+    url: "",
+  },
+  {
+    tabName: "Jak to działa?",
+    url: "",
+  },
+  {
+    tabName: "Wiedza o IT",
+    url: "",
+  },
+];

@@ -93,7 +93,7 @@ export const SignUpDoneDescription = styled(Description)`
 // *********** BUTTONS AS STYLED LINK COMPONENTS ***********
 
 export const MobileLinkButton = styled(Link)`
-  width: 8.5rem;
+  width: 9rem;
   padding: 0.7rem;
   text-align: center;
   font-family: Quicksand;

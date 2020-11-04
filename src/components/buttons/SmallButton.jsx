@@ -4,8 +4,8 @@ import { StyledButton } from "./Button";
 
 export const StyledSmallButton = styled(StyledButton)`
   font-weight: 600;
-  font-size: 0.9rem;
-  padding: 1rem 0;
+  font-size: 1.2rem;
+  padding: 0.7rem;
   width: 50%;
 `;
 

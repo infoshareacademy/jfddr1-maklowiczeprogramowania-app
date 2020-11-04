@@ -9,7 +9,8 @@ export const StyledInput = styled.input`
   border-radius: 0.3rem;
   border: none;
   font-family: "Quicksand", sans-serif;
-  font-size: 1em;
+  font-size: 1.1em;
+  font-weight: 600;
 `;
 
 const Input = React.forwardRef(({ id, name, type }, ref) => (

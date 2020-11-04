@@ -57,7 +57,7 @@ const SignInMobile = () => {
         />
         <Description>
           Nie masz konta? Założ je{" "}
-          <Link to="../pages/SignUpDesktop">
+          <Link to="../pages/SignUpMobile">
             <StyledAnchor>tutaj</StyledAnchor>
           </Link>
         </Description>

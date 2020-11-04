@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Input from "../../components/Input";
+import { Link } from "react-router-dom";
 import { LabelMobile } from "../../components/Label";
 import MobileViewTemplate, {
   MobileFormWrapper,
@@ -31,7 +32,9 @@ const SignUpMobile = () => {
         <Input id="password" name="password" type="password" />
         <Description>
           Masz już konto? Zaloguj się{" "}
-          <StyledAnchor href="/">tutaj</StyledAnchor>
+          <Link to="../pages/SignInMobile">
+            <StyledAnchor>tutaj</StyledAnchor>
+          </Link>
         </Description>
         <SingUpInfoWrapper>
           <SingUpInfoMark>!</SingUpInfoMark>

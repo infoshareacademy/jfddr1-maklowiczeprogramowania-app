@@ -1,34 +1,33 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import MobileViewTemplate, {
   MobileCommonWrapper,
 } from "../../components/templates/MobileViewTemplate";
 import { menuMobileTabsDB } from "../../mocks/MenuMobileTabs.js";
 
-const StyledMobileMenuTab = styled.a`
+const StyledMenuMobileTab = styled(Link)`
+  color: var(--dark-clr);
   padding: 0.94rem;
-  font-weight: 700;
-  font-size: 2rem;
   text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
 `;
 
-const MobileMenuTab = ({ text }) => {
-  return <StyledMobileMenuTab>{text}</StyledMobileMenuTab>;
-};
-
-// const ExampleComp = () =>{
-//   return <div>Cześć</div>
-// }
-
 const MenuMobile = () => {
-  const searchedMenuMobileTabs = menuMobileTabsDB.map(({ tabName }) => {
-    return <MobileMenuTab key={tabName} text={tabName} />;
+  const searchedMenuMobileTab = menuMobileTabsDB.map(({ tabName, path }) => {
+    return (
+      <StyledMenuMobileTab to={path} key={tabName}>
+        {tabName}
+      </StyledMenuMobileTab>
+    );
   });
 
   return (
     // <MobTemplate anotherNestedComponent={<ExampleComp/>} >
     <MobileViewTemplate>
-      <MobileCommonWrapper>{searchedMenuMobileTabs}</MobileCommonWrapper>
+      <MobileCommonWrapper>{searchedMenuMobileTab}</MobileCommonWrapper>
     </MobileViewTemplate>
   );
 };

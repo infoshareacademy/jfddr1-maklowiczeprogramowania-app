@@ -1,22 +1,22 @@
 export const menuMobileTabsDB = [
   {
     tabName: "Zaloguj się",
-    url: "",
+    path: "/pages/SignInMobile",
   },
   {
     tabName: "Zarejestruj się",
-    url: "",
+    path: "/pages/SignUpMobile",
   },
   {
     tabName: "Strona główna",
-    url: "",
+    path: "/",
   },
   {
     tabName: "Jak to działa?",
-    url: "",
+    path: "",
   },
   {
     tabName: "Wiedza o IT",
-    url: "",
+    path: "",
   },
 ];

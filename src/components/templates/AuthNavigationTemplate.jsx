@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { authMenuDB } from "../../mocks/AuthMenuData.js";
 import { StyledSmallButton } from "../buttons/SmallButton";
@@ -16,12 +17,13 @@ const AuthMenuItem = styled.li`
   min-width: 100%;
 `;
 
-const AuthMenuItemLink = styled.a`
+const AuthMenuItemLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 100%;
   cursor: pointer;
+  text-decoration: none;
 `;
 
 const AuthMenuItemLinkWrapper = styled.p`
@@ -49,10 +51,10 @@ const CreateProjectButton = styled(StyledSmallButton)`
 const AuthMenuListElement = () => {
   const authMenuData = authMenuDB;
 
-  const AuthMenuDataComponents = authMenuData.map(({ label, icon }) => {
+  const AuthMenuDataComponents = authMenuData.map(({ label, icon, path }) => {
     return (
       <AuthMenuItem key={label}>
-        <AuthMenuItemLink key={label}>
+        <AuthMenuItemLink to={path} key={label}>
           <AuthMenuItemLinkWrapper>
             <AuthMenuItemIcon src={icon} />
             <AuthMenuItemSpan>{label}</AuthMenuItemSpan>

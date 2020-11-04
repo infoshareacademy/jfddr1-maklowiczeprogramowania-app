@@ -15,6 +15,7 @@ import {
   SingUpInfoWrapper,
   SingUpInfoMark,
   SingUpInfoParagraph,
+  MobileLinkButton,
 } from "../../components/SignInUpElements";
 
 const SignUpMobile = () => {
@@ -49,7 +50,9 @@ const SignUpMobile = () => {
         </SingUpInfoWrapper>
         <ShiftedRowButtonContainer>
           <SmallButton type="submit" label="Stwórz konto" />
-          <SmallButton type="submit" label="Wypełnij formularz" />
+          <MobileLinkButton to="/pages/SignUpFull1Mobile">
+            Wepłnij formularz
+          </MobileLinkButton>
         </ShiftedRowButtonContainer>
       </MobileFormWrapper>
     </MobileViewTemplate>

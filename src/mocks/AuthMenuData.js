@@ -10,30 +10,37 @@ export const authMenuDB = [
   {
     label: "Wyszukiwarka",
     icon: search,
+    path: "/pages/AuthWelcomeView",
   },
 
   {
     label: "Profil",
     icon: profile,
+    path: "",
   },
   {
     label: "Powiadomienia",
     icon: notifications,
+    path: "",
   },
   {
     label: "Wiadomości",
     icon: messages,
+    path: "",
   },
   {
     label: "Znajomi",
     icon: friends,
+    path: "",
   },
   {
     label: "Projekty",
     icon: projects,
+    path: "",
   },
   {
     label: "Wyloguj się",
     icon: signOut,
+    path: "/pages/WelcomePages",
   },
 ];

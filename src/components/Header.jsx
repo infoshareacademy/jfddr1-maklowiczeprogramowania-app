@@ -178,9 +178,16 @@ const Header = () => {
           Opisz nad czym chciałbyś pracować i kogo poszukujesz do wspólnej
           przygody! Czas spełnić swoje marzenia!
         </HeroParagraph>
-        <Link to="../pages/SignUpDesktop">
-          <CreateHeroButton>Stwórz bohatera</CreateHeroButton>
-        </Link>
+        <MediaQuery maxDeviceWidth={1023}>
+          <Link to="../pages/SignUpMobile">
+            <CreateHeroButton>Stwórz bohatera</CreateHeroButton>
+          </Link>
+        </MediaQuery>
+        <MediaQuery minDeviceWidth={1024}>
+          <Link to="../pages/SignUpDesktop">
+            <CreateHeroButton>Stwórz bohatera</CreateHeroButton>
+          </Link>
+        </MediaQuery>
         <HowItWorksButton>Jak to działa?</HowItWorksButton>
       </Hero>
       <FlexContainer>

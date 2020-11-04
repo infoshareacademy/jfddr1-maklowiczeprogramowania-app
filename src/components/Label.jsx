@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 export const StyledLabelMobile = styled.label`
-  margin: 1.6rem 0 0.17rem 0;
-  font-size: 1.1rem;
+  margin: 1.2rem 0 0.17rem 0;
+  font-size: 1rem;
 `;
 
 export const LabelMobile = ({ htmlFor, children }) => {

@@ -56,13 +56,35 @@ const HamburgerAuthMenu = styled.img`
   margin-left: 0.7em;
 `;
 
-const Main = styled.main`
+const StyledAuthDesktopMain = styled.main`
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
   margin: 5em auto;
 `;
+
+export const AuthDesktopMain = (props) => {
+  return (
+    <StyledAuthDesktopMain>
+      <Heading>{props.heading}</Heading>
+      <Paragraph>{props.sectionSubtitle}</Paragraph>
+      {props.children}
+      <StepCounter>{props.step}</StepCounter>
+    </StyledAuthDesktopMain>
+  );
+};
+
+// export const AuthDesktopMain = ({ heading, sectionSubtitle, children, step }) => {
+//   return (
+//     <StyledAuthDesktopMain heading={heading} sectionSubtitle={sectionSubtitle} step={step}>
+//       <Heading>{heading}</Heading>
+//       <Paragraph>{sectionSubtitle}</Paragraph>
+//       {children}
+//       <StepCounter>{step}</StepCounter>
+//     </StyledAuthDesktopMain>
+//   );
+// };
 
 const DesktopMenuBar = styled.section`
   height: 100vh;
@@ -197,7 +219,7 @@ const AuthNavigationTemplate = () => {
   return <>{AuthMenuDataComponents}</>;
 };
 
-const AuthDesktopTemplate = (props) => {
+const AuthDesktopTemplate = ({ children }) => {
   const { currentUserData, currentUser } = useAuth();
   console.log(currentUserData, currentUser);
   return (
@@ -231,13 +253,14 @@ const AuthDesktopTemplate = (props) => {
             </AuthMenuList>
           </DesktopMenuBar>
         </MediaQuery>
-        <Main>
+        {children}
+        {/* <Main>
           <Heading>{props.heading}</Heading>
           <Paragraph>{props.sectionSubtitle}</Paragraph>
 
           {props.children}
           <StepCounter>{props.step}</StepCounter>
-        </Main>
+        </Main> */}
       </PageWrapper>
     </>
   );

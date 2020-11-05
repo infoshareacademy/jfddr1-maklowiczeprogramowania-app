@@ -6,7 +6,9 @@ import { Link, useHistory } from "react-router-dom";
 import { useProject } from "../contexts/ProjectsContext";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
 import AddProjectTemplateView from "./AddProjectTemplateView";
-import AuthDesktopTemplate from "../pages/AuthDesktopTemplate";
+import AuthDesktopTemplate, {
+  AuthDesktopMain,
+} from "../pages/AuthDesktopTemplate";
 import { techDB } from "../mocks/TechData";
 
 const Button = styled(StyledSmallButton)`
@@ -125,22 +127,24 @@ const AddProjectView3 = () => {
   return (
     <>
       <MediaQuery minDeviceWidth={1024}>
-        <AuthDesktopTemplate
-          step={"Krok 3 z 4"}
-          heading={"Dodaj technologie"}
-          sectionSubtitle={
-            "Określ które technologie wybrani przez Ciebie specjaliści mają znać"
-          }
-          children={
-            <>
-              <Container>
-                <SpecSelects />
-              </Container>
+        <AuthDesktopTemplate>
+          <AuthDesktopMain
+            heading={"Dodaj technologie"}
+            sectionSubtitle={
+              "Określ które technologie wybrani przez Ciebie specjaliści mają znać"
+            }
+            step={"Krok 3 z 4"}
+            children={
+              <>
+                <Container>
+                  <SpecSelects />
+                </Container>
 
-              <Button onClick={clickHandler}>Dalej</Button>
-            </>
-          }
-        ></AuthDesktopTemplate>
+                <Button onClick={clickHandler}>Dalej</Button>
+              </>
+            }
+          />
+        </AuthDesktopTemplate>
       </MediaQuery>
       <MediaQuery maxDeviceWidth={1024}>
         <AddProjectTemplateView

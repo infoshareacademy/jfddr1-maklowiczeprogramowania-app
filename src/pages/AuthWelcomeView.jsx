@@ -9,7 +9,9 @@ import { getSearchSpecializationTagNames } from "../mocks/SearchTags.js";
 import { getProjectsData } from "../mocks/Projects.js";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
 import MediaQuery from "react-responsive";
-import AuthDesktopTemplate from "../pages/AuthDesktopTemplate";
+import AuthDesktopTemplate, {
+  AuthDesktopMain,
+} from "../pages/AuthDesktopTemplate";
 
 const Header = styled.header`
   display: flex;
@@ -287,43 +289,44 @@ const AuthWelcomeView = () => {
         </MediaQuery>
 
         <AuthDesktopTemplate>
-          children ={" "}
-          {
-            <>
-              <MediaQuery minDeviceWidth={1024}>
-                <UserInformation>
-                  <Wrapper>
-                    <WelcomeText>
-                      Cześć, {currentUserData && currentUserData.firstName}!
-                    </WelcomeText>
-                    <NotificationText>
-                      Masz <AmountOfMessages>0</AmountOfMessages> nowych
-                      wiadomości
-                    </NotificationText>
-                  </Wrapper>
-                  <MenuIconsAuthBackground>
-                    <MenuMessageIcon src={MenuMessageIconSrc} />
-                    <MenuBellIcon src={MenuBellIconSrc} />
-                    <MediaQuery maxDeviceWidth={1024}>
-                      <HamburgerAuthMenu src={HamburgerMenuSrc} />
-                    </MediaQuery>
-                  </MenuIconsAuthBackground>
-                </UserInformation>
-              </MediaQuery>
+          <AuthDesktopMain
+            children={
+              <>
+                <MediaQuery minDeviceWidth={1024}>
+                  <UserInformation>
+                    <Wrapper>
+                      <WelcomeText>
+                        Cześć, {currentUserData && currentUserData.firstName}!
+                      </WelcomeText>
+                      <NotificationText>
+                        Masz <AmountOfMessages>0</AmountOfMessages> nowych
+                        wiadomości
+                      </NotificationText>
+                    </Wrapper>
+                    <MenuIconsAuthBackground>
+                      <MenuMessageIcon src={MenuMessageIconSrc} />
+                      <MenuBellIcon src={MenuBellIconSrc} />
+                      <MediaQuery maxDeviceWidth={1024}>
+                        <HamburgerAuthMenu src={HamburgerMenuSrc} />
+                      </MediaQuery>
+                    </MenuIconsAuthBackground>
+                  </UserInformation>
+                </MediaQuery>
 
-              <MainHeading>Wyszukaj projekt</MainHeading>
-              <SearchWrapper>
-                <SearchInput />
-                <SubmitSearchButton>Szukaj</SubmitSearchButton>
-              </SearchWrapper>
-              <SearchTagSpecializationComponentsWrapper>
-                {searchTagSpecializationNamesComponents}
-              </SearchTagSpecializationComponentsWrapper>
-              <SearchedProjectsSection>
-                {searchedProjectsComponents}
-              </SearchedProjectsSection>
-            </>
-          }
+                <MainHeading>Wyszukaj projekt</MainHeading>
+                <SearchWrapper>
+                  <SearchInput />
+                  <SubmitSearchButton>Szukaj</SubmitSearchButton>
+                </SearchWrapper>
+                <SearchTagSpecializationComponentsWrapper>
+                  {searchTagSpecializationNamesComponents}
+                </SearchTagSpecializationComponentsWrapper>
+                <SearchedProjectsSection>
+                  {searchedProjectsComponents}
+                </SearchedProjectsSection>
+              </>
+            }
+          />
         </AuthDesktopTemplate>
       </PageWrapper>
     </>

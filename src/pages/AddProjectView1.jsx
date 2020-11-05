@@ -9,7 +9,9 @@ import { StyledInput } from "../components/Input";
 import { StyledLabelDesktop } from "../components/Label";
 import { fieldTagsDB } from "../mocks/FieldTagsData.js";
 import AddProjectTemplateView from "./AddProjectTemplateView";
-import AuthDesktopTemplate from "../pages/AuthDesktopTemplate";
+import AuthDesktopTemplate, {
+  AuthDesktopMain,
+} from "../pages/AuthDesktopTemplate";
 
 const Button = styled(StyledSmallButton)`
   width: 8em;
@@ -136,12 +138,12 @@ const AddProjectView1 = () => {
   return (
     <>
       <MediaQuery minDeviceWidth={1024}>
-        <AuthDesktopTemplate
-          heading={"Dodaj podstawowe informacje"}
-          sectionSubtitle={"Opisz swój projekt"}
-          step={"Krok 1 z 4"}
-          children={
-            <>
+        <AuthDesktopTemplate>
+          <AuthDesktopMain
+            heading={"Dodaj podstawowe informacje"}
+            sectionSubtitle={"Opisz swój projekt"}
+            step={"Krok 1 z 4"}
+            children={
               <Form onSubmit={handleSubmit}>
                 <LabelInputWrapper>
                   <Label>Tytuł</Label>
@@ -180,9 +182,9 @@ const AddProjectView1 = () => {
 
                 <Button type="submit">Dalej</Button>
               </Form>
-            </>
-          }
-        ></AuthDesktopTemplate>
+            }
+          />
+        </AuthDesktopTemplate>
       </MediaQuery>
       <MediaQuery maxDeviceWidth={1024}>
         <AddProjectTemplateView

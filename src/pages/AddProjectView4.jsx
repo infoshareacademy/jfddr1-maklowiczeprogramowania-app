@@ -6,7 +6,9 @@ import { useHistory } from "react-router-dom";
 import { useProject } from "../contexts/ProjectsContext";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
 import AddProjectTemplateView from "./AddProjectTemplateView";
-import AuthDesktopTemplate from "../pages/AuthDesktopTemplate";
+import AuthDesktopTemplate, {
+  AuthDesktopMain,
+} from "../pages/AuthDesktopTemplate";
 import { toolsDB } from "../mocks/ToolsData";
 import { firebaseProjectsDB } from "../firebase/ProjectsDB";
 const Button = styled(StyledSmallButton)`
@@ -132,21 +134,23 @@ const AddProjectView4 = () => {
   return (
     <>
       <MediaQuery minDeviceWidth={1024}>
-        <AuthDesktopTemplate
-          step={"Krok 4 z 4"}
-          heading={"Dodaj narzędzia"}
-          sectionSubtitle={
-            "Określ które narzędzia wybrani przez Ciebie specjaliści mają znać"
-          }
-          children={
-            <>
-              <Container>
-                <SpecSelects />
-              </Container>
-              <Button onClick={clickHandler}>Zatwierdź projekt</Button>
-            </>
-          }
-        ></AuthDesktopTemplate>
+        <AuthDesktopTemplate>
+          <AuthDesktopMain
+            heading={"Dodaj narzędzia"}
+            sectionSubtitle={
+              "Określ które narzędzia wybrani przez Ciebie specjaliści mają znać"
+            }
+            step={"Krok 4 z 4"}
+            children={
+              <>
+                <Container>
+                  <SpecSelects />
+                </Container>
+                <Button onClick={clickHandler}>Zatwierdź projekt</Button>
+              </>
+            }
+          ></AuthDesktopMain>
+        </AuthDesktopTemplate>
       </MediaQuery>
       <MediaQuery maxDeviceWidth={1024}>
         <AddProjectTemplateView

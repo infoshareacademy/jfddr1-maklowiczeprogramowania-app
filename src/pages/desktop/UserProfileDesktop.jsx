@@ -2,11 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import AuthDesktopTemplate from "../AuthDesktopTemplate";
-import ExitIcon from "../../components/ExitIcon";
-import ExitIconSrc from "../../img/exit-light-icon.svg";
-import FriendsIconSrc from "../../img/friends-icon.svg";
 import GitHubIconSrc from "../../img/github-icon.svg";
-import MessageIconSrc from "../../img/message-light-icon.svg";
 import LinkedInIconSrc from "../../img/linkedin-icon.svg";
 import PortfolioIconSrc from "../../img/portfolio-icon.svg";
 import ProfileImageIconSrc from "../../img/example-profile-image.svg";
@@ -15,7 +11,6 @@ const MainWrapper = styled.section`
   display: flex;
   flex-direction: column;
   margin: 5em auto;
-  text-align: center;
   font-weight: 600;
   color: var(--dark-clr);
   background: white;
@@ -24,21 +19,16 @@ const MainWrapper = styled.section`
 const TopWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  padding: 1.8rem 1.8rem 0 1.8rem;
-  border-radius: 0 0 2.3rem 2.3rem;
+  // padding: 0 1.8rem;
   background-color: var(--dark-clr);
 `;
 
-const ExitIconWrapper = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-`;
-
-const UserImageAndIconsWrapper = styled.div`
+const UserImageAndTabsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -4.7rem;
+  gap: 3rem;
 `;
 
 const UserImage = styled.img`
@@ -50,30 +40,10 @@ const UserImage = styled.img`
   padding: 1rem;
 `;
 
-const IconWithPlusWrapper = styled.div`
-  display: flex;
-  height: 3.1rem;
-  width: 3.1rem;
-`;
-
 const Icon = styled.img`
   align-self: center;
   height: 2rem;
   width: 2rem;
-`;
-
-const PlusOnIcon = styled.span`
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  height: 1.1rem;
-  width: 1.1rem;
-  line-height: 1rem;
-  margin-left: -0.6rem;
-  // text-align: center;
-  font-size: 0.9rem;
-  border-radius: 0.2rem;
-  background-color: var(--accent-clr);
 `;
 
 const UserInfoWrapper = styled.div`
@@ -82,16 +52,18 @@ const UserInfoWrapper = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 0 5rem;
   gap: 0.7rem;
   color: var(--light-clr);
 `;
 
 const UserInfoName = styled.h2`
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
 `;
 
 const UserInfoSpecialization = styled.h1`
+  font-size: 1.6rem;
   font-weight: 600;
 `;
 
@@ -108,12 +80,6 @@ const UserInfoIconsContainer = styled.div`
   gap: 3rem;
 `;
 
-const TopWrapperTabsContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-`;
-
 const TopWrapperTab = styled.button`
   width: 6rem;
   margin-bottom: -0.9rem;
@@ -125,6 +91,10 @@ const TopWrapperTab = styled.button`
   outline: none;
   cursor: pointer;
   background-color: var(--light-clr);
+`;
+
+const ActiveTopWrapperTab = styled(TopWrapperTab)`
+  background-color: var(--accent-clr);
 `;
 
 const BottomWrapper = styled.section`
@@ -161,22 +131,13 @@ const UserProfileDesktop = () => {
     <AuthDesktopTemplate>
       <MainWrapper>
         <TopWrapper>
-          <ExitIconWrapper>
-            <Link to="../pages">
-              <ExitIcon src={ExitIconSrc} />
-            </Link>
-          </ExitIconWrapper>
-          <UserImageAndIconsWrapper>
-            <IconWithPlusWrapper>
-              <Icon src={FriendsIconSrc} />
-              <PlusOnIcon>+</PlusOnIcon>
-            </IconWithPlusWrapper>
+          <UserImageAndTabsWrapper>
+            <ActiveTopWrapperTab>Informacje</ActiveTopWrapperTab>
+            <TopWrapperTab>Projekty</TopWrapperTab>
             <UserImage src={ProfileImageIconSrc} />
-            <IconWithPlusWrapper>
-              <Icon src={MessageIconSrc} />
-              <PlusOnIcon>+</PlusOnIcon>
-            </IconWithPlusWrapper>
-          </UserImageAndIconsWrapper>
+            <TopWrapperTab>Projekty</TopWrapperTab>
+            <TopWrapperTab>Nie wiem</TopWrapperTab>
+          </UserImageAndTabsWrapper>
           <UserInfoWrapper>
             <UserInfoName>Robert Makłowicz</UserInfoName>
             <UserInfoSpecialization>Front-End Developer</UserInfoSpecialization>
@@ -190,11 +151,6 @@ const UserProfileDesktop = () => {
             <Icon src={LinkedInIconSrc} />
             <Icon src={PortfolioIconSrc} />
           </UserInfoIconsContainer>
-          <TopWrapperTabsContainer>
-            <TopWrapperTab>Informacje</TopWrapperTab>
-            <TopWrapperTab>Projekty</TopWrapperTab>
-            <TopWrapperTab>Nie wiem</TopWrapperTab>
-          </TopWrapperTabsContainer>
         </TopWrapper>
         <BottomWrapper>
           <TechAndToolsWrapper>

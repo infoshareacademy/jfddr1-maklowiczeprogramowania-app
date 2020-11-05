@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContext";
+import { Link, useHistory } from "react-router-dom";
+import Select from "react-select";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
 import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
 import {
@@ -17,23 +19,64 @@ import {
   ChosenOption,
   DesktopLinkButton,
 } from "../../components/SignInUpElements";
+import { StyledButton } from "../../components/buttons/Button";
+import { techDB } from "../../mocks/TechData";
+const StyledSelect = styled(Select)`
+  width: 20em;
+  font-size: 1.5rem;
+`;
 
 const SignUpFull4Desktop = () => {
+  const [state, setState] = useState();
+  const history = useHistory();
+  const [disabled, setDisabled] = useState(false);
+  const { currentUserData, setCurrentUserData } = useAuth();
+  const handleClick = (e) => {
+    e.preventDefault();
+    const spec = Object.values(state).map((el) => el.label);
+    setState(spec);
+    setDisabled(true);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (disabled === false) {
+      alert("You must choose at least one technology!");
+      return;
+    }
+
+    const tech = state;
+    setCurrentUserData({ ...currentUserData, tech });
+    history.push("/pages/SignUpFull5Desktop");
+  };
   return (
     <DesktopViewWithCloudsTemplate>
       <HalfDesktopFormWrapper>
         <Title>Wybierz technologie</Title>
         <OptionContainer>
-          <TechElement />
-          <AddButton type="submit" label="Dodaj" />
+          <StyledSelect
+            isMulti={true}
+            placeholder="Dodaj technologie, które opanowałeś"
+            options={techDB}
+            onChange={setState}
+            isDisabled={disabled}
+          />
+          <StyledButton onClick={handleClick}>Zatwierdź</StyledButton>
+
+          {/* Same story as before, needed to change that button */}
+          {/* <AddButton type="submit" label="Zatwierdź" />
+           */}
         </OptionContainer>
-        <ChosenOptionContainer>
+        {/* <ChosenOptionContainer>
           <ChosenOption type="" label="Python" />
           <ChosenOption type="" label="JavaScript" />
           <ChosenOption type="" label="Java" />
-        </ChosenOptionContainer>
+        </ChosenOptionContainer> */}
         <DesktopCenterRowButtonContainer>
-          <DesktopLinkButton to="/pages/SignUpFull5Desktop">
+          <DesktopLinkButton
+            onClick={handleSubmit}
+            to="/pages/SignUpFull5Desktop"
+          >
             Dalej
           </DesktopLinkButton>
         </DesktopCenterRowButtonContainer>

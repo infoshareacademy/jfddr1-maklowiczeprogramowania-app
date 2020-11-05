@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
 import ProjectDoneIconSrc from "../../img/project-done.svg";
 
@@ -18,6 +18,11 @@ import {
 } from "../../components/SignInUpElements";
 
 const SignUpFull7DoneDesktop = () => {
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push("/pages/AuthWelcomeView");
+  };
   return (
     <DesktopViewWithCloudsTemplate>
       <HalfDesktopFormWrapper>
@@ -29,7 +34,9 @@ const SignUpFull7DoneDesktop = () => {
           Utworzyłeś konto, teraz możesz korzystać z naszych dobrodziejstw!
         </SignUpDoneDescription>
         <DesktopCenterRowButtonContainer>
-          <DesktopLinkButton to="/pages/">Profil</DesktopLinkButton>
+          <DesktopLinkButton onClick={handleClick}>
+            Przejdź do profilu
+          </DesktopLinkButton>
         </DesktopCenterRowButtonContainer>
       </HalfDesktopFormWrapper>
       <DesktopSlideContainer>

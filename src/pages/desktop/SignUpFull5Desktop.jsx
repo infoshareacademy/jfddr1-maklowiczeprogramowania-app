@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContext";
+import { Link, useHistory } from "react-router-dom";
+import Select from "react-select";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
 import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
 import {
@@ -17,23 +19,53 @@ import {
   ChosenOption,
   DesktopLinkButton,
 } from "../../components/SignInUpElements";
-
+import { StyledButton } from "../../components/buttons/Button";
+import { toolsDB } from "../../mocks/ToolsData";
+const StyledSelect = styled(Select)`
+  width: 20em;
+  font-size: 1.5rem;
+`;
 const SignUpFull5Desktop = () => {
+  const [state, setState] = useState();
+  const history = useHistory();
+  const [disabled, setDisabled] = useState(false);
+  const { currentUserData, setCurrentUserData } = useAuth();
+  const handleClick = (e) => {
+    e.preventDefault();
+    const tools = Object.values(state).map((el) => el.label);
+    setState(tools);
+    setDisabled(true);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (disabled === false) {
+      alert("You must choose at least one tool!");
+      return;
+    }
+    const tools = state;
+    setCurrentUserData({ ...currentUserData, tools });
+    history.push("/pages/SignUpFull6Desktop");
+  };
   return (
     <DesktopViewWithCloudsTemplate>
       <HalfDesktopFormWrapper>
         <Title>Wybierz narzędzia</Title>
         <OptionContainer>
-          <ToolsElement />
-          <AddButton type="submit" label="Dodaj" />
+          <StyledSelect
+            isMulti={true}
+            placeholder="Dodaj narzędzia, które opanowałeś"
+            options={toolsDB}
+            onChange={setState}
+            isDisabled={disabled}
+          />
+          <StyledButton onClick={handleClick}>Zatwierdź</StyledButton>
         </OptionContainer>
-        <ChosenOptionContainer>
-          <ChosenOption type="" label="Git" />
-          <ChosenOption type="" label="Jira" />
-          <ChosenOption type="" label="Option3" />
-        </ChosenOptionContainer>
+
         <DesktopCenterRowButtonContainer>
-          <DesktopLinkButton to="/pages/SignUpFull6Desktop">
+          <DesktopLinkButton
+            onClick={handleSubmit}
+            to="/pages/SignUpFull6Desktop"
+          >
             Dalej
           </DesktopLinkButton>
         </DesktopCenterRowButtonContainer>

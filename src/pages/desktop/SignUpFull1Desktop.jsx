@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useAuth } from "../../contexts/AuthContext";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
 import Input from "../../components/Input";
 import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
@@ -15,27 +16,62 @@ import {
   DesktopCenterRowButtonContainer,
   DesktopLinkButton,
 } from "../../components/SignInUpElements";
+import { StyledInput } from "../../components/Input";
+import { StyledButton } from "../../components/buttons/Button";
+
+const SubmitFormButton = styled(StyledButton)`
+  margin-top: 2em;
+`;
 
 const SignUpFull1Desktop = () => {
+  const history = useHistory();
+  const { currentUserData, setCurrentUserData } = useAuth();
+  const firstNameRef = React.createRef();
+  const secondNameRef = React.createRef();
+  const emailRef = React.createRef();
+  const passwordRef = React.createRef();
+
+  const handleSubmit = () => {
+    const firstName = firstNameRef.current.value;
+    const secondName = secondNameRef.current.value;
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
+    setCurrentUserData({
+      firstName,
+      secondName,
+      email,
+      password,
+    });
+    history.push("/pages/SignUpFull2Desktop");
+  };
+
   return (
     <DesktopViewWithCloudsTemplate>
-      <HalfDesktopFormWrapper>
+      <HalfDesktopFormWrapper onSubmit={handleSubmit}>
         <Title>Podaj podstawowe dane</Title>
         <InputsAndLabelsContainer>
           <LabelDesktop htmlFor="Imię">{"Imię"}</LabelDesktop>
-          <Input name="Imię" type="text" />
+          <StyledInput ref={firstNameRef} name="Imię" type="text" required />
           <LabelDesktop htmlFor="Nazwisko">{"Nazwisko"}</LabelDesktop>
-          <Input name="Nazwisko" type="text" />
+          <StyledInput
+            ref={secondNameRef}
+            name="Nazwisko"
+            type="text"
+            required
+          />
           <LabelDesktop htmlFor="Email">{"Email"}</LabelDesktop>
-          <Input name="Email" type="text" />
+          <StyledInput ref={emailRef} name="Email" type="email" required />
           <LabelDesktop htmlFor="Hasło">{"Hasło"}</LabelDesktop>
-          <Input name="Hasło" type="text" />
+          <StyledInput
+            ref={passwordRef}
+            name="Hasło"
+            type="password"
+            required
+          />
+          <SubmitFormButton type="submit">Dalej</SubmitFormButton>
+          <DesktopCenterRowButtonContainer></DesktopCenterRowButtonContainer>
         </InputsAndLabelsContainer>
-        <DesktopCenterRowButtonContainer>
-          <DesktopLinkButton to="/pages/SignUpFull2Desktop">
-            Dalej
-          </DesktopLinkButton>
-        </DesktopCenterRowButtonContainer>
       </HalfDesktopFormWrapper>
       <DesktopSlideContainer>
         <SlideDescription>Krok</SlideDescription>

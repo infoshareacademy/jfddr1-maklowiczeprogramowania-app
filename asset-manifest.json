@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/jfddr1-maklowiczeprogramowania-app/static/js/main.6843d877.chunk.js",
-    "main.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/main.6843d877.chunk.js.map",
+    "main.js": "/jfddr1-maklowiczeprogramowania-app/static/js/main.8ea0fe9b.chunk.js",
+    "main.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/main.8ea0fe9b.chunk.js.map",
     "runtime-main.js": "/jfddr1-maklowiczeprogramowania-app/static/js/runtime-main.59d3cbc5.js",
     "runtime-main.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/runtime-main.59d3cbc5.js.map",
-    "static/js/2.3762de46.chunk.js": "/jfddr1-maklowiczeprogramowania-app/static/js/2.3762de46.chunk.js",
-    "static/js/2.3762de46.chunk.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/2.3762de46.chunk.js.map",
+    "static/js/2.ee79a305.chunk.js": "/jfddr1-maklowiczeprogramowania-app/static/js/2.ee79a305.chunk.js",
+    "static/js/2.ee79a305.chunk.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/2.ee79a305.chunk.js.map",
     "index.html": "/jfddr1-maklowiczeprogramowania-app/index.html",
-    "precache-manifest.059ac729fe90e552ac882b4a15cfb69d.js": "/jfddr1-maklowiczeprogramowania-app/precache-manifest.059ac729fe90e552ac882b4a15cfb69d.js",
+    "precache-manifest.cfa3972f3a3b3b22333954dd8279af50.js": "/jfddr1-maklowiczeprogramowania-app/precache-manifest.cfa3972f3a3b3b22333954dd8279af50.js",
     "service-worker.js": "/jfddr1-maklowiczeprogramowania-app/service-worker.js",
-    "static/js/2.3762de46.chunk.js.LICENSE.txt": "/jfddr1-maklowiczeprogramowania-app/static/js/2.3762de46.chunk.js.LICENSE.txt",
+    "static/js/2.ee79a305.chunk.js.LICENSE.txt": "/jfddr1-maklowiczeprogramowania-app/static/js/2.ee79a305.chunk.js.LICENSE.txt",
     "static/media/Achievement.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/Achievement.490d1669.svg",
     "static/media/Security.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/Security.661c1399.svg",
     "static/media/add-project-idea-image.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/add-project-idea-image.c946e01f.svg",
@@ -18,12 +18,20 @@
     "static/media/background-vector-right.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/background-vector-right.82a9de3a.svg",
     "static/media/bell-icon-light.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/bell-icon-light.59eab30a.svg",
     "static/media/bell-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/bell-icon.274410c2.svg",
-    "static/media/exit-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/exit-icon.66c399e7.svg",
+    "static/media/example-profile-image.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/example-profile-image.6f3b7bea.svg",
+    "static/media/exit-dark-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/exit-dark-icon.66c399e7.svg",
+    "static/media/exit-light-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/exit-light-icon.ee92f4d2.svg",
+    "static/media/form-desktop-vector-big.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/form-desktop-vector-big.92aa8b8a.svg",
+    "static/media/form-desktop-vector-small.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/form-desktop-vector-small.20f42f1c.svg",
     "static/media/friends-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/friends-icon.63591ee7.svg",
+    "static/media/github-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/github-icon.b52d7696.svg",
     "static/media/header-image.png": "/jfddr1-maklowiczeprogramowania-app/static/media/header-image.3ba2f05e.png",
     "static/media/icons_hamburger-menu-light.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/icons_hamburger-menu-light.a7e8e9ac.svg",
+    "static/media/linkedin-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/linkedin-icon.b089d57d.svg",
     "static/media/message-bar-icon-light.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/message-bar-icon-light.cbf04579.svg",
     "static/media/message-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/message-icon.774fa85e.svg",
+    "static/media/message-light-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/message-light-icon.dd0b17f2.svg",
+    "static/media/portfolio-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/portfolio-icon.d5e285bd.svg",
     "static/media/profile-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/profile-icon.bb7537d8.svg",
     "static/media/project-done.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/project-done.78573921.svg",
     "static/media/projects-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/projects-icon.36eb4cba.svg",
@@ -36,7 +44,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.59d3cbc5.js",
-    "static/js/2.3762de46.chunk.js",
-    "static/js/main.6843d877.chunk.js"
+    "static/js/2.ee79a305.chunk.js",
+    "static/js/main.8ea0fe9b.chunk.js"
   ]
 }

@@ -12,7 +12,7 @@ const NotificationMainWrapper = styled.section`
 `;
 
 const NotificationHeader = styled.header`
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   color: var(--text-color);
   @media (min-width: 1024px) {
     color: var(--dark-clr);
@@ -29,7 +29,10 @@ const NotificationWrapper = styled.div`
 
 const NotificationsContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  gap: 50px;
+  margin-top: 50px;
 `;
 
 const NotificationImg = styled.img`
@@ -60,6 +63,7 @@ const NotiHeaderAndButtonContainer = styled.div``;
 const NotiHeaderContainer = styled.header`
   font-weight: 800;
   font-size: 2rem;
+  margin-bottom: 50px;
 `;
 
 const NotiButtonContainer = styled.div`
@@ -83,6 +87,26 @@ const NotificationDesktop = () => {
                 <SmallButton>Zobacz profil</SmallButton>
                 <SmallButton>Zobacz aplikacje</SmallButton>
               </NotiButtonContainer>
+            </NotiHeaderAndButtonContainer>
+          </NotificationWrapper>
+          <NotificationWrapper>
+            <NotificationImg src={ProfileImageIconSrc}></NotificationImg>
+            <NotiHeaderAndButtonContainer>
+              <NotiHeaderContainer>
+                Robercik Maklowicz Wysłał Ci zaproszenie do znajomych!
+              </NotiHeaderContainer>
+              <NotiButtonContainer>
+                <SmallButton>Zobacz profil</SmallButton>
+                <SmallButton>Zobacz aplikacje</SmallButton>
+              </NotiButtonContainer>
+            </NotiHeaderAndButtonContainer>
+          </NotificationWrapper>
+          <NotificationWrapper>
+            <NotificationImg src={ProfileImageIconSrc}></NotificationImg>
+            <NotiHeaderAndButtonContainer>
+              <NotiHeaderContainer>
+                Gratulacje!! Twoja strona do projektu zaakceptowana!
+              </NotiHeaderContainer>
             </NotiHeaderAndButtonContainer>
           </NotificationWrapper>
         </NotificationsContainer>

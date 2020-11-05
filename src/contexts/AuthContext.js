@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
-import firebase from "firebase/app";
 import { auth } from "../firebase";
+import { firebaseUsersDB } from "../firebase/UsersDB";
+
 export const useAuth = () => {
   return useContext(AuthContext);
 };
@@ -12,15 +12,12 @@ export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState();
   const [currentUserData, setCurrentUserData] = useState();
   const [loading, setLoading] = useState(true);
-  const history = useHistory();
   const signUp = (email, password) => {
     return auth.createUserWithEmailAndPassword(email, password);
   };
 
   const getUserData = (userId) => {
-    firebase
-      .firestore()
-      .collection("users")
+    firebaseUsersDB
       .doc(userId)
       .get()
       .then((data) => {
@@ -53,6 +50,7 @@ export const AuthProvider = ({ children }) => {
     signIn,
     signOut,
     getUserData,
+    setCurrentUserData,
   };
 
   return (

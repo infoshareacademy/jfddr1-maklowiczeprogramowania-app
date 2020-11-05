@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContext";
+import { Link, useHistory } from "react-router-dom";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
 import Input from "../../components/Input";
 import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
@@ -15,27 +16,57 @@ import {
   DesktopCenterRowButtonContainer,
   DesktopLinkButton,
 } from "../../components/SignInUpElements";
+import { StyledButton } from "../../components/buttons/Button";
+import { StyledInput } from "../../components/Input";
 
+const SubmitFormButton = styled(StyledButton)`
+  margin-top: 2em;
+`;
 const SignUpFull2Desktop = () => {
+  const { currentUserData, setCurrentUserData } = useAuth();
+  const history = useHistory();
+  const portfolioRef = React.createRef();
+  const githubRef = React.createRef();
+  const linkedInRef = React.createRef();
+  //  const ImageSrc = React.createRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const portfolio = portfolioRef.current.value;
+    const github = githubRef.current.value;
+    const linkedIn = linkedInRef.current.value;
+    //  const ImageSrc = passwordRef.current.value;
+    const socialMedia = [
+      {
+        portfolio,
+        github,
+        linkedIn,
+      },
+    ];
+    setCurrentUserData({ ...currentUserData, socialMedia });
+    history.push("/pages/SignUpFull3Desktop");
+  };
+
   return (
     <DesktopViewWithCloudsTemplate>
-      <HalfDesktopFormWrapper>
+      <HalfDesktopFormWrapper onSubmit={handleSubmit}>
         <Title>Pozwól się odnaleźć</Title>
         <InputsAndLabelsContainer>
           <LabelDesktop htmlFor="Portfolio">{"Portfolio"}</LabelDesktop>
-          <Input name="Portfolio" type="text" />
+          <StyledInput
+            ref={portfolioRef}
+            name="Portfolio"
+            type="text"
+            required
+          />
           <LabelDesktop htmlFor="Github">{"Github"}</LabelDesktop>
-          <Input name="Github" type="text" />
+          <StyledInput ref={githubRef} name="Github" type="text" required />
           <LabelDesktop htmlFor="Linkedin">{"Linkedin"}</LabelDesktop>
-          <Input name="Linkedin" type="text" />
+          <StyledInput ref={linkedInRef} name="Linkedin" type="text" required />
           <LabelDesktop htmlFor="Dodaj">{"Dodaj zdjęcie"}</LabelDesktop>
-          <Input name="Dodaj" type="text" />
+          <StyledInput name="Dodaj" type="file" />
+          <SubmitFormButton type="submit">Dalej</SubmitFormButton>
         </InputsAndLabelsContainer>
-        <DesktopCenterRowButtonContainer>
-          <DesktopLinkButton to="/pages/SignUpFull3Desktop">
-            Dalej
-          </DesktopLinkButton>
-        </DesktopCenterRowButtonContainer>
       </HalfDesktopFormWrapper>
       <DesktopSlideContainer>
         <SlideDescription>Krok</SlideDescription>

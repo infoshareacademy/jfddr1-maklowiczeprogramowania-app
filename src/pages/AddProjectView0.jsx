@@ -41,7 +41,7 @@ const Paragraph = styled.p`
   }
 
   @media (min-width: 1024px) {
-    font-size: 1.6rem;Gratulacje
+    font-size: 1.6rem;
     padding: 0 6em;
   }
 `;

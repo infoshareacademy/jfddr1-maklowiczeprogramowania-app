@@ -18,12 +18,22 @@ const SignUpFullImage = styled.img`
   width: 25em;
 `;
 
+const DescriptionText = styled.p`
+  font-size: 1.2rem;
+  text-align: center;
+`;
+
 const SignUpFull0StartDesktop = () => {
   return (
     <CenterMainWrapper>
       <HalfDesktopCommonWrapper>
         <SignUpFullImage src={SignUpFullImageSrc} />
         <Title>Załóż konto w kilku prostych krokach!</Title>
+        <DescriptionText>
+          Przeprowadzimy Cię teraz przez formularz rejestracyjny. Prosimy o
+          staranne uzupełnienie danych, gdyż pozwoli to lepiej nam się do Ciebie
+          dopasować!{" "}
+        </DescriptionText>
         <DesktopCenterRowButtonContainer>
           <DesktopLinkButton to="/pages/WelcomePage">Cofnij</DesktopLinkButton>
           <DesktopLinkButton to="/pages/SignUpFull1Desktop">

@@ -131,7 +131,6 @@ const AddProjectView1 = () => {
     let file = fileRef.current.value;
     let description = descriptionRef.current.value;
     setProject({ title, file, description, tags });
-    console.log(project);
     history.push("/pages/AddProjectView2");
   };
 

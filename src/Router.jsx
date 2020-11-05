@@ -35,6 +35,7 @@ import UserProfileDesktop from "./pages/desktop/UserProfileDesktop";
 import UserProfileGuestView1Mobile from "./pages/mobile/UserProfileGuestView1Mobile";
 import WelcomePage from "./pages/WelcomePage";
 import AuthDesktopTemplate from "./pages/AuthDesktopTemplate";
+import NotificationDesktop from "./pages/desktop/NotificationDesktop";
 
 const Router = () => {
   return (
@@ -146,7 +147,7 @@ const Router = () => {
           <WelcomePage />
         </Route>
         <Route path="/">
-          <WelcomePage />
+          <NotificationDesktop />
         </Route>
       </Switch>
       <Route path="/pages/SignUpDesktop">

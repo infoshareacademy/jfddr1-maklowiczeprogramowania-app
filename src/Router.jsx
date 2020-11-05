@@ -23,8 +23,6 @@ import SignUpFull5Mobile from "./pages/mobile/SignUpFull5Mobile";
 import SignUpFull6Mobile from "./pages/mobile/SignUpFull6Mobile";
 import SignUpFull7DoneMobile from "./pages/mobile/SignUpFull7DoneMobile";
 import SignUpMobile from "./pages/mobile/SignUpMobile";
-import UserProfileGuestView1Mobile from "./pages/mobile/UserProfileGuestView1Mobile";
-import WelcomePage from "./pages/WelcomePage";
 import SignUpFull0StartDesktop from "./pages/desktop/SignUpFull0StartDesktop";
 import SignUpFull1Desktop from "./pages/desktop/SignUpFull1Desktop";
 import SignUpFull2Desktop from "./pages/desktop/SignUpFull2Desktop";
@@ -33,6 +31,10 @@ import SignUpFull4Desktop from "./pages/desktop/SignUpFull4Desktop";
 import SignUpFull5Desktop from "./pages/desktop/SignUpFull5Desktop";
 import SignUpFull6Desktop from "./pages/desktop/SignUpFull6Desktop";
 import SignUpFull7DoneDesktop from "./pages/desktop/SignUpFull7DoneDesktop";
+import UserProfileDesktop from "./pages/desktop/UserProfileDesktop";
+import UserProfileGuestView1Mobile from "./pages/mobile/UserProfileGuestView1Mobile";
+import WelcomePage from "./pages/WelcomePage";
+import AuthDesktopTemplate from "./pages/AuthDesktopTemplate";
 
 const Router = () => {
   return (
@@ -139,6 +141,9 @@ const Router = () => {
         </Route>
         <Route path="/pages/UserProfileGuestView1Mobile">
           <UserProfileGuestView1Mobile />
+        </Route>
+        <Route path="/pages/UserProfileDesktop">
+          <WelcomePage />
         </Route>
         <Route path="/">
           <WelcomePage />

@@ -69,7 +69,7 @@ const DesktopMenuBar = styled.section`
   max-width: 300px;
   display: flex;
   align-items: center;
-
+  position: sticky;
   flex-direction: column;
   width: 40vw;
   background: var(--dark-clr);
@@ -199,7 +199,7 @@ const AuthNavigationTemplate = () => {
 
 const AuthDesktopTemplate = (props) => {
   const { currentUserData, currentUser } = useAuth();
-  console.log(currentUserData, currentUser);
+
   return (
     <>
       <PageWrapper>
@@ -221,7 +221,9 @@ const AuthDesktopTemplate = (props) => {
                 {currentUserData &&
                   currentUserData.firstName + " " + currentUserData.secondName}
               </UserName>
-              <UserSpecialization>Front-End Developer</UserSpecialization>
+              <UserSpecialization>
+                {currentUserData && currentUserData.specialization}
+              </UserSpecialization>
             </UserInfo>
             <AuthMenuList>
               <AuthNavigationTemplate />

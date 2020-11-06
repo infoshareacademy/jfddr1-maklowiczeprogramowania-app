@@ -20,11 +20,11 @@ const NotificationHeader = styled.header`
 `;
 
 const NotificationWrapper = styled.div`
-  background-color: var(--light-clr);
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 2rem;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: var(--light-clr);
 `;
 
 const NotificationsContainer = styled.div`
@@ -36,15 +36,15 @@ const NotificationsContainer = styled.div`
 `;
 
 const NotificationImg = styled.img`
-  height: 8rem;
-  width: 8rem;
+  height: 6rem;
+  width: 6rem;
   background-color: var(--dark-clr);
-  border-radius: 4rem;
-  margin: 1.2rem;
+  border-radius: 3rem;
+  margin-right: 1.5rem;
   padding: 1rem;
 `;
 
-const SmallButton = styled.button`
+const NotiSmallButton = styled.button`
   padding: 0.6rem;
   font-family: "Quicksand";
   font-weight: 500;
@@ -54,16 +54,15 @@ const SmallButton = styled.button`
   border: none;
   cursor: pointer;
   outline: none;
-  width: 20%;
   height: 40px;
 `;
 
 const NotiHeaderAndButtonContainer = styled.div``;
 
 const NotiHeaderContainer = styled.header`
-  font-weight: 800;
-  font-size: 2rem;
-  margin-bottom: 50px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 `;
 
 const NotiButtonContainer = styled.div`
@@ -84,8 +83,8 @@ const NotificationDesktop = () => {
                 Wielki Krol Maklowicz chce dołączyć do Twojego projektu!
               </NotiHeaderContainer>
               <NotiButtonContainer>
-                <SmallButton>Zobacz profil</SmallButton>
-                <SmallButton>Zobacz aplikacje</SmallButton>
+                <NotiSmallButton>Zobacz profil</NotiSmallButton>
+                <NotiSmallButton>Zobacz aplikacje</NotiSmallButton>
               </NotiButtonContainer>
             </NotiHeaderAndButtonContainer>
           </NotificationWrapper>
@@ -96,8 +95,8 @@ const NotificationDesktop = () => {
                 Robercik Maklowicz Wysłał Ci zaproszenie do znajomych!
               </NotiHeaderContainer>
               <NotiButtonContainer>
-                <SmallButton>Zobacz profil</SmallButton>
-                <SmallButton>Zobacz aplikacje</SmallButton>
+                <NotiSmallButton>Zobacz profil</NotiSmallButton>
+                <NotiSmallButton>Zobacz aplikacje</NotiSmallButton>
               </NotiButtonContainer>
             </NotiHeaderAndButtonContainer>
           </NotificationWrapper>

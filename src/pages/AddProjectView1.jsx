@@ -3,15 +3,15 @@ import styled from "styled-components";
 import MediaQuery from "react-responsive";
 import Select from "react-select";
 import { useProject } from "../contexts/ProjectsContext";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
 import { StyledInput } from "../components/Input";
 import { StyledLabelDesktop } from "../components/Label";
 import { fieldTagsDB } from "../mocks/FieldTagsData.js";
-import AddProjectTemplateView from "./AddProjectTemplateView";
+import AddProjectViewTemplate from "../components/templates/AddProjectViewTemplate";
 import AuthDesktopTemplate, {
   AuthDesktopMain,
-} from "../pages/AuthDesktopTemplate";
+} from "../components/templates/AuthDesktopTemplate";
 
 const Button = styled(StyledSmallButton)`
   width: 8em;
@@ -74,12 +74,6 @@ const TagContainer = styled.section`
   margin: 2em 0;
   width: 100%;
   align-items: center;
-`;
-
-const StepCounter = styled.p`
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--dark-clr);
 `;
 
 const Form = styled.form`
@@ -186,7 +180,7 @@ const AddProjectView1 = () => {
         </AuthDesktopTemplate>
       </MediaQuery>
       <MediaQuery maxDeviceWidth={1024}>
-        <AddProjectTemplateView
+        <AddProjectViewTemplate
           heading={"Dodaj podstawowe informacje"}
           sectionSubtitle={"Opisz swój projekt"}
           children={
@@ -209,7 +203,7 @@ const AddProjectView1 = () => {
               <Button>Dalej</Button>
             </>
           }
-        ></AddProjectTemplateView>
+        ></AddProjectViewTemplate>
       </MediaQuery>
     </>
   );

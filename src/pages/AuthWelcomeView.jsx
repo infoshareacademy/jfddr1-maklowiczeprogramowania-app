@@ -11,7 +11,7 @@ import { StyledSmallButton } from "../components/buttons/SmallButton";
 import MediaQuery from "react-responsive";
 import AuthDesktopTemplate, {
   AuthDesktopMain,
-} from "../pages/AuthDesktopTemplate";
+} from "../components/templates/AuthDesktopTemplate";
 
 const Header = styled.header`
   display: flex;
@@ -216,10 +216,10 @@ const UserInformation = styled.section`
   justify-content: space-between;
 `;
 
-const UserName = styled.h2`
-  font-weight: 400;
-  margin-top: 0.5em;
-`;
+// const UserName = styled.h2`
+//   font-weight: 400;
+//   margin-top: 0.5em;
+// `;
 
 const SpecializationTagTemplate = ({ tagName }) => {
   return (

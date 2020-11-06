@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import MediaQuery from "react-responsive";
 import ImageSrc from "../img/add-project-idea-image.svg";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
-import AddProjectTemplateView from "./AddProjectTemplateView";
+import AddProjectViewTemplate from "../components/templates/AddProjectViewTemplate";
 
 const Image = styled.img`
   width: 15em;
@@ -60,7 +59,7 @@ const Button = styled(StyledSmallButton)`
 const AddProjectView0 = () => {
   return (
     <>
-      <AddProjectTemplateView
+      <AddProjectViewTemplate
         children={
           <>
             <Image src={ImageSrc} />
@@ -78,7 +77,7 @@ const AddProjectView0 = () => {
             </Link>
           </>
         }
-      ></AddProjectTemplateView>
+      ></AddProjectViewTemplate>
     </>
   );
 };

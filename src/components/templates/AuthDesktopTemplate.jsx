@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link, useHistory } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
-import MenuMessageIconSrc from "../img/message-icon.svg";
-import MenuBellIconSrc from "../img/bell-icon.svg";
-import HamburgerMenuSrc from "../img/radix-icons_hamburger-menu-dark.svg";
-import { StyledSmallButton } from "../components/buttons/SmallButton";
+import { useAuth } from "../../contexts/AuthContext";
+import MenuMessageIconSrc from "../../img/message-icon.svg";
+import MenuBellIconSrc from "../../img/bell-icon.svg";
+import HamburgerMenuSrc from "../../img/radix-icons_hamburger-menu-dark.svg";
+import { StyledSmallButton } from "../buttons/SmallButton";
 import MediaQuery from "react-responsive";
-import UserAvatarImageSrc from "../img/team1.svg";
-import { authMenuDB } from "../mocks/AuthMenuData.js";
+import UserAvatarImageSrc from "../../img/team1.svg";
+import { authMenuDB } from "../../mocks/AuthMenuData.js";
 
 const Header = styled.header`
   display: flex;
@@ -190,18 +190,13 @@ const StepCounter = styled.p`
 const AuthMenuItem = styled.li``;
 
 const AuthNavigationTemplate = () => {
-  const [error, setError] = useState("");
-  const { currentUser, signOut } = useAuth();
+  const { signOut } = useAuth();
 
   const history = useHistory();
   const signOutHandler = () => {
-    signOut()
-      .then(() => {
-        history.push("/pages/WelcomePage");
-      })
-      .catch(() => {
-        setError("Wylogowywanie nie powiodło się, spróbuj jeszcze raz!");
-      });
+    signOut().then(() => {
+      history.push("/pages/WelcomePage");
+    });
   };
 
   const authMenuData = authMenuDB;

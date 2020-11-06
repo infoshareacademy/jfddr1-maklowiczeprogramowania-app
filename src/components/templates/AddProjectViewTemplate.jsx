@@ -3,7 +3,7 @@ import styled from "styled-components";
 import MediaQuery from "react-responsive";
 // import ExitIconSrc from "../img/exit-icon.svg";
 
-import ExitIconSrc from "../img/exit-dark-icon.svg";
+import ExitIconSrc from "../../img/exit-dark-icon.svg";
 
 const Heading = styled.h1`
   color: var(--text-color);

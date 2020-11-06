@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import PrivateRouter from "./PrivateRouter";
 import AddProjectView0 from "./pages/AddProjectView0";
 import AddProjectView1 from "./pages/AddProjectView1";
@@ -10,7 +10,7 @@ import AddProjectViewDone from "./pages/AddProjectViewDone";
 import AuthMenuMobile from "./pages/mobile/AuthMenuMobile";
 import AuthWelcomeView from "./pages/AuthWelcomeView";
 import MenuMobile from "./pages/mobile/MenuMobile";
-import Projects from "./pages/Projects";
+// import Projects from "./pages/Projects";
 import SignInDesktop from "./pages/desktop/SignInDesktop";
 import SignInMobile from "./pages/mobile/SignInMobile";
 import SignUpDesktop from "./pages/desktop/SignUpDesktop";
@@ -34,7 +34,7 @@ import SignUpFull7DoneDesktop from "./pages/desktop/SignUpFull7DoneDesktop";
 import UserProfileDesktop from "./pages/desktop/UserProfileDesktop";
 import UserProfileGuestView1Mobile from "./pages/mobile/UserProfileGuestView1Mobile";
 import WelcomePage from "./pages/WelcomePage";
-import AuthDesktopTemplate from "./pages/AuthDesktopTemplate";
+// import AuthDesktopTemplate from "./components/templates/AuthDesktopTemplate";
 import NotificationDesktop from "./pages/desktop/NotificationDesktop";
 
 const Router = () => {
@@ -146,8 +146,11 @@ const Router = () => {
         <Route path="/pages/UserProfileDesktop">
           <UserProfileDesktop />
         </Route>
-        <Route path="/">
+        <Route path="/pages/NotificationDesktop">
           <NotificationDesktop />
+        </Route>
+        <Route path="/">
+          <WelcomePage />
         </Route>
       </Switch>
       <Route path="/pages/SignUpDesktop">

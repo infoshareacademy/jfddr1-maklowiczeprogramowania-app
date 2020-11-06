@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import MediaQuery from "react-responsive";
-import styled from "styled-components";
-import firebase from "firebase/app";
 import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import Button from "../../components/buttons/Button";

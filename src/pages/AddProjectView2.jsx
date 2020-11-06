@@ -4,11 +4,11 @@ import { useProject } from "../contexts/ProjectsContext";
 import MediaQuery from "react-responsive";
 import { Link, useHistory } from "react-router-dom";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
-import AddProjectTemplateView from "./AddProjectTemplateView";
+import AddProjectViewTemplate from "../components/templates/AddProjectViewTemplate";
 import { specDB } from "../mocks/SpecializationsData.js";
 import AuthDesktopTemplate, {
   AuthDesktopMain,
-} from "../pages/AuthDesktopTemplate";
+} from "../components/templates/AuthDesktopTemplate";
 
 const Button = styled(StyledSmallButton)`
   background-color: var(--light-clr);
@@ -168,7 +168,7 @@ const AddProjectView2 = () => {
         </AuthDesktopTemplate>
       </MediaQuery>
       <MediaQuery maxDeviceWidth={1024}>
-        <AddProjectTemplateView
+        <AddProjectViewTemplate
           heading={"Dodaj poszukiwanych przez Ciebie specjalistów"}
           sectionSubtitle={"Same kozaki"}
           children={
@@ -181,7 +181,7 @@ const AddProjectView2 = () => {
               </Link>
             </>
           }
-        ></AddProjectTemplateView>
+        ></AddProjectViewTemplate>
       </MediaQuery>
     </>
   );

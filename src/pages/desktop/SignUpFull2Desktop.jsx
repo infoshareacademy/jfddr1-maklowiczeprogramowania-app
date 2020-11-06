@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
-import Input from "../../components/Input";
 import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
 import { LabelDesktop } from "../../components/Label";
 import {
@@ -13,8 +12,6 @@ import {
   DesktopSlideContainer,
   Title,
   InputsAndLabelsContainer,
-  DesktopCenterRowButtonContainer,
-  DesktopLinkButton,
 } from "../../components/SignInUpElements";
 import { StyledButton } from "../../components/buttons/Button";
 import { StyledInput } from "../../components/Input";

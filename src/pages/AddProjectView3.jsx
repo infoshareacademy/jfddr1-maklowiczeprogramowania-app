@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Select from "react-select";
 import MediaQuery from "react-responsive";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useProject } from "../contexts/ProjectsContext";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
-import AddProjectTemplateView from "./AddProjectTemplateView";
+import AddProjectViewTemplate from "../components/templates/AddProjectViewTemplate";
 import AuthDesktopTemplate, {
   AuthDesktopMain,
-} from "../pages/AuthDesktopTemplate";
+} from "../components/templates/AuthDesktopTemplate";
 import { techDB } from "../mocks/TechData";
 
 const Button = styled(StyledSmallButton)`
@@ -147,7 +147,7 @@ const AddProjectView3 = () => {
         </AuthDesktopTemplate>
       </MediaQuery>
       <MediaQuery maxDeviceWidth={1024}>
-        <AddProjectTemplateView
+        <AddProjectViewTemplate
           heading={"Dodaj technologie"}
           sectionSubtitle={
             "Określ które technologie wybrani przez Ciebie specjaliści mają znać"
@@ -157,7 +157,7 @@ const AddProjectView3 = () => {
               <Button onClick={clickHandler}>Dalej</Button>
             </>
           }
-        ></AddProjectTemplateView>
+        ></AddProjectViewTemplate>
       </MediaQuery>
     </>
   );

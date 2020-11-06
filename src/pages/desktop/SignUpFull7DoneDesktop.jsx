@@ -1,6 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
 import ProjectDoneIconSrc from "../../img/project-done.svg";
 

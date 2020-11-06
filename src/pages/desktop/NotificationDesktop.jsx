@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import AuthDesktopTemplate from "../AuthDesktopTemplate";
+import AuthDesktopTemplate from "../../components/templates/AuthDesktopTemplate";
 import ProfileImageIconSrc from "../../img/example-profile-image.svg";
 
 const NotificationMainWrapper = styled.section`

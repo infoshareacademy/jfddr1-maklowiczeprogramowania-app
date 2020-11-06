@@ -6,17 +6,13 @@ import Select from "react-select";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
 import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
 import {
-  AddButton,
   OptionContainer,
-  TechElement,
   SlideItem,
   SlideItemActive,
   SlideDescription,
   DesktopSlideContainer,
   Title,
   DesktopCenterRowButtonContainer,
-  ChosenOptionContainer,
-  ChosenOption,
   DesktopLinkButton,
 } from "../../components/SignInUpElements";
 import { StyledButton } from "../../components/buttons/Button";

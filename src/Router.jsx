@@ -10,7 +10,7 @@ import AddProjectViewDone from "./pages/AddProjectViewDone";
 import AuthMenuMobile from "./pages/mobile/AuthMenuMobile";
 import AuthWelcomeView from "./pages/AuthWelcomeView";
 import MenuMobile from "./pages/mobile/MenuMobile";
-import Projects from "./pages/Projects";
+import Project from "./pages/Project";
 import SignInDesktop from "./pages/desktop/SignInDesktop";
 import SignInMobile from "./pages/mobile/SignInMobile";
 import SignUpDesktop from "./pages/desktop/SignUpDesktop";
@@ -34,6 +34,11 @@ import SignUpFull7DoneDesktop from "./pages/desktop/SignUpFull7DoneDesktop";
 import UserProfileDesktop from "./pages/desktop/UserProfileDesktop";
 import UserProfileGuestView1Mobile from "./pages/mobile/UserProfileGuestView1Mobile";
 import WelcomePage from "./pages/WelcomePage";
+import OwnProfileView from "./pages/OwnProfileView";
+import MessagesView from "./pages/MessagesView";
+import NotificationsView from "./pages/NotificationsView";
+import FriendsView from "./pages/FriendsView";
+import ProjectsView from "./pages/ProjectsView";
 
 const Router = () => {
   return (
@@ -45,38 +50,55 @@ const Router = () => {
         {/* <Route path="/pages/SignInDesktop">
           <SignInDesktop />
         </Route> */}
+
         <PrivateRouter
-          exact
           path="/pages/AddProjectView0"
           component={AddProjectView0}
         ></PrivateRouter>
         <PrivateRouter
-          exact
           path="/pages/AddProjectView1"
           component={AddProjectView1}
         ></PrivateRouter>
         <PrivateRouter
-          exact
           path="/pages/AddProjectView2"
           component={AddProjectView2}
         ></PrivateRouter>
         <PrivateRouter
-          exact
           path="/pages/AddProjectView3"
           component={AddProjectView3}
         ></PrivateRouter>
         <PrivateRouter
-          exact
           path="/pages/AddProjectView4"
           component={AddProjectView4}
         ></PrivateRouter>
         <PrivateRouter
-          exact
           path="/pages/AddProjectViewDone"
           component={AddProjectViewDone}
         ></PrivateRouter>
+
+        {/* <Route path="/pages/:projectId">
+          <Project />
+        </Route> */}
+        <Route path="/pages/projects/:projectId">
+          <Project />
+        </Route>
         <Route path="/pages/AuthWelcomeView">
           <AuthWelcomeView />
+        </Route>
+        <Route path="/pages/OwnProfileView">
+          <OwnProfileView />
+        </Route>
+        <Route path="/pages/NotificationsView">
+          <NotificationsView />
+        </Route>
+        <Route path="/pages/MessagesView">
+          <MessagesView />
+        </Route>
+        <Route path="/pages/FriendsView">
+          <FriendsView />
+        </Route>
+        <Route path="/pages/ProjectsView">
+          <ProjectsView />
         </Route>
         <Route path="/pages/MenuMobile">
           <MenuMobile />
@@ -144,6 +166,7 @@ const Router = () => {
         <Route path="/pages/UserProfileDesktop">
           <UserProfileDesktop />
         </Route>
+
         <Route path="/">
           <WelcomePage />
         </Route>

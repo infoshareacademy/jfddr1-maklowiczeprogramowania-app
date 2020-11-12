@@ -4,6 +4,7 @@ import Select from "react-select";
 import MediaQuery from "react-responsive";
 import { useHistory } from "react-router-dom";
 import { useProject } from "../contexts/ProjectsContext";
+import { useAuth } from "../contexts/AuthContext";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
 import AddProjectTemplateView from "./AddProjectTemplateView";
 import AuthDesktopTemplate, {
@@ -11,6 +12,9 @@ import AuthDesktopTemplate, {
 } from "../pages/AuthDesktopTemplate";
 import { toolsDB } from "../mocks/ToolsData";
 import { firebaseProjectsDB } from "../firebase/ProjectsDB";
+import * as firebase from "firebase/app";
+import "firebase/firestore";
+
 const Button = styled(StyledSmallButton)`
   width: 8em;
   margin: 2em 0.5em 0 0.5em;
@@ -109,8 +113,9 @@ const SpecSelects = () => {
 
 const AddProjectView4 = () => {
   const { project, setProject } = useProject();
+  const { currentUser } = useAuth();
+
   const history = useHistory();
-  const { currentUserData } = useState();
   const clickHandler = () => {
     const err = project.team.map((spec) => {
       return spec.tools.length === 0 ? true : false;
@@ -120,14 +125,13 @@ const AddProjectView4 = () => {
       alert("You must choose at least one tool for each specialist!");
       return;
     }
-    let creator;
-    console.log(currentUserData);
-    if (currentUserData) {
-      creator = currentUserData.firstName + " " + currentUserData.secondName;
-    }
 
-    setProject({ ...project, creator });
+    setProject({ ...project });
     firebaseProjectsDB.add(project);
+
+    // Projekty pojedynczego usera, projekt musi być dodawany do jego biblioteki
+    firebase.firestore().collection(currentUser.uid).add(project);
+
     history.push("/pages/AddProjectViewDone");
   };
 

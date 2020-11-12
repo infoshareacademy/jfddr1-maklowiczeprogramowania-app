@@ -69,7 +69,7 @@ const Container = styled.section`
 `;
 
 const AddProjectView2 = () => {
-  const { project, setProject } = useProject();
+  const { project, setProject, projectsState } = useProject();
   const history = useHistory();
   const [allSpec, setAllSpec] = useState({
     "Front-End Developer": false,
@@ -133,8 +133,8 @@ const AddProjectView2 = () => {
         tools: [],
       });
     });
-
-    setProject({ ...project, team });
+    let id = projectsState.length + 1;
+    setProject({ ...project, team, id });
 
     function isFalse(item) {
       return item === false;

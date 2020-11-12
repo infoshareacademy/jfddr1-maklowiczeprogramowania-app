@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import MediaQuery from "react-responsive";
 import Select from "react-select";
+import { useAuth } from "../contexts/AuthContext";
 import { useProject } from "../contexts/ProjectsContext";
 import { Link, useHistory } from "react-router-dom";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
@@ -93,7 +94,8 @@ const Input = React.forwardRef(({ id, name, type }, ref) => (
 
 const AddProjectView1 = () => {
   const history = useHistory();
-  const { project, setProject } = useProject();
+  const { setProject } = useProject();
+  const { currentUserData, currentUser } = useAuth();
   const [tags, setTags] = useState([]);
   const titleRef = React.createRef();
   const fileRef = React.createRef();
@@ -130,7 +132,14 @@ const AddProjectView1 = () => {
     let title = titleRef.current.value;
     let file = fileRef.current.value;
     let description = descriptionRef.current.value;
-    setProject({ title, file, description, tags });
+    const userFirebaseId = currentUser.uid;
+    setProject({
+      title,
+      file,
+      description,
+      tags,
+      author: { ...currentUserData, userFirebaseId },
+    });
     history.push("/pages/AddProjectView2");
   };
 

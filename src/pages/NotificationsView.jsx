@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import styled from "styled-components";
-import AuthDesktopTemplate from "./AuthDesktopTemplate";
-import { AuthDesktopMain } from "./AuthDesktopTemplate";
+import AuthDesktopTemplate, {
+  AuthDesktopMain,
+} from "../components/templates/AuthDesktopTemplate";
+// import { AuthDesktopMain } from "./AuthDesktopTemplate";
 import * as firebase from "firebase/app";
 import "firebase/firestore";
 

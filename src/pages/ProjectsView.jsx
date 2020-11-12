@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import AuthDesktopTemplate from "./AuthDesktopTemplate";
-import { AuthDesktopMain } from "./AuthDesktopTemplate";
+import AuthDesktopTemplate, {
+  AuthDesktopMain,
+} from "../components/templates/AuthDesktopTemplate";
+// import { AuthDesktopMain } from "./AuthDesktopTemplate";
 import { useAuth } from "../contexts/AuthContext";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
 import * as firebase from "firebase/app";

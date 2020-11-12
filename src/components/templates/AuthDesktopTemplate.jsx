@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
@@ -253,7 +253,7 @@ const AuthDesktopTemplate = ({ children }, props) => {
           </DesktopMenuBar>
         </MediaQuery>
         {children}
-        {
+        {/* {
           <Main>
             <Heading>{props.heading}</Heading>
             <Paragraph>{props.sectionSubtitle}</Paragraph>
@@ -261,7 +261,7 @@ const AuthDesktopTemplate = ({ children }, props) => {
             {props.children}
             <StepCounter>{props.step}</StepCounter>
           </Main>
-        }
+        } */}
       </PageWrapper>
     </>
   );

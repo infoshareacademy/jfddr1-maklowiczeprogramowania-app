@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import styled from "styled-components";
-import AuthDesktopTemplate from "./AuthDesktopTemplate";
-import { AuthDesktopMain } from "./AuthDesktopTemplate";
+import AuthDesktopTemplate, {
+  AuthDesktopMain,
+} from "../components/templates/AuthDesktopTemplate";
+// import { AuthDesktopMain } from "./AuthDesktopTemplate";
 import { useProject } from "../contexts/ProjectsContext";
 import { StyledButton } from "../components/buttons/Button";
 import ApplicationModal from "../components/ApplicationModal";

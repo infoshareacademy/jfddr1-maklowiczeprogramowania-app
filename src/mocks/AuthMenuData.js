@@ -16,31 +16,32 @@ export const authMenuDB = [
   {
     label: "Profil",
     icon: profile,
-    path: "",
+    path: "/pages/OwnProfileView",
   },
   {
     label: "Powiadomienia",
     icon: notifications,
-    path: "",
+    path: "/pages/NotificationsView",
   },
   {
     label: "Wiadomości",
     icon: messages,
-    path: "",
+    path: "/pages/MessagesView",
   },
   {
     label: "Znajomi",
     icon: friends,
-    path: "",
+    path: "/pages/FriendsView",
   },
   {
     label: "Projekty",
     icon: projects,
-    path: "",
+    path: "/pages/ProjectsView",
   },
   {
+    value: "signOut",
     label: "Wyloguj się",
     icon: signOut,
-    path: "/pages/WelcomePages",
+    path: "/pages/WelcomePage",
   },
 ];

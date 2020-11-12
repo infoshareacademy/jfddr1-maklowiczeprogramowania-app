@@ -34,6 +34,7 @@ import SignUpFull7DoneDesktop from "./pages/desktop/SignUpFull7DoneDesktop";
 import UserProfileDesktop from "./pages/desktop/UserProfileDesktop";
 import UserProfileGuestView1Mobile from "./pages/mobile/UserProfileGuestView1Mobile";
 import WelcomePage from "./pages/WelcomePage";
+import WorkInProgressPage from "./pages/WorkInProgressPage";
 // import AuthDesktopTemplate from "./components/templates/AuthDesktopTemplate";
 import NotificationDesktop from "./pages/desktop/NotificationDesktop";
 
@@ -149,8 +150,11 @@ const Router = () => {
         <Route path="/pages/NotificationDesktop">
           <NotificationDesktop />
         </Route>
+        <Route path="/pages/WorkInProgressPage">
+          <WorkInProgressPage />
+        </Route>
         <Route path="/">
-          <WelcomePage />
+          <WorkInProgressPage />
         </Route>
       </Switch>
       <Route path="/pages/SignUpDesktop">

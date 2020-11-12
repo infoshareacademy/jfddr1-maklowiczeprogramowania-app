@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import PrivateRouter from "./PrivateRouter";
 import AddProjectView0 from "./pages/AddProjectView0";
 import AddProjectView1 from "./pages/AddProjectView1";
@@ -39,6 +39,8 @@ import MessagesView from "./pages/MessagesView";
 import NotificationsView from "./pages/NotificationsView";
 import FriendsView from "./pages/FriendsView";
 import ProjectsView from "./pages/ProjectsView";
+import WorkInProgressPage from "./pages/WorkInProgressPage";
+import NotificationDesktop from "./pages/desktop/NotificationDesktop";
 
 const Router = () => {
   return (
@@ -166,7 +168,12 @@ const Router = () => {
         <Route path="/pages/UserProfileDesktop">
           <UserProfileDesktop />
         </Route>
-
+        <Route path="/pages/NotificationDesktop">
+          <NotificationDesktop />
+        </Route>
+        <Route path="/pages/WorkInProgressPage">
+          <WorkInProgressPage />
+        </Route>
         <Route path="/">
           <WelcomePage />
         </Route>

@@ -6,10 +6,10 @@ import { useHistory } from "react-router-dom";
 import { useProject } from "../contexts/ProjectsContext";
 import { useAuth } from "../contexts/AuthContext";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
-import AddProjectTemplateView from "./AddProjectTemplateView";
+import AddProjectViewTemplate from "../components/templates/AddProjectViewTemplate";
 import AuthDesktopTemplate, {
   AuthDesktopMain,
-} from "../pages/AuthDesktopTemplate";
+} from "../components/templates/AuthDesktopTemplate";
 import { toolsDB } from "../mocks/ToolsData";
 import { firebaseProjectsDB } from "../firebase/ProjectsDB";
 import * as firebase from "firebase/app";
@@ -157,7 +157,7 @@ const AddProjectView4 = () => {
         </AuthDesktopTemplate>
       </MediaQuery>
       <MediaQuery maxDeviceWidth={1024}>
-        <AddProjectTemplateView
+        <AddProjectViewTemplate
           heading={"Dodaj narzędzia"}
           sectionSubtitle={
             "Określ które narzędzia wybrani przez Ciebie specjaliści mają znać"
@@ -167,7 +167,7 @@ const AddProjectView4 = () => {
               <Button onClick={clickHandler}>Zatwierdź projekt</Button>
             </>
           }
-        ></AddProjectTemplateView>
+        ></AddProjectViewTemplate>
       </MediaQuery>
     </>
   );

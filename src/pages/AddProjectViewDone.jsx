@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useProject } from "../contexts/ProjectsContext";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
-import AddProjectTemplateView from "./AddProjectTemplateView";
+import AddProjectViewTemplate from "../components/templates/AddProjectViewTemplate";
 import ImageSrc from "../img/project-done.svg";
 
 const Image = styled.img`
@@ -43,7 +43,7 @@ const AddProjectViewDone = () => {
   const { project } = useProject();
   return (
     <>
-      <AddProjectTemplateView
+      <AddProjectViewTemplate
         children={
           <>
             <Image src={ImageSrc} />
@@ -56,7 +56,7 @@ const AddProjectViewDone = () => {
             </Link>
           </>
         }
-      ></AddProjectTemplateView>
+      ></AddProjectViewTemplate>
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import ImageSrc from "../img/add-project-idea-image.svg";
+import BarrowImgSrc from "../img/barrow.svg";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
 import AddProjectViewTemplate from "../components/templates/AddProjectViewTemplate";
 
@@ -62,18 +62,14 @@ const AddProjectView0 = () => {
       <AddProjectViewTemplate
         children={
           <>
-            <Image src={ImageSrc} />
-            <MainHeading>Kreator projektu</MainHeading>
+            <Image src={BarrowImgSrc} />
+            <MainHeading>Uwaga, remont!</MainHeading>
             <Paragraph>
-              Zamierzasz stworzyć projekt? Świetnie! Przeprowadzimy Cię teraz
-              przez kreator projektu, który pozwoli dodać Twój projekt w kilku
-              prostych krokach!{" "}
+              Przepraszamy, ta sekcja znajduje się aktualnie w budowie.
             </Paragraph>
+            <Paragraph>Zapraszamy za jakiś czas! </Paragraph>
             <Link to="/pages/AuthWelcomeView">
               <Button>Cofnij</Button>
-            </Link>
-            <Link to="/pages/AddProjectView1">
-              <Button>Tworzę projekt</Button>
             </Link>
           </>
         }

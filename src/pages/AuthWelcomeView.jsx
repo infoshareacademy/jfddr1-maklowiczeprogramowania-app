@@ -7,8 +7,10 @@ import HamburgerMenuSrc from "../img/radix-icons_hamburger-menu-dark.svg";
 import MediaQuery from "react-responsive";
 import AuthDesktopTemplate, {
   AuthDesktopMain,
-} from "../pages/AuthDesktopTemplate";
+} from "../components/templates/AuthDesktopTemplate";
+
 import SearchProjects from "../pages/SearchProjects";
+
 const Header = styled.header`
   display: flex;
   align-items: center;

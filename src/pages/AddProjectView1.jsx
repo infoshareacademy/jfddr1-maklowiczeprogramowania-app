@@ -30,7 +30,7 @@ const SelectButton = styled(Button)`
 `;
 
 const GreyishInput = styled(StyledInput)`
-  width: 90%;
+  width: 100%;
   height: 2.5em;
   color: var(--dark-clr);
   background-color: #f2f5f6;
@@ -42,9 +42,10 @@ const GreyishInput = styled(StyledInput)`
 `;
 
 const GreyishTextArea = styled(StyledTextArea)`
-  width: 90%;
-  min-height: 2.5em;
-  max-height: 8rem;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 15em;
+  max-height: 30rem;
   color: var(--dark-clr);
   background-color: #f2f5f6;
 
@@ -54,14 +55,10 @@ const GreyishTextArea = styled(StyledTextArea)`
   }
 `;
 
-const BigGreyishInput = styled(GreyishInput)`
-  height: 8em;
-`;
-
 const Label = styled(StyledLabelDesktop)`
   font-weight: 500;
   align-self: flex-start;
-  margin-left: 1.4em;
+
   font-weight: 500;
   @media (min-width: 1024px) {
     font-size: 1.2rem;
@@ -74,15 +71,14 @@ const LabelInputWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 32rem;
-  max-width: 450px;
+  width: 100%;
 `;
 
 const StyledSelect = styled(Select)`
   color: var(--dark-clr);
   border: red;
-  min-width: 20rem;
-  max-width: 20rem;
+  min-width: 25rem;
+  max-width: 25rem;
 `;
 
 const TagContainer = styled.section`
@@ -96,7 +92,9 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 37rem;
 `;
+
 const Input = React.forwardRef(({ id, name, type }, ref) => (
   <GreyishInput ref={ref} id={id} name={name} type={type} required />
 ));

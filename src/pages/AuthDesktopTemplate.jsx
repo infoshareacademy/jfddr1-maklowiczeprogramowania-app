@@ -75,23 +75,13 @@ export const AuthDesktopMain = (props) => {
   );
 };
 
-// export const AuthDesktopMain = ({ heading, sectionSubtitle, children, step }) => {
-//   return (
-//     <StyledAuthDesktopMain heading={heading} sectionSubtitle={sectionSubtitle} step={step}>
-//       <Heading>{heading}</Heading>
-//       <Paragraph>{sectionSubtitle}</Paragraph>
-//       {children}
-//       <StepCounter>{step}</StepCounter>
-//     </StyledAuthDesktopMain>
-//   );
-// };
-
 const DesktopMenuBar = styled.section`
+  position: sticky;
+  top: 0;
   height: 100vh;
   max-width: 300px;
   display: flex;
   align-items: center;
-  position: sticky;
   flex-direction: column;
   width: 40vw;
   background: var(--dark-clr);
@@ -137,8 +127,9 @@ const AuthMenuList = styled.ul`
   flex-direction: column;
 `;
 
-const AuthMenuLink = styled.a`
+const AuthMenuLink = styled(Link)`
   margin-top: 2.3em;
+  text-decoration: none;
   font-weight: 600;
   color: var(--light-clr);
   display: inline-block;
@@ -187,11 +178,13 @@ const StepCounter = styled.p`
   color: var(--dark-clr);
 `;
 
+const Main = styled.main``;
+
 const AuthMenuItem = styled.li``;
 
 const AuthNavigationTemplate = () => {
   const [error, setError] = useState("");
-  const { currentUser, signOut } = useAuth();
+  const { signOut } = useAuth();
 
   const history = useHistory();
   const signOutHandler = () => {
@@ -205,22 +198,30 @@ const AuthNavigationTemplate = () => {
   };
 
   const authMenuData = authMenuDB;
-  const AuthMenuDataComponents = authMenuData.map(({ label, icon }) => {
-    return (
-      <AuthMenuItem key={label}>
-        <AuthMenuOptionIcon src={icon} />
-        <AuthMenuLink onClick={signOutHandler} key={label}>
-          {label}
-        </AuthMenuLink>
-      </AuthMenuItem>
-    );
-  });
+  const AuthMenuDataComponents = authMenuData.map(
+    ({ label, icon, path, value }) => {
+      return (
+        <AuthMenuItem key={label}>
+          <AuthMenuOptionIcon src={icon} />
+          {value === "signOut" ? (
+            <AuthMenuLink onClick={signOutHandler} to={path} key={label}>
+              {label}
+            </AuthMenuLink>
+          ) : (
+            <AuthMenuLink to={path} key={label}>
+              {label}
+            </AuthMenuLink>
+          )}
+        </AuthMenuItem>
+      );
+    }
+  );
 
   return <>{AuthMenuDataComponents}</>;
 };
 
-const AuthDesktopTemplate = ({ children }) => {
-  const { currentUserData, currentUser } = useAuth();
+const AuthDesktopTemplate = ({ children }, props) => {
+  const { currentUserData } = useAuth();
 
   return (
     <>
@@ -256,13 +257,15 @@ const AuthDesktopTemplate = ({ children }) => {
           </DesktopMenuBar>
         </MediaQuery>
         {children}
-        {/* <Main>
-          <Heading>{props.heading}</Heading>
-          <Paragraph>{props.sectionSubtitle}</Paragraph>
+        {
+          <Main>
+            <Heading>{props.heading}</Heading>
+            <Paragraph>{props.sectionSubtitle}</Paragraph>
 
-          {props.children}
-          <StepCounter>{props.step}</StepCounter>
-        </Main> */}
+            {props.children}
+            <StepCounter>{props.step}</StepCounter>
+          </Main>
+        }
       </PageWrapper>
     </>
   );

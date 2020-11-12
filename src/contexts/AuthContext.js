@@ -11,11 +11,11 @@ const AuthContext = React.createContext();
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState();
   const [currentUserData, setCurrentUserData] = useState();
+  const [profileImage, setProfileImage] = useState();
   const [loading, setLoading] = useState(true);
   const signUp = (email, password) => {
     return auth.createUserWithEmailAndPassword(email, password);
   };
-
   const getUserData = (userId) => {
     firebaseUsersDB
       .doc(userId)
@@ -25,7 +25,6 @@ export const AuthProvider = ({ children }) => {
         setCurrentUserData(userData);
       });
   };
-
   const signIn = (email, password) => {
     return auth.signInWithEmailAndPassword(email, password);
   };
@@ -33,6 +32,9 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const cleanup = auth.onAuthStateChanged((user) => {
       setCurrentUser(user);
+      if (currentUser) {
+        getUserData(user.uid);
+      }
       setLoading(false);
     });
 
@@ -51,6 +53,7 @@ export const AuthProvider = ({ children }) => {
     signOut,
     getUserData,
     setCurrentUserData,
+    setProfileImage,
   };
 
   return (

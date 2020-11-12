@@ -44,7 +44,7 @@ const SignUpFull5Desktop = () => {
     }
     const tools = state;
     setCurrentUserData({ ...currentUserData, tools });
-    history.push("/pages/SignUpFull6Desktop");
+    // history.push("/pages/SignUpFull6Desktop");
   };
   return (
     <DesktopViewWithCloudsTemplate>

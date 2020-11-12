@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
-import Input from "../../components/Input";
 import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
 import { LabelDesktop } from "../../components/Label";
 import {
@@ -13,8 +12,6 @@ import {
   DesktopSlideContainer,
   Title,
   InputsAndLabelsContainer,
-  DesktopCenterRowButtonContainer,
-  DesktopLinkButton,
 } from "../../components/SignInUpElements";
 import { StyledButton } from "../../components/buttons/Button";
 import { StyledInput } from "../../components/Input";
@@ -22,20 +19,45 @@ import { StyledInput } from "../../components/Input";
 const SubmitFormButton = styled(StyledButton)`
   margin-top: 2em;
 `;
+
 const SignUpFull2Desktop = () => {
-  const { currentUserData, setCurrentUserData } = useAuth();
+  const {
+    currentUserData,
+    setCurrentUserData,
+    setProfileImage,
+    profileImage,
+  } = useAuth();
   const history = useHistory();
   const portfolioRef = React.createRef();
   const githubRef = React.createRef();
   const linkedInRef = React.createRef();
-  //  const ImageSrc = React.createRef();
+
+  const FirebaseUploadImage = () => {
+    const handleChange = (e) => {
+      if (e.target.files[0]) {
+        setProfileImage(e.target.files[0]);
+      }
+    };
+
+    const handleUpload = (e) => {
+      e.preventDefault();
+    };
+
+    return (
+      <>
+        <LabelDesktop htmlFor="Dodaj">{"Dodaj zdjęcie"}</LabelDesktop>
+        <StyledInput name="Dodaj" type="file" onChange={handleChange} />
+        <StyledButton onClick={handleUpload}>Zatwierdź zdjęcie</StyledButton>
+      </>
+    );
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const portfolio = portfolioRef.current.value;
     const github = githubRef.current.value;
     const linkedIn = linkedInRef.current.value;
-    //  const ImageSrc = passwordRef.current.value;
+
     const socialMedia = [
       {
         portfolio,
@@ -63,8 +85,9 @@ const SignUpFull2Desktop = () => {
           <StyledInput ref={githubRef} name="Github" type="text" required />
           <LabelDesktop htmlFor="Linkedin">{"Linkedin"}</LabelDesktop>
           <StyledInput ref={linkedInRef} name="Linkedin" type="text" required />
-          <LabelDesktop htmlFor="Dodaj">{"Dodaj zdjęcie"}</LabelDesktop>
-          <StyledInput name="Dodaj" type="file" />
+          {/* <LabelDesktop htmlFor="Dodaj">{"Dodaj zdjęcie"}</LabelDesktop>
+          <StyledInput name="Dodaj" type="file" onClick={handleUpload} /> */}
+          <FirebaseUploadImage></FirebaseUploadImage>
           <SubmitFormButton type="submit">Dalej</SubmitFormButton>
         </InputsAndLabelsContainer>
       </HalfDesktopFormWrapper>

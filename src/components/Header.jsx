@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import HamburgerMenu from "../components/HamburgerMenu";
@@ -131,8 +131,6 @@ const StyledHeaderButton = styled(StyledButton)`
 `;
 
 const Header = () => {
-  const [isRootOverflowHidden, setIsRootOverflowHidden] = useState("scroll");
-
   const rootOverflowHidden = () => {
     const root = document.querySelector(":root");
 

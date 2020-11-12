@@ -12,6 +12,7 @@ import AddProjectViewTemplate from "../components/templates/AddProjectViewTempla
 import AuthDesktopTemplate, {
   AuthDesktopMain,
 } from "../components/templates/AuthDesktopTemplate";
+import TextArea, { StyledTextArea } from "../components/TextArea";
 
 const Button = styled(StyledSmallButton)`
   width: 8em;
@@ -25,12 +26,25 @@ const Button = styled(StyledSmallButton)`
 `;
 
 const SelectButton = styled(Button)`
-margin 0 1em;
+  margin: 0 1em;
 `;
 
 const GreyishInput = styled(StyledInput)`
   width: 90%;
   height: 2.5em;
+  color: var(--dark-clr);
+  background-color: #f2f5f6;
+
+  @media (min-width: 1024px) {
+    color: var(--light-clr);
+    background-color: var(--dark-clr);
+  }
+`;
+
+const GreyishTextArea = styled(StyledTextArea)`
+  width: 90%;
+  min-height: 2.5em;
+  max-height: 8rem;
   color: var(--dark-clr);
   background-color: #f2f5f6;
 
@@ -60,13 +74,15 @@ const LabelInputWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 32rem;
   max-width: 450px;
 `;
 
 const StyledSelect = styled(Select)`
   color: var(--dark-clr);
   border: red;
+  min-width: 20rem;
+  max-width: 20rem;
 `;
 
 const TagContainer = styled.section`
@@ -160,7 +176,7 @@ const AddProjectView1 = () => {
                 </LabelInputWrapper>
                 <LabelInputWrapper>
                   <Label>Opis projektu</Label>
-                  <Input
+                  <GreyishTextArea
                     ref={descriptionRef}
                     id={"description"}
                     name={"description"}
@@ -196,7 +212,7 @@ const AddProjectView1 = () => {
                 </LabelInputWrapper>
                 <LabelInputWrapper>
                   <Label>Opis projektu</Label>
-                  <BigGreyishInput required />
+                  <GreyishTextArea required />
                 </LabelInputWrapper>
               </Form>
 

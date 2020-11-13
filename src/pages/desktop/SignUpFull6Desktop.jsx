@@ -58,13 +58,10 @@ const SignUpFull6Desktop = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (disabled === false) {
       alert("You must choose at least one tag!");
       return;
     }
-
-    const newProfileImage = JSON.stringify(profileImage);
     const tags = state;
     setCurrentUserData({ ...currentUserData, tags });
     signUp(currentUserData.email, currentUserData.password).then((cred) => {
@@ -73,7 +70,7 @@ const SignUpFull6Desktop = () => {
       // firebase
       //   .storage()
       //   .ref("users/" + cred.user.uid + "/profile.jpg")
-      //   .put(newProfileImage);
+      //   .put(profileImage);
       history.push("/pages/SignUpFull7DoneDesktop");
       console.log("Done");
 

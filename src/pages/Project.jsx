@@ -8,6 +8,8 @@ import AuthDesktopTemplate, {
 import { useProject } from "../contexts/ProjectsContext";
 import { StyledButton } from "../components/buttons/Button";
 import ApplicationModal from "../components/ApplicationModal";
+import ProfileImageIconSrc from "../img/example-profile-image.svg";
+
 const ProjectTitle = styled.h1`
   color: var(--dark-clr);
   font-size: 2rem;
@@ -34,14 +36,11 @@ margin:4em; 0;
 `;
 
 const UserImage = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1em auto;
-  height: 6rem;
-  width: 6rem;
+  height: 8rem;
+  width: 8rem;
   background-color: var(--light-clr);
   border-radius: 4rem;
+  margin: 0 1.5rem 0.7rem 1.5rem;
   padding: 1rem;
 `;
 
@@ -155,7 +154,7 @@ const ProjectAuthor = ({ clickedProject }) => {
   return (
     <>
       <TeamMemberTemplate>
-        <UserImage></UserImage>
+        <UserImage />
         <MemberName>
           {clickedProject.author.firstName + clickedProject.author.secondName}
         </MemberName>

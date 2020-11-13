@@ -25,7 +25,7 @@ const SignUpFull5Desktop = () => {
   const [state, setState] = useState();
   const history = useHistory();
   const [disabled, setDisabled] = useState(false);
-  const { currentUserData, setCurrentUserData } = useAuth();
+  const { currentUserData, setCurrentUserData, profileImage } = useAuth();
   const handleClick = (e) => {
     e.preventDefault();
     const tools = Object.values(state).map((el) => el.label);
@@ -34,6 +34,7 @@ const SignUpFull5Desktop = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (disabled === false) {
       alert("You must choose at least one tool!");
       return;

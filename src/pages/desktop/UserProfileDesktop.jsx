@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import AuthDesktopTemplate from "../../components/templates/AuthDesktopTemplate";
+import { useAuth } from "../../contexts/AuthContext";
+
 import GitHubIconSrc from "../../img/github-icon.svg";
 import LinkedInIconSrc from "../../img/linkedin-icon.svg";
 import PortfolioIconSrc from "../../img/portfolio-icon.svg";
@@ -16,9 +18,9 @@ const MainWrapper = styled.section`
 `;
 
 const TopWrapper = styled.section`
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
-  // padding: 0 1.8rem;
   background-color: var(--dark-clr);
 `;
 
@@ -80,14 +82,16 @@ const UserInfoIconsContainer = styled.div`
 `;
 
 const TopWrapperTab = styled.button`
-  width: 6rem;
   margin-bottom: -0.9rem;
-  padding: 0.4rem;
+  padding: 1em 2em;
+  border: none;
   text-align: center;
-  font-size: 0.8rem;
-  border: 0.1rem var(--dark-clr) solid;
+  font-size: 0.9rem;
   border-radius: 0.6rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
   outline: none;
+  color: var(--dark-clr);
   cursor: pointer;
   background-color: var(--light-clr);
 `;
@@ -109,62 +113,87 @@ const TechAndToolsWrapper = styled.div`
 `;
 
 const TechAndToolsTitle = styled.div`
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 600;
 `;
 
 const TechAndToolsItem = styled.div`
   display: inline-block;
-  width: 6rem;
   margin-top: 0.5rem;
   margin-right: 0.5rem;
-  padding: 0.4rem;
+  padding: 1em 2em;
   text-align: center;
   font-size: 0.8rem;
   border-radius: 0.6rem;
   background-color: var(--light-clr);
+  font-size: 1.1rem;
 `;
 
+const UserTech = ({ currentUserTech }) => {
+  const UserTechComponentsArray = currentUserTech.map((tech) => {
+    return <TechAndToolsItem>{tech}</TechAndToolsItem>;
+  });
+
+  return UserTechComponentsArray;
+};
+
+const UserTools = ({ currentUserTools }) => {
+  const UserTechComponentsArray = currentUserTools.map((tool) => {
+    return <TechAndToolsItem>{tool}</TechAndToolsItem>;
+  });
+
+  return UserTechComponentsArray;
+};
+
 const UserProfileDesktop = () => {
+  const { currentUserData } = useAuth();
   return (
-    <AuthDesktopTemplate>
-      <MainWrapper>
-        <TopWrapper>
-          <UserImageAndTabsWrapper>
-            <ActiveTopWrapperTab>Informacje</ActiveTopWrapperTab>
-            <TopWrapperTab>Projekty</TopWrapperTab>
-            <UserImage src={ProfileImageIconSrc} />
-            <TopWrapperTab>Projekty</TopWrapperTab>
-            <TopWrapperTab>Nie wiem</TopWrapperTab>
-          </UserImageAndTabsWrapper>
-          <UserInfoWrapper>
-            <UserInfoName>Robert Makłowicz</UserInfoName>
-            <UserInfoSpecialization>Front-End Developer</UserInfoSpecialization>
-            <UserInfoDescription>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-              commodi sequi ullam ipsam unde accusamus maiores atque.
-            </UserInfoDescription>
-          </UserInfoWrapper>
-          <UserInfoIconsContainer>
-            <Icon src={GitHubIconSrc} />
-            <Icon src={LinkedInIconSrc} />
-            <Icon src={PortfolioIconSrc} />
-          </UserInfoIconsContainer>
-        </TopWrapper>
-        <BottomWrapper>
-          <TechAndToolsWrapper>
-            <TechAndToolsTitle>Technologie</TechAndToolsTitle>
-            <TechAndToolsItem>JavaScript</TechAndToolsItem>
-            <TechAndToolsItem>TypeScript</TechAndToolsItem>
-            <TechAndToolsItem>React</TechAndToolsItem>
-          </TechAndToolsWrapper>
-          <TechAndToolsWrapper>
-            <TechAndToolsTitle>Narzędzia</TechAndToolsTitle>
-            <TechAndToolsItem>Git</TechAndToolsItem>
-          </TechAndToolsWrapper>
-        </BottomWrapper>
-      </MainWrapper>
-    </AuthDesktopTemplate>
+    <>
+      {currentUserData &&
+        ((
+          <AuthDesktopTemplate>
+            <MainWrapper>
+              <TopWrapper>
+                <UserImageAndTabsWrapper>
+                  <ActiveTopWrapperTab>Informacje</ActiveTopWrapperTab>
+                  <UserImage src={ProfileImageIconSrc} />
+                  <TopWrapperTab>Edytuj profil</TopWrapperTab>
+                </UserImageAndTabsWrapper>
+                <UserInfoWrapper>
+                  <UserInfoName>
+                    {currentUserData.firstName} {currentUserData.secondName}{" "}
+                  </UserInfoName>
+                  <UserInfoSpecialization>
+                    {currentUserData.specialization}
+                  </UserInfoSpecialization>
+                  <UserInfoDescription>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sed, commodi sequi ullam ipsam unde accusamus maiores atque.
+                  </UserInfoDescription>
+                </UserInfoWrapper>
+                <UserInfoIconsContainer>
+                  <Icon src={GitHubIconSrc} />
+                  <Icon src={LinkedInIconSrc} />
+                  <Icon src={PortfolioIconSrc} />
+                </UserInfoIconsContainer>
+              </TopWrapper>
+              <BottomWrapper>
+                {
+                  <TechAndToolsWrapper>
+                    <TechAndToolsTitle>Technologie</TechAndToolsTitle>
+                    <UserTech currentUserTech={currentUserData.tech} />
+                  </TechAndToolsWrapper>
+                }
+
+                <TechAndToolsWrapper>
+                  <TechAndToolsTitle>Narzędzia</TechAndToolsTitle>
+                  <UserTools currentUserTools={currentUserData.tools} />
+                </TechAndToolsWrapper>
+              </BottomWrapper>
+            </MainWrapper>
+          </AuthDesktopTemplate>
+        ): null)}
+    </>
   );
 };
 

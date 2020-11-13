@@ -88,7 +88,7 @@ const Router = () => {
           <AuthWelcomeView />
         </Route>
         <Route path="/pages/OwnProfileView">
-          <OwnProfileView />
+          <UserProfileDesktop />
         </Route>
         <Route path="/pages/NotificationsView">
           <NotificationsView />

@@ -84,8 +84,8 @@ const AddProjectView3 = () => {
         <Form>
           <StyledSelect
             isMulti={true}
-            name={name}
             placeholder="Wybierz technologie..."
+            name={name}
             options={techDB}
             onChange={setState}
             isDisabled={disabled}

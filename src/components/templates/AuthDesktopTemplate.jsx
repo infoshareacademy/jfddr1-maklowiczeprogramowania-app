@@ -9,7 +9,7 @@ import { StyledSmallButton } from "../buttons/SmallButton";
 import MediaQuery from "react-responsive";
 import UserAvatarImageSrc from "../../img/team1.svg";
 import { authMenuDB } from "../../mocks/AuthMenuData.js";
-
+import ProfileImageIconSrc from "../../img/example-profile-image.svg";
 const Header = styled.header`
   display: flex;
   align-items: center;
@@ -124,6 +124,7 @@ const PageWrapper = styled.section`
 const AuthMenuList = styled.ul`
   justify-content: flex-start;
   display: flex;
+  margin: 1em 0;
   flex-direction: column;
 `;
 
@@ -176,6 +177,14 @@ const StepCounter = styled.p`
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--dark-clr);
+`;
+
+const UserImage = styled.img`
+  height: 5rem;
+  width: 5rem;
+  background-color: var(--light-clr);
+  border-radius: 4rem;
+  padding: 1rem;
 `;
 
 const Main = styled.main``;
@@ -234,7 +243,7 @@ const AuthDesktopTemplate = ({ children }, props) => {
         <MediaQuery minDeviceWidth={1024}>
           <DesktopMenuBar>
             <UserInfo>
-              <UserAvatar src={UserAvatarImageSrc} />
+              <UserImage src={ProfileImageIconSrc} />
               <UserName>
                 {" "}
                 {currentUserData &&

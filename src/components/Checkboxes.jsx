@@ -71,11 +71,9 @@ const Checkboxes = ({ projectsState, setProjectsState, initialState }) => {
         );
 
         setProjectsState(filteredProjects);
-      } else if (chosenSpecializations.length > 2) {
-        const filteredProjects = projectsState.filter(
-          ({ team }) =>
-            team.some(({ name }) => chosenSpecializations.includes(name)) ||
-            team.every(({ name }) => chosenSpecializations.includes(name))
+      } else if (chosenSpecializations.length >= 2) {
+        const filteredProjects = projectsState.filter(({ team }) =>
+          team.every(({ name }) => chosenSpecializations.includes(name))
         );
 
         setProjectsState(filteredProjects);

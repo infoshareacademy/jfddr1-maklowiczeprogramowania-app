@@ -100,40 +100,42 @@ const Input = React.forwardRef(({ id, name, type }, ref) => (
   <GreyishInput ref={ref} id={id} name={name} type={type} required />
 ));
 
+const SpecSelect = ({ name, tags, setTags }) => {
+  const [tagsState, setTagsState] = useState();
+  const [disabled, setDisabled] = useState(false);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    tags = tagsState.map((el) => el.label);
+    setTags(tags);
+    setDisabled(true);
+  };
+  return (
+    <>
+      <StyledSelect
+        isMulti={true}
+        placeholder="Wybierz tagi..."
+        name={name}
+        options={fieldTagsDB}
+        onChange={setTagsState}
+        isDisabled={disabled}
+      />
+      <SelectButton type="button" name={name} onClick={handleClick}>
+        Zatwierdź
+      </SelectButton>
+    </>
+  );
+};
+
 const AddProjectView1 = () => {
   const history = useHistory();
   const { setProject } = useProject();
   const { currentUserData, currentUser } = useAuth();
   const [tags, setTags] = useState([]);
+
   const titleRef = React.createRef();
   const fileRef = React.createRef();
   const descriptionRef = React.createRef();
-  const SpecSelect = ({ name }) => {
-    const [disabled, setDisabled] = useState(false);
-    const [tagsState, setTagsState] = useState([]);
-
-    const handleClick = (e) => {
-      e.preventDefault();
-      const tags = tagsState.map((el) => el.label);
-      setTags(tags);
-      setDisabled(true);
-    };
-    return (
-      <>
-        <StyledSelect
-          isMulti={true}
-          placeholder="Wybierz tagi..."
-          name={name}
-          options={fieldTagsDB}
-          onChange={setTagsState}
-          isDisabled={disabled}
-        />
-        <SelectButton name={name} onClick={handleClick}>
-          Zatwierdź
-        </SelectButton>
-      </>
-    );
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -193,7 +195,7 @@ const AddProjectView1 = () => {
                 </LabelInputWrapper>
 
                 <TagContainer>
-                  <SpecSelect />
+                  <SpecSelect tags={tags} setTags={setTags} />
                 </TagContainer>
 
                 <Button type="submit">Dalej</Button>

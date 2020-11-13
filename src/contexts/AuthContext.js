@@ -32,11 +32,8 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const cleanup = auth.onAuthStateChanged((user) => {
       setCurrentUser(user);
-
-      if (currentUser) {
-        getUserData(user.uid);
-      }
       setLoading(false);
+      getUserData(user.uid);
     });
 
     return cleanup;

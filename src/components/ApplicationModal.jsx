@@ -85,7 +85,6 @@ const ApplicationText = styled.p`
 
 const ApplicationModal = ({ showModal, setShowModal, clickedProject }) => {
   const [error, setError] = useState();
-
   const { currentUser, currentUserData } = useAuth();
   const applicationTextRef = React.createRef();
   const handleSubmit = (e) => {
@@ -96,6 +95,8 @@ const ApplicationModal = ({ showModal, setShowModal, clickedProject }) => {
       userMessage: applicationTextRef.current.value,
       text: `${currentUserData.firstName} ${currentUserData.secondName} zaaplikował do Twojego projektu ${clickedProject.title} `,
     };
+    setShowModal((prevState) => !prevState);
+
     firebase
       .firestore()
       .collection(`userNotifications${clickedProject.author.userFirebaseId}`)

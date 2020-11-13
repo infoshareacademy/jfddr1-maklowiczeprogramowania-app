@@ -31,26 +31,32 @@ const SignUpFull2Desktop = () => {
   const portfolioRef = React.createRef();
   const githubRef = React.createRef();
   const linkedInRef = React.createRef();
+  const fileRef = React.createRef();
+  let file;
+  // const FirebaseUploadImage = () => {
+  //   const handleChange = (e) => {
+  //     file = e.target.files[0];
+  //     // setProfileImage(file);
+  //   };
 
-  const FirebaseUploadImage = () => {
-    const handleChange = (e) => {
-      if (e.target.files[0]) {
-        setProfileImage(e.target.files[0]);
-      }
-    };
+  //   const handleUpload = (e) => {
+  //     e.preventDefault();
+  //     setCurrentUserData({ ...currentUserData, file });
+  //   };
 
-    const handleUpload = (e) => {
-      e.preventDefault();
-    };
-
-    return (
-      <>
-        <LabelDesktop htmlFor="Dodaj">{"Dodaj zdjęcie"}</LabelDesktop>
-        <StyledInput name="Dodaj" type="file" onChange={handleChange} />
-        <StyledButton onClick={handleUpload}>Zatwierdź zdjęcie</StyledButton>
-      </>
-    );
-  };
+  //   return (
+  //     <>
+  //       <LabelDesktop htmlFor="Dodaj">{"Dodaj zdjęcie"}</LabelDesktop>
+  //       <StyledInput
+  //         ref={fileRef}
+  //         name="Dodaj"
+  //         type="file"
+  //         onChange={handleChange}
+  //       />
+  //       <StyledButton onClick={handleUpload}>Zatwierdź zdjęcie</StyledButton>
+  //     </>
+  //   );
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -87,7 +93,7 @@ const SignUpFull2Desktop = () => {
           <StyledInput ref={linkedInRef} name="Linkedin" type="text" required />
           {/* <LabelDesktop htmlFor="Dodaj">{"Dodaj zdjęcie"}</LabelDesktop>
           <StyledInput name="Dodaj" type="file" onClick={handleUpload} /> */}
-          <FirebaseUploadImage></FirebaseUploadImage>
+          {/* <FirebaseUploadImage></FirebaseUploadImage> */}
           <SubmitFormButton type="submit">Dalej</SubmitFormButton>
         </InputsAndLabelsContainer>
       </HalfDesktopFormWrapper>

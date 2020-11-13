@@ -27,7 +27,12 @@ const SignUpFull3Desktop = () => {
   const [state, setState] = useState();
   const history = useHistory();
   const [disabled, setDisabled] = useState(false);
-  const { currentUserData, setCurrentUserData } = useAuth();
+  const {
+    currentUserData,
+    setCurrentUserData,
+    setProfileImage,
+    profileImage,
+  } = useAuth();
   const handleClick = (e) => {
     e.preventDefault();
     const spec = Object.values(state).map((el) => el);

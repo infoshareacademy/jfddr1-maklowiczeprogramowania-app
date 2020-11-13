@@ -4,9 +4,9 @@ import styled from "styled-components";
 import AuthDesktopTemplate, {
   AuthDesktopMain,
 } from "../components/templates/AuthDesktopTemplate";
-// import { AuthDesktopMain } from "./AuthDesktopTemplate";
 import * as firebase from "firebase/app";
 import "firebase/firestore";
+import ProfileImageIconSrc from "../img/example-profile-image.svg";
 
 const ProjectTitle = styled.h1`
   color: var(--dark-clr);
@@ -16,11 +16,12 @@ const ProjectTitle = styled.h1`
 
 const NotificationTale = styled.article`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1em;
   margin: 1em 0;
-  padding: 4em;
   width: 50vw;
-  height: 20vh;
+  min-height: 20vh;
   background: var(--light-clr);
   border-radius: 4px;
 `;
@@ -28,22 +29,47 @@ const NotificationTale = styled.article`
 const NotificationAction = styled.h4`
   color: var(--dark-clr);
   font-size: 1.4rem;
+  text-align: left;
 `;
 
 const NotificationUserMessage = styled.p`
   color: var(--dark-clr);
   font-size: 1.2rem;
   font-weight: 500;
+  text-align: left;
 `;
+
+const UserImage = styled.img`
+  height: 8rem;
+  width: 8rem;
+  background-color: var(--dark-clr);
+  border-radius: 4rem;
+  margin: 0 1.5rem 0.7rem 1.5rem;
+  padding: 1rem;
+`;
+
+const Wrapper = styled.section`
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+`;
+
+const TextWrapper = styled.section``;
+
 const NotificationComponent = ({ userNotifications }) => {
   const NotificationComponentArray = userNotifications.map((notification) => {
     return (
       <>
         <NotificationTale>
-          <NotificationAction>{notification.text}</NotificationAction>
-          <NotificationUserMessage>
-            {notification.userMessage}
-          </NotificationUserMessage>
+          <Wrapper>
+            <UserImage src={ProfileImageIconSrc} />
+            <TextWrapper>
+              <NotificationAction>{notification.text}</NotificationAction>
+              <NotificationUserMessage>
+                {notification.userMessage}
+              </NotificationUserMessage>
+            </TextWrapper>
+          </Wrapper>
         </NotificationTale>
       </>
     );

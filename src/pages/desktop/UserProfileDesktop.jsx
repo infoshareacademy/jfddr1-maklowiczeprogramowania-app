@@ -176,28 +176,28 @@ const UserProfileDesktop = () => {
                   </UserInfoDescription>
                 </UserInfoWrapper>
                 <UserInfoIconsContainer>
-                  <Link
-                    to={
+                  <a
+                    href={
                       currentUserData && currentUserData.socialMedia[0].github
                     }
                   >
                     <Icon src={GitHubIconSrc} />
-                  </Link>
-                  <Link
-                    to={
+                  </a>
+                  <a
+                    href={
                       currentUserData && currentUserData.socialMedia[0].linkedIn
                     }
                   >
                     <Icon src={LinkedInIconSrc} />
-                  </Link>
-                  <Link
-                    to={
+                  </a>
+                  <a
+                    href={
                       currentUserData &&
                       currentUserData.socialMedia[0].portfolio
                     }
                   >
                     <Icon src={PortfolioIconSrc} />
-                  </Link>
+                  </a>
                 </UserInfoIconsContainer>
               </TopWrapper>
               <BottomWrapper>

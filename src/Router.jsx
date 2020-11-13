@@ -9,8 +9,14 @@ import AddProjectView4 from "./pages/AddProjectView4";
 import AddProjectViewDone from "./pages/AddProjectViewDone";
 import AuthMenuMobile from "./pages/mobile/AuthMenuMobile";
 import AuthWelcomeView from "./pages/AuthWelcomeView";
+import FriendsView from "./pages/FriendsView";
 import MenuMobile from "./pages/mobile/MenuMobile";
+import MessagesView from "./pages/MessagesView";
+import NotificationDesktop from "./pages/desktop/NotificationDesktop";
+import NotificationsView from "./pages/NotificationsView";
+import OwnProfileView from "./pages/OwnProfileView";
 import Project from "./pages/Project";
+import ProjectsView from "./pages/ProjectsView";
 import SignInDesktop from "./pages/desktop/SignInDesktop";
 import SignInMobile from "./pages/mobile/SignInMobile";
 import SignUpDesktop from "./pages/desktop/SignUpDesktop";
@@ -34,13 +40,7 @@ import SignUpFull7DoneDesktop from "./pages/desktop/SignUpFull7DoneDesktop";
 import UserProfileDesktop from "./pages/desktop/UserProfileDesktop";
 import UserProfileGuestView1Mobile from "./pages/mobile/UserProfileGuestView1Mobile";
 import WelcomePage from "./pages/WelcomePage";
-import OwnProfileView from "./pages/OwnProfileView";
-import MessagesView from "./pages/MessagesView";
-import NotificationsView from "./pages/NotificationsView";
-import FriendsView from "./pages/FriendsView";
-import ProjectsView from "./pages/ProjectsView";
 import WorkInProgressPage from "./pages/WorkInProgressPage";
-import NotificationDesktop from "./pages/desktop/NotificationDesktop";
 
 const Router = () => {
   return (

@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import AuthDesktopTemplate from "../../components/templates/AuthDesktopTemplate";
 import { useAuth } from "../../contexts/AuthContext";
-
+import AuthDesktopTemplate from "../../components/templates/AuthDesktopTemplate";
 import GitHubIconSrc from "../../img/github-icon.svg";
 import LinkedInIconSrc from "../../img/linkedin-icon.svg";
 import PortfolioIconSrc from "../../img/portfolio-icon.svg";

@@ -24,17 +24,19 @@ const AddImageContainer = styled(OptionContainer)`
 `;
 
 const ModalTextArea = styled.textarea`
-  height: 15em;
-  margin .5em 0em;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 15em;
+  max-height: 25em;
   padding: 1em 1em;
-  outline: none;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1em;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
   background-color: #2b2b3f;
-  color:white;
-  font-weight:600;
+  color: white;
   border-radius: 5px;
   border: none;
+  outline: none;
 `;
 
 const SignUpFull2Desktop = () => {

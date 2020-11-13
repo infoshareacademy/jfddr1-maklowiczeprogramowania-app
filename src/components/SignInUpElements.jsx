@@ -92,7 +92,6 @@ export const DesktopButton = styled(StyledButton)`
 
 export const StyledAddButton = styled(StyledButton)`
   padding: 0.7rem 1.4rem;
-  margin-top: 4em;
   font-size: 1.3rem;
   font-weight: 600;
 `;

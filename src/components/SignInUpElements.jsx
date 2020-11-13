@@ -1,4 +1,5 @@
 import React from "react";
+import Select from "react-select";
 import styled from "styled-components";
 import { toolsDB } from "../mocks/ToolsData";
 import { specDB } from "../mocks/SpecializationsData";
@@ -12,8 +13,8 @@ import { Link } from "react-router-dom";
 export const Title = styled.h1`
   margin: 0 auto;
   text-align: center;
+  font-size: 2.5rem;
   font-weight: 600;
-  font-size: 2.6rem;
   color: var(--dark-clr);
 `;
 
@@ -32,16 +33,6 @@ export const StyledAnchor = styled.a`
   cursor: pointer;
   color: var(--accent-clr);
 `;
-
-export const StyledAddButton = styled(StyledButton)`
-  padding: 0.8rem 2rem;
-  font-size: 1.4rem;
-  font-weight: 600;
-`;
-
-export const AddButton = ({ type, label }) => {
-  return <StyledAddButton type={type}>{label}</StyledAddButton>;
-};
 
 export const InputsAndLabelsContainer = styled.div`
   display: flex;
@@ -90,6 +81,25 @@ export const SignUpDoneDescription = styled(Description)`
   margin: 0.3rem 0 0.3rem 0;
 `;
 
+// *********** BUTTONS ***********
+
+export const DesktopButton = styled(StyledButton)`
+  width: 14rem;
+  margin: auto 0;
+  padding: 1.2rem;
+  font-size: 1.5em;
+`;
+
+export const StyledAddButton = styled(StyledButton)`
+  padding: 0.7rem 1.4rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+`;
+
+export const AddButton = ({ type, label }) => {
+  return <StyledAddButton type={type}>{label}</StyledAddButton>;
+};
+
 // *********** BUTTONS AS STYLED LINK COMPONENTS ***********
 
 export const MobileLinkButton = styled(Link)`
@@ -109,7 +119,7 @@ export const MobileLinkButton = styled(Link)`
 export const DesktopLinkButton = styled(MobileLinkButton)`
   width: 14rem;
   margin: auto 0;
-  padding: 1.3rem;
+  padding: 1.2rem;
   font-size: 1.5em;
 `;
 
@@ -151,7 +161,7 @@ export const ErrorMessageBackground = styled.div`
   padding: 1em;
   border-radius: 0.25rem;
   background: var(--accent-clr);
-  color: #f49869;
+  color: #d17344;
 `;
 
 export const ErrorMessageParagraph = styled.p`
@@ -197,6 +207,12 @@ export const SlideItemActive = styled(SlideItem)`
 
 // *********** LIST WITH OPTIONS ***********
 
+export const StyledSelect = styled(Select)`
+  line-height: 2.2rem;
+  width: 32rem;
+  font-size: 1.2rem;
+`;
+
 export const OptionContainer = styled.div`
   display: flex;
   align-items: center;
@@ -204,7 +220,7 @@ export const OptionContainer = styled.div`
   width: 100%;
   margin-top: 3.1rem;
   margin-bottom: 3.1rem;
-  gap: 0.3rem;
+  gap: 0.8rem;
 `;
 
 export const Option = styled.select`

@@ -12,12 +12,15 @@ import {
   DesktopSlideContainer,
   Title,
   InputsAndLabelsContainer,
+  DesktopButton,
+  DesktopCenterRowButtonContainer,
+  StyledAddButton,
+  OptionContainer,
 } from "../../components/SignInUpElements";
-import { StyledButton } from "../../components/buttons/Button";
 import { StyledInput } from "../../components/Input";
 
-const SubmitFormButton = styled(StyledButton)`
-  margin-top: 2em;
+const AddImageContainer = styled(OptionContainer)`
+  margin: 0;
 `;
 
 const SignUpFull2Desktop = () => {
@@ -46,8 +49,15 @@ const SignUpFull2Desktop = () => {
     return (
       <>
         <LabelDesktop htmlFor="Dodaj">{"Dodaj zdjęcie"}</LabelDesktop>
-        <StyledInput name="Dodaj" type="file" onChange={handleChange} />
-        <StyledButton onClick={handleUpload}>Zatwierdź zdjęcie</StyledButton>
+        <AddImageContainer>
+          <StyledInput
+            style={{ width: "85%" }}
+            name="Dodaj"
+            type="file"
+            onChange={handleChange}
+          />
+          <StyledAddButton onClick={handleUpload}>Zatwierdź</StyledAddButton>
+        </AddImageContainer>
       </>
     );
   };
@@ -88,7 +98,9 @@ const SignUpFull2Desktop = () => {
           {/* <LabelDesktop htmlFor="Dodaj">{"Dodaj zdjęcie"}</LabelDesktop>
           <StyledInput name="Dodaj" type="file" onClick={handleUpload} /> */}
           <FirebaseUploadImage></FirebaseUploadImage>
-          <SubmitFormButton type="submit">Dalej</SubmitFormButton>
+          <DesktopCenterRowButtonContainer>
+            <DesktopButton type="submit">Dalej</DesktopButton>
+          </DesktopCenterRowButtonContainer>
         </InputsAndLabelsContainer>
       </HalfDesktopFormWrapper>
       <DesktopSlideContainer>

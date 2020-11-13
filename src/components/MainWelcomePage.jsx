@@ -36,6 +36,7 @@ const MainWelcomePageLightRightBackground = styled(
   left: auto;
   right: 0;
   width: 17em;
+
   @media (min-width: 768px) {
     width: 25em;
   }
@@ -46,6 +47,7 @@ const MainWelcomePageLightLeftBackground = styled(
 )`
   top: 70%;
   width: 15em;
+
   @media (min-width: 768px) {
     width: 25em;
     top: 60%;

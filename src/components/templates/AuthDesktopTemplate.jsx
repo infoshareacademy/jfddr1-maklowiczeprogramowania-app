@@ -58,9 +58,10 @@ const HamburgerAuthMenu = styled.img`
 
 const StyledAuthDesktopMain = styled.main`
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
-  text-align: center;
+  width: 100%;
   margin: 5em auto;
 `;
 
@@ -144,6 +145,7 @@ const CreateProjectButton = styled(StyledSmallButton)`
   padding: 1em 2em;
   width: auto;
   margin-top: 3em;
+
   :hover {
     cursor: pointer;
   }
@@ -154,17 +156,20 @@ const AuthMenuOptionIcon = styled.img`
 `;
 
 const Heading = styled.h1`
-  font-size: 1.6rem;
+  font-size: 2.5rem;
+  font-weight: 600;
   color: var(--text-color);
+
   @media (min-width: 1024px) {
     color: var(--dark-clr);
   }
 `;
 
 const Paragraph = styled.p`
-  margin-top: 0.5em;
+  margin: 0.5em 0 1rem 0;
   font-size: 0.9rem;
   font-weight: 500;
+
   @media (min-width: 1024px) {
     font-size: 1.2rem;
     color: var(--dark-clr);
@@ -172,13 +177,11 @@ const Paragraph = styled.p`
 `;
 
 const StepCounter = styled.p`
-  margin: 1em 0;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
   color: var(--dark-clr);
+  margin-top: 5rem;
 `;
-
-const Main = styled.main``;
 
 const AuthMenuItem = styled.li``;
 

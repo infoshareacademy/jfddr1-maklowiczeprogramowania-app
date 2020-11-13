@@ -3,9 +3,7 @@ import styled from "styled-components";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import { firebaseUsersDB } from "../../firebase/UsersDB";
-import * as firebase from "firebase/app";
 import "firebase/storage";
-import Select from "react-select";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
 import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
 import {
@@ -17,20 +15,17 @@ import {
   Title,
   DesktopCenterRowButtonContainer,
   DesktopLinkButton,
+  StyledAddButton,
+  StyledSelect,
 } from "../../components/SignInUpElements";
-import { StyledButton } from "../../components/buttons/Button";
 import { fieldTagsDB } from "../../mocks/FieldTagsData";
-const StyledSelect = styled(Select)`
-  width: 20em;
-  font-size: 1.5rem;
-`;
 
 const ErrorMessageBackground = styled.div`
   margin-top: 2em;
   padding: 1em;
   border-radius: 0.25rem;
   background: var(--accent-clr);
-  color: #f49869;
+  color: #d17344;
 `;
 
 const ErrorMessageParagraph = styled.p`
@@ -103,7 +98,7 @@ const SignUpFull6Desktop = () => {
             onChange={setState}
             isDisabled={disabled}
           />
-          <StyledButton onClick={handleClick}>Zatwierdź</StyledButton>
+          <StyledAddButton onClick={handleClick}>Zatwierdź</StyledAddButton>
         </OptionContainer>
         <DesktopCenterRowButtonContainer>
           <DesktopLinkButton onClick={handleSubmit}>

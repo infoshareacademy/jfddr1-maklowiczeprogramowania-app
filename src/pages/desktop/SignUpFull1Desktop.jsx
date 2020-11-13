@@ -13,13 +13,9 @@ import {
   Title,
   InputsAndLabelsContainer,
   DesktopCenterRowButtonContainer,
+  DesktopButton,
 } from "../../components/SignInUpElements";
 import { StyledInput } from "../../components/Input";
-import { StyledButton } from "../../components/buttons/Button";
-
-const SubmitFormButton = styled(StyledButton)`
-  margin-top: 2em;
-`;
 
 const SignUpFull1Desktop = () => {
   const history = useHistory();
@@ -67,8 +63,9 @@ const SignUpFull1Desktop = () => {
             type="password"
             required
           />
-          <SubmitFormButton type="submit">Dalej</SubmitFormButton>
-          <DesktopCenterRowButtonContainer></DesktopCenterRowButtonContainer>
+          <DesktopCenterRowButtonContainer>
+            <DesktopButton type="submit">Dalej</DesktopButton>
+          </DesktopCenterRowButtonContainer>
         </InputsAndLabelsContainer>
       </HalfDesktopFormWrapper>
       <DesktopSlideContainer>

@@ -1,104 +1,24 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import MediaQuery from "react-responsive";
-import Select from "react-select";
 import { useAuth } from "../contexts/AuthContext";
 import { useProject } from "../contexts/ProjectsContext";
 import { useHistory } from "react-router-dom";
-import { StyledSmallButton } from "../components/buttons/SmallButton";
-import { StyledInput } from "../components/Input";
-import { StyledLabelDesktop } from "../components/Label";
 import { fieldTagsDB } from "../mocks/FieldTagsData.js";
 import AddProjectViewTemplate from "../components/templates/AddProjectViewTemplate";
 import AuthDesktopTemplate, {
   AuthDesktopMain,
 } from "../components/templates/AuthDesktopTemplate";
-import TextArea, { StyledTextArea } from "../components/TextArea";
-
-const Button = styled(StyledSmallButton)`
-  width: 8em;
-  margin: 2em 0.5em 0 0.5em;
-  color: var(--dark-clr);
-  background-color: var(--light-clr);
-  @media (min-width: 1024px) {
-    color: var(--light-clr);
-    background-color: var(--dark-clr);
-  }
-`;
-
-const SelectButton = styled(Button)`
-  margin: 0 1em;
-`;
-
-const GreyishInput = styled(StyledInput)`
-  width: 100%;
-  height: 2.5em;
-  color: var(--dark-clr);
-  background-color: #f2f5f6;
-
-  @media (min-width: 1024px) {
-    color: var(--light-clr);
-    background-color: var(--dark-clr);
-  }
-`;
-
-const GreyishTextArea = styled(StyledTextArea)`
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 15em;
-  max-height: 30rem;
-  color: var(--dark-clr);
-  background-color: #f2f5f6;
-
-  @media (min-width: 1024px) {
-    color: var(--light-clr);
-    background-color: var(--dark-clr);
-  }
-`;
-
-const Label = styled(StyledLabelDesktop)`
-  font-weight: 500;
-  align-self: flex-start;
-
-  font-weight: 500;
-  @media (min-width: 1024px) {
-    font-size: 1.2rem;
-    color: var(--dark-clr);
-  }
-`;
-
-const LabelInputWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-`;
-
-const StyledSelect = styled(Select)`
-  color: var(--dark-clr);
-  border: red;
-  min-width: 25rem;
-  max-width: 25rem;
-`;
-
-const TagContainer = styled.section`
-  display: flex;
-  margin: 2em 0;
-  width: 100%;
-  align-items: center;
-`;
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 37rem;
-`;
-
-const Input = React.forwardRef(({ id, name, type }, ref) => (
-  <GreyishInput ref={ref} id={id} name={name} type={type} required />
-));
+import {
+  Button,
+  SelectButton,
+  GreyishTextArea,
+  Label,
+  LabelInputWrapper,
+  StyledSelect,
+  TagContainer,
+  FormWrapper,
+  GreyishInput,
+} from "../components/AddProjectViewElements";
 
 const AddProjectView1 = () => {
   const history = useHistory();
@@ -108,6 +28,7 @@ const AddProjectView1 = () => {
   const titleRef = React.createRef();
   const fileRef = React.createRef();
   const descriptionRef = React.createRef();
+
   const SpecSelect = ({ name }) => {
     const [disabled, setDisabled] = useState(false);
     const [tagsState, setTagsState] = useState([]);
@@ -160,10 +81,10 @@ const AddProjectView1 = () => {
             sectionSubtitle={"Opisz swój projekt"}
             step={"Krok 1 z 4"}
             children={
-              <Form onSubmit={handleSubmit}>
+              <FormWrapper onSubmit={handleSubmit}>
                 <LabelInputWrapper>
                   <Label>Tytuł</Label>
-                  <Input
+                  <GreyishInput
                     ref={titleRef}
                     id={"title"}
                     name={"title"}
@@ -173,7 +94,7 @@ const AddProjectView1 = () => {
                 </LabelInputWrapper>
                 <LabelInputWrapper>
                   <Label>Grafika projektu</Label>
-                  <Input
+                  <GreyishInput
                     ref={fileRef}
                     id={"upload"}
                     name={"upload"}
@@ -197,7 +118,7 @@ const AddProjectView1 = () => {
                 </TagContainer>
 
                 <Button type="submit">Dalej</Button>
-              </Form>
+              </FormWrapper>
             }
           />
         </AuthDesktopTemplate>
@@ -208,7 +129,7 @@ const AddProjectView1 = () => {
           sectionSubtitle={"Opisz swój projekt"}
           children={
             <>
-              <Form>
+              <FormWrapper>
                 <LabelInputWrapper>
                   <Label>Tytuł</Label>
                   <GreyishInput required type="password" />
@@ -221,7 +142,7 @@ const AddProjectView1 = () => {
                   <Label>Opis projektu</Label>
                   <GreyishTextArea required />
                 </LabelInputWrapper>
-              </Form>
+              </FormWrapper>
 
               <Button>Dalej</Button>
             </>

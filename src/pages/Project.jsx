@@ -4,10 +4,15 @@ import styled from "styled-components";
 import AuthDesktopTemplate, {
   AuthDesktopMain,
 } from "../components/templates/AuthDesktopTemplate";
-// import { AuthDesktopMain } from "./AuthDesktopTemplate";
 import { useProject } from "../contexts/ProjectsContext";
 import { StyledButton } from "../components/buttons/Button";
 import ApplicationModal from "../components/ApplicationModal";
+import {
+  StyledThematicTagTemplate,
+  StyledThematicTagText,
+} from "../components/tags/ThematicTag";
+import { StyledAddButton } from "../components/SignInUpElements";
+
 const ProjectTitle = styled.h1`
   color: var(--dark-clr);
   font-size: 2rem;
@@ -28,7 +33,7 @@ const TeamMemberDescription = styled.p`
 const TeamContainer = styled.section`
   display: flex;
   justify-content: center;
-margin:4em; 0;
+  margin: 1em 0 4rem 0;
   flex-wrap: nowrap;
   gap: 30px;
 `;
@@ -47,10 +52,12 @@ const UserImage = styled.div`
 
 const TechContainer = styled.section`
   display: flex;
+  flex-wrap: wrap;
 `;
 
 const ToolsContainer = styled.section`
   display: flex;
+  flex-wrap: wrap;
 `;
 
 const SmallerHeading = styled.h2`
@@ -76,7 +83,8 @@ const LightClrButton = styled(StyledButton)`
   font-size: 1rem;
   font-weight: 600;
   margin: 0 auto;
-  bottom: -1em;
+  bottom: -1.2em;
+  left: 50%;
   transform: translateX(-50%);
 `;
 
@@ -85,7 +93,8 @@ const TechLabel = styled.label`
   align-items: center;
   justify-content: center;
   padding: 0.3em 0.7em;
-  margin: 0 0.2em;
+  margin: 0.2em;
+  font-size: 0.9rem;
   font-weight: 600;
   border-radius: 4px;
   background-color: var(--light-clr);
@@ -101,29 +110,13 @@ const QuestionMark = styled.p`
   font-weight: 600;
   color: var(--dark-clr);
 `;
-const SpecializationTagNameTemplate = styled.div`
-  background-color: #e9e9e9;
-  padding: 0.5em;
-  width: 8em;
-  color: #b9b9b9;
-  border-radius: 5px;
-  margin: 0em 0.5em 0.5em 0;
-`;
-
-const StyledThematicTagTemplate = styled(SpecializationTagNameTemplate)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fbbb9a;
-  color: #f49869;
-  font-weight: 500;
-`;
-
-const StyledThematicTagText = styled.p`
-  font-weight: 600;
-`;
 
 const ButtonContainer = styled.div``;
+
+const ThematicTagContainer = styled.div`
+  display: flex;
+  margin: 1rem;
+`;
 
 const ThematicTagTemplate = ({ clickedProject }) => {
   const ThematicTagsComponents = clickedProject.tags.map((label) => {
@@ -265,12 +258,14 @@ const Project = () => {
               </TeamContainer>
 
               <SmallerHeading>Tematyka</SmallerHeading>
-              <ThematicTagTemplate
-                clickedProject={clickedProject}
-              ></ThematicTagTemplate>
+              <ThematicTagContainer>
+                <ThematicTagTemplate
+                  clickedProject={clickedProject}
+                ></ThematicTagTemplate>
+              </ThematicTagContainer>
               <ButtonContainer>
                 {" "}
-                <StyledButton onClick={handleClick}>Wróć</StyledButton>
+                <StyledAddButton onClick={handleClick}>Wróć</StyledAddButton>
               </ButtonContainer>
             </>
           }

@@ -4,33 +4,33 @@ import { Link } from "react-router-dom";
 import { useProject } from "../contexts/ProjectsContext";
 import { StyledSmallButton } from "../components/buttons/SmallButton";
 import AddProjectViewTemplate from "../components/templates/AddProjectViewTemplate";
-import ImageSrc from "../img/project-done.svg";
+import ImageSrc from "../img/project-done-light.svg";
 
 const Image = styled.img`
-  width: 12em;
+  width: 18em;
+  margin-bottom: 5rem;
 `;
 
 const Heading = styled.h1`
-  color: var(--text-color);
   margin: 0.5em 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: var(--text-color);
 `;
 
 const Paragraph = styled.p`
+  margin-top: 0.5em;
   font-size: 1.1rem;
   font-weight: 500;
-  margin-top: 0.5em;
 `;
 
 const Button = styled(StyledSmallButton)`
-  width: 8em;
+  width: 11em;
   margin: 2em 0.5em 0 0.5em;
   color: var(--dark-clr);
   background-color: var(--light-clr);
+
   @media (min-width: 1024px) {
-    color: var(--light-clr);
     margin: 4em auto;
-    background-color: var(--dark-clr);
   }
 `;
 

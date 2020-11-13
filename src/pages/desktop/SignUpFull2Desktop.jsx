@@ -23,6 +23,20 @@ const AddImageContainer = styled(OptionContainer)`
   margin: 0;
 `;
 
+const ModalTextArea = styled.textarea`
+  height: 15em;
+  margin .5em 0em;
+  padding: 1em 1em;
+  outline: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  background-color: #2b2b3f;
+  color:white;
+  font-weight:600;
+  border-radius: 5px;
+  border: none;
+`;
+
 const SignUpFull2Desktop = () => {
   const {
     currentUserData,
@@ -34,6 +48,7 @@ const SignUpFull2Desktop = () => {
   const portfolioRef = React.createRef();
   const githubRef = React.createRef();
   const linkedInRef = React.createRef();
+  const descriptionRef = React.createRef();
   const fileRef = React.createRef();
   let file;
   // const FirebaseUploadImage = () => {
@@ -72,7 +87,7 @@ const SignUpFull2Desktop = () => {
     const portfolio = portfolioRef.current.value;
     const github = githubRef.current.value;
     const linkedIn = linkedInRef.current.value;
-
+    const description = descriptionRef.current.value;
     const socialMedia = [
       {
         portfolio,
@@ -80,7 +95,7 @@ const SignUpFull2Desktop = () => {
         linkedIn,
       },
     ];
-    setCurrentUserData({ ...currentUserData, socialMedia });
+    setCurrentUserData({ ...currentUserData, socialMedia, description });
     history.push("/pages/SignUpFull3Desktop");
   };
 
@@ -100,6 +115,16 @@ const SignUpFull2Desktop = () => {
           <StyledInput ref={githubRef} name="Github" type="text" required />
           <LabelDesktop htmlFor="Linkedin">{"Linkedin"}</LabelDesktop>
           <StyledInput ref={linkedInRef} name="Linkedin" type="text" required />
+          <LabelDesktop htmlFor="description">
+            {"Dodaj kilka słów o sobie"}
+          </LabelDesktop>
+
+          <ModalTextArea
+            type="text"
+            name={"description"}
+            ref={descriptionRef}
+            required
+          ></ModalTextArea>
           {/* <LabelDesktop htmlFor="Dodaj">{"Dodaj zdjęcie"}</LabelDesktop>
           <StyledInput name="Dodaj" type="file" onClick={handleUpload} /> */}
           {/* <FirebaseUploadImage></FirebaseUploadImage> */}

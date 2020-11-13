@@ -13,7 +13,7 @@ import {
   StyledThematicTagText,
 } from "../components/tags/ThematicTag";
 import { StyledAddButton } from "../components/SignInUpElements";
-
+import CrownImageSrc from "../img/crown.svg";
 const ProjectTitle = styled.h1`
   color: var(--dark-clr);
   font-size: 2rem;
@@ -42,9 +42,24 @@ const TeamContainer = styled.section`
 const UserImage = styled.div`
   height: 8rem;
   width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--light-clr);
   border-radius: 4rem;
-  margin: 0 1.5rem 0.7rem 1.5rem;
+  margin: 0 auto 2em auto;
+  padding: 1rem;
+`;
+
+const AuthorImage = styled.img`
+  height: 8rem;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-clr);
+  border-radius: 4rem;
+  margin: 0 auto 2em auto;
   padding: 1rem;
 `;
 
@@ -116,6 +131,13 @@ const ThematicTagContainer = styled.div`
   margin: 1rem;
 `;
 
+const CrownImage = styled.img`
+  position: absolute;
+  top: -3%;
+  left: -5%;
+  transform: rotate(-45deg);
+`;
+
 const ThematicTagTemplate = ({ clickedProject }) => {
   const ThematicTagsComponents = clickedProject.tags.map((label) => {
     return (
@@ -146,15 +168,17 @@ const ProjectAuthor = ({ clickedProject }) => {
   return (
     <>
       <TeamMemberTemplate>
-        <UserImage />
+        <CrownImage src={CrownImageSrc} />
+        <AuthorImage src={ProfileImageIconSrc} />
         <MemberName>
-          {clickedProject.author.firstName + clickedProject.author.secondName}
+          {clickedProject.author.firstName +
+            " " +
+            clickedProject.author.secondName}
         </MemberName>
         <MinorHeading>{clickedProject.author.specialization}</MinorHeading>
 
         <TeamMemberDescription>
-          Quisque a posuere ligula. Nullam efficitur, neque nec elementum
-          tincidunt.
+          {clickedProject.author.description}
         </TeamMemberDescription>
         <MinorHeading>Technologie</MinorHeading>
         <TechContainer>{TechTagsComponents}</TechContainer>

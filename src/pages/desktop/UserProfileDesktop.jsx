@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import AuthDesktopTemplate from "../../components/templates/AuthDesktopTemplate";
 import { useAuth } from "../../contexts/AuthContext";
 
@@ -7,8 +8,6 @@ import GitHubIconSrc from "../../img/github-icon.svg";
 import LinkedInIconSrc from "../../img/linkedin-icon.svg";
 import PortfolioIconSrc from "../../img/portfolio-icon.svg";
 import ProfileImageIconSrc from "../../img/example-profile-image.svg";
-import { useAuth } from "../../contexts/AuthContext";
-import { Link } from "react-router-dom";
 
 const MainWrapper = styled.section`
   display: flex;
@@ -131,6 +130,10 @@ const TechAndToolsItem = styled.div`
   font-size: 1.1rem;
 `;
 
+const CustomLink = styled.a`
+  text-decoration: none;
+`;
+
 const UserTech = ({ currentUserTech }) => {
   const UserTechComponentsArray = currentUserTech.map((tech) => {
     return <TechAndToolsItem>{tech}</TechAndToolsItem>;
@@ -169,8 +172,7 @@ const UserProfileDesktop = () => {
                     {currentUserData.specialization}
                   </UserInfoSpecialization>
                   <UserInfoDescription>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sed, commodi sequi ullam ipsam unde accusamus maiores atque.
+                    {currentUserData.description}
                   </UserInfoDescription>
                 </UserInfoWrapper>
                 <UserInfoIconsContainer>

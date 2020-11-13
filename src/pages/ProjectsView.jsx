@@ -22,6 +22,7 @@ import {
   EvenSmallerButton,
   ProjectTagsContainer,
 } from "./SearchProjects";
+import projectImgSrc from "../img/Makłowicz.jpg";
 
 const PageHeading = styled.h1`
   color: var(--dark-clr);
@@ -32,7 +33,7 @@ const PageHeading = styled.h1`
 const ProjectTemplate = ({
   projectTitle,
   projectDescription,
-  projectImgSrc,
+
   projectTags,
   projectId,
 }) => {

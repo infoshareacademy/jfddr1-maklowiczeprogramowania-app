@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
-import Select from "react-select";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
 import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
 import {
@@ -14,13 +12,11 @@ import {
   Title,
   DesktopCenterRowButtonContainer,
   DesktopLinkButton,
+  StyledAddButton,
+  StyledSelect,
 } from "../../components/SignInUpElements";
-import { StyledButton } from "../../components/buttons/Button";
 import { toolsDB } from "../../mocks/ToolsData";
-const StyledSelect = styled(Select)`
-  width: 20em;
-  font-size: 1.5rem;
-`;
+
 const SignUpFull5Desktop = () => {
   const [state, setState] = useState();
   const history = useHistory();
@@ -55,7 +51,7 @@ const SignUpFull5Desktop = () => {
             onChange={setState}
             isDisabled={disabled}
           />
-          <StyledButton onClick={handleClick}>Zatwierdź</StyledButton>
+          <StyledAddButton onClick={handleClick}>Zatwierdź</StyledAddButton>
         </OptionContainer>
 
         <DesktopCenterRowButtonContainer>

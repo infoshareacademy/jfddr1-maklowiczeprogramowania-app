@@ -3,29 +3,24 @@ import styled from "styled-components";
 import { useProject } from "../contexts/ProjectsContext";
 import MediaQuery from "react-responsive";
 import { Link, useHistory } from "react-router-dom";
-import { StyledSmallButton } from "../components/buttons/SmallButton";
 import AddProjectViewTemplate from "../components/templates/AddProjectViewTemplate";
 import { specDB } from "../mocks/SpecializationsData.js";
 import AuthDesktopTemplate, {
   AuthDesktopMain,
 } from "../components/templates/AuthDesktopTemplate";
-
-const Button = styled(StyledSmallButton)`
-  background-color: var(--light-clr);
-  color: var(--dark-clr);
-  width: 8em;
-  margin: 2em 0.5em 0 0.5em;
-  @media (min-width: 1024px) {
-    color: var(--light-clr);
-    background-color: var(--dark-clr);
-  }
-`;
+import {
+  Button,
+  FormWrapper,
+  SpecContainer,
+  SpecLabel,
+} from "../components/AddProjectViewElements";
 
 const StyledCheckbox = styled.input`
   width: 5em;
   height: 2.5em;
   background-color: var(--dark-clr);
   border-radius: 4px;
+
   @media (min-width: 1024px) {
     color: var(--light-clr);
     background-color: var(--dark-clr);
@@ -33,39 +28,6 @@ const StyledCheckbox = styled.input`
       background-color: var(--light-clr);
     }
   }
-`;
-
-const SpecLabel = styled.label`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20em;
-  height: 2.5em;
-  font-family: Quicksand;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #9b9b9b;
-  background-color: #ecf0f2;
-  border-radius: 4px;
-  @media (min-width: 1024px) {
-    color: var(--light-clr);
-    background-color: var(--dark-clr);
-  }
-`;
-
-const CheckBoxContainer = styled.form`
-  display: flex;
-  flex-direction: column;
-  margin-top: 1em;
-  justify-content: center;
-  align-items: center;
-  width: 80vw;
-  gap: 2em;
-`;
-const Container = styled.section`
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `;
 
 const AddProjectView2 = () => {
@@ -83,7 +45,7 @@ const AddProjectView2 = () => {
   const Checkbox = ({ name, handleSetState, checked, label }) => {
     return (
       <>
-        <Container>
+        <SpecContainer>
           <SpecLabel>{label}</SpecLabel>
           <StyledCheckbox
             checked={checked}
@@ -91,7 +53,7 @@ const AddProjectView2 = () => {
             type="checkbox"
             onChange={(e) => handleSetState(e.target.name, e.target.checked)}
           />
-        </Container>
+        </SpecContainer>
       </>
     );
   };
@@ -154,14 +116,14 @@ const AddProjectView2 = () => {
         <AuthDesktopTemplate>
           <AuthDesktopMain
             heading={"Dodaj poszukiwanych przez Ciebie specjalistów"}
-            sectionSubtitle={"Same kozaki"}
+            sectionSubtitle={"Zaznacz kogo poszukujesz"}
             step={"Krok 2 z 4"}
             children={
               <>
-                <CheckBoxContainer>
+                <FormWrapper>
                   <Checkboxes />
-                </CheckBoxContainer>
-                <Button onClick={clickHandler}>Dalej</Button>
+                  <Button onClick={clickHandler}>Dalej</Button>
+                </FormWrapper>
               </>
             }
           />
@@ -170,12 +132,12 @@ const AddProjectView2 = () => {
       <MediaQuery maxDeviceWidth={1024}>
         <AddProjectViewTemplate
           heading={"Dodaj poszukiwanych przez Ciebie specjalistów"}
-          sectionSubtitle={"Same kozaki"}
+          sectionSubtitle={"Zaznacz kogo poszukujesz"}
           children={
             <>
-              <CheckBoxContainer>
+              <FormWrapper>
                 <Checkboxes />
-              </CheckBoxContainer>
+              </FormWrapper>
               <Link to="/pages/AddProjectView3">
                 <Button onClick={clickHandler}>Dalej</Button>
               </Link>

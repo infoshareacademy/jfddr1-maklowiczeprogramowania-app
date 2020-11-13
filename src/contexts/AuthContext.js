@@ -16,6 +16,7 @@ export const AuthProvider = ({ children }) => {
   const signUp = (email, password) => {
     return auth.createUserWithEmailAndPassword(email, password);
   };
+
   const getUserData = (userId) => {
     firebaseUsersDB
       .doc(userId)
@@ -25,6 +26,7 @@ export const AuthProvider = ({ children }) => {
         setCurrentUserData(userData);
       });
   };
+
   const signIn = (email, password) => {
     return auth.signInWithEmailAndPassword(email, password);
   };

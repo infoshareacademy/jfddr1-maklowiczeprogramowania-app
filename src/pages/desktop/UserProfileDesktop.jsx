@@ -7,6 +7,8 @@ import GitHubIconSrc from "../../img/github-icon.svg";
 import LinkedInIconSrc from "../../img/linkedin-icon.svg";
 import PortfolioIconSrc from "../../img/portfolio-icon.svg";
 import ProfileImageIconSrc from "../../img/example-profile-image.svg";
+import { useAuth } from "../../contexts/AuthContext";
+import { Link } from "react-router-dom";
 
 const MainWrapper = styled.section`
   display: flex;
@@ -172,9 +174,28 @@ const UserProfileDesktop = () => {
                   </UserInfoDescription>
                 </UserInfoWrapper>
                 <UserInfoIconsContainer>
-                  <Icon src={GitHubIconSrc} />
-                  <Icon src={LinkedInIconSrc} />
-                  <Icon src={PortfolioIconSrc} />
+                  <Link
+                    to={
+                      currentUserData && currentUserData.socialMedia[0].github
+                    }
+                  >
+                    <Icon src={GitHubIconSrc} />
+                  </Link>
+                  <Link
+                    to={
+                      currentUserData && currentUserData.socialMedia[0].linkedIn
+                    }
+                  >
+                    <Icon src={LinkedInIconSrc} />
+                  </Link>
+                  <Link
+                    to={
+                      currentUserData &&
+                      currentUserData.socialMedia[0].portfolio
+                    }
+                  >
+                    <Icon src={PortfolioIconSrc} />
+                  </Link>
                 </UserInfoIconsContainer>
               </TopWrapper>
               <BottomWrapper>

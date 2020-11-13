@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
-import Select from "react-select";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
 import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";
 import {
@@ -14,14 +12,10 @@ import {
   Title,
   DesktopCenterRowButtonContainer,
   DesktopLinkButton,
+  StyledAddButton,
+  StyledSelect,
 } from "../../components/SignInUpElements";
-import { StyledButton } from "../../components/buttons/Button";
 import { specDB } from "../../mocks/SpecializationsData";
-
-const StyledSelect = styled(Select)`
-  width: 20em;
-  font-size: 1.5rem;
-`;
 
 const SignUpFull3Desktop = () => {
   const [state, setState] = useState();
@@ -62,7 +56,7 @@ const SignUpFull3Desktop = () => {
             isDisabled={disabled}
           />
           {/* Needed to change AddButton to StyledButton cuz it was a functional component so I could not attach proper logic to it // WIP  */}
-          <StyledButton onClick={handleClick}>Zatwierdź</StyledButton>
+          <StyledAddButton onClick={handleClick}>Zatwierdź</StyledAddButton>
         </OptionContainer>
         <DesktopCenterRowButtonContainer>
           <DesktopLinkButton

@@ -8,7 +8,6 @@ import MediaQuery from "react-responsive";
 import AuthDesktopTemplate, {
   AuthDesktopMain,
 } from "../components/templates/AuthDesktopTemplate";
-
 import SearchProjects from "../pages/SearchProjects";
 
 const Header = styled.header`
@@ -48,6 +47,7 @@ const NotificationText = styled.p`
 const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
+
   @media (min-width: 1024px) {
     text-align: left;
     margin-left: 2em;
@@ -68,6 +68,7 @@ const MenuIconsAuthBackground = styled.div`
   align-items: center;
   justify-content: center;
   border-bottom-left-radius: 15px;
+
   @media (min-width: 1024px) {
     width: 14em;
   }
@@ -98,20 +99,22 @@ const HamburgerAuthMenu = styled.img`
 
 const MainHeading = styled.h2`
   color: var(--dark-clr);
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1em;
 `;
 
 const SearchedProjectsSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   padding: 2em 2em;
 `;
 
 const PageWrapper = styled.section`
   display: flex;
   flex-direction: column;
-
-  @media (min-width: 1024px) {
-    flex-direction: row;
   }
 `;
 
@@ -119,6 +122,7 @@ const UserInformation = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 `;
 
 const AuthWelcomeView = () => {

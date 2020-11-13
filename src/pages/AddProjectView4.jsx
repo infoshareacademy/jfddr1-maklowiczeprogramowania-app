@@ -1,74 +1,30 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-import Select from "react-select";
 import MediaQuery from "react-responsive";
 import { useHistory } from "react-router-dom";
 import { useProject } from "../contexts/ProjectsContext";
 import { useAuth } from "../contexts/AuthContext";
-import { StyledSmallButton } from "../components/buttons/SmallButton";
 import AddProjectViewTemplate from "../components/templates/AddProjectViewTemplate";
 import AuthDesktopTemplate, {
   AuthDesktopMain,
 } from "../components/templates/AuthDesktopTemplate";
 import { toolsDB } from "../mocks/ToolsData";
+import {
+  Button,
+  SpecLabel,
+  FormWrapper,
+  StyledSelect,
+  SelectButton,
+  TagContainer,
+} from "../components/AddProjectViewElements";
 import { firebaseProjectsDB } from "../firebase/ProjectsDB";
 import * as firebase from "firebase/app";
 import "firebase/firestore";
-
-const Button = styled(StyledSmallButton)`
-  width: 8em;
-  margin: 2em 0.5em 0 0.5em;
-  color: var(--dark-clr);
-  background-color: var(--light-clr);
-  @media (min-width: 1024px) {
-    margin: 4em auto;
-    color: var(--light-clr);
-    background-color: var(--dark-clr);
-  }
-`;
-
-const SpecLabel = styled.label`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.5em;
-  margin-top: 2em;
-  width: 20em;
-  font-family: Quicksand;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #9b9b9b;
-  background-color: #ecf0f2;
-  border-radius: 4px;
-  @media (min-width: 1024px) {
-    color: var(--light-clr);
-    background-color: var(--dark-clr);
-  }
-`;
-
-const StyledSelect = styled(Select)`
-  color: var(--dark-clr);
-`;
-
-const SpecContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 40px;
-`;
-const Container = styled.section`
-  display: flex;
-  gap: 40px;
-`;
-
-const Form = styled.form`
-  width: 20em;
-`;
 
 const SpecSelect = ({ name }) => {
   const [state, setState] = useState([]);
   const [disabled, setDisabled] = useState(false);
   const { project } = useProject();
+
   const handleClick = (e) => {
     e.preventDefault();
     const found = project.team.find((el) => el.name === String(e.target.name));
@@ -76,21 +32,20 @@ const SpecSelect = ({ name }) => {
     found.tools.push(...tools);
     setDisabled(true);
   };
+
   return (
     <>
-      <Form>
-        <StyledSelect
-          isMulti={true}
-          name={name}
-          placeholder="Wybierz narzędzia..."
-          options={toolsDB}
-          onChange={setState}
-          isDisabled={disabled}
-        />
-        <Button onClick={handleClick} name={name}>
-          Zatwierdź
-        </Button>
-      </Form>
+      <StyledSelect
+        isMulti={true}
+        name={name}
+        placeholder="Wybierz narzędzia..."
+        options={toolsDB}
+        onChange={setState}
+        isDisabled={disabled}
+      />
+      <SelectButton onClick={handleClick} name={name}>
+        Zatwierdź
+      </SelectButton>
     </>
   );
 };
@@ -101,10 +56,10 @@ const SpecSelects = () => {
   const SelectComponents = project.team.map((spec) => {
     return (
       <>
-        <SpecContainer>
-          <SpecLabel>{spec.name}</SpecLabel>
-          <SpecSelect name={spec.name} />
-        </SpecContainer>
+        <SpecLabel key={spec.name}>{spec.name}</SpecLabel>
+        <TagContainer key={spec.name}>
+          <SpecSelect key={spec.name} name={spec.name} />
+        </TagContainer>
       </>
     );
   });
@@ -114,8 +69,8 @@ const SpecSelects = () => {
 const AddProjectView4 = () => {
   const { project, setProject } = useProject();
   const { currentUser } = useAuth();
-
   const history = useHistory();
+
   const clickHandler = () => {
     const err = project.team.map((spec) => {
       return spec.tools.length === 0 ? true : false;
@@ -147,10 +102,10 @@ const AddProjectView4 = () => {
             step={"Krok 4 z 4"}
             children={
               <>
-                <Container>
+                <FormWrapper>
                   <SpecSelects />
-                </Container>
-                <Button onClick={clickHandler}>Zatwierdź projekt</Button>
+                  <Button onClick={clickHandler}>Zatwierdź projekt</Button>
+                </FormWrapper>
               </>
             }
           ></AuthDesktopMain>

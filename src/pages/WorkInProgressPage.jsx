@@ -68,7 +68,7 @@ const AddProjectView0 = () => {
               Przepraszamy, ta sekcja znajduje się aktualnie w budowie.
             </Paragraph>
             <Paragraph>Zapraszamy za jakiś czas! </Paragraph>
-            <Link to="/pages/AuthWelcomeView">
+            <Link to="/pages/WelcomePage">
               <Button>Cofnij</Button>
             </Link>
           </>

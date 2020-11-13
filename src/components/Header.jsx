@@ -12,6 +12,7 @@ const HeaderHeading = styled.h1`
   font-size: 2.5rem;
   margin: 0em 0 0.5em 0;
   padding: 0 1em 0 1em;
+
   @media (min-width: 1024px) {
     padding: 0;
   }
@@ -23,10 +24,12 @@ const HeroParagraph = styled.p`
   line-height: 30px;
   padding: 0 1em;
   margin-top: 0.3em;
+
   @media (min-width: 700px) {
     padding: 0 3em;
     font-size: 1.3rem;
   }
+
   @media (min-width: 1024px) {
     padding: 0;
   }
@@ -49,6 +52,7 @@ const CreateHeroButton = styled.button`
   border-radius: 4px;
   transition: 0.3s;
   border: 2px solid #fbeccc;
+
   :hover {
     cursor: pointer;
     background: transparent;
@@ -68,6 +72,7 @@ const HowItWorksButton = styled(CreateHeroButton)`
   border: 2px solid #fbeccc;
   color: #fbeccc;
   border-radius: 4px;
+
   :hover {
     cursor: pointer;
     background: var(--light-clr);
@@ -79,6 +84,7 @@ const HeaderImage = styled.img`
   @media (min-width: 1024px) {
     width: 30em;
   }
+
   @media (min-width: 1600px) {
     width: 40rem;
   }
@@ -87,6 +93,7 @@ const HeaderImage = styled.img`
 const Hero = styled.section`
   text-align: center;
   margin: 9em 0 0 0;
+
   @media (min-width: 1024px) {
     margin: 13em 0em 0 5em;
     width: 50%;
@@ -98,18 +105,18 @@ const Hero = styled.section`
 
 const DesktopNav = styled.nav`
   position: absolute;
-  left: 35%;
-  margin-top: 4em;
+  right: 1rem;
+  margin-top: 3em;
 
   @media (min-width: 1600px) {
-    left: 45%;
+    right: 10rem;
   }
 `;
 
 const DesktopNavList = styled.ul`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   list-style: none;
 `;
 
@@ -118,24 +125,26 @@ const DesktopNavListItem = styled.li`
   font-weight: 500;
 `;
 
-const DesktopNavListLink = styled.a`
+const DesktopNavListLink = styled.p`
+  display: inline;
   margin-right: 3em;
 `;
 
 const FlexContainer = styled.section``;
 
 const StyledHeaderButton = styled(StyledButton)`
-  font-size: 1.2rem;
+  width: 12rem;
+  margin-left: 1.5em;
   padding: 1rem 2rem;
-  margin-left: 2em;
+  font-size: 1.2rem;
 `;
 
 const Header = () => {
-  const rootOverflowHidden = () => {
-    const root = document.querySelector(":root");
+  // const rootOverflowHidden = () => {
+  //   const root = document.querySelector(":root");
 
-    return (root.style.overflow = "hidden");
-  };
+  //   return (root.style.overflow = "hidden");
+  // };
 
   return (
     <Wrapper>
@@ -146,18 +155,39 @@ const Header = () => {
         <DesktopNav>
           <DesktopNavList>
             <DesktopNavListItem>
-              <DesktopNavListLink>Strona główna</DesktopNavListLink>
-              <DesktopNavListLink>Jak to działa?</DesktopNavListLink>
-              <DesktopNavListLink>Wiedza o IT</DesktopNavListLink>
-              <Link to="../pages/SignInDesktop">
-                <StyledHeaderButton onClick={rootOverflowHidden}>
-                  Zaloguj się
-                </StyledHeaderButton>
+              <Link
+                style={{ color: "var(--white-clr)", textDecoration: "none" }}
+                to="/pages/WelcomePage"
+              >
+                <DesktopNavListLink>Strona główna</DesktopNavListLink>
               </Link>
+            </DesktopNavListItem>
+            <DesktopNavListItem>
+              <Link
+                style={{ color: "var(--white-clr)", textDecoration: "none" }}
+                to="/pages/WorkInProgressPage"
+              >
+                <DesktopNavListLink>Jak to działa?</DesktopNavListLink>
+              </Link>
+            </DesktopNavListItem>
+            <DesktopNavListItem>
+              <Link
+                style={{ color: "var(--white-clr)", textDecoration: "none" }}
+                to="/pages/WorkInProgressPage"
+              >
+                <DesktopNavListLink>Wiedza o IT</DesktopNavListLink>
+              </Link>
+            </DesktopNavListItem>
+            <DesktopNavListItem>
+              <Link to="../pages/SignInDesktop">
+                {/* <StyledHeaderButton onClick={rootOverflowHidden}> */}
+                <StyledHeaderButton>Zaloguj się</StyledHeaderButton>
+              </Link>
+            </DesktopNavListItem>
+            <DesktopNavListItem>
               <Link to="../pages/SignUpDesktop">
-                <StyledHeaderButton onClick={rootOverflowHidden}>
-                  Zarejestruj się
-                </StyledHeaderButton>
+                {/* <StyledHeaderButton onClick={rootOverflowHidden}> */}
+                <StyledHeaderButton>Zarejestruj się</StyledHeaderButton>
               </Link>
             </DesktopNavListItem>
           </DesktopNavList>
@@ -186,7 +216,9 @@ const Header = () => {
             <CreateHeroButton>Stwórz bohatera</CreateHeroButton>
           </Link>
         </MediaQuery>
-        <HowItWorksButton>Jak to działa?</HowItWorksButton>
+        <Link to="../pages/WorkInProgressPage">
+          <HowItWorksButton>Jak to działa?</HowItWorksButton>
+        </Link>
       </Hero>
       <FlexContainer>
         <MediaQuery minDeviceWidth={1024}>

@@ -1,6 +1,5 @@
 import React from "react";
 import { useAuth } from "../../contexts/AuthContext";
-import styled from "styled-components";
 import { Link, useHistory } from "react-router-dom";
 import DesktopViewWithCloudsTemplate from "../../components/templates/DesktopViewWithCloudsTemplate";
 import { HalfDesktopFormWrapper } from "../../components/templates/DesktopViewTemplate";

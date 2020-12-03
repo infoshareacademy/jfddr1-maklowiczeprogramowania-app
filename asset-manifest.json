@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.js": "/jfddr1-maklowiczeprogramowania-app/static/js/main.8ea0fe9b.chunk.js",
-    "main.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/main.8ea0fe9b.chunk.js.map",
+    "main.js": "/jfddr1-maklowiczeprogramowania-app/static/js/main.767f27a3.chunk.js",
+    "main.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/main.767f27a3.chunk.js.map",
     "runtime-main.js": "/jfddr1-maklowiczeprogramowania-app/static/js/runtime-main.59d3cbc5.js",
     "runtime-main.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/runtime-main.59d3cbc5.js.map",
-    "static/js/2.ee79a305.chunk.js": "/jfddr1-maklowiczeprogramowania-app/static/js/2.ee79a305.chunk.js",
-    "static/js/2.ee79a305.chunk.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/2.ee79a305.chunk.js.map",
+    "static/js/2.71db3366.chunk.js": "/jfddr1-maklowiczeprogramowania-app/static/js/2.71db3366.chunk.js",
+    "static/js/2.71db3366.chunk.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/2.71db3366.chunk.js.map",
     "index.html": "/jfddr1-maklowiczeprogramowania-app/index.html",
-    "precache-manifest.cfa3972f3a3b3b22333954dd8279af50.js": "/jfddr1-maklowiczeprogramowania-app/precache-manifest.cfa3972f3a3b3b22333954dd8279af50.js",
+    "precache-manifest.e85a9f4a808e66a7f9e136f0835e4720.js": "/jfddr1-maklowiczeprogramowania-app/precache-manifest.e85a9f4a808e66a7f9e136f0835e4720.js",
     "service-worker.js": "/jfddr1-maklowiczeprogramowania-app/service-worker.js",
-    "static/js/2.ee79a305.chunk.js.LICENSE.txt": "/jfddr1-maklowiczeprogramowania-app/static/js/2.ee79a305.chunk.js.LICENSE.txt",
+    "static/js/2.71db3366.chunk.js.LICENSE.txt": "/jfddr1-maklowiczeprogramowania-app/static/js/2.71db3366.chunk.js.LICENSE.txt",
     "static/media/Achievement.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/Achievement.490d1669.svg",
+    "static/media/Makłowicz.jpg": "/jfddr1-maklowiczeprogramowania-app/static/media/Makłowicz.077f201b.jpg",
     "static/media/Security.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/Security.661c1399.svg",
     "static/media/add-project-idea-image.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/add-project-idea-image.c946e01f.svg",
     "static/media/background-vector-left-2.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/background-vector-left-2.869ed2a6.svg",
     "static/media/background-vector-left.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/background-vector-left.68d8e247.svg",
     "static/media/background-vector-right.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/background-vector-right.82a9de3a.svg",
+    "static/media/barrow.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/barrow.bb644a2e.svg",
     "static/media/bell-icon-light.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/bell-icon-light.59eab30a.svg",
     "static/media/bell-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/bell-icon.274410c2.svg",
+    "static/media/crown.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/crown.78a85620.svg",
     "static/media/example-profile-image.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/example-profile-image.6f3b7bea.svg",
     "static/media/exit-dark-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/exit-dark-icon.66c399e7.svg",
     "static/media/exit-light-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/exit-light-icon.ee92f4d2.svg",
@@ -33,6 +36,7 @@
     "static/media/message-light-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/message-light-icon.dd0b17f2.svg",
     "static/media/portfolio-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/portfolio-icon.d5e285bd.svg",
     "static/media/profile-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/profile-icon.bb7537d8.svg",
+    "static/media/project-done-light.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/project-done-light.8d37bf3f.svg",
     "static/media/project-done.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/project-done.78573921.svg",
     "static/media/projects-icon.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/projects-icon.36eb4cba.svg",
     "static/media/radix-icons_hamburger-menu-dark.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/radix-icons_hamburger-menu-dark.001e9476.svg",
@@ -44,7 +48,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.59d3cbc5.js",
-    "static/js/2.ee79a305.chunk.js",
-    "static/js/main.8ea0fe9b.chunk.js"
+    "static/js/2.71db3366.chunk.js",
+    "static/js/main.767f27a3.chunk.js"
   ]
 }

@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c95bf157e08147d7d41446c9bed0a589",
+    "revision": "02c80b54d9b2aefaf2d50df0d69c1f84",
     "url": "/jfddr1-maklowiczeprogramowania-app/index.html"
   },
   {
-    "revision": "842b81ac39b724ca6548",
-    "url": "/jfddr1-maklowiczeprogramowania-app/static/js/2.ee79a305.chunk.js"
+    "revision": "55bc31b31746e99a91cd",
+    "url": "/jfddr1-maklowiczeprogramowania-app/static/js/2.71db3366.chunk.js"
   },
   {
     "revision": "a3dc9fd35d46d772f92b9c2b7d434046",
-    "url": "/jfddr1-maklowiczeprogramowania-app/static/js/2.ee79a305.chunk.js.LICENSE.txt"
+    "url": "/jfddr1-maklowiczeprogramowania-app/static/js/2.71db3366.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "64fea13ce7e10da129a9",
-    "url": "/jfddr1-maklowiczeprogramowania-app/static/js/main.8ea0fe9b.chunk.js"
+    "revision": "22b61815ce5e38d2331b",
+    "url": "/jfddr1-maklowiczeprogramowania-app/static/js/main.767f27a3.chunk.js"
   },
   {
     "revision": "db4b361d000dc00a137b",
@@ -22,6 +22,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "490d16691d3865f7f2eb00c74e64fb89",
     "url": "/jfddr1-maklowiczeprogramowania-app/static/media/Achievement.490d1669.svg"
+  },
+  {
+    "revision": "077f201b58fc35988b4bf05fbd92511b",
+    "url": "/jfddr1-maklowiczeprogramowania-app/static/media/Makłowicz.077f201b.jpg"
   },
   {
     "revision": "661c1399156185b2c6d4dc77a4fced26",
@@ -44,12 +48,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jfddr1-maklowiczeprogramowania-app/static/media/background-vector-right.82a9de3a.svg"
   },
   {
+    "revision": "bb644a2e80e169ca1aefd648969648bf",
+    "url": "/jfddr1-maklowiczeprogramowania-app/static/media/barrow.bb644a2e.svg"
+  },
+  {
     "revision": "59eab30a712b95fccea94b4287fb1631",
     "url": "/jfddr1-maklowiczeprogramowania-app/static/media/bell-icon-light.59eab30a.svg"
   },
   {
     "revision": "274410c2adc6062cf0e6c8b4d3f95832",
     "url": "/jfddr1-maklowiczeprogramowania-app/static/media/bell-icon.274410c2.svg"
+  },
+  {
+    "revision": "78a856200ae6da1f6b9a9ed835ccdb03",
+    "url": "/jfddr1-maklowiczeprogramowania-app/static/media/crown.78a85620.svg"
   },
   {
     "revision": "6f3b7bea161374cee62adc73953112d0",
@@ -110,6 +122,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bb7537d8dec825848ca9b0e66bae966a",
     "url": "/jfddr1-maklowiczeprogramowania-app/static/media/profile-icon.bb7537d8.svg"
+  },
+  {
+    "revision": "8d37bf3fa688ce6d51f877c256a11386",
+    "url": "/jfddr1-maklowiczeprogramowania-app/static/media/project-done-light.8d37bf3f.svg"
   },
   {
     "revision": "7857392176b36976f31b09f4a2baf337",

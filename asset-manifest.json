@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/jfddr1-maklowiczeprogramowania-app/static/js/main.767f27a3.chunk.js",
-    "main.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/main.767f27a3.chunk.js.map",
+    "main.js": "/jfddr1-maklowiczeprogramowania-app/static/js/main.571068ab.chunk.js",
+    "main.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/main.571068ab.chunk.js.map",
     "runtime-main.js": "/jfddr1-maklowiczeprogramowania-app/static/js/runtime-main.59d3cbc5.js",
     "runtime-main.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/runtime-main.59d3cbc5.js.map",
-    "static/js/2.71db3366.chunk.js": "/jfddr1-maklowiczeprogramowania-app/static/js/2.71db3366.chunk.js",
-    "static/js/2.71db3366.chunk.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/2.71db3366.chunk.js.map",
+    "static/js/2.927243e1.chunk.js": "/jfddr1-maklowiczeprogramowania-app/static/js/2.927243e1.chunk.js",
+    "static/js/2.927243e1.chunk.js.map": "/jfddr1-maklowiczeprogramowania-app/static/js/2.927243e1.chunk.js.map",
     "index.html": "/jfddr1-maklowiczeprogramowania-app/index.html",
-    "precache-manifest.e85a9f4a808e66a7f9e136f0835e4720.js": "/jfddr1-maklowiczeprogramowania-app/precache-manifest.e85a9f4a808e66a7f9e136f0835e4720.js",
+    "precache-manifest.115c9ed047145f72007f747a230bf914.js": "/jfddr1-maklowiczeprogramowania-app/precache-manifest.115c9ed047145f72007f747a230bf914.js",
     "service-worker.js": "/jfddr1-maklowiczeprogramowania-app/service-worker.js",
-    "static/js/2.71db3366.chunk.js.LICENSE.txt": "/jfddr1-maklowiczeprogramowania-app/static/js/2.71db3366.chunk.js.LICENSE.txt",
+    "static/js/2.927243e1.chunk.js.LICENSE.txt": "/jfddr1-maklowiczeprogramowania-app/static/js/2.927243e1.chunk.js.LICENSE.txt",
     "static/media/Achievement.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/Achievement.490d1669.svg",
     "static/media/Makłowicz.jpg": "/jfddr1-maklowiczeprogramowania-app/static/media/Makłowicz.077f201b.jpg",
     "static/media/Security.svg": "/jfddr1-maklowiczeprogramowania-app/static/media/Security.661c1399.svg",
@@ -48,7 +48,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.59d3cbc5.js",
-    "static/js/2.71db3366.chunk.js",
-    "static/js/main.767f27a3.chunk.js"
+    "static/js/2.927243e1.chunk.js",
+    "static/js/main.571068ab.chunk.js"
   ]
 }

@@ -1,71 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-https://infoshareacademy.github.io/jfddr1-maklowiczeprogramowania-app/
+# :hammer_and_wrench: Zaadoptuj programistę
 
-## Available Scripts
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Usage](#usage)
+* [Setup](#setup)
+* [Live preview](#live-preview)
 
-In the project directory, you can run:
+## General info
+Project is being created by the group of three developers. This project is a web application which allows us to register a new user. Each user can create their own projects, describe them in detail, specify team members they are looking for or search for existing project created by someone else and apply.
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![](src/design/desktop/hero-section.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+![](src/design/desktop/auth-view.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies
+Project is created with:
+* React (styled components, hooks, react context, react router, react select, react responsive)
+* JavaScript
+* Firebase (Firestore, Authenticaton)
+* HTML
+* Figma (design)
 
-### `npm run build`
+	
+## Features
+* Creating new user
+* Searching for projects
+* Creating new projects/adding to the main Firebase Firestore database.
+* Applying to a project
+* Notification system
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## To do
+* Messages
+* Finalize procedures of applying to a project
+* Implement Firebase Storage (user profile images)
+* Notification system
+* Friends system
+* Editing user profile
+* Fix bugs/RWD
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Setup
+Clone this repo and run ``` $ npm install ``` to install all dependecies.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage 
+Once the dependencies are installed, you can run ```$ npm start ```  to start the application.
 
-### `npm run eject`
+## Live preview
+You can also click here https://infoshareacademy.github.io/jfddr1-maklowiczeprogramowania-app/ to live preview.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Sizes
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployments
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-### All the fields on forms are required
